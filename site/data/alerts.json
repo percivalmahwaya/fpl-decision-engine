@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 27,
- "latest_snapshot": 31,
+ "latest_snapshot": 32,
  "prev_taken_at": "2026-09-11T21:01:22.387299+00:00",
- "latest_taken_at": "2026-09-13T10:17:10.398962+00:00",
+ "latest_taken_at": "2026-09-13T20:53:57.725120+00:00",
  "alerts": [
   {
    "element_id": 367,
@@ -13,6 +13,16 @@
    "severity": "GOOD",
    "tag": "WATCH",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 398,
+   "name": "Foden",
+   "position": "MID",
+   "price": 7.0,
+   "owned": 3.6,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 17 Oct)"
   },
   {
    "element_id": 198,
@@ -35,11 +45,21 @@
    "message": "RULED OUT (Ankle injury - Expected back 10 Oct)"
   },
   {
+   "element_id": 492,
+   "name": "Awoniyi",
+   "position": "FWD",
+   "price": 5.5,
+   "owned": 0.6,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 19 Oct)"
+  },
+  {
    "element_id": 536,
    "name": "Reinildo",
    "position": "DEF",
    "price": 4.5,
-   "owned": 0.4,
+   "owned": 0.3,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 10 Oct)"
@@ -59,7 +79,7 @@
    "name": "Mendy",
    "position": "DEF",
    "price": 4.1,
-   "owned": 7.9,
+   "owned": 7.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Concussion - 50% chance of playing)"
@@ -160,49 +180,49 @@
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.8,
-   "owned": 74.2,
+   "owned": 74.6,
    "direction": "up"
   },
   {
    "name": "Rogers",
    "old": 7.6,
    "new": 7.7,
-   "owned": 35.4,
+   "owned": 36.2,
    "direction": "up"
   },
   {
    "name": "Konsa",
    "old": 4.4,
    "new": 4.5,
-   "owned": 17.2,
+   "owned": 17.5,
    "direction": "up"
   },
   {
    "name": "Hall",
    "old": 5.1,
    "new": 5.2,
-   "owned": 14.2,
+   "owned": 14.4,
    "direction": "up"
   },
   {
    "name": "Ajayi",
    "old": 4.1,
    "new": 4.2,
-   "owned": 13.0,
+   "owned": 13.3,
    "direction": "up"
   },
   {
    "name": "Elanga",
    "old": 6.1,
    "new": 6.2,
-   "owned": 11.4,
+   "owned": 11.5,
    "direction": "up"
   },
   {
    "name": "Lammens",
    "old": 5.0,
    "new": 4.9,
-   "owned": 11.3,
+   "owned": 11.1,
    "direction": "down"
   },
   {
@@ -216,21 +236,21 @@
    "name": "Brobbey",
    "old": 5.9,
    "new": 5.8,
-   "owned": 6.6,
+   "owned": 6.5,
    "direction": "down"
   },
   {
    "name": "Senesi",
    "old": 5.9,
    "new": 5.8,
-   "owned": 4.3,
+   "owned": 4.2,
    "direction": "down"
   },
   {
    "name": "E.Le Fée",
    "old": 5.9,
    "new": 5.8,
-   "owned": 4.3,
+   "owned": 4.2,
    "direction": "down"
   },
   {

@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 27,
- "latest_snapshot": 30,
+ "latest_snapshot": 31,
  "prev_taken_at": "2026-09-11T21:01:22.387299+00:00",
- "latest_taken_at": "2026-09-13T06:44:44.381662+00:00",
+ "latest_taken_at": "2026-09-13T10:17:10.398962+00:00",
  "alerts": [
   {
    "element_id": 367,
@@ -15,21 +15,11 @@
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 586,
-   "name": "Mendy",
-   "position": "DEF",
-   "price": 4.1,
-   "owned": 8.0,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 100% -> 50% (Concussion - 50% chance of playing)"
-  },
-  {
    "element_id": 198,
    "name": "Henderson",
    "position": "GKP",
    "price": 5.0,
-   "owned": 1.9,
+   "owned": 1.8,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Foot injury - Expected back 11 Oct)"
@@ -65,11 +55,21 @@
    "message": "RULED OUT (Suspended until 25 Oct)"
   },
   {
+   "element_id": 586,
+   "name": "Mendy",
+   "position": "DEF",
+   "price": 4.1,
+   "owned": 7.9,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Concussion - 50% chance of playing)"
+  },
+  {
    "element_id": 471,
    "name": "Milenković",
    "position": "DEF",
    "price": 5.5,
-   "owned": 1.6,
+   "owned": 1.5,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
@@ -160,21 +160,21 @@
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.8,
-   "owned": 74.1,
+   "owned": 74.2,
    "direction": "up"
   },
   {
    "name": "Rogers",
    "old": 7.6,
    "new": 7.7,
-   "owned": 35.3,
+   "owned": 35.4,
    "direction": "up"
   },
   {
    "name": "Konsa",
    "old": 4.4,
    "new": 4.5,
-   "owned": 17.1,
+   "owned": 17.2,
    "direction": "up"
   },
   {
@@ -209,14 +209,14 @@
    "name": "Havertz",
    "old": 7.5,
    "new": 7.6,
-   "owned": 8.1,
+   "owned": 8.0,
    "direction": "up"
   },
   {
    "name": "Brobbey",
    "old": 5.9,
    "new": 5.8,
-   "owned": 6.7,
+   "owned": 6.6,
    "direction": "down"
   },
   {

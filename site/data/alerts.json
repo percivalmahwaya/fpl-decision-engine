@@ -1,48 +1,18 @@
 {
- "prev_snapshot": 27,
- "latest_snapshot": 32,
- "prev_taken_at": "2026-09-11T21:01:22.387299+00:00",
- "latest_taken_at": "2026-09-13T20:53:57.725120+00:00",
+ "prev_snapshot": 29,
+ "latest_snapshot": 33,
+ "prev_taken_at": "2026-09-12T20:37:58.031880+00:00",
+ "latest_taken_at": "2026-09-14T10:38:24.025694+00:00",
  "alerts": [
-  {
-   "element_id": 367,
-   "name": "Gakpo",
-   "position": "MID",
-   "price": 7.2,
-   "owned": 12.2,
-   "severity": "GOOD",
-   "tag": "WATCH",
-   "message": "cleared - news removed, fit again"
-  },
   {
    "element_id": 398,
    "name": "Foden",
    "position": "MID",
    "price": 7.0,
-   "owned": 3.6,
+   "owned": 3.4,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 17 Oct)"
-  },
-  {
-   "element_id": 198,
-   "name": "Henderson",
-   "position": "GKP",
-   "price": 5.0,
-   "owned": 1.8,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Foot injury - Expected back 11 Oct)"
-  },
-  {
-   "element_id": 123,
-   "name": "Hinshelwood",
-   "position": "MID",
-   "price": 6.0,
-   "owned": 0.8,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Ankle injury - Expected back 10 Oct)"
   },
   {
    "element_id": 492,
@@ -63,116 +33,6 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 10 Oct)"
-  },
-  {
-   "element_id": 153,
-   "name": "Disasi",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.1,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Suspended until 25 Oct)"
-  },
-  {
-   "element_id": 586,
-   "name": "Mendy",
-   "position": "DEF",
-   "price": 4.1,
-   "owned": 7.7,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 50% (Concussion - 50% chance of playing)"
-  },
-  {
-   "element_id": 471,
-   "name": "Milenković",
-   "position": "DEF",
-   "price": 5.5,
-   "owned": 1.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 36,
-   "name": "Maatsen",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.8,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 25% (Ankle injury - 25% chance of playing)"
-  },
-  {
-   "element_id": 152,
-   "name": "Palestra",
-   "position": "DEF",
-   "price": 5.3,
-   "owned": 0.8,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Thigh injury - Expected back 18 Sep"
-  },
-  {
-   "element_id": 224,
-   "name": "Nketiah",
-   "position": "FWD",
-   "price": 5.5,
-   "owned": 0.7,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 34,
-   "name": "Pau",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.4,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 474,
-   "name": "Jair Cunha",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.2,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 5,
-   "name": "J.Timber",
-   "position": "DEF",
-   "price": 6.5,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 53,
-   "name": "Manzambi",
-   "position": "MID",
-   "price": 5.9,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 54,
-   "name": "Gomes",
-   "position": "MID",
-   "price": 5.5,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -180,42 +40,28 @@
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.8,
-   "owned": 74.6,
+   "owned": 74.8,
    "direction": "up"
   },
   {
    "name": "Rogers",
    "old": 7.6,
    "new": 7.7,
-   "owned": 36.2,
+   "owned": 36.5,
    "direction": "up"
   },
   {
-   "name": "Konsa",
-   "old": 4.4,
-   "new": 4.5,
-   "owned": 17.5,
+   "name": "Gvardiol",
+   "old": 5.6,
+   "new": 5.7,
+   "owned": 21.7,
    "direction": "up"
   },
   {
-   "name": "Hall",
-   "old": 5.1,
-   "new": 5.2,
-   "owned": 14.4,
-   "direction": "up"
-  },
-  {
-   "name": "Ajayi",
-   "old": 4.1,
-   "new": 4.2,
-   "owned": 13.3,
-   "direction": "up"
-  },
-  {
-   "name": "Elanga",
-   "old": 6.1,
-   "new": 6.2,
-   "owned": 11.5,
+   "name": "Tarkowski",
+   "old": 6.0,
+   "new": 6.1,
+   "owned": 12.7,
    "direction": "up"
   },
   {
@@ -233,11 +79,11 @@
    "direction": "up"
   },
   {
-   "name": "Brobbey",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 6.5,
-   "direction": "down"
+   "name": "Tavernier",
+   "old": 6.0,
+   "new": 6.1,
+   "owned": 4.7,
+   "direction": "up"
   },
   {
    "name": "Senesi",
@@ -247,17 +93,31 @@
    "direction": "down"
   },
   {
-   "name": "E.Le Fée",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 4.2,
+   "name": "Roefs",
+   "old": 5.0,
+   "new": 4.9,
+   "owned": 2.8,
    "direction": "down"
   },
   {
-   "name": "Robertson",
-   "old": 4.5,
-   "new": 4.4,
-   "owned": 2.7,
+   "name": "Igor Jesus",
+   "old": 5.9,
+   "new": 5.8,
+   "owned": 2.5,
+   "direction": "down"
+  },
+  {
+   "name": "Mukiele",
+   "old": 5.5,
+   "new": 5.4,
+   "owned": 2.1,
+   "direction": "down"
+  },
+  {
+   "name": "Bruno G.",
+   "old": 6.8,
+   "new": 6.7,
+   "owned": 1.7,
    "direction": "down"
   }
  ],

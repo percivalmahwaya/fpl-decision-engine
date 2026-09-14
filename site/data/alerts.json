@@ -1,18 +1,58 @@
 {
  "prev_snapshot": 29,
- "latest_snapshot": 33,
+ "latest_snapshot": 34,
  "prev_taken_at": "2026-09-12T20:37:58.031880+00:00",
- "latest_taken_at": "2026-09-14T10:38:24.025694+00:00",
+ "latest_taken_at": "2026-09-14T21:52:46.481856+00:00",
  "alerts": [
+  {
+   "element_id": 454,
+   "name": "Elanga",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 10.9,
+   "severity": "CRITICAL",
+   "tag": "OWNED",
+   "message": "RULED OUT (Unspecified injury - Unknown return date)"
+  },
   {
    "element_id": 398,
    "name": "Foden",
    "position": "MID",
    "price": 7.0,
-   "owned": 3.4,
+   "owned": 3.2,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 17 Oct)"
+  },
+  {
+   "element_id": 471,
+   "name": "Milenković",
+   "position": "DEF",
+   "price": 5.5,
+   "owned": 1.4,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hamstring injury - Expected back 11 Oct)"
+  },
+  {
+   "element_id": 441,
+   "name": "Obi",
+   "position": "FWD",
+   "price": 4.5,
+   "owned": 1.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Has joined Willem II on loan for the rest of the season)"
+  },
+  {
+   "element_id": 107,
+   "name": "Furo",
+   "position": "FWD",
+   "price": 4.5,
+   "owned": 1.1,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Unspecified injury - Unknown return date)"
   },
   {
    "element_id": 492,
@@ -33,6 +73,86 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 10 Oct)"
+  },
+  {
+   "element_id": 455,
+   "name": "Tonali",
+   "position": "MID",
+   "price": 5.4,
+   "owned": 2.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Knock - 75% chance of playing)"
+  },
+  {
+   "element_id": 448,
+   "name": "Burn",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.9,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Ankle injury - Expected back 19 Sep"
+  },
+  {
+   "element_id": 269,
+   "name": "Sessegnon",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 405,
+   "name": "N.Gonzalez",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Concussion - 50% chance of playing)"
+  },
+  {
+   "element_id": 474,
+   "name": "Jair Cunha",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 75% -> 50% (Hamstring injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 593,
+   "name": "Dedić",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 2.9,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 506,
+   "name": "Udogie",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 359,
+   "name": "Gomez",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
   }
  ],
  "price_moves": [
@@ -40,63 +160,63 @@
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.8,
-   "owned": 74.8,
+   "owned": 75.0,
    "direction": "up"
   },
   {
    "name": "Rogers",
    "old": 7.6,
    "new": 7.7,
-   "owned": 36.5,
+   "owned": 37.0,
    "direction": "up"
   },
   {
    "name": "Gvardiol",
    "old": 5.6,
    "new": 5.7,
-   "owned": 21.7,
+   "owned": 22.3,
    "direction": "up"
   },
   {
    "name": "Tarkowski",
    "old": 6.0,
    "new": 6.1,
-   "owned": 12.7,
+   "owned": 12.9,
    "direction": "up"
   },
   {
    "name": "Lammens",
    "old": 5.0,
    "new": 4.9,
-   "owned": 11.1,
+   "owned": 10.9,
    "direction": "down"
   },
   {
    "name": "Havertz",
    "old": 7.5,
    "new": 7.6,
-   "owned": 8.0,
+   "owned": 7.9,
    "direction": "up"
   },
   {
    "name": "Tavernier",
    "old": 6.0,
    "new": 6.1,
-   "owned": 4.7,
+   "owned": 5.0,
    "direction": "up"
   },
   {
    "name": "Senesi",
    "old": 5.9,
    "new": 5.8,
-   "owned": 4.2,
+   "owned": 4.1,
    "direction": "down"
   },
   {
    "name": "Roefs",
    "old": 5.0,
    "new": 4.9,
-   "owned": 2.8,
+   "owned": 2.7,
    "direction": "down"
   },
   {

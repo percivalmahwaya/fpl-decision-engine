@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 32,
- "latest_snapshot": 36,
+ "latest_snapshot": 37,
  "prev_taken_at": "2026-09-13T20:53:57.725120+00:00",
- "latest_taken_at": "2026-09-15T17:23:35.925431+00:00",
+ "latest_taken_at": "2026-09-15T19:41:04.699377+00:00",
  "alerts": [
   {
    "element_id": 454,
    "name": "Elanga",
    "position": "MID",
    "price": 6.2,
-   "owned": 9.6,
+   "owned": 9.5,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
@@ -25,16 +25,6 @@
    "message": "RULED OUT (Hamstring injury - Expected back 11 Oct)"
   },
   {
-   "element_id": 441,
-   "name": "Obi",
-   "position": "FWD",
-   "price": 4.5,
-   "owned": 1.2,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Has joined Willem II on loan for the rest of the season)"
-  },
-  {
    "element_id": 107,
    "name": "Furo",
    "position": "FWD",
@@ -45,11 +35,31 @@
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
   },
   {
+   "element_id": 441,
+   "name": "Obi",
+   "position": "FWD",
+   "price": 4.5,
+   "owned": 1.1,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Has joined Willem II on loan for the rest of the season)"
+  },
+  {
+   "element_id": 10,
+   "name": "White",
+   "position": "DEF",
+   "price": 5.5,
+   "owned": 6.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
+  },
+  {
    "element_id": 455,
    "name": "Tonali",
    "position": "MID",
    "price": 5.4,
-   "owned": 2.3,
+   "owned": 2.2,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Knock - 75% chance of playing)"
@@ -65,16 +75,6 @@
    "message": "new news: Ankle injury - Expected back 19 Sep"
   },
   {
-   "element_id": 456,
-   "name": "J.Ramsey",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.4,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 25% (Thigh injury - 25% chance of playing)"
-  },
-  {
    "element_id": 269,
    "name": "Sessegnon",
    "position": "DEF",
@@ -83,6 +83,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 456,
+   "name": "J.Ramsey",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 25% (Thigh injury - 25% chance of playing)"
   },
   {
    "element_id": 405,
@@ -119,7 +129,7 @@
    "name": "Dedić",
    "position": "DEF",
    "price": 4.5,
-   "owned": 2.9,
+   "owned": 2.8,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -160,7 +170,7 @@
    "name": "Gvardiol",
    "old": 5.6,
    "new": 5.7,
-   "owned": 23.0,
+   "owned": 23.1,
    "direction": "up"
   },
   {

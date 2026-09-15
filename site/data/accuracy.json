@@ -4,9 +4,30 @@
   "naive_form",
   "two_stage_ml"
  ],
- "scored": [],
+ "scored": [
+  {
+   "gameweek": 4,
+   "model": "form_fdr",
+   "n": 654,
+   "mae": 1.213,
+   "mae_high_return": 4.572
+  },
+  {
+   "gameweek": 4,
+   "model": "naive_form",
+   "n": 654,
+   "mae": 1.277,
+   "mae_high_return": 4.601
+  },
+  {
+   "gameweek": 4,
+   "model": "two_stage_ml",
+   "n": 656,
+   "mae": 1.126,
+   "mae_high_return": 5.353
+  }
+ ],
  "pending": [
-  4,
   5
  ]
 }

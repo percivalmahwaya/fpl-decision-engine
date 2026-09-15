@@ -14,7 +14,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.59,
+   "ep": 3.38,
    "flagged": false
   },
   {
@@ -30,7 +30,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 0,
-   "ep": 2.84,
+   "ep": 2.72,
    "flagged": false
   },
   {
@@ -39,14 +39,14 @@
    "position": "DEF",
    "club": "MCI",
    "price": 5.5,
-   "owned": 1.8,
+   "owned": 1.9,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.59,
+   "ep": 3.56,
    "flagged": false
   },
   {
@@ -62,39 +62,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.58,
-   "flagged": false
-  },
-  {
-   "name": "Mitchell",
-   "element_id": 204,
-   "position": "DEF",
-   "club": "CRY",
-   "price": 4.5,
-   "owned": 6.4,
-   "status": "a",
-   "chance": null,
-   "news": null,
-   "is_captain": false,
-   "is_vice": false,
-   "started": 1,
-   "ep": 3.31,
-   "flagged": false
-  },
-  {
-   "name": "Thomas",
-   "element_id": 173,
-   "position": "DEF",
-   "club": "COV",
-   "price": 4.0,
-   "owned": 9.0,
-   "status": "a",
-   "chance": null,
-   "news": null,
-   "is_captain": false,
-   "is_vice": false,
-   "started": 0,
-   "ep": 2.59,
+   "ep": 3.3,
    "flagged": false
   },
   {
@@ -110,7 +78,39 @@
    "is_captain": false,
    "is_vice": false,
    "started": 0,
-   "ep": 2.58,
+   "ep": 2.79,
+   "flagged": false
+  },
+  {
+   "name": "Mitchell",
+   "element_id": 204,
+   "position": "DEF",
+   "club": "CRY",
+   "price": 4.5,
+   "owned": 6.4,
+   "status": "a",
+   "chance": null,
+   "news": null,
+   "is_captain": false,
+   "is_vice": false,
+   "started": 1,
+   "ep": 2.42,
+   "flagged": false
+  },
+  {
+   "name": "Thomas",
+   "element_id": 173,
+   "position": "DEF",
+   "club": "COV",
+   "price": 4.0,
+   "owned": 9.0,
+   "status": "a",
+   "chance": null,
+   "news": null,
+   "is_captain": false,
+   "is_vice": false,
+   "started": 0,
+   "ep": 2.38,
    "flagged": false
   },
   {
@@ -119,14 +119,30 @@
    "position": "MID",
    "club": "MUN",
    "price": 12.0,
-   "owned": 41.8,
+   "owned": 41.7,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 5.78,
+   "ep": 5.59,
+   "flagged": false
+  },
+  {
+   "name": "Rogers",
+   "element_id": 40,
+   "position": "MID",
+   "club": "CHE",
+   "price": 7.7,
+   "owned": 37.6,
+   "status": "a",
+   "chance": null,
+   "news": null,
+   "is_captain": false,
+   "is_vice": false,
+   "started": 1,
+   "ep": 4.99,
    "flagged": false
   },
   {
@@ -142,23 +158,7 @@
    "is_captain": true,
    "is_vice": false,
    "started": 1,
-   "ep": 4.75,
-   "flagged": false
-  },
-  {
-   "name": "Rogers",
-   "element_id": 40,
-   "position": "MID",
-   "club": "CHE",
-   "price": 7.7,
-   "owned": 37.4,
-   "status": "a",
-   "chance": null,
-   "news": null,
-   "is_captain": false,
-   "is_vice": false,
-   "started": 1,
-   "ep": 4.52,
+   "ep": 4.77,
    "flagged": false
   },
   {
@@ -167,14 +167,14 @@
    "position": "MID",
    "club": "LIV",
    "price": 7.0,
-   "owned": 36.4,
+   "owned": 36.1,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 4.02,
+   "ep": 4.01,
    "flagged": false
   },
   {
@@ -190,7 +190,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.75,
+   "ep": 3.98,
    "flagged": false
   },
   {
@@ -199,14 +199,14 @@
    "position": "FWD",
    "club": "LIV",
    "price": 9.1,
-   "owned": 22.2,
+   "owned": 22.1,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 4.85,
+   "ep": 4.69,
    "flagged": false
   },
   {
@@ -215,14 +215,14 @@
    "position": "FWD",
    "club": "CHE",
    "price": 7.8,
-   "owned": 75.2,
+   "owned": 75.3,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": true,
    "started": 1,
-   "ep": 4.32,
+   "ep": 4.57,
    "flagged": false
   },
   {
@@ -238,7 +238,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 0,
-   "ep": 4.3,
+   "ep": 4.35,
    "flagged": false
   }
  ],

@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 32,
- "latest_snapshot": 35,
+ "latest_snapshot": 36,
  "prev_taken_at": "2026-09-13T20:53:57.725120+00:00",
- "latest_taken_at": "2026-09-15T10:04:18.317871+00:00",
+ "latest_taken_at": "2026-09-15T17:23:35.925431+00:00",
  "alerts": [
   {
    "element_id": 454,
    "name": "Elanga",
    "position": "MID",
    "price": 6.2,
-   "owned": 10.1,
+   "owned": 9.6,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
@@ -125,6 +125,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 125,
+   "name": "Georginio",
+   "position": "FWD",
+   "price": 5.4,
+   "owned": 0.5,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 506,
    "name": "Udogie",
    "position": "DEF",
@@ -150,14 +160,14 @@
    "name": "Gvardiol",
    "old": 5.6,
    "new": 5.7,
-   "owned": 22.7,
+   "owned": 23.0,
    "direction": "up"
   },
   {
    "name": "Tarkowski",
    "old": 6.0,
    "new": 6.1,
-   "owned": 13.1,
+   "owned": 13.2,
    "direction": "up"
   },
   {
@@ -171,7 +181,7 @@
    "name": "Tavernier",
    "old": 6.0,
    "new": 6.1,
-   "owned": 5.2,
+   "owned": 5.4,
    "direction": "up"
   },
   {
@@ -185,7 +195,7 @@
    "name": "Mukiele",
    "old": 5.5,
    "new": 5.4,
-   "owned": 2.1,
+   "owned": 2.0,
    "direction": "down"
   },
   {
@@ -199,7 +209,7 @@
    "name": "Caicedo",
    "old": 5.4,
    "new": 5.3,
-   "owned": 1.3,
+   "owned": 1.2,
    "direction": "down"
   },
   {

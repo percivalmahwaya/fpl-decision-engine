@@ -1,28 +1,18 @@
 {
- "prev_snapshot": 29,
- "latest_snapshot": 34,
- "prev_taken_at": "2026-09-12T20:37:58.031880+00:00",
- "latest_taken_at": "2026-09-14T21:52:46.481856+00:00",
+ "prev_snapshot": 32,
+ "latest_snapshot": 35,
+ "prev_taken_at": "2026-09-13T20:53:57.725120+00:00",
+ "latest_taken_at": "2026-09-15T10:04:18.317871+00:00",
  "alerts": [
   {
    "element_id": 454,
    "name": "Elanga",
    "position": "MID",
    "price": 6.2,
-   "owned": 10.9,
+   "owned": 10.1,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
-  },
-  {
-   "element_id": 398,
-   "name": "Foden",
-   "position": "MID",
-   "price": 7.0,
-   "owned": 3.2,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Suspended until 17 Oct)"
   },
   {
    "element_id": 471,
@@ -55,26 +45,6 @@
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
   },
   {
-   "element_id": 492,
-   "name": "Awoniyi",
-   "position": "FWD",
-   "price": 5.5,
-   "owned": 0.6,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Suspended until 19 Oct)"
-  },
-  {
-   "element_id": 536,
-   "name": "Reinildo",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.3,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Suspended until 10 Oct)"
-  },
-  {
    "element_id": 455,
    "name": "Tonali",
    "position": "MID",
@@ -89,10 +59,20 @@
    "name": "Burn",
    "position": "DEF",
    "price": 4.9,
-   "owned": 0.9,
+   "owned": 0.8,
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Ankle injury - Expected back 19 Sep"
+  },
+  {
+   "element_id": 456,
+   "name": "J.Ramsey",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.4,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 25% (Thigh injury - 25% chance of playing)"
   },
   {
    "element_id": 269,
@@ -109,7 +89,7 @@
    "name": "N.Gonzalez",
    "position": "MID",
    "price": 5.5,
-   "owned": 0.3,
+   "owned": 0.2,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Concussion - 50% chance of playing)"
@@ -125,6 +105,16 @@
    "message": "worsened 75% -> 50% (Hamstring injury - 50% chance of playing)"
   },
   {
+   "element_id": 104,
+   "name": "Onyeka",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Hand injury - 50% chance of playing)"
+  },
+  {
    "element_id": 593,
    "name": "Dedić",
    "position": "DEF",
@@ -138,7 +128,7 @@
    "element_id": 506,
    "name": "Udogie",
    "position": "DEF",
-   "price": 4.5,
+   "price": 4.4,
    "owned": 0.4,
    "severity": "GOOD",
    "tag": "-",
@@ -157,73 +147,38 @@
  ],
  "price_moves": [
   {
-   "name": "João Pedro",
-   "old": 7.7,
-   "new": 7.8,
-   "owned": 75.0,
-   "direction": "up"
-  },
-  {
-   "name": "Rogers",
-   "old": 7.6,
-   "new": 7.7,
-   "owned": 37.0,
-   "direction": "up"
-  },
-  {
    "name": "Gvardiol",
    "old": 5.6,
    "new": 5.7,
-   "owned": 22.3,
+   "owned": 22.7,
    "direction": "up"
   },
   {
    "name": "Tarkowski",
    "old": 6.0,
    "new": 6.1,
-   "owned": 12.9,
+   "owned": 13.1,
    "direction": "up"
   },
   {
-   "name": "Lammens",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 10.9,
+   "name": "Hughes",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 8.0,
    "direction": "down"
-  },
-  {
-   "name": "Havertz",
-   "old": 7.5,
-   "new": 7.6,
-   "owned": 7.9,
-   "direction": "up"
   },
   {
    "name": "Tavernier",
    "old": 6.0,
    "new": 6.1,
-   "owned": 5.0,
+   "owned": 5.2,
    "direction": "up"
-  },
-  {
-   "name": "Senesi",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 4.1,
-   "direction": "down"
   },
   {
    "name": "Roefs",
    "old": 5.0,
    "new": 4.9,
    "owned": 2.7,
-   "direction": "down"
-  },
-  {
-   "name": "Igor Jesus",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 2.5,
    "direction": "down"
   },
   {
@@ -234,10 +189,45 @@
    "direction": "down"
   },
   {
-   "name": "Bruno G.",
-   "old": 6.8,
-   "new": 6.7,
-   "owned": 1.7,
+   "name": "Tielemans",
+   "old": 5.9,
+   "new": 5.8,
+   "owned": 1.6,
+   "direction": "down"
+  },
+  {
+   "name": "Caicedo",
+   "old": 5.4,
+   "new": 5.3,
+   "owned": 1.3,
+   "direction": "down"
+  },
+  {
+   "name": "Reed",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 1.2,
+   "direction": "down"
+  },
+  {
+   "name": "Solanke",
+   "old": 5.9,
+   "new": 5.8,
+   "owned": 0.9,
+   "direction": "down"
+  },
+  {
+   "name": "Yarmoliuk",
+   "old": 4.9,
+   "new": 4.8,
+   "owned": 0.7,
+   "direction": "down"
+  },
+  {
+   "name": "Hinshelwood",
+   "old": 6.0,
+   "new": 5.9,
+   "owned": 0.7,
    "direction": "down"
   }
  ],

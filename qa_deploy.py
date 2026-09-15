@@ -28,6 +28,7 @@ Usage:
     python qa_deploy.py
 """
 
+import ast
 import json
 import os
 import re
@@ -503,6 +504,95 @@ def qa_app():
         pr = declared(pipeline_reqs)
         ok("pipeline requirements include scikit-learn", "scikit-learn" in pr)
         ok("pipeline requirements include scipy for the optimiser", "scipy" in pr)
+
+    qa_house_rules(source)
+
+
+# --------------------------------------------------------- HOUSE RULES
+
+def qa_house_rules(app_source):
+    """The five rules Percival gave for the interface, enforced.
+
+    These are taste, not correctness, which is exactly why they need a check.
+    Nothing breaks when an emoji creeps back into a heading, so nothing stops
+    it, and six months later the page looks like every other dashboard. The
+    same rules govern Bulawayo Chess Hub and live at the top of its
+    static/css/bch.css.
+
+    Only INTERFACE COPY is scanned. Comments and docstrings may discuss em
+    dashes freely, and this file has to be able to name the thing it bans.
+    """
+    print("\nDESIGN HOUSE RULES")
+
+    css = ROOT / "site" / "assets" / "pfl.css"
+    if not ok("the design system exists", css.exists(),
+              "site/assets/pfl.css is the single source of visual truth"):
+        return
+    css_text = css.read_text(encoding="utf-8")
+
+    ok("the app loads the design system", "pfl.css" in app_source)
+    ok("the house rules are written into the stylesheet",
+       "HOUSE RULES" in css_text,
+       "the rules must survive in the file, not only in someone's memory")
+
+    # Interface copy means string literals. Walk the AST rather than the raw
+    # text so a comment explaining a rule cannot trip the rule.
+    literals = []
+    try:
+        for node in ast.walk(ast.parse(app_source)):
+            if isinstance(node, ast.Constant) and isinstance(node.value, str):
+                literals.append(node.value)
+    except SyntaxError:
+        check("house rules scanned", WARN, "app.py does not parse")
+        return
+
+    # Docstrings are documentation, not interface copy, and this module's own
+    # docstring names the banned characters.
+    copy = "\n".join(s for s in literals if len(s) < 400)
+
+    EM_DASH = "—"
+    EN_DASH = "–"
+    ok("no em dashes in interface copy",
+       EM_DASH not in copy and EN_DASH not in copy,
+       "Percival named this first and it is the most common tell. "
+       "Use a comma, a colon, or two sentences.")
+
+    # Emoji, not every non-ASCII character: player names legitimately carry
+    # accents and this must never flag "Joao Pedro" or "Hornicek".
+    EMOJI = re.compile(
+        "[" "\U0001F300-\U0001FAFF" "\U00002600-\U000027BF"
+        "\U0001F000-\U0001F0FF" "\U0000FE0F" "\U00002B00-\U00002BFF"
+        "\U00002190-\U000021FF" "\U00002700-\U000027BF" "]")
+    # Reported by codepoint, never by printing the character. Printing it
+    # raised UnicodeEncodeError on a Windows cp1252 console and took the whole
+    # suite down with a traceback, so the check that found a real violation
+    # destroyed the report it was supposed to appear in. A codepoint is also
+    # the more useful thing to be told: it is searchable.
+    found = sorted({f"U+{ord(c):04X}" for c in EMOJI.findall(copy + css_text)})
+    ok("no emoji used as icons", not found,
+       f"found {', '.join(found)}. Use a word: a word survives a font "
+       f"fallback, reads correctly in a screen reader, and does not render "
+       f"as an empty box on an older Android handset.")
+
+    # A colour blend, not the function. Flat bands with hard stops are how the
+    # pitch markings and the chess board motif are both drawn.
+    blends = []
+    for m in re.finditer(r"(linear|radial|conic)-gradient\(([^;]*)\)", css_text):
+        body = m.group(2)
+        stops = re.findall(r"(#[0-9a-fA-F]{3,8}|var\(--[\w-]+\)|transparent)"
+                           r"\s+([\d.]+)%", body)
+        # A hard stop repeats the same position for two colours, or uses the
+        # "colour A B%" pairs that tile rather than fade.
+        positions = [p for _, p in stops]
+        if len(positions) >= 2 and len(set(positions)) == len(positions) \
+                and "0 " not in body and not re.search(r"\d%\s+\d", body):
+            blends.append(m.group(0)[:60])
+    ok("no blended gradients in the stylesheet", not blends,
+       f"{blends}. Flat bands with hard stops are fine and are how the pitch "
+       f"markings are drawn. A fade between two colours is not.")
+
+    ok("charts are on the palette", "SERIES" in app_source and "#1f7a3d" in app_source,
+       "Streamlit's default blue belongs to no part of this design")
 
 
 # ------------------------------------------------------------- WORKFLOW

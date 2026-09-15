@@ -1,4 +1,4 @@
-# FPL Decision Engine
+# Progeny FPL Engine
 
 A data-driven decision support system for Fantasy Premier League: predicts player
 points, picks the optimal squad under FPL's rules, recommends a captain, and alerts
@@ -322,6 +322,57 @@ the **deadline is within 26 hours**.
    `player_gw` are regenerable, but the **snapshot series is not** — a gameweek
    of injury-news history that was never captured cannot be recovered. The
    committed `site/data/*.json` is a partial hedge, not a backup.
+
+---
+
+## Design
+
+The front end has a design system, `site/assets/pfl.css`, and it is not
+decoration. Read its header before changing anything visual.
+
+**Structure from the pitch. Colour from the Warriors kit.** Every FPL tool on
+the internet clones the official purple-and-mint palette, and every football
+site reaches for turf green. This one draws chalk-line pitch furniture, which
+renders from flat colour and needs no images, in the Zimbabwe kit colours:
+Warriors green, the gold of the Zimbabwe Bird, flag red held back for genuine
+alarm. Competitive surfaces (captaincy, accuracy) go dark and near monochrome,
+which is the pitch at kick-off. The personal ones (season record, photographs)
+are warm and open.
+
+It is the same method as [Bulawayo Chess Hub](https://github.com/percivalmahwaya/bcaChessHub),
+whose `static/css/bch.css` carries the same five house rules, from the same
+person:
+
+- no em dashes in interface copy
+- no emoji used as icons
+- no gradients at all, meaning no blend between two colours
+- no centred hero with a gradient background and two buttons
+- no row of three feature cards each with an icon in a circle
+
+**`qa_deploy.py` enforces the first three** under `DESIGN HOUSE RULES`. They
+are taste rather than correctness, which is exactly why they need a check:
+nothing breaks when an emoji creeps back into a heading, so nothing stops it.
+Each one is verified to fail by injecting the violation.
+
+### Photographs
+
+```bash
+python tools/optimise_photos.py ~/Pictures/some-folder   # 120 KB each, 4 max
+python tools/make_mark.py                                # regenerate the tab icon
+```
+
+Drop images in `site/assets/photos/` and the "My season" tab shows them. The
+caption is the filename. See that folder's README.
+
+### Weight, honestly
+
+Measured on a phone viewport, first load: **5171 KB, of which 4894 KB is
+Streamlit's own JavaScript.** The stylesheet is 13 KB and loads no fonts, no
+icon set and nothing from a CDN, but that is rearranging deckchairs. Bulawayo
+Chess Hub went from 329 KB to 19 KB; nothing comparable is possible here. It is
+acceptable only because this app has one reader on his own connection. For an
+audience on a metered bundle the answer would not be a lighter stylesheet, it
+would be a different host.
 
 ---
 

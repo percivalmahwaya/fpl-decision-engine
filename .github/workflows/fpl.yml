@@ -169,7 +169,7 @@ jobs:
           secure: false
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
-          from: FPL Decision Engine
+          from: Progeny FPL Engine
           to: ${{ secrets.MAIL_TO }}
           subject: ${{ steps.notify.outputs.subject }}
           body: file://mail_body.txt

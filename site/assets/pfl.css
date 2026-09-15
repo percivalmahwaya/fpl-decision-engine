@@ -1,0 +1,350 @@
+/* ==========================================================================
+   Progeny FPL Engine - design system
+   ==========================================================================
+
+   STRUCTURE FROM THE PITCH. COLOUR FROM THE WARRIORS KIT.
+
+   This is the same method as Bulawayo Chess Hub, applied to football. Read
+   bcaChessHub/static/css/bch.css first if you have not; the reasoning there
+   is the reasoning here, and the house rules at the bottom are identical
+   because they came from the same person.
+
+   THE VISUAL LANGUAGE
+
+   Chess owns the board. Football owns the pitch: chalk lines on mown grass,
+   a halfway line, a centre circle, a penalty box. Like the board it renders
+   from nothing, weighs nothing, and is unmistakable without a single
+   photograph. Every marking in this file is flat colour with hard stops.
+
+   And like the board, we take the structure and reject the usual colours.
+   Every FPL tool on the internet clones the official palette, #37003c purple
+   into #00ff87 mint, and every other football site reaches for turf green.
+   This one uses the Zimbabwe kit Percival actually plays in: Warriors green,
+   the gold of the Zimbabwe Bird, flag red kept back for genuine alarm, on
+   bone. Same recognisable pitch furniture, colours no other FPL tool has.
+
+   TONE FOLLOWS THE REAL THING
+
+   Ninety minutes of football is two different things at once. On the pitch it
+   is tight, quiet, measured, nobody talking. Off it, it is the group photo
+   with the flag. So the competitive surfaces here, the ones carrying
+   predictions and accuracy and captaincy, go dark, dense and near monochrome:
+   that is the pitch at kick-off, where only the numbers matter and the model
+   has to answer for itself. The personal surfaces, the season record and the
+   photographs, are warm and open. Most dashboards pick one tone and flatten
+   everything with it.
+
+   WEIGHT, AND AN HONEST ADMISSION
+
+   Measured on a 390px viewport, first load, nothing cached:
+
+       4894 KB   Streamlit's own JavaScript, 77 requests
+         41 KB   all CSS including this file
+         64 KB   the one photograph
+       5171 KB   total
+
+   So the number that made Bulawayo Chess Hub what it is, 329 KB down to 19 KB,
+   has no equivalent here. Streamlit ships five megabytes of JavaScript before
+   this file is read and there is nothing a stylesheet can do about it.
+
+   Say that plainly rather than pretending otherwise. The reason it is
+   acceptable is that the audiences are different: the Chess Hub is for club
+   players in Bulawayo on metered bundles, while this is read by one person,
+   mostly at home, twice a week. If that ever changes, the honest answer is not
+   a lighter stylesheet, it is a different host. Streamlit is the wrong tool for
+   an audience on a data bundle.
+
+   What this file still owes that audience: no web font, no icon set, no
+   framework, nothing loaded from a CDN. Everything above adds 13 KB. If you
+   are about to add a typeface, price it first and put the number here.
+
+   HOUSE RULES, from Percival directly. Do not reintroduce these:
+     - no em dashes in interface copy
+     - no emoji used as icons
+     - no purple to blue gradients. In fact no gradients at all
+     - no centred hero with a gradient background and two buttons
+     - no row of three feature cards each with an icon in a circle
+
+   On "no gradients": the flat bands and chalk lines below use
+   linear-gradient() purely as a geometry primitive, with hard stops and no
+   blending between colours, exactly as the chess board motif does. A blended
+   fade is what is banned, not the function.
+   ========================================================================== */
+
+/* --------------------------------------------------------------- tokens */
+
+:root {
+  /* The kit. Green pulled deeper and more saturated than turf so it reads as
+     Zimbabwe rather than as grass; gold taken from the bird on the flag. */
+  --pfl-green:    #1f7a3d;
+  --pfl-green-d:  #17602f;
+  --pfl-green-l:  #2e9b52;
+  --pfl-gold:     #d8a222;
+  --pfl-gold-d:   #a97c14;
+
+  /* Flag red. Alarm only: an injury, a failed run, a bypass. Never decoration.
+     If this colour appears anywhere the reader does not need to act, it has
+     been misused and it stops working where it matters. */
+  --pfl-red:      #b3241a;
+
+  /* Ink and chalk. */
+  --pfl-ink:      #14140f;
+  --pfl-slate:    #33332b;
+  --pfl-stone:    #6a6a5f;
+  --pfl-mist:     #a6a69a;
+
+  --pfl-paper:    #faf8f2;
+  --pfl-bone:     #f3f0e6;
+  --pfl-sand:     #e4dfd0;
+  --pfl-sand-l:   #f0ece0;
+  --pfl-white:    #ffffff;
+  --pfl-chalk:    rgba(255, 255, 255, .78);
+
+  /* Mown stripes. Deliberately almost invisible: texture, not a playable
+     pitch. A full strength green stripe at page scale looks like a betting
+     site. */
+  --stripe-a:     var(--pfl-bone);
+  --stripe-b:     var(--pfl-sand-l);
+
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --t-xs:   0.75rem;
+  --t-sm:   0.875rem;
+  --t-base: 1rem;
+  --t-lg:   1.125rem;
+  --t-xl:   1.375rem;
+  --t-2xl:  1.75rem;
+  --t-3xl:  2.25rem;
+
+  --s-1: .25rem;  --s-2: .5rem;   --s-3: .75rem;  --s-4: 1rem;
+  --s-5: 1.5rem;  --s-6: 2rem;    --s-7: 3rem;    --s-8: 4rem;
+
+  --r: 3px;                      /* pitch markings are straight. Barely round. */
+  --line: 1px solid var(--pfl-sand);
+}
+
+/* ------------------------------------------------------- pitch furniture */
+
+/* The touchline, with the halfway mark struck through the middle of it.
+   The gold segment is deliberately narrow and centred: wide gold end caps
+   read as a loading bar, which was the first attempt and looked like one. */
+.pitch-rule {
+  height: 3px;
+  background-color: var(--pfl-green);
+  background-image:
+    linear-gradient(90deg, transparent 0 49.3%, var(--pfl-gold) 49.3% 50.7%,
+                    transparent 50.7% 100%);
+  margin: 0;
+}
+
+/* Mown stripes, for the rare band that wants texture behind it. */
+.pitch-tint {
+  background-color: var(--stripe-a);
+  background-image:
+    linear-gradient(90deg, var(--stripe-b) 50%, transparent 50%);
+  background-size: 56px 100%;
+}
+
+/* The centre circle, used as the brand mark. Pitch furniture, not a logo,
+   which is the honest position for a tool that is one person's side project. */
+.pfl-mark {
+  display: inline-block;
+  width: 15px; height: 15px;
+  border: 2px solid var(--pfl-green);
+  border-radius: 50%;
+  position: relative;
+  margin-right: var(--s-3);
+  vertical-align: -2px;
+}
+.pfl-mark::after {
+  content: ""; position: absolute; inset: 4px;
+  background: var(--pfl-gold); border-radius: 50%;
+}
+
+/* ------------------------------------------------------------- masthead */
+
+.pfl-head {
+  background: var(--pfl-ink);
+  color: var(--pfl-bone);
+  padding: var(--s-5) var(--s-5) var(--s-4);
+  /* No marking drawn here on purpose. A single faint vertical line stood in
+     this rule as a penalty box; rendered, it read as a display artifact
+     rather than as pitch furniture. The centre circle in the h1 already
+     carries the motif, and one piece of furniture is a signature where three
+     would be a theme park. */
+}
+.pfl-head h1 {
+  font-size: var(--t-2xl); font-weight: 700; letter-spacing: -.01em;
+  margin: 0 0 var(--s-2); color: var(--pfl-white); line-height: 1.15;
+}
+.pfl-head .kicker {
+  font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .16em;
+  color: var(--pfl-gold); margin: 0 0 var(--s-3);
+}
+.pfl-head p.lede {
+  font-size: var(--t-sm); color: var(--pfl-mist);
+  margin: 0; max-width: 62ch; line-height: 1.55;
+}
+
+/* ------------------------------------------------------------ stat line */
+
+/* One quiet rule of numbers, not four cards with icons in circles. */
+.pfl-stats {
+  display: flex; flex-wrap: wrap; gap: var(--s-6);
+  padding: var(--s-4) var(--s-5);
+  background: var(--pfl-ink); color: var(--pfl-bone);
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.pfl-stat .k {
+  display: block; font-size: var(--t-xs); text-transform: uppercase;
+  letter-spacing: .1em; color: var(--pfl-mist); margin-bottom: 2px;
+}
+.pfl-stat .v {
+  display: block; font-family: var(--font-mono);
+  font-size: var(--t-xl); font-weight: 700; color: var(--pfl-white);
+  font-variant-numeric: tabular-nums; line-height: 1.1;
+}
+.pfl-stat .v.urgent { color: var(--pfl-gold); }
+.pfl-stat .v.alarm  { color: #ff6b5e; }
+
+/* ---------------------------------------------------------------- panel */
+
+.pfl-panel {
+  border: var(--line); border-radius: var(--r);
+  background: var(--pfl-white); margin-bottom: var(--s-5);
+}
+.pfl-panel > h3 {
+  margin: 0; padding: var(--s-3) var(--s-4);
+  font-size: var(--t-xs); text-transform: uppercase; letter-spacing: .1em;
+  color: var(--pfl-stone); border-bottom: var(--line); font-weight: 700;
+}
+.pfl-panel .body { padding: var(--s-4); }
+
+/* The competitive surface. Dark, dense, monochrome: the pitch at kick-off. */
+.pfl-quiet {
+  background: var(--pfl-ink); color: var(--pfl-bone);
+  border-radius: var(--r); padding: var(--s-5);
+}
+.pfl-quiet h3 { color: var(--pfl-gold); }
+.pfl-quiet .muted { color: var(--pfl-mist); }
+.pfl-quiet .big {
+  font-family: var(--font-mono); font-size: var(--t-3xl); font-weight: 700;
+  color: var(--pfl-white); font-variant-numeric: tabular-nums;
+  line-height: 1.05; display: block;
+}
+.pfl-quiet .sub { font-size: var(--t-sm); color: var(--pfl-mist); }
+
+/* ----------------------------------------------------------------- tags */
+
+/* Text, not emoji. A word is readable by a screen reader, survives a font
+   fallback, and does not render as a black-and-white box on older Android. */
+.tag {
+  display: inline-block; font-size: var(--t-xs); font-weight: 700;
+  text-transform: uppercase; letter-spacing: .07em;
+  padding: 2px var(--s-2); border-radius: 2px; white-space: nowrap;
+}
+.tag-yours  { background: var(--pfl-green);  color: #fff; }
+.tag-doubt  { background: var(--pfl-gold);   color: var(--pfl-ink); }
+.tag-out    { background: var(--pfl-red);    color: #fff; }
+.tag-live   { background: var(--pfl-gold);   color: var(--pfl-ink); }
+.tag-quiet  { background: var(--pfl-sand);   color: var(--pfl-slate); }
+
+/* --------------------------------------------------------- verdict rows */
+
+/* Agreement and disagreement between Percival and the model. This is the
+   argument the whole project exists to have, so it gets its own treatment
+   rather than being folded into a generic alert box. */
+.pfl-verdict {
+  border-left: 3px solid var(--pfl-stone);
+  padding: var(--s-3) var(--s-4); margin: var(--s-3) 0;
+  background: var(--pfl-bone); font-size: var(--t-sm);
+}
+.pfl-verdict.agree  { border-left-color: var(--pfl-green); }
+.pfl-verdict.differ { border-left-color: var(--pfl-gold); }
+.pfl-verdict.tied   { border-left-color: var(--pfl-stone); }
+.pfl-verdict strong { color: var(--pfl-ink); }
+
+/* ---------------------------------------------------------- empty state */
+
+/* Say what will appear here and why it has not. "Coming soon" reads as dead. */
+.pfl-empty {
+  padding: var(--s-6) var(--s-4); text-align: center;
+  color: var(--pfl-stone); font-size: var(--t-sm); line-height: 1.6;
+}
+.pfl-empty strong {
+  display: block; color: var(--pfl-slate); margin-bottom: var(--s-1);
+  font-size: var(--t-base);
+}
+
+/* --------------------------------------------------------------- photos */
+
+/* Rendered with st.image inside st.columns, not as markup of our own. An
+   <img> written into st.markdown is dropped silently by Streamlit, heading
+   and all, which cost an hour to find because nothing is logged. Style the
+   widget instead of replacing it. */
+[data-testid="stImage"] img {
+  height: 180px; width: 100%; object-fit: cover;
+  border-radius: var(--r); display: block;
+}
+[data-testid="stImage"] [data-testid="stImageCaption"],
+[data-testid="stImage"] figcaption {
+  font-size: var(--t-xs); color: var(--pfl-stone);
+  text-align: left; padding-top: var(--s-1);
+}
+
+/* --------------------------------------------------------------- footer */
+
+.pfl-foot {
+  border-top: var(--line); margin-top: var(--s-6);
+  padding: var(--s-4) var(--s-5) var(--s-6);
+  font-size: var(--t-xs); color: var(--pfl-stone); line-height: 1.7;
+}
+.pfl-foot code {
+  font-family: var(--font-mono); background: var(--pfl-sand-l);
+  padding: 1px 4px; border-radius: 2px; color: var(--pfl-slate);
+}
+
+/* =========================================================== Streamlit ==
+   Everything below reaches into Streamlit's own DOM. Those class names and
+   data-testid values are not a public API and do change between releases,
+   so each rule is written to fail soft: if a selector stops matching, the
+   app loses a refinement and keeps working. Nothing structural depends on
+   this block. Check it after any streamlit upgrade.
+   ====================================================================== */
+
+/* Streamlit pads the main container for a page that starts with a title.
+   Ours starts with a full-bleed masthead, so reclaim the top. */
+.block-container { padding-top: 1.2rem !important; max-width: 1280px; }
+
+/* Tabs as a team sheet rather than a row of pills. */
+.stTabs [data-baseweb="tab-list"] {
+  gap: var(--s-5); border-bottom: 2px solid var(--pfl-sand);
+}
+.stTabs [data-baseweb="tab"] {
+  height: auto; padding: var(--s-2) 0; background: transparent;
+  font-size: var(--t-sm); font-weight: 600; color: var(--pfl-stone);
+}
+.stTabs [aria-selected="true"] { color: var(--pfl-ink) !important; }
+.stTabs [data-baseweb="tab-highlight"] { background: var(--pfl-green); }
+
+/* Tables. Tabular numerals so columns of points line up on the decimal,
+   which is the entire reason anyone scans this page. */
+.stDataFrame, .stDataFrame * { font-variant-numeric: tabular-nums; }
+.stDataFrame { font-size: var(--t-sm); }
+
+/* Streamlit's own alert boxes, pulled onto the palette. */
+.stAlert { border-radius: var(--r); font-size: var(--t-sm); }
+
+/* Expander: a quiet disclosure, not a card. */
+.streamlit-expanderHeader, [data-testid="stExpander"] summary {
+  font-size: var(--t-sm); font-weight: 600; color: var(--pfl-slate);
+}
+
+/* Streamlit's running-man and menu add nothing for a single-page dashboard. */
+#MainMenu, footer, [data-testid="stStatusWidget"] { visibility: hidden; }
+
+/* Links keep the kit colour. */
+a, a:visited { color: var(--pfl-green-d); }
+a:hover { color: var(--pfl-green); }

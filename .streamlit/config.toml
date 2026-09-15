@@ -1,0 +1,26 @@
+# Progeny FPL Engine - framework theme
+#
+# Streamlit paints its own chrome (widgets, tabs, dataframes, sliders) before
+# any stylesheet of ours loads. Setting the theme here means those controls are
+# the right colour from the first paint instead of flashing Streamlit red and
+# then being corrected, which is what a CSS-only approach looks like on a slow
+# connection.
+#
+# site/assets/pfl.css does the rest. These four values and that file must agree;
+# they are duplicated because Streamlit's theme cannot read CSS variables.
+
+[theme]
+base                    = "light"
+primaryColor            = "#1f7a3d"   # --pfl-green,  Warriors green
+backgroundColor         = "#faf8f2"   # --pfl-paper
+secondaryBackgroundColor = "#f0ece0"  # --pfl-sand-l, cards, sidebar, table header
+textColor               = "#14140f"   # --pfl-ink
+font                    = "sans serif"
+
+[server]
+# The published JSON is small and refreshed by the pipeline, not by the viewer.
+# No uploads happen here, so the default 200 MB upload buffer is dead weight.
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false

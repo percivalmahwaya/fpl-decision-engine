@@ -399,6 +399,37 @@ def qa_honesty(conn, meta):
         ok("every prediction was made before its deadline", not late,
            f"{len(late)} logged after the deadline")
 
+    # Every gameweek whose fixtures have ALL finished must have actuals loaded.
+    #
+    # `predict.py --backfill` asks the API which gameweeks are finished and
+    # stores each one. If that list comes back short — the API flips `finished`
+    # late, the step is reordered, a request fails — the step prints a tidy
+    # "GW1..GW3 stored" and exits 0 having quietly skipped the gameweek that
+    # just ended. Nothing downstream complains: scoring has nothing to join, so
+    # it says "nothing to score yet", and the published scoreboard stays empty
+    # while every step of the pipeline reports success.
+    #
+    # That is how GW4 sat unscored for days in September 2026 across five
+    # consecutive green runs. Checked against the stored fixture table rather
+    # than the network, so the gate works offline and cannot be fooled by the
+    # same API response that caused the miss.
+    finished_gws = [
+        r[0] for r in conn.execute(
+            """SELECT event FROM fixtures
+               WHERE snapshot_id = (SELECT MAX(snapshot_id) FROM fixtures)
+                 AND event IS NOT NULL
+               GROUP BY event
+               HAVING SUM(CASE WHEN finished THEN 0 ELSE 1 END) = 0""")
+    ]
+    have_actuals = {r[0] for r in conn.execute(
+        "SELECT DISTINCT gameweek FROM player_gw")}
+    missing = sorted(g for g in finished_gws if g not in have_actuals)
+    ok("every finished gameweek has its actual results loaded",
+       not missing,
+       ("GW" + ", GW".join(str(g) for g in missing) + " finished but absent from "
+        "player_gw - predict.py --backfill reported success without storing them")
+       if missing else f"{len(finished_gws)} finished gameweeks, all present")
+
     scored = conn.execute(
         """SELECT COUNT(*) FROM predictions p JOIN player_gw a
              ON a.element_id = p.element_id AND a.gameweek = p.gameweek""").fetchone()[0]
@@ -409,8 +440,15 @@ def qa_honesty(conn, meta):
         ok("scored gameweeks have a positive sample size",
            all(s["n"] > 0 for s in acc["scored"]))
     else:
-        check("accuracy scored", WARN,
-              f"nothing scored yet ({scored} prediction/result joins exist)")
+        # An empty scoreboard is only tolerable while nothing is scorable. Once
+        # a gameweek has both predictions and results, an empty scoreboard is a
+        # failure and not a note: the scoreboard is the product.
+        joinable = sorted(g for g in finished_gws if g in have_actuals and conn.execute(
+            "SELECT 1 FROM predictions WHERE gameweek=? LIMIT 1", (g,)).fetchone())
+        ok("accuracy scored", not joinable,
+           ("GW" + ", GW".join(str(g) for g in joinable) + " have both predictions "
+            "and results, but the published scoreboard is empty")
+           if joinable else f"nothing scorable yet ({scored} prediction/result joins)")
 
 
 # ------------------------------------------------------------------ APP

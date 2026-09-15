@@ -32,16 +32,16 @@
   },
   {
    "gameweek": 4,
-   "points": null,
-   "transfers": 1,
+   "points": 53,
+   "transfers": 0,
    "formation": "3-5-2",
    "decided_by": "gut+model",
    "captain": "Palmer",
-   "captain_points": null,
-   "played": false
+   "captain_points": 10,
+   "played": true
   }
  ],
- "total_points": 180,
- "played": 3,
- "average": 60.0
+ "total_points": 233,
+ "played": 4,
+ "average": 58.2
 }

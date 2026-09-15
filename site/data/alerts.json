@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 32,
- "latest_snapshot": 38,
+ "latest_snapshot": 39,
  "prev_taken_at": "2026-09-13T20:53:57.725120+00:00",
- "latest_taken_at": "2026-09-15T20:53:12.080765+00:00",
+ "latest_taken_at": "2026-09-15T21:23:37.176752+00:00",
  "alerts": [
   {
    "element_id": 454,
@@ -49,7 +49,7 @@
    "name": "White",
    "position": "DEF",
    "price": 5.5,
-   "owned": 6.7,
+   "owned": 6.6,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"

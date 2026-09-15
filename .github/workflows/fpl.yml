@@ -47,6 +47,11 @@ jobs:
       MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
       MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
       MAIL_TO: ${{ secrets.MAIL_TO }}
+      # Job level, not on the one step that fetches with it. qa_deploy.py also
+      # reads this to tell "not configured" apart from "configured and broken",
+      # and scoped to a single step it could not see it: the fetch succeeded
+      # while the QA gate reported the id as unset, in the same run.
+      FPL_ENTRY_ID: ${{ vars.FPL_ENTRY_ID }}
 
     steps:
       - uses: actions/checkout@v5
@@ -116,8 +121,6 @@ jobs:
       # A VARIABLE, not a secret. An entry id is not a credential and every FPL
       # team is already publicly viewable by id.
       - name: Record squad and results
-        env:
-          FPL_ENTRY_ID: ${{ vars.FPL_ENTRY_ID }}
         run: python record_my_team.py
 
       - name: Baseline predictions

@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 32,
- "latest_snapshot": 37,
+ "latest_snapshot": 38,
  "prev_taken_at": "2026-09-13T20:53:57.725120+00:00",
- "latest_taken_at": "2026-09-15T19:41:04.699377+00:00",
+ "latest_taken_at": "2026-09-15T20:53:12.080765+00:00",
  "alerts": [
   {
    "element_id": 454,
    "name": "Elanga",
    "position": "MID",
    "price": 6.2,
-   "owned": 9.5,
+   "owned": 9.4,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
@@ -170,7 +170,7 @@
    "name": "Gvardiol",
    "old": 5.6,
    "new": 5.7,
-   "owned": 23.1,
+   "owned": 23.2,
    "direction": "up"
   },
   {
@@ -191,7 +191,7 @@
    "name": "Tavernier",
    "old": 6.0,
    "new": 6.1,
-   "owned": 5.4,
+   "owned": 5.5,
    "direction": "up"
   },
   {

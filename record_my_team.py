@@ -465,11 +465,27 @@ def verify(conn):
             problems += 1
             continue
 
+        # On a chip week FPL reports event_transfers as 0, because a wildcard
+        # or free hit makes transfers unlimited and free so it does not count
+        # them at all. The transcription recorded the change actually made.
+        # Neither record is wrong; they answer different questions, and
+        # comparing them is meaningless. Found on the first real run of this
+        # check, against GW4, which was a wildcard.
+        chip = None
+        try:
+            chip = get(f"entry/{ENTRY_ID}/event/{gw}/picks/").get("active_chip")
+        except Exception:
+            pass
+
         checks = [
             ("total points", data["total_points"], row[0]),
-            ("transfers", data["transfers"], row[1]),
             ("formation", data["formation"], row[2]),
         ]
+        if chip:
+            print(f"  GW{gw}: chip '{chip}' played, so transfers are not "
+                  f"compared (FPL reports 0 on a chip week)")
+        else:
+            checks.append(("transfers", data["transfers"], row[1]))
         for label, typed, stored in checks:
             # An unplayed gameweek has no transcribed score to compare.
             if typed is None or stored is None:

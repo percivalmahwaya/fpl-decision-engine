@@ -93,7 +93,7 @@ python backfill_history.py --load     # 4 seasons, 113,582 rows
 python predict.py --backfill          # this season's actual results
 
 # 2. Verify everything is sound
-python qa.py --all                    # 33 checks
+python qa.py --all                    # modelling checks
 
 # 3. Get this week's recommendation
 python recommend.py --run             # trains, predicts, logs before the deadline
@@ -121,14 +121,14 @@ are gone unless they were captured at the time. This is why collection is automa
 | `captain.py` | Season-long captaincy simulation | `--run` |
 | `recommend.py` | Live recommendation + logs predictions | `--run` |
 | `optimise.py` | MILP squad / transfer / wildcard | `--squad` `--transfers` `--wildcard` `--free N` `--bank X` `--budget X` `--horizon N` |
-| `record_my_team.py` | Record actual squad + captaincy review | `--show` |
+| `record_my_team.py` | Fetch my own squad, points and captaincy from the FPL API | `--show` `--verify` `--seed` |
 | `alert.py` | Diff snapshots for team-news changes | `--check [--hours N]` `--watch-wildcard` `--watchlist` |
 | `opponent.py` | Opponent-strength features — **tested and rejected**, kept as a documented negative result | *(imported)* |
 | `compare.py` | **Engine vs gut scoreboard** — XI and captaincy, expected then actual | `--gw N` `--fdr` `--score` `--season` |
 | `publish.py` | Database → the small JSON files the web app reads | `--print` |
 | `app.py` | Streamlit front end; reads JSON only, no database, no model | `streamlit run app.py` |
-| `qa.py` | Modelling QA suite (33 checks) | `--all` |
-| `qa_deploy.py` | Deployment QA suite (88 checks) — JSON contract, workflow, app constraints | *(no args)* |
+| `qa.py` | Modelling QA suite | `--all` |
+| `qa_deploy.py` | Deployment QA suite: JSON contract, workflow, app constraints, design house rules, benchmark freshness | *(no args)* |
 
 ---
 
@@ -265,7 +265,31 @@ public repo it is unmetered.
    | `MAIL_PASSWORD` | Google **app password** (not the account password) |
    | `MAIL_TO` | where alerts should arrive |
 
-3. Run the workflow once by hand (Actions → FPL pipeline → Run workflow) to
+3. Add one repository **variable** (Settings → Secrets and variables → Actions
+   → Variables), so the pipeline can fetch your own results:
+
+   | Variable | Value |
+   |---|---|
+   | `FPL_ENTRY_ID` | the number in `fantasy.premierleague.com/entry/NNNNNNN/` when you view your own team |
+
+   ```bash
+   gh variable set FPL_ENTRY_ID --body 1234567
+   ```
+
+   A variable rather than a secret, deliberately: an entry id is not a
+   credential, grants no access, and every FPL team is already publicly
+   readable by id. Making it a secret would only mean the logs say `***` when
+   something goes wrong.
+
+   **Without it the benchmark does not advance.** `record_my_team.py` falls
+   back to a transcription somebody typed from screenshots, `qa_deploy.py`
+   raises a warning, and your own score stays blank on the site for every new
+   gameweek. With it set but failing, `qa_deploy.py` **fails**, because a
+   benchmark that has quietly stopped updating is worse than none: it looks
+   exactly like a season that has not happened yet. That is not hypothetical.
+   It is what this project did from GW4 until 2026-09-15.
+
+4. Run the workflow once by hand (Actions → FPL pipeline → Run workflow) to
    bootstrap the database release.
 
 > **Scheduled workflows are disabled after 60 days of repository inactivity.**

@@ -1,29 +1,93 @@
 """
 Record Percival's actual FPL squad and results, gameweek by gameweek.
 
-WHY THIS MATTERS: this is the benchmark. Any model we build later has to beat
-these decisions, not just beat a naive baseline. Without a record of what you
-actually picked — and what it scored — there's no way to know whether the
-system is helping or just producing confident-looking numbers.
+WHY THIS MATTERS: this is the benchmark. Any model we build has to beat these
+decisions, not just beat a naive baseline. Without a record of what he actually
+picked, and what it scored, there is no way to know whether the system is
+helping or just producing confident-looking numbers.
 
 Team: "Progeny"
-Source: FPL app screenshots, transcribed 2026-09-07.
+
+HOW IT USED TO WORK, AND WHY THAT WAS WRONG
+===========================================
+Until 2026-09-15 the gameweeks below were the ONLY source: a dict transcribed
+by hand from screenshots on 2026-09-07. The pipeline ran this script twice a
+day, and it dutifully rewrote the same four gameweeks every time.
+
+So the workflow step called "Record squad" went green forever while recording
+nothing new. GW4 finished, was scored by every other part of the system, and
+still showed `points: null` on the site, because no code anywhere could learn
+his score without someone editing this file.
+
+That is the same failure this project keeps finding: a step that reports
+success having done nothing. It is now fetched from the FPL API instead.
+
+WHAT IS FETCHED, AND WHAT STILL CANNOT BE
+=========================================
+Two public endpoints, no login and no token:
+
+    entry/{id}/history/          points, transfers, hits, bench points per GW
+    entry/{id}/event/{gw}/picks/ the fifteen picks, captain, vice, multipliers
+
+Picks carry `element` ids directly, which retires the whole name matching
+problem below: FPL web_names are not unique, and matching "Palmer" or
+"Martinez" by name alone silently picked the wrong player more than once.
+
+The one field that cannot be fetched is `decided_by`, because whether a call
+came from instinct or from the engine is a fact about Percival, not about FPL.
+It is kept as a small override map and defaults to "unrecorded".
+
+CONFIGURATION
+=============
+    FPL_ENTRY_ID    his manager id. The number in the URL when he views his
+                    own team: fantasy.premierleague.com/entry/NNNNNNN/event/4
+
+Set as a repository VARIABLE (not a secret): an entry id is not a credential,
+it grants no access, and anyone can already look up any public team with it.
+
+Without it this script falls back to the transcription and says so loudly, and
+qa_deploy.py raises a warning. With it set but failing, qa_deploy.py FAILS,
+because that means the benchmark has silently stopped updating.
 
 Usage:
-    python record_my_team.py            # write the gameweeks below into fpl.db
-    python record_my_team.py --show     # print what's recorded
+    python record_my_team.py           # fetch if FPL_ENTRY_ID is set, else seed
+    python record_my_team.py --seed    # force the hand transcription
+    python record_my_team.py --show    # print what is recorded
+    python record_my_team.py --verify  # compare the API against the transcription
 """
 
+import json
+import os
 import sqlite3
 import sys
+import urllib.error
+import urllib.request
 from pathlib import Path
 
 DB_PATH = Path(__file__).parent / "fpl.db"
+API = "https://fantasy.premierleague.com/api"
+ENTRY_ID = os.environ.get("FPL_ENTRY_ID", "").strip()
 
-# --- The data -------------------------------------------------------------
+# Whether a gameweek was decided by instinct or by the engine. The only field
+# here that is a fact about the manager rather than about FPL, so the only one
+# that cannot be fetched. Add a line when a gameweek is decided differently.
+DECIDED_BY = {
+    1: "gut",
+    2: "gut",
+    3: "gut",
+    4: "gut+model",
+}
+DEFAULT_DECIDED_BY = "unrecorded"
+
+# --- The hand transcription ------------------------------------------------
+# Kept deliberately after the switch to fetching. It is no longer the source of
+# truth; it is the CROSS CHECK. `--verify` scores the API against it, which is
+# how we know the element id mapping and the multiplier arithmetic are right:
+# two independent records of the same four gameweeks, one typed by a human from
+# screenshots and one pulled from the API, agreeing.
+#
 # Each entry: (name, points, started?, is_captain, is_vice)
 # points of None = did not play / no score shown.
-
 GAMEWEEKS = {
     1: {
         "total_points": 53,
@@ -145,6 +209,8 @@ GAMEWEEKS = {
 }
 
 
+# --- Schema ----------------------------------------------------------------
+
 def create_schema(conn):
     conn.executescript(
         """
@@ -153,14 +219,14 @@ def create_schema(conn):
             total_points INTEGER,
             transfers    INTEGER,
             formation    TEXT,
-            decided_by   TEXT DEFAULT 'gut'   -- 'gut' or 'model', so we can compare later
+            decided_by   TEXT DEFAULT 'gut'
         );
 
         CREATE TABLE IF NOT EXISTS my_squad (
             gameweek   INTEGER NOT NULL,
             name       TEXT NOT NULL,
-            element_id INTEGER,               -- matched to the FPL API where possible
-            points     INTEGER,               -- NULL = did not play
+            element_id INTEGER,
+            points     INTEGER,               -- NULL = not yet scored
             started    INTEGER,
             is_captain INTEGER,
             is_vice    INTEGER,
@@ -170,10 +236,134 @@ def create_schema(conn):
     )
 
 
-# FPL web_names are NOT unique. There are two "Palmer" (Cole Palmer MID, and a
-# goalkeeper) and two "Martinez" (Emiliano Martinez GKP, and a defender).
-# Matching on name alone silently picked the wrong player. Position is what
-# disambiguates them, so it is recorded explicitly here.
+# --- The API ---------------------------------------------------------------
+
+def get(path):
+    """One GET against the public FPL API."""
+    req = urllib.request.Request(f"{API}/{path}",
+                                 headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=30) as fh:
+        return json.load(fh)
+
+
+def element_names(conn):
+    """element_id -> (web_name, element_type) from the most recent snapshot."""
+    row = conn.execute("SELECT MAX(snapshot_id) FROM players").fetchone()
+    if not row or row[0] is None:
+        return {}
+    return {
+        eid: (name, pos)
+        for eid, name, pos in conn.execute(
+            "SELECT element_id, web_name, position FROM players WHERE snapshot_id=?",
+            (row[0],))
+    }
+
+
+def actual_points(conn, gw):
+    """element_id -> points actually scored in that gameweek."""
+    return dict(conn.execute(
+        "SELECT element_id, total_points FROM player_gw WHERE gameweek=?", (gw,)))
+
+
+POS_ORDER = {"GKP": 0, "DEF": 1, "MID": 2, "FWD": 3}
+
+
+def formation_of(starters):
+    """'3-5-2' from the outfield starters. Goalkeeper is implied, as in FPL."""
+    counts = {"DEF": 0, "MID": 0, "FWD": 0}
+    for pos in starters:
+        if pos in counts:
+            counts[pos] += 1
+    return f"{counts['DEF']}-{counts['MID']}-{counts['FWD']}"
+
+
+def fetch(conn):
+    """Pull every gameweek this entry has played, and store it.
+
+    Every gameweek is refetched, not just the newest. Bonus points land a day
+    after a match, an appeal can change a score, and FPL occasionally corrects
+    one retrospectively. Fetching only the latest would freeze whatever was
+    true at the moment of the first read.
+    """
+    if not ENTRY_ID:
+        return False
+
+    try:
+        history = get(f"entry/{ENTRY_ID}/history/")
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as ex:
+        print(f"  COULD NOT REACH THE FPL API for entry {ENTRY_ID}: {ex}")
+        print("  Nothing written. The benchmark is now stale, and qa_deploy.py "
+              "will fail on it rather than let that pass quietly.")
+        return False
+
+    played = history.get("current", [])
+    if not played:
+        print(f"  Entry {ENTRY_ID} has no gameweeks yet.")
+        return True
+
+    names = element_names(conn)
+    print(f"  Entry {ENTRY_ID}: {len(played)} gameweek(s) reported by the API.")
+
+    for row in played:
+        gw = row["event"]
+        try:
+            picks = get(f"entry/{ENTRY_ID}/event/{gw}/picks/")
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as ex:
+            print(f"  GW{gw}: picks unavailable ({ex}), skipped")
+            continue
+
+        scored = actual_points(conn, gw)
+        starters = []
+        squad_rows = []
+
+        for p in picks.get("picks", []):
+            eid = p["element"]
+            name, pos = names.get(eid, (f"element {eid}", None))
+            mult = p.get("multiplier", 0)
+            started = 1 if mult > 0 else 0
+            if started and pos:
+                starters.append(pos)
+
+            # The FPL app shows a captain's points already doubled, and the
+            # hand transcription copied what the app showed. Multiplying here
+            # keeps the two records comparable, and keeps a triple captain
+            # honest too.
+            raw = scored.get(eid)
+            pts = None if raw is None else raw * max(mult, 1) if started else raw
+
+            squad_rows.append((gw, name, eid, pts, started,
+                               1 if p.get("is_captain") else 0,
+                               1 if p.get("is_vice_captain") else 0))
+
+        conn.execute("DELETE FROM my_squad WHERE gameweek=?", (gw,))
+        conn.executemany(
+            "INSERT INTO my_squad (gameweek, name, element_id, points, started,"
+            " is_captain, is_vice) VALUES (?,?,?,?,?,?,?)", squad_rows)
+
+        # event_transfers_cost is the hit, in points. Recorded as transfers
+        # made; the cost shows up in total_points already.
+        conn.execute(
+            "INSERT OR REPLACE INTO my_gameweeks"
+            " (gameweek, total_points, transfers, formation, decided_by)"
+            " VALUES (?,?,?,?,?)",
+            (gw, row.get("points"), row.get("event_transfers"),
+             formation_of(starters),
+             DECIDED_BY.get(gw, DEFAULT_DECIDED_BY)))
+
+        chip = picks.get("active_chip")
+        unscored = sum(1 for r in squad_rows if r[3] is None)
+        print(f"  GW{gw}: {row.get('points')} pts, "
+              f"{row.get('event_transfers')} transfer(s), "
+              f"{formation_of(starters)}"
+              + (f", chip {chip}" if chip else "")
+              + (f", {unscored} player(s) not yet scored" if unscored else ""))
+
+    conn.commit()
+    return True
+
+
+# --- The hand transcription, as a fallback and as a cross check -------------
+
 POSITIONS = {
     "Martinez": "GKP", "Phillips": "GKP",
     "Virgil": "DEF", "Cash": "DEF", "Shaw": "DEF", "Hall": "DEF",
@@ -181,7 +371,6 @@ POSITIONS = {
     "B.Fernandes": "MID", "Palmer": "MID", "Szoboszlai": "MID",
     "Mbeumo": "MID", "Rice": "MID",
     "Wood": "FWD", "João Pedro": "FWD", "Havertz": "FWD", "Gyökeres": "FWD",
-    # post-wildcard arrivals (GW4)
     "Pickford": "GKP", "Horníček": "GKP",
     "Thomas": "DEF", "Mitchell": "DEF", "Davis": "DEF", "Rúben": "DEF",
     "Rogers": "MID", "Gakpo": "MID", "Wirtz": "MID",
@@ -189,38 +378,57 @@ POSITIONS = {
 }
 
 
-def match_element_ids(conn):
-    """
-    Link squad names to FPL element_ids.
+def seed(conn):
+    """Write the hand transcription. Used only when there is no entry id."""
+    for gw, data in GAMEWEEKS.items():
+        conn.execute(
+            "INSERT OR REPLACE INTO my_gameweeks"
+            " (gameweek, total_points, transfers, formation, decided_by)"
+            " VALUES (?,?,?,?,?)",
+            (gw, data["total_points"], data["transfers"], data["formation"],
+             DECIDED_BY.get(gw, DEFAULT_DECIDED_BY)))
+        for name, pts, started, cap, vice in data["squad"]:
+            conn.execute(
+                "INSERT OR REPLACE INTO my_squad"
+                " (gameweek, name, element_id, points, started, is_captain, is_vice)"
+                " VALUES (?,?,?,?,?,?,?)",
+                (gw, name, None, pts, int(started), int(cap), int(vice)))
+    conn.commit()
+    match_element_ids(conn)
+    print(f"  Seeded {len(GAMEWEEKS)} transcribed gameweek(s).")
 
-    Must match on (web_name, position). Name alone is ambiguous — see POSITIONS
-    above. If a name is still ambiguous after adding position, we refuse to
-    guess and report it, because a silent wrong match corrupts every downstream
-    join without ever looking broken.
+
+def match_element_ids(conn):
+    """Link transcribed names to element_ids.
+
+    Only needed for the seeded path. Fetched picks carry element ids already,
+    which is the entire reason fetching is better: FPL web_names are not
+    unique, there are two "Palmer" and two "Martinez", and matching on name
+    alone silently picked the wrong player.
     """
     row = conn.execute("SELECT MAX(snapshot_id) FROM players").fetchone()
     if not row or row[0] is None:
-        print("  (no snapshot yet — run fpl_collect.py first to enable ID matching)")
+        print("  (no snapshot yet, run fpl_collect.py first to enable matching)")
         return
     snap = row[0]
 
     unmatched, ambiguous, fixed = [], [], 0
-    for (name,) in conn.execute("SELECT DISTINCT name FROM my_squad").fetchall():
+    for (name,) in conn.execute(
+            "SELECT DISTINCT name FROM my_squad WHERE element_id IS NULL").fetchall():
         pos = POSITIONS.get(name)
         if pos:
             cands = conn.execute(
-                "SELECT element_id, price FROM players"
+                "SELECT element_id FROM players"
                 " WHERE snapshot_id=? AND web_name=? AND position=?",
-                (snap, name, pos),
-            ).fetchall()
+                (snap, name, pos)).fetchall()
         else:
             cands = conn.execute(
-                "SELECT element_id, price FROM players WHERE snapshot_id=? AND web_name=?",
-                (snap, name),
-            ).fetchall()
+                "SELECT element_id FROM players WHERE snapshot_id=? AND web_name=?",
+                (snap, name)).fetchall()
 
         if len(cands) == 1:
-            conn.execute("UPDATE my_squad SET element_id=? WHERE name=?", (cands[0][0], name))
+            conn.execute("UPDATE my_squad SET element_id=? WHERE name=? "
+                         "AND element_id IS NULL", (cands[0][0], name))
             fixed += 1
         elif len(cands) > 1:
             ambiguous.append(f"{name} ({len(cands)} candidates)")
@@ -228,114 +436,124 @@ def match_element_ids(conn):
             unmatched.append(name)
 
     conn.commit()
-    print(f"  Matched {fixed} players by (name, position).")
+    print(f"  Matched {fixed} player(s) by (name, position).")
     if ambiguous:
         print(f"  AMBIGUOUS, not guessed: {', '.join(ambiguous)}")
     if unmatched:
         print(f"  Could not match: {', '.join(unmatched)}")
 
 
-def record(conn):
-    for gw, data in GAMEWEEKS.items():
-        conn.execute(
-            "INSERT OR REPLACE INTO my_gameweeks (gameweek, total_points, transfers, formation, decided_by)"
-            " VALUES (?,?,?,?,?)",
-            (gw, data["total_points"], data["transfers"], data["formation"],
-             data.get("decided_by", "gut")),
-        )
-        # Clear the gameweek before rewriting it. INSERT OR REPLACE is keyed on
-        # (gameweek, name), so a player REMOVED from the squad is not replaced
-        # by anything and simply survives — after the Gakpo -> Wirtz transfer
-        # that would have left a 16-man squad, quietly breaking the shape check
-        # and every "who do I own?" query downstream.
-        conn.execute("DELETE FROM my_squad WHERE gameweek = ?", (gw,))
-        conn.executemany(
-            "INSERT OR REPLACE INTO my_squad (gameweek, name, points, started, is_captain, is_vice)"
-            " VALUES (?,?,?,?,?,?)",
-            # `started` stays NULL for a gameweek whose XI has not been picked
-            # yet — int(None) would raise, and 0 would be a lie.
-            [(gw, n, p, None if s is None else int(s), int(c), int(v))
-             for (n, p, s, c, v) in data["squad"]],
-        )
-    conn.commit()
-    print(f"  Recorded {len(GAMEWEEKS)} gameweeks.")
-    match_element_ids(conn)
+def verify(conn):
+    """Score what the API returned against what was typed from screenshots.
 
+    Two independent records of the same gameweeks. If they agree, the element
+    id mapping and the captain multiplier arithmetic are right. If they do not,
+    one of them is wrong and it matters which.
+    """
+    if not ENTRY_ID:
+        print("  FPL_ENTRY_ID is not set, so there is nothing to verify against.")
+        return 1
+
+    print("\nAPI versus the hand transcription\n")
+    problems = 0
+    for gw, data in sorted(GAMEWEEKS.items()):
+        row = conn.execute(
+            "SELECT total_points, transfers, formation FROM my_gameweeks"
+            " WHERE gameweek=?", (gw,)).fetchone()
+        if not row:
+            print(f"  GW{gw}: not in the database at all")
+            problems += 1
+            continue
+
+        checks = [
+            ("total points", data["total_points"], row[0]),
+            ("transfers", data["transfers"], row[1]),
+            ("formation", data["formation"], row[2]),
+        ]
+        for label, typed, stored in checks:
+            # An unplayed gameweek has no transcribed score to compare.
+            if typed is None or stored is None:
+                continue
+            if str(typed) != str(stored):
+                print(f"  GW{gw} {label}: transcribed {typed!r}, API {stored!r}")
+                problems += 1
+
+        typed_caps = {n for n, _, _, c, _ in data["squad"] if c}
+        stored_caps = {n for (n,) in conn.execute(
+            "SELECT name FROM my_squad WHERE gameweek=? AND is_captain=1", (gw,))}
+        if typed_caps and stored_caps and typed_caps != stored_caps:
+            print(f"  GW{gw} captain: transcribed {typed_caps}, API {stored_caps}")
+            problems += 1
+
+    if problems:
+        print(f"\n  {problems} disagreement(s). One of the two records is wrong.")
+    else:
+        print("  Every transcribed gameweek agrees with the API.")
+    return 1 if problems else 0
+
+
+# --- Reporting -------------------------------------------------------------
 
 def show(conn):
     rows = conn.execute(
-        "SELECT gameweek, total_points, transfers, formation FROM my_gameweeks ORDER BY gameweek"
-    ).fetchall()
+        "SELECT gameweek, total_points, transfers, formation, decided_by"
+        " FROM my_gameweeks ORDER BY gameweek").fetchall()
     if not rows:
-        print("Nothing recorded yet. Run: python record_my_team.py")
+        print("Nothing recorded.")
         return
 
-    # A gameweek that has not been played yet has no points and must not be
-    # averaged in — otherwise the season average silently drops every time a
-    # forthcoming squad is recorded.
-    played = [r for r in rows if r[1] is not None]
-    total = sum(r[1] for r in played)
-
-    print("PROGENY - season so far (all decisions made on gut feel)\n")
-    print(f"  {'GW':<4}{'Points':>8}{'Transfers':>11}  Formation   Captain (pts)")
-    for gw, pts, tr, form in rows:
+    print(f"\n{'GW':>3}  {'PTS':>4}  {'TR':>3}  {'FORMATION':<10} {'DECIDED BY':<12} CAPTAIN")
+    print("  " + "-" * 62)
+    total = 0
+    played = 0
+    for gw, pts, tr, form, by in rows:
         cap = conn.execute(
-            "SELECT name, points FROM my_squad WHERE gameweek=? AND is_captain=1", (gw,)
-        ).fetchone()
-        if cap:
-            cap_s = f"{cap[0]} ({cap[1]})" if cap[1] is not None else f"{cap[0]} (pending)"
-        else:
-            cap_s = "-"
-        pts_s = "  --" if pts is None else str(pts)
-        print(f"  {gw:<4}{pts_s:>8}{tr:>11}  {(form or 'not set'):<11} {cap_s}")
-
+            "SELECT name, points FROM my_squad WHERE gameweek=? AND is_captain=1",
+            (gw,)).fetchone()
+        cap_txt = f"{cap[0]} ({cap[1]})" if cap and cap[1] is not None else (
+            cap[0] if cap else "none")
+        print(f"{gw:>3}  {'' if pts is None else pts:>4}  {tr:>3}  "
+              f"{form or '':<10} {by or '':<12} {cap_txt}")
+        if pts is not None:
+            total += pts
+            played += 1
+    print("  " + "-" * 62)
     if played:
-        print(f"\n  Total: {total} pts over {len(played)} GWs"
-              f"   |   Average: {total/len(played):.1f} per GW")
-    if len(rows) > len(played):
-        pending = [str(r[0]) for r in rows if r[1] is None]
-        print(f"  GW{', GW'.join(pending)} recorded but not yet played.")
-
-    print("\n  Captaincy review (the biggest single lever in FPL):")
-    total_lost = 0
-    for gw, pts, _, _ in rows:
-        # Compare RAW scores. The captain's stored points are already doubled,
-        # so halve them; everyone else's are already raw. Comparing a halved
-        # captain against other players' displayed scores is not like-for-like.
-        squad = conn.execute(
-            "SELECT name, points, is_captain FROM my_squad"
-            " WHERE gameweek=? AND started=1 AND points IS NOT NULL", (gw,)
-        ).fetchall()
-        if not squad:
-            continue
-        raws = [(n, (p / 2 if c else p)) for n, p, c in squad]
-        cap = next(((n, r) for (n, r), (_, _, c) in zip(raws, squad) if c), None)
-        if not cap:
-            continue
-        best_name, best_raw = max(raws, key=lambda x: x[1])
-        lost = 2 * (best_raw - cap[1])
-        total_lost += lost
-        if lost <= 0:
-            note = "optimal choice"
-        else:
-            note = f"{best_name} raw {best_raw:.0f} would have given +{lost:.0f}"
-        print(f"    GW{gw}: {cap[0]:<14} raw {cap[1]:>4.0f}  ->  {note}")
-    print(f"\n    Points left on the table by captaincy alone: {total_lost:.0f}")
+        print(f"  {played} gameweek(s) scored, {total} points, "
+              f"{total / played:.1f} average\n")
 
 
 def main():
     conn = sqlite3.connect(DB_PATH)
     try:
         create_schema(conn)
+
         if "--show" in sys.argv:
             show(conn)
+            return 0
+        if "--verify" in sys.argv:
+            return verify(conn)
+
+        if "--seed" in sys.argv:
+            seed(conn)
+        elif ENTRY_ID:
+            if not fetch(conn):
+                return 1
         else:
-            record(conn)
-            print()
-            show(conn)
+            # Loud on purpose. The whole reason this file was rewritten is that
+            # it used to do nothing in silence, twice a day, for over a week.
+            print("  FPL_ENTRY_ID IS NOT SET.")
+            print("  Falling back to the hand transcription, which means this")
+            print("  benchmark stops at the last gameweek somebody typed in by")
+            print("  hand and will never learn a new score on its own.")
+            print("  Set it to the number in fantasy.premierleague.com/entry/NNNNNNN/")
+            seed(conn)
+
+        show(conn)
+        return 0
     finally:
         conn.close()
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

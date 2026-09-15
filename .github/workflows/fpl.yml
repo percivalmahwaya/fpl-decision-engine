@@ -97,16 +97,28 @@ jobs:
       - name: Take snapshot
         run: python fpl_collect.py
 
-      # Your squad is version-controlled inside record_my_team.py, not in the
-      # database, so a rebuilt database has no my_squad at all — which is how
-      # the first cloud run of the alerter died. Replaying it here makes the
-      # database reproducible from the repo alone, and must come AFTER the
-      # snapshot because element ids are matched against it.
-      - name: Record squad
-        run: python record_my_team.py
-
       - name: Backfill finished gameweek results
         run: python predict.py --backfill
+
+      # MUST run after the backfill. What each pick actually scored lives in
+      # player_gw, which the step above fills, and this step reads it. Ordered
+      # the other way round, as it was until 2026-09-15, a freshly finished
+      # gameweek is always recorded with null scores and only corrects itself
+      # on the next run twelve hours later.
+      #
+      # FPL_ENTRY_ID turns this from replaying a hand transcription into a real
+      # fetch of his own team. Without it the script says so loudly and
+      # qa_deploy raises a warning; with it set but failing, qa_deploy FAILS,
+      # because a benchmark that has silently stopped updating is worse than no
+      # benchmark at all. That is precisely what happened here: this step went
+      # green twice a day for over a week while recording nothing new.
+      #
+      # A VARIABLE, not a secret. An entry id is not a credential and every FPL
+      # team is already publicly viewable by id.
+      - name: Record squad and results
+        env:
+          FPL_ENTRY_ID: ${{ vars.FPL_ENTRY_ID }}
+        run: python record_my_team.py
 
       - name: Baseline predictions
         run: python predict.py --predict

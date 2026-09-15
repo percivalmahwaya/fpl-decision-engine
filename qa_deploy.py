@@ -377,6 +377,78 @@ def qa_consistency(conn, meta, squad):
            not mismatched, f"{mismatched[:5]}" if mismatched else "")
 
 
+def qa_benchmark(conn):
+    """Is the record of Percival's own results still being updated?
+
+    This is the benchmark the whole project is measured against: GW1 to GW3
+    were picked on instinct, and anything the engine produces has to beat them.
+    A benchmark that quietly stops advancing does not look broken. It looks
+    like a season that has not happened yet.
+
+    And it did stop. record_my_team.py was a dict transcribed from screenshots
+    on 2026-09-07, replayed by the pipeline twice a day. The workflow step was
+    called "Record squad", reported success every run, and could not have
+    learned a new score without somebody editing the file. GW4 finished, was
+    scored by every other part of the system, and sat at null here for days.
+    """
+    print("\nBENCHMARK (my own results)")
+
+    finished = [
+        r[0] for r in conn.execute(
+            """SELECT event FROM fixtures
+               WHERE snapshot_id = (SELECT MAX(snapshot_id) FROM fixtures)
+                 AND event IS NOT NULL
+               GROUP BY event
+               HAVING SUM(CASE WHEN finished THEN 0 ELSE 1 END) = 0""")
+    ]
+    if not finished:
+        check("benchmark is current", PASS, "no finished gameweeks yet")
+        return
+
+    recorded = dict(conn.execute(
+        "SELECT gameweek, total_points FROM my_gameweeks"))
+    missing = sorted(g for g in finished
+                     if recorded.get(g) is None)
+
+    entry_id = os.environ.get("FPL_ENTRY_ID", "").strip()
+
+    if not entry_id:
+        # Unconfigured is a warning, not a failure: the rest of the engine
+        # still works and still has something useful to say. Configured but
+        # broken is a failure, below, because that is a silent regression.
+        check("benchmark is fetched, not transcribed", WARN,
+              "FPL_ENTRY_ID is not set, so my own results are replayed from a "
+              "hand transcription and stop at the last gameweek somebody typed "
+              "in. Set it as a repository variable to the number in "
+              "fantasy.premierleague.com/entry/NNNNNNN/")
+        check("every finished gameweek has my score",
+              PASS if not missing else WARN,
+              f"GW{', GW'.join(str(g) for g in missing)} finished but unscored "
+              f"here, which follows from the line above" if missing
+              else f"{len(finished)} finished gameweeks, all recorded")
+        return
+
+    ok("benchmark is fetched, not transcribed", True,
+       f"FPL_ENTRY_ID is set to {entry_id}")
+    ok("every finished gameweek has my score", not missing,
+       (f"GW{', GW'.join(str(g) for g in missing)} finished but carries no "
+        f"total_points. FPL_ENTRY_ID is set, so the fetch itself is failing "
+        f"and the benchmark has silently stopped advancing.")
+       if missing else f"{len(finished)} finished gameweeks, all recorded")
+
+    # A squad with no points at all, after the gameweek is over, means the
+    # picks were stored but never joined to what they scored.
+    for gw in finished:
+        n = conn.execute(
+            "SELECT COUNT(*) FROM my_squad WHERE gameweek=? AND points IS NOT NULL",
+            (gw,)).fetchone()[0]
+        total = conn.execute(
+            "SELECT COUNT(*) FROM my_squad WHERE gameweek=?", (gw,)).fetchone()[0]
+        if total:
+            ok(f"GW{gw} picks are joined to their scores", n > 0,
+               "" if n else f"{total} picks stored, not one carrying points")
+
+
 def qa_honesty(conn, meta):
     print("\nHONESTY OF THE PREDICTION LOG")
 
@@ -790,6 +862,7 @@ def main():
         try:
             qa_consistency(conn, meta, squad)
             qa_honesty(conn, meta)
+            qa_benchmark(conn)
         finally:
             conn.close()
     else:

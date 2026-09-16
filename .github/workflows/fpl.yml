@@ -145,6 +145,18 @@ jobs:
           python qa.py --all
           python qa_deploy.py
 
+      # Retries on a rejected push.
+      #
+      # The push was bare, so any commit landing on main between this run's
+      # checkout and its push lost the run: the step failed, the pipeline went
+      # red, and that gameweek's published JSON was simply not committed. It
+      # happened on 2026-09-15 when a scheduled run collided with a push from
+      # a laptop. Harmless in itself, since the next run republishes, but a
+      # pipeline that goes red for a benign race is a pipeline people learn to
+      # ignore, and this one is the gate in front of the email.
+      #
+      # Rebase rather than merge: these are data commits on top of whatever is
+      # on main, never a divergent history worth a merge commit.
       - name: Commit published data
         run: |
           git config user.name  "github-actions[bot]"
@@ -152,10 +164,23 @@ jobs:
           git add site/data
           if git diff --staged --quiet; then
             echo "Nothing changed."
-          else
-            git commit -m "data: GW${{ github.run_number }} refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
-            git push
+            exit 0
           fi
+          git commit -m "data: GW${{ github.run_number }} refresh $(date -u +'%Y-%m-%d %H:%M UTC')"
+          for attempt in 1 2 3; do
+            if git push; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt. Rebasing onto origin/main."
+            git pull --rebase --autostash origin main || {
+              echo "Rebase failed. Refusing to force. The next run republishes."
+              exit 1
+            }
+            sleep $((attempt * 5))
+          done
+          echo "Still rejected after 3 attempts."
+          exit 1
 
       - name: Store database back to release
         run: |

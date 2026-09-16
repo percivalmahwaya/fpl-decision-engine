@@ -1,15 +1,25 @@
 {
  "prev_snapshot": 34,
- "latest_snapshot": 42,
+ "latest_snapshot": 43,
  "prev_taken_at": "2026-09-14T21:52:46.481856+00:00",
- "latest_taken_at": "2026-09-16T09:56:54.949666+00:00",
+ "latest_taken_at": "2026-09-16T21:22:14.054825+00:00",
  "alerts": [
+  {
+   "element_id": 165,
+   "name": "João Pedro",
+   "position": "FWD",
+   "price": 7.8,
+   "owned": 75.2,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
   {
    "element_id": 10,
    "name": "White",
    "position": "DEF",
    "price": 5.5,
-   "owned": 6.5,
+   "owned": 6.3,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
@@ -25,14 +35,44 @@
    "message": "worsened 100% -> 25% (Thigh injury - 25% chance of playing)"
   },
   {
-   "element_id": 104,
-   "name": "Onyeka",
+   "element_id": 54,
+   "name": "Gomes",
    "position": "MID",
-   "price": 4.9,
-   "owned": 0.1,
+   "price": 5.5,
+   "owned": 0.0,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 50% (Hand injury - 50% chance of playing)"
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 246,
+   "name": "Röhl",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 32,
+   "name": "Cash",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 5.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 208,
+   "name": "Sarr",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 0.6,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
   },
   {
    "element_id": 125,
@@ -43,6 +83,16 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 359,
+   "name": "Gomez",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -50,14 +100,14 @@
    "name": "Groß",
    "old": 5.6,
    "new": 5.7,
-   "owned": 19.1,
+   "owned": 19.4,
    "direction": "up"
   },
   {
    "name": "Gibbs-White",
    "old": 7.9,
    "new": 8.0,
-   "owned": 12.5,
+   "owned": 12.8,
    "direction": "up"
   },
   {
@@ -71,28 +121,28 @@
    "name": "Schade",
    "old": 6.0,
    "new": 6.1,
-   "owned": 6.2,
+   "owned": 6.4,
    "direction": "up"
   },
   {
    "name": "Cash",
    "old": 4.5,
    "new": 4.4,
-   "owned": 5.3,
+   "owned": 5.2,
    "direction": "down"
   },
   {
    "name": "Belloumi",
    "old": 5.0,
    "new": 5.1,
-   "owned": 3.3,
+   "owned": 3.4,
    "direction": "up"
   },
   {
    "name": "Mosquera",
    "old": 5.4,
    "new": 5.3,
-   "owned": 2.0,
+   "owned": 1.9,
    "direction": "down"
   },
   {
@@ -131,7 +181,18 @@
    "direction": "down"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 165,
+   "name": "João Pedro",
+   "position": "FWD",
+   "price": 7.8,
+   "owned": 75.2,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

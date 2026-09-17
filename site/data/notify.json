@@ -1,8 +1,9 @@
 {
  "should_email": true,
  "reasons": [
-  "1 squad/watchlist change(s)"
+  "1 squad/watchlist change(s)",
+  "GW5 deadline in 20h"
  ],
- "subject": "FPL: 1 squad/watchlist change(s)",
- "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] WARNING  João Pedro (FWD)  worsened 100% -> 75% (Unspecified injury - 75% chance of playing)\n\nFLAGGED IN YOUR SQUAD:\n  João Pedro (FWD) chance 75% — Unspecified injury - 75% chance of playing\n\nCAPTAIN — model says B.Fernandes (5.59 xPts).\n  You have Palmer recorded. Model disagrees.\n\nSnapshot #44 at 2026-09-17T09:59:19.466147+00:00"
+ "subject": "FPL: 1 squad/watchlist change(s); GW5 deadline in 20h",
+ "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] WARNING  João Pedro (FWD)  worsened 100% -> 75% (Unspecified injury - 75% chance of playing)\n\nDEADLINE — GW5 in 20.1 hours (2026-09-18T17:30:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  João Pedro (FWD) chance 75% — Unspecified injury - 75% chance of playing\n\nCAPTAIN — model says B.Fernandes (5.59 xPts).\n  You have Palmer recorded. Model disagrees.\n\nSnapshot #45 at 2026-09-17T21:26:50.819758+00:00"
 }

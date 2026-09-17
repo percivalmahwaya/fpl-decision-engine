@@ -1,38 +1,48 @@
 {
- "prev_snapshot": 34,
- "latest_snapshot": 43,
- "prev_taken_at": "2026-09-14T21:52:46.481856+00:00",
- "latest_taken_at": "2026-09-16T21:22:14.054825+00:00",
+ "prev_snapshot": 40,
+ "latest_snapshot": 44,
+ "prev_taken_at": "2026-09-15T21:26:38.991534+00:00",
+ "latest_taken_at": "2026-09-17T09:59:19.466147+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.8,
-   "owned": 75.2,
+   "owned": 74.5,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
-   "element_id": 10,
-   "name": "White",
+   "element_id": 182,
+   "name": "Amenda",
    "position": "DEF",
-   "price": 5.5,
-   "owned": 6.3,
+   "price": 4.0,
+   "owned": 0.7,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
+   "message": "worsened 100% -> 50% (Calf injury - 50% chance of playing)"
   },
   {
-   "element_id": 456,
-   "name": "J.Ramsey",
+   "element_id": 244,
+   "name": "Armstrong",
    "position": "MID",
-   "price": 4.9,
-   "owned": 0.3,
+   "price": 5.0,
+   "owned": 0.4,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 25% (Thigh injury - 25% chance of playing)"
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 29,
+   "name": "M.Bizot",
+   "position": "GKP",
+   "price": 4.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
   },
   {
    "element_id": 54,
@@ -75,11 +85,11 @@
    "message": "improved 0% -> 50%"
   },
   {
-   "element_id": 125,
-   "name": "Georginio",
-   "position": "FWD",
-   "price": 5.4,
-   "owned": 0.5,
+   "element_id": 104,
+   "name": "Onyeka",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -97,31 +107,31 @@
  ],
  "price_moves": [
   {
+   "name": "De Cuyper",
+   "old": 4.8,
+   "new": 4.9,
+   "owned": 24.1,
+   "direction": "up"
+  },
+  {
    "name": "Groß",
    "old": 5.6,
    "new": 5.7,
-   "owned": 19.4,
+   "owned": 19.6,
    "direction": "up"
   },
   {
    "name": "Gibbs-White",
    "old": 7.9,
    "new": 8.0,
-   "owned": 12.8,
+   "owned": 13.1,
    "direction": "up"
-  },
-  {
-   "name": "Hughes",
-   "old": 4.5,
-   "new": 4.4,
-   "owned": 8.0,
-   "direction": "down"
   },
   {
    "name": "Schade",
    "old": 6.0,
    "new": 6.1,
-   "owned": 6.4,
+   "owned": 6.5,
    "direction": "up"
   },
   {
@@ -135,7 +145,7 @@
    "name": "Belloumi",
    "old": 5.0,
    "new": 5.1,
-   "owned": 3.4,
+   "owned": 3.5,
    "direction": "up"
   },
   {
@@ -143,13 +153,6 @@
    "old": 5.4,
    "new": 5.3,
    "owned": 1.9,
-   "direction": "down"
-  },
-  {
-   "name": "Tielemans",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 1.6,
    "direction": "down"
   },
   {
@@ -167,17 +170,24 @@
    "direction": "down"
   },
   {
-   "name": "Caicedo",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 1.2,
+   "name": "O.Dango",
+   "old": 6.4,
+   "new": 6.3,
+   "owned": 0.5,
    "direction": "down"
   },
   {
-   "name": "Solanke",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 0.9,
+   "name": "Wilson",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 0.4,
+   "direction": "down"
+  },
+  {
+   "name": "Amad",
+   "old": 5.8,
+   "new": 5.7,
+   "owned": 0.3,
    "direction": "down"
   }
  ],
@@ -187,7 +197,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.8,
-   "owned": 75.2,
+   "owned": 74.5,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"

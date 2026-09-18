@@ -1,8 +1,6 @@
 {
- "should_email": true,
- "reasons": [
-  "GW5 deadline in 8h"
- ],
- "subject": "FPL: GW5 deadline in 8h",
- "body": "DEADLINE — GW5 in 7.7 hours (2026-09-18T17:30:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  João Pedro (FWD) chance 75% — Unspecified injury - 75% chance of playing\n\nCAPTAIN — model says B.Fernandes (5.59 xPts).\n  You have Palmer recorded. Model disagrees.\n\nSnapshot #46 at 2026-09-18T09:45:42.449776+00:00"
+ "should_email": false,
+ "reasons": [],
+ "subject": "FPL: nothing urgent",
+ "body": "FLAGGED IN YOUR SQUAD:\n  João Pedro (FWD) chance 75% — Unspecified injury - 75% chance of playing\n\nCAPTAIN — model says B.Fernandes (6.18 xPts).\n\nSnapshot #47 at 2026-09-18T20:57:44.622638+00:00"
 }

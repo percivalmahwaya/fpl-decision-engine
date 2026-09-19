@@ -1,5 +1,5 @@
 {
- "gameweek": 4,
+ "gameweek": 5,
  "squad": [
   {
    "name": "Horníček",
@@ -123,7 +123,7 @@
    "status": "a",
    "chance": null,
    "news": null,
-   "is_captain": false,
+   "is_captain": true,
    "is_vice": false,
    "started": 1,
    "ep": null,
@@ -139,8 +139,8 @@
    "status": "a",
    "chance": 100,
    "news": null,
-   "is_captain": true,
-   "is_vice": false,
+   "is_captain": false,
+   "is_vice": true,
    "started": 1,
    "ep": null,
    "flagged": false
@@ -236,7 +236,7 @@
    "chance": 75,
    "news": "Knee injury - 75% chance of playing",
    "is_captain": false,
-   "is_vice": true,
+   "is_vice": false,
    "started": 1,
    "ep": null,
    "flagged": true

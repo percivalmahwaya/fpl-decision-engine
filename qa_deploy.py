@@ -46,7 +46,8 @@ PASS, FAIL, WARN = "PASS", "FAIL", "WARN"
 results = []
 
 EXPECTED_FILES = ["meta", "squad", "recommendations", "captain",
-                  "accuracy", "season", "alerts", "notify", "bench"]
+                  "accuracy", "season", "alerts", "notify", "bench",
+                  "transfers"]
 
 SQUAD_SHAPE = {"GKP": 2, "DEF": 5, "MID": 5, "FWD": 3}
 SEVERITIES = {"CRITICAL", "WARNING", "INFO", "GOOD"}

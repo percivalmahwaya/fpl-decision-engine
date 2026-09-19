@@ -71,6 +71,15 @@ def create_schema(conn):
             news                TEXT,
             news_added          TEXT,
             ep_next             REAL,
+            -- Set-piece duty. Arrives free on every bootstrap-static call and
+            -- was being kept only inside the `raw` blob, where nothing read
+            -- it. 1 means first choice. A first-choice penalty taker has a
+            -- scoring route no model feature captures: penalties are the
+            -- highest-probability shot in football and they are assigned by
+            -- the manager, not earned by form.
+            penalties_order     INTEGER,
+            freekicks_order     INTEGER,
+            corners_order       INTEGER,
             raw                 TEXT,
             PRIMARY KEY (snapshot_id, element_id)
         );
@@ -156,11 +165,22 @@ def take_snapshot(conn):
                 p.get("news") or None,
                 p.get("news_added"),
                 to_float(p.get("ep_next")),
+                p.get("penalties_order"),
+                p.get("direct_freekicks_order"),
+                p.get("corners_and_indirect_freekicks_order"),
                 json.dumps(p, separators=(",", ":")),  # keep everything, for later
             )
         )
+    # Named columns. Nineteen positional question marks is a row that breaks
+    # silently and invisibly the moment the table gains a field, and it just
+    # gained three.
     conn.executemany(
-        "INSERT OR REPLACE INTO players VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", rows
+        "INSERT OR REPLACE INTO players (snapshot_id, element_id, web_name, "
+        "team_id, position, price, total_points, form, minutes, starts, "
+        "selected_by_percent, transfers_in_event, transfers_out_event, "
+        "status, chance_next_round, news, news_added, ep_next, "
+        "penalties_order, freekicks_order, corners_order, raw) "
+        "VALUES (" + ",".join("?" * 22) + ")", rows
     )
 
     # --- teams ---

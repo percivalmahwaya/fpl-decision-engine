@@ -219,7 +219,16 @@ def create_schema(conn):
             total_points INTEGER,
             transfers    INTEGER,
             formation    TEXT,
-            decided_by   TEXT DEFAULT 'gut'
+            decided_by   TEXT DEFAULT 'gut',
+            -- All three arrive on the same history call that was already
+            -- being made for points, and all three were being dropped.
+            -- `bank` is the one that matters: without it the transfer
+            -- optimiser assumed zero money and could only ever suggest
+            -- swaps that were exactly affordable, which is almost none of
+            -- them. In tenths of a million, as the API sends it.
+            bank         INTEGER,
+            squad_value  INTEGER,
+            bench_points INTEGER
         );
 
         CREATE TABLE IF NOT EXISTS my_squad (
@@ -344,11 +353,13 @@ def fetch(conn):
         # made; the cost shows up in total_points already.
         conn.execute(
             "INSERT OR REPLACE INTO my_gameweeks"
-            " (gameweek, total_points, transfers, formation, decided_by)"
-            " VALUES (?,?,?,?,?)",
+            " (gameweek, total_points, transfers, formation, decided_by,"
+            "  bank, squad_value, bench_points)"
+            " VALUES (?,?,?,?,?,?,?,?)",
             (gw, row.get("points"), row.get("event_transfers"),
              formation_of(starters),
-             DECIDED_BY.get(gw, DEFAULT_DECIDED_BY)))
+             DECIDED_BY.get(gw, DEFAULT_DECIDED_BY),
+             row.get("bank"), row.get("value"), row.get("points_on_bench")))
 
         chip = picks.get("active_chip")
         unscored = sum(1 for r in squad_rows if r[3] is None)

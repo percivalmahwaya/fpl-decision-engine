@@ -308,6 +308,65 @@ def build_bench(conn, next_gw, squad_rows):
     }
 
 
+
+def build_transfers(conn, next_gw):
+    """Who to buy, who to drop, within the money actually in the bank.
+
+    The bank is READ, not assumed. It was a command-line flag defaulting to
+    zero, which silently restricted every suggestion to an exact-price swap.
+    """
+    from transfers import Candidate, suggest, summarise
+
+    snap = conn.execute("SELECT MAX(id) FROM snapshots").fetchone()[0]
+
+    def fetch(extra, args):
+        return conn.execute(f"""
+            SELECT p.element_id, p.web_name, p.position, t.short_name, p.price,
+                   pr.predicted, p.penalties_order, p.freekicks_order,
+                   p.status, p.chance_next_round, p.selected_by_percent
+              FROM players p
+              JOIN teams t ON t.team_id = p.team_id
+                          AND t.snapshot_id = p.snapshot_id
+              LEFT JOIN predictions pr ON pr.element_id = p.element_id
+                   AND pr.gameweek = ? AND pr.model = ?
+             WHERE p.snapshot_id = ? {extra}""",
+            (next_gw, MODEL_NAME, snap, *args)).fetchall()
+
+    def build(raw):
+        return [Candidate(
+            element_id=e, name=n, position=pos, club=club or "?",
+            price=price or 0.0, expected_points=float(ep or 0.0),
+            penalties_order=pen, freekicks_order=fk, status=st or "a",
+            chance=ch, owned_by_percent=float(own or 0))
+            for e, n, pos, club, price, ep, pen, fk, st, ch, own in raw]
+
+    owned = [r[0] for r in conn.execute(
+        "SELECT element_id FROM my_squad "
+        "WHERE gameweek = (SELECT MAX(gameweek) FROM my_squad)")]
+    if not owned:
+        return {"available": False, "reason": "no squad recorded yet"}
+
+    market = build(fetch("AND pr.predicted IS NOT NULL", ()))
+    if not market:
+        return {"available": False,
+                "reason": f"no predictions logged for GW{next_gw} yet, so "
+                          "there is nothing to compare against. They are "
+                          "written in the run before the deadline."}
+
+    squad = build(fetch(
+        "AND p.element_id IN (%s)" % ",".join("?" * len(owned)), owned))
+
+    row = conn.execute("SELECT bank FROM my_gameweeks "
+                       "ORDER BY gameweek DESC LIMIT 1").fetchone()
+    bank = (row[0] or 0) / 10.0 if row else 0.0
+
+    moves = suggest(squad, market, bank=bank, free_transfers=1, limit=5)
+    out = summarise(moves, bank, 1)
+    out["available"] = True
+    out["gameweek"] = next_gw
+    return out
+
+
 def build_recommendations(conn, next_gw, limit=40):
     """Top players by the model's expected points for the upcoming gameweek."""
     rows = conn.execute(
@@ -463,7 +522,7 @@ def build_alerts(conn, hours=24):
     return data
 
 
-def build_notify(meta, alerts, squad, captain):
+def build_notify(meta, alerts, squad, captain, transfers=None, bench=None):
     """
     Decide whether this run should email, and what it should say.
 
@@ -496,6 +555,35 @@ def build_notify(meta, alerts, squad, captain):
             lines.append(f"  {p['name']} ({p['position']}) chance {ch} — {p['news']}")
         lines.append("")
 
+    # TRANSFERS. Only emailed when a move clears the noise floor AND is free.
+    # A suggestion that costs a four point hit it does not repay is arithmetic
+    # worth showing on the page, not worth putting in somebody's inbox, and an
+    # email that arrives every single week saying "consider this marginal
+    # swap" is an email that stops being read.
+    if transfers and transfers.get("available") and transfers.get("has_recommendation"):
+        top = next((m for m in transfers["moves"] if m["free"] and m["worth_it"]), None)
+        if top:
+            reasons.append("transfer worth making")
+            lines.append("TRANSFER — %s out, %s in." % (top["out"], top["in"]))
+            lines.append("  %+.2f expected points, %.1fm, %.1fm left in the bank."
+                         % (top["net"], top["cost"], top["bank_after"]))
+            if top["penalties"]:
+                lines.append("  %s is his club's first-choice penalty taker."
+                             % top["in"])
+            for reason in top["reasons"][:2]:
+                lines.append("  " + reason)
+            lines.append("")
+
+    # BENCH BOOST. Said only when the answer is "play it", because a chip you
+    # are holding needs no weekly reminder that you are still holding it.
+    if bench and bench.get("available"):
+        bb = bench.get("bench_boost", {})
+        if bb.get("verdict") == "play it":
+            reasons.append("bench boost")
+            lines.append("BENCH BOOST — worth %.1f points this week, the best "
+                         "of your season." % bb["value_now"])
+            lines.append("")
+
     if captain and captain.get("model_pick"):
         mp = captain["model_pick"]
         lines.append(f"CAPTAIN — model says {mp['name']} ({mp['ep']:.2f} xPts).")
@@ -523,18 +611,21 @@ def run(conn, verbose=False):
 
     squad = build_squad(conn, next_gw)
     bench_plan = build_bench(conn, next_gw, squad)
+    transfer_plan = build_transfers(conn, next_gw)
     recs = build_recommendations(conn, next_gw)
     captain = build_captain(conn, next_gw)
     accuracy = build_accuracy(conn)
     season = build_season(conn)
     alerts = build_alerts(conn)
-    notify = build_notify(meta, alerts, squad, captain)
+    notify = build_notify(meta, alerts, squad, captain,
+                          transfers=transfer_plan, bench=bench_plan)
 
     written = []
     for name, payload in [
         ("meta.json", meta),
         ("squad.json", squad),
         ("bench.json", bench_plan),
+        ("transfers.json", transfer_plan),
         ("recommendations.json", recs),
         ("captain.json", captain),
         ("accuracy.json", accuracy),

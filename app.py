@@ -267,10 +267,10 @@ if age is not None and age > 14:
     )
 
 
-(tab_squad, tab_bench, tab_picks, tab_news,
+(tab_squad, tab_transfers, tab_bench, tab_picks, tab_news,
  tab_model, tab_season) = st.tabs(
-    ["Squad and captain", "Bench", "Recommendations", "Team news",
-     "Model accuracy", "My season"]
+    ["Squad and captain", "Transfers", "Bench", "Recommendations",
+     "Team news", "Model accuracy", "My season"]
 )
 
 
@@ -400,6 +400,56 @@ with tab_squad:
                 st.error(f"{p['name']} ({p['position']}), chance of playing "
                          f"{chance}. {p['news']}")
 
+
+
+
+# --------------------------------------------------------- transfers tab
+
+with tab_transfers:
+    tr = load("transfers")
+
+    if not tr or not tr.get("available"):
+        st.info(tr.get("reason", "No transfer suggestions yet.") if tr
+                else "No transfer suggestions yet.")
+    else:
+        top = st.columns(3)
+        top[0].metric("In the bank", f"{tr['bank']:.1f}m")
+        top[1].metric("Free transfers", tr["free_transfers"])
+        top[2].metric("Noise floor", f"{tr['noise_floor']:.2f} xP",
+                      help="A gain smaller than this is inside the model's "
+                           "own reseeding variance, so it is not a preference.")
+
+        if tr["has_recommendation"]:
+            st.success(f"**{tr['headline']}**")
+        else:
+            st.info(f"**{tr['headline']}**")
+
+        st.caption(
+            "Only players you can actually afford: the replacement must cost "
+            "no more than the player leaving plus the bank. Hits are priced "
+            "in, so a move gaining three points that costs four is shown as "
+            "losing one."
+        )
+
+        for m in tr["moves"]:
+            tag = "Free transfer" if m["free"] else f"Costs a {4} point hit"
+            pen = " &nbsp;·&nbsp; **takes penalties**" if m["penalties"] else ""
+            with st.expander(
+                    f"{m['out']} to {m['in']}  ·  {m['net']:+.2f} net  ·  {tag}",
+                    expanded=m["free"] and m["worth_it"]):
+                st.markdown(
+                    f"**Out** {m['out']} &nbsp; {m['out_price']:.1f}m &nbsp; "
+                    f"{m['out_ep']:.2f} xP<br>"
+                    f"**In** &nbsp;&nbsp;{m['in']} ({m['in_club']}) &nbsp; "
+                    f"{m['in_price']:.1f}m &nbsp; {m['in_ep']:.2f} xP{pen}<br>"
+                    f"**Money** {m['cost']:+.1f}m, leaving "
+                    f"{m['bank_after']:.1f}m in the bank",
+                    unsafe_allow_html=True)
+                if not m["worth_it"]:
+                    st.caption("Does not clear the noise floor, so this is "
+                               "listed for completeness rather than advised.")
+                for reason in m["reasons"]:
+                    st.caption(reason)
 
 
 # ------------------------------------------------------------- bench tab

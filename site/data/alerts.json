@@ -1,15 +1,15 @@
 {
- "prev_snapshot": 43,
- "latest_snapshot": 47,
- "prev_taken_at": "2026-09-16T21:22:14.054825+00:00",
- "latest_taken_at": "2026-09-18T20:57:44.622638+00:00",
+ "prev_snapshot": 45,
+ "latest_snapshot": 48,
+ "prev_taken_at": "2026-09-17T21:26:50.819758+00:00",
+ "latest_taken_at": "2026-09-19T09:30:19.559149+00:00",
  "alerts": [
   {
    "element_id": 423,
    "name": "Shaw",
    "position": "DEF",
-   "price": 4.4,
-   "owned": 8.4,
+   "price": 4.3,
+   "owned": 8.3,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 75% -> 50% (Unspecified injury - 50% chance of playing)"
@@ -23,26 +23,6 @@
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 586,
-   "name": "Mendy",
-   "position": "DEF",
-   "price": 4.1,
-   "owned": 6.5,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Concussion - Expected back 11 Oct)"
-  },
-  {
-   "element_id": 593,
-   "name": "Dedić",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 2.2,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Unspecified injury - Unknown return date)"
   },
   {
    "element_id": 260,
@@ -75,16 +55,6 @@
    "message": "RULED OUT (Hamstring injury - Expected back 10 Oct)"
   },
   {
-   "element_id": 456,
-   "name": "J.Ramsey",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.3,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Thigh injury - Unknown return date)"
-  },
-  {
    "element_id": 256,
    "name": "Tete",
    "position": "DEF",
@@ -93,16 +63,6 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Concussion - Expected back 10 Oct)"
-  },
-  {
-   "element_id": 405,
-   "name": "N.Gonzalez",
-   "position": "MID",
-   "price": 5.5,
-   "owned": 0.2,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Concussion - Expected back 12 Oct)"
   },
   {
    "element_id": 29,
@@ -139,20 +99,10 @@
    "name": "James",
    "position": "DEF",
    "price": 5.4,
-   "owned": 6.6,
+   "owned": 6.5,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 556,
-   "name": "Targett",
-   "position": "DEF",
-   "price": 4.0,
-   "owned": 1.7,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   },
   {
    "element_id": 448,
@@ -163,36 +113,6 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Ankle injury - Expected back 12 Oct"
-  },
-  {
-   "element_id": 182,
-   "name": "Amenda",
-   "position": "DEF",
-   "price": 4.0,
-   "owned": 0.7,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 25% (Calf injury - 25% chance of playing)"
-  },
-  {
-   "element_id": 244,
-   "name": "Armstrong",
-   "position": "MID",
-   "price": 5.0,
-   "owned": 0.4,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 97,
-   "name": "Jensen",
-   "position": "MID",
-   "price": 5.4,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Unspecified injury - Expected back 10 Oct"
   },
   {
    "element_id": 170,
@@ -218,7 +138,7 @@
    "element_id": 455,
    "name": "Tonali",
    "position": "MID",
-   "price": 5.4,
+   "price": 5.3,
    "owned": 2.0,
    "severity": "GOOD",
    "tag": "-",
@@ -235,16 +155,6 @@
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 159,
-   "name": "Caicedo",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 1.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 50%"
-  },
-  {
    "element_id": 400,
    "name": "Doku",
    "position": "MID",
@@ -253,46 +163,6 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
-  },
-  {
-   "element_id": 152,
-   "name": "Palestra",
-   "position": "DEF",
-   "price": 5.3,
-   "owned": 0.6,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 50%"
-  },
-  {
-   "element_id": 208,
-   "name": "Sarr",
-   "position": "MID",
-   "price": 6.2,
-   "owned": 0.6,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 224,
-   "name": "Nketiah",
-   "position": "FWD",
-   "price": 5.5,
-   "owned": 0.5,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 474,
-   "name": "Jair Cunha",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.2,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 50% -> 75%"
   },
   {
    "element_id": 131,
@@ -344,18 +214,25 @@
    "direction": "up"
   },
   {
-   "name": "De Cuyper",
-   "old": 4.8,
-   "new": 4.9,
-   "owned": 25.0,
-   "direction": "up"
-  },
-  {
    "name": "Ødegaard",
    "old": 6.7,
    "new": 6.8,
-   "owned": 20.0,
+   "owned": 20.1,
    "direction": "up"
+  },
+  {
+   "name": "Konsa",
+   "old": 4.5,
+   "new": 4.6,
+   "owned": 19.4,
+   "direction": "up"
+  },
+  {
+   "name": "M.Sangaré",
+   "old": 5.7,
+   "new": 5.6,
+   "owned": 11.0,
+   "direction": "down"
   },
   {
    "name": "Thiago",
@@ -372,6 +249,34 @@
    "direction": "down"
   },
   {
+   "name": "Shaw",
+   "old": 4.4,
+   "new": 4.3,
+   "owned": 8.3,
+   "direction": "down"
+  },
+  {
+   "name": "Ndiaye",
+   "old": 5.9,
+   "new": 5.8,
+   "owned": 7.3,
+   "direction": "down"
+  },
+  {
+   "name": "Lacroix",
+   "old": 6.0,
+   "new": 5.9,
+   "owned": 7.0,
+   "direction": "down"
+  },
+  {
+   "name": "Dewsbury-Hall",
+   "old": 6.5,
+   "new": 6.6,
+   "owned": 6.2,
+   "direction": "up"
+  },
+  {
    "name": "Wirtz",
    "old": 7.4,
    "new": 7.3,
@@ -382,43 +287,8 @@
    "name": "Bogle",
    "old": 4.5,
    "new": 4.6,
-   "owned": 5.8,
+   "owned": 5.9,
    "direction": "up"
-  },
-  {
-   "name": "Foden",
-   "old": 7.0,
-   "new": 6.9,
-   "owned": 2.1,
-   "direction": "down"
-  },
-  {
-   "name": "Wilson",
-   "old": 6.3,
-   "new": 6.2,
-   "owned": 2.0,
-   "direction": "down"
-  },
-  {
-   "name": "Frimpong",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 1.9,
-   "direction": "down"
-  },
-  {
-   "name": "Furlong",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 0.6,
-   "direction": "down"
-  },
-  {
-   "name": "Damsgaard",
-   "old": 5.5,
-   "new": 5.4,
-   "owned": 0.4,
-   "direction": "down"
   }
  ],
  "urgent": [],

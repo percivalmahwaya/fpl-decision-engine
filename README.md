@@ -75,10 +75,73 @@ This is why the news/availability layer matters more than any modelling refineme
 | **2 · Real model** | Complete — beats FPL's `xP`; live recommendations |
 | **3 · Optimiser** | Complete — MILP squad / transfers / wildcard |
 | **4 · Minutes & news edge** | Partial — alerter built and scheduled; European congestion still outstanding |
-| **5 · Self-improving loop** | Built but **unproven** — no gameweek has been scored live yet |
+| **5 · Self-improving loop** | **Proven.** GW4 scored live on 2026-09-15, the first graded gameweek |
 
-> **Important caveat.** Every result above is a **backtest**. Predictions for GW4 are
-> logged but not yet graded. The system has never made a verified live prediction.
+> **What is backtest and what is live.** The headline table above is a backtest on
+> held-out 2025-26 data. The system has now also made and graded a real prediction:
+> see [Live results](#live-results-what-it-has-actually-scored) below, which is a
+> smaller sample and a less flattering picture.
+
+---
+
+## Live results: what it has actually scored
+
+Everything above this point is a backtest. This section is the engine predicting a
+gameweek it had never seen, then being graded on it. **One gameweek is not a
+result**, it is the first data point, and it is recorded here because a project that
+only publishes its backtest is a project marking its own homework.
+
+### Gameweek 4, scored 2026-09-15
+
+| Model | MAE | High-return MAE | n |
+|---|---|---|---|
+| **`two_stage_ml`** (champion) | **1.126** | 5.353 | 656 |
+| `form_fdr` (baseline) | 1.213 | **4.572** | 654 |
+| `naive_form` (baseline) | 1.277 | 4.601 | 654 |
+
+**The champion wins on the average and loses on the half that decides a gameweek.**
+Overall MAE is the best of the three, which is the result the backtest predicted. But
+on high-returning players — the hauls that actually win you a week — it is the
+*worst* of the three, by a wide margin: 5.353 against `form_fdr`'s 4.572.
+
+That is the opposite of what the backtest's high-return column suggested, and it is
+one gameweek, so it may be noise. It is published anyway. If it holds over several
+more gameweeks it is the most important thing this project has found, because it
+would mean the model is well calibrated on the 90% of players who score two points
+and blind on the 10% who decide anything.
+
+### The noise floor: 0.17 expected points
+
+Measured by reseeding the model and comparing predictions against a control that
+should mean nothing. Reseeding alone moves a pickable player's prediction by **0.169
+xPts on average and up to 1.56**.
+
+**Any gap below roughly 0.17 xPts is noise.** The interface reports such gaps as
+"too close to call" rather than ranking them, and the captain panel says so in
+words. Full measurement in `FINDINGS_2026-09-11.md`; the experiments that produced
+it are `exp_stability.py` and `exp_goalkeeper*.py`.
+
+This is why the GW4 captaincy call between B.Fernandes and Palmer — a gap of 0.08 —
+was reported as a tie rather than a preference. The engine had no opinion and had
+been stating one to two decimal places.
+
+### Benchmark: the engine against its owner
+
+Percival's own season is fetched from the FPL API each run (`record_my_team.py`) and
+scored alongside the models, so the engine is measured against the human it is meant
+to help rather than only against baselines.
+
+| GW | Points | Captain | Decided by |
+|---|---|---|---|
+| 1 | 53 | João Pedro | gut |
+| 2 | 79 | João Pedro | gut |
+| 3 | 48 | B.Fernandes | gut |
+| 4 | 53 | Palmer | gut + model |
+
+**233 points, 58.2 average.** The human has beaten the engine's captain pick twice
+running, both times inside the noise floor, which is consistent with the engine
+having had no real preference on either occasion.
+
 
 ---
 
@@ -450,7 +513,23 @@ pipeline is the source of truth. Remove them with
 ## Roadmap
 
 - [x] ~~Drop the `raw` storage bloat~~ — done; growth 1.7 MB -> 0.098 MB per snapshot
-- [ ] Score GW4 live — the **first real validation** of everything above
+- [x] ~~Score GW4 live — the **first real validation** of everything above~~ — done
+      2026-09-15. See [Live results](#live-results-what-it-has-actually-scored).
+- [ ] **The goalkeeper training gap is still open, and it is a real bug.** `history`
+      labels goalkeepers `GK`, the live API labels them `GKP`, and `model.py:53`
+      filters on `GKP`. **All 12,500 goalkeeper rows, 11% of the archive, are
+      silently dropped from training**, `is_gkp` is a constant zero, and 71
+      goalkeepers per gameweek are predicted anyway. Nothing crashes or warns.
+      Measured in `FINDINGS_2026-09-11.md`: fixing it is a **correctness** fix, not
+      an accuracy win, since the ranking change sits inside the noise floor.
+      **Deliberately not fixed yet** — `recommend.py` uses `INSERT OR REPLACE`, so
+      retraining mid-gameweek overwrites predictions already logged and destroys the
+      ability to grade that gameweek. Fix immediately after a gameweek is scored,
+      never before a deadline.
+- [ ] **Bench order and Bench Boost timing.** GW4 left **17 points on the bench**, a
+      bigger single leak than any captaincy call this season, and the engine says
+      nothing about either the order players are benched in or which gameweek to
+      spend the chip on.
 - [ ] **Opponent difficulty features — the model is currently fixture-blind.** All 47
       features describe the player; none describe who he is facing. It predicts the
       same score against Man City as against Hull City. Data is already available
@@ -459,7 +538,11 @@ pipeline is the source of truth. Remove them with
       position-specific models.
 - [ ] Position-specific models (OpenFPL's approach; still outstanding)
 - [ ] European fixture congestion — CL/EL fixtures are not in the FPL API
-- [ ] Deploy to Railway with cron + email (est. 14–17 h)
+- [x] ~~Deploy to Railway with cron + email (est. 14–17 h)~~ — **abandoned
+      deliberately**, not done. GitHub Actions plus Streamlit does the same job for
+      nothing and does not draw on the $5 credit keeping bcaChessHub alive, which is
+      what took that site down on 2026-09-06. Reasoning in
+      [Why not Railway](#why-not-railway).
 - [ ] Champion/challenger promotion: only ship a model that wins a held-out backtest
 
 ---

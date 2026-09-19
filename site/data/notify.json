@@ -1,6 +1,8 @@
 {
- "should_email": false,
- "reasons": [],
- "subject": "FPL: nothing urgent",
- "body": "FLAGGED IN YOUR SQUAD:\n  João Pedro (FWD) chance 75% — Unspecified injury - 75% chance of playing\n\nCAPTAIN — model says B.Fernandes (6.18 xPts).\n\nSnapshot #48 at 2026-09-19T09:30:19.559149+00:00"
+ "should_email": true,
+ "reasons": [
+  "1 squad/watchlist change(s)"
+ ],
+ "subject": "FPL: 1 squad/watchlist change(s)",
+ "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] WARNING  João Pedro (FWD)  new news: Knee injury - 75% chance of playing\n\nFLAGGED IN YOUR SQUAD:\n  João Pedro (FWD) chance 75% — Knee injury - 75% chance of playing\n\nSnapshot #43 at 2026-09-19T12:04:12.788714+00:00"
 }

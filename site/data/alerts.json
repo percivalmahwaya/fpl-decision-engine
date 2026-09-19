@@ -1,9 +1,19 @@
 {
- "prev_snapshot": 45,
- "latest_snapshot": 48,
- "prev_taken_at": "2026-09-17T21:26:50.819758+00:00",
- "latest_taken_at": "2026-09-19T09:30:19.559149+00:00",
+ "prev_snapshot": 40,
+ "latest_snapshot": 43,
+ "prev_taken_at": "2026-09-17T19:00:06.018285+00:00",
+ "latest_taken_at": "2026-09-19T12:04:12.788714+00:00",
  "alerts": [
+  {
+   "element_id": 165,
+   "name": "João Pedro",
+   "position": "FWD",
+   "price": 7.8,
+   "owned": 68.4,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "new news: Knee injury - 75% chance of playing"
+  },
   {
    "element_id": 423,
    "name": "Shaw",
@@ -13,16 +23,6 @@
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 75% -> 50% (Unspecified injury - 50% chance of playing)"
-  },
-  {
-   "element_id": 499,
-   "name": "Pedro Porro",
-   "position": "DEF",
-   "price": 5.4,
-   "owned": 8.4,
-   "severity": "GOOD",
-   "tag": "OWNED",
-   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 260,
@@ -115,6 +115,16 @@
    "message": "new news: Ankle injury - Expected back 12 Oct"
   },
   {
+   "element_id": 52,
+   "name": "Alysson",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
    "element_id": 170,
    "name": "Emegha",
    "position": "FWD",
@@ -163,6 +173,26 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 208,
+   "name": "Sarr",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 0.6,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 224,
+   "name": "Nketiah",
+   "position": "FWD",
+   "price": 5.5,
+   "owned": 0.5,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 131,
@@ -242,13 +272,6 @@
    "direction": "down"
   },
   {
-   "name": "Pedro Porro",
-   "old": 5.5,
-   "new": 5.4,
-   "owned": 8.4,
-   "direction": "down"
-  },
-  {
    "name": "Shaw",
    "old": 4.4,
    "new": 4.3,
@@ -256,10 +279,17 @@
    "direction": "down"
   },
   {
+   "name": "Pedro Porro",
+   "old": 5.5,
+   "new": 5.4,
+   "owned": 8.3,
+   "direction": "down"
+  },
+  {
    "name": "Ndiaye",
    "old": 5.9,
    "new": 5.8,
-   "owned": 7.3,
+   "owned": 7.2,
    "direction": "down"
   },
   {
@@ -291,7 +321,18 @@
    "direction": "up"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 165,
+   "name": "João Pedro",
+   "position": "FWD",
+   "price": 7.8,
+   "owned": 68.4,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "new news: Knee injury - 75% chance of playing"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

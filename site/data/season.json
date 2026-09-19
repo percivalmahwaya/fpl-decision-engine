@@ -39,19 +39,9 @@
    "captain": "Palmer",
    "captain_points": 10,
    "played": true
-  },
-  {
-   "gameweek": 5,
-   "points": 4,
-   "transfers": 0,
-   "formation": "3-5-2",
-   "decided_by": "unrecorded",
-   "captain": "B.Fernandes",
-   "captain_points": null,
-   "played": true
   }
  ],
- "total_points": 237,
- "played": 5,
- "average": 47.4
+ "total_points": 233,
+ "played": 4,
+ "average": 58.2
 }

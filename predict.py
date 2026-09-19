@@ -86,6 +86,13 @@ def create_schema(conn):
             model       TEXT NOT NULL,
             predicted   REAL,
             made_at     TEXT,
+            -- The two halves of the two-stage prediction, kept separately.
+            -- `predicted` is p60 * cond and was for a long time the only thing
+            -- stored, which quietly made correct bench ordering impossible:
+            -- the right order is by cond alone, NOT by the product. See
+            -- bench.py for why. NULL on rows logged before 2026-09-19.
+            p60         REAL,
+            cond        REAL,
             PRIMARY KEY (gameweek, element_id, model)
         );
 

@@ -174,6 +174,140 @@ def build_squad(conn, next_gw):
     }
 
 
+
+def build_bench(conn, next_gw, squad_rows):
+    """The bench decision for the upcoming gameweek.
+
+    Needs BOTH halves of the two-stage prediction, because the correct bench
+    order is by E[points | played] and not by expected points. See bench.py.
+
+    p60 and cond were only persisted from 2026-09-19, so any gameweek whose
+    predictions were logged before that has them NULL. Rather than silently
+    ordering by the wrong number, this falls back and SAYS the ordering is
+    provisional: a wrong order presented confidently is worse than an
+    approximate one that admits it.
+    """
+    from bench import (Player, bench_boost_advice, build_plan,
+                       find_double_gameweeks)
+
+    rows = conn.execute(
+        """SELECT s.element_id, s.name, p.position, p.price, p.status,
+                  p.chance_next_round,
+                  pr.predicted, pr.p60, pr.cond
+             FROM my_squad s
+             LEFT JOIN players p
+               ON p.element_id = s.element_id
+              AND p.snapshot_id = (SELECT MAX(id) FROM snapshots)
+             LEFT JOIN predictions pr
+               ON pr.element_id = s.element_id
+              AND pr.gameweek = ? AND pr.model = ?
+            WHERE s.gameweek = (SELECT MAX(gameweek) FROM my_squad)""",
+        (next_gw, MODEL_NAME),
+    ).fetchall()
+
+    # NO PREDICTIONS YET is a different state from PROVISIONAL ORDERING, and
+    # conflating them was the first version's bug: with no predictions logged
+    # for the upcoming gameweek, every value fell back to zero and the panel
+    # rendered a confident bench order and a "hold the chip" verdict built on
+    # nothing at all. Predictions are only logged in the run before a
+    # deadline, so this is the NORMAL state for most of the week.
+    with_prediction = sum(1 for r in rows if r[6] is not None)
+    if with_prediction == 0:
+        return {"available": False,
+                "reason": f"no predictions logged for GW{next_gw} yet. They "
+                          "are written in the run before the deadline, so "
+                          "this fills in once the gameweek is close."}
+
+    players, provisional = [], False
+    for eid, name, pos, price, status, chance, predicted, p60, cond in rows:
+        if not pos:
+            continue
+        if predicted is None:
+            # A squad member with no prediction at all: treat as a zero rather
+            # than dropping them, or the squad stops being fifteen and the
+            # whole plan is refused.
+            predicted = 0.0
+        if cond is None or p60 is None:
+            # Fall back: treat the stored expected points as if the player
+            # always appears. The ORDER this produces is the naive one, which
+            # is why it is flagged rather than shown as final.
+            provisional = True
+            p60, cond = 1.0, float(predicted or 0.0)
+        players.append(Player(
+            element_id=eid, name=name, position=pos,
+            p_play=float(p60), points_if_played=float(cond),
+            price=float(price or 0.0),
+            flagged=bool(status and status not in ("a",))
+                    or (chance is not None and chance < 100),
+        ))
+
+    if len(players) != 15:
+        return {"available": False,
+                "reason": f"squad has {len(players)} players with a known "
+                          "position, not 15"}
+
+    plan = build_plan(players)
+    notes = list(plan.notes)
+    if provisional:
+        notes.insert(0,
+            "ORDER IS PROVISIONAL. These predictions were logged before the "
+            "engine started storing both halves of the two-stage model, so "
+            "the ordering here uses expected points, which is the wrong "
+            "number for a bench. It corrects itself at the next deadline.")
+
+    # History of what Bench Boost would have been worth, for scale.
+    recent = []
+    for gw in range(max(1, next_gw - 5), next_gw):
+        row = conn.execute(
+            """SELECT SUM(pr.predicted) FROM my_squad s
+                 JOIN predictions pr
+                   ON pr.element_id = s.element_id AND pr.gameweek = s.gameweek
+                  AND pr.model = ?
+                WHERE s.gameweek = ? AND s.started = 0""",
+            (MODEL_NAME, gw),
+        ).fetchone()
+        if row and row[0]:
+            recent.append((gw, round(float(row[0]), 2)))
+
+    advice = bench_boost_advice(
+        gameweek=next_gw,
+        value_now=plan.bench_boost_value,
+        recent=recent,
+        doubles=find_double_gameweeks(conn, next_gw),
+    )
+
+    def render(player):
+        return {"name": player.name, "element_id": player.element_id,
+                "position": player.position,
+                "ep": round(player.expected_points, 2),
+                "p_play": round(player.p_play, 3),
+                "if_played": round(player.points_if_played, 2),
+                "flagged": player.flagged}
+
+    return {
+        "available": True,
+        "gameweek": next_gw,
+        "provisional": provisional,
+        "formation": plan.formation,
+        "starting_xi": [render(x) for x in plan.starting_xi],
+        "bench": [render(b) for b in plan.bench],
+        # None, not 0.0, when the ordering is provisional. The fallback sets
+        # every p_play to 1.0, so nothing can blank and the autosub figure is
+        # structurally zero: an artefact of the assumption rather than a
+        # finding about the bench. Publishing it as 0.00 would read as "your
+        # bench is worthless as cover", which is not what was measured.
+        "autosub_value": None if provisional else round(plan.autosub_value, 2),
+        "notes": notes,
+        "bench_boost": {
+            "value_now": round(advice.value_now, 2),
+            "verdict": advice.verdict,
+            "recent": advice.recent,
+            "double_gameweeks": advice.double_gameweeks,
+            "reasoning": advice.reasoning,
+        },
+    }
+
+
 def build_recommendations(conn, next_gw, limit=40):
     """Top players by the model's expected points for the upcoming gameweek."""
     rows = conn.execute(
@@ -388,6 +522,7 @@ def run(conn, verbose=False):
     next_gw = meta["next_gw"]
 
     squad = build_squad(conn, next_gw)
+    bench_plan = build_bench(conn, next_gw, squad)
     recs = build_recommendations(conn, next_gw)
     captain = build_captain(conn, next_gw)
     accuracy = build_accuracy(conn)
@@ -399,6 +534,7 @@ def run(conn, verbose=False):
     for name, payload in [
         ("meta.json", meta),
         ("squad.json", squad),
+        ("bench.json", bench_plan),
         ("recommendations.json", recs),
         ("captain.json", captain),
         ("accuracy.json", accuracy),

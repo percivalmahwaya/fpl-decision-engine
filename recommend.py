@@ -127,6 +127,10 @@ def run(conn):
     p60 = clf.predict_proba(X)[:, 1]
     cond = reg.predict(X)
     pred_rows["p60"] = p60
+    # Kept, not discarded. cond is E[points | they play], and it is the
+    # quantity correct bench ordering needs: the right bench order is by cond
+    # alone, NOT by the product below. See bench.py for the proof.
+    pred_rows["cond"] = cond
     pred_rows["ep"] = p60 * cond
 
     # bring back availability info for display
@@ -149,9 +153,15 @@ def run(conn):
         if now > dl:
             print(f"  Deadline for GW{gw} has passed — not logging (would be dishonest).")
         else:
+            # Columns named explicitly. It was positional VALUES (?,?,?,?,?),
+            # which silently breaks the moment the table gains a column, and
+            # the table just gained two.
             conn.executemany(
-                "INSERT OR REPLACE INTO predictions VALUES (?,?,?,?,?)",
-                [(gw, int(r.element), MODEL_NAME, float(r.ep), now.isoformat())
+                "INSERT OR REPLACE INTO predictions "
+                "(gameweek, element_id, model, predicted, made_at, p60, cond) "
+                "VALUES (?,?,?,?,?,?,?)",
+                [(gw, int(r.element), MODEL_NAME, float(r.ep), now.isoformat(),
+                  float(r.p60), float(r.cond))
                  for r in pred_rows.itertuples()],
             )
             conn.commit()

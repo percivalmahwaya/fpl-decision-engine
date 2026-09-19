@@ -530,7 +530,17 @@ pipeline is the source of truth. Remove them with
       bigger single leak than any captaincy call this season, and the engine says
       nothing about either the order players are benched in or which gameweek to
       spend the chip on.
-- [ ] **Opponent difficulty features — the model is currently fixture-blind.** All 47
+- [ ] **Register `+ keeper fix + opponent` as a live CHALLENGER.** Re-measured
+      2026-09-19: it cuts high-return MAE by 0.214, CI [-0.228, -0.200],
+      P(better) 1.00, which is the exact weakness GW4 exposed. It costs
+      roughly 0.08 on ranking, not statistically clear. A real trade-off, so
+      it is to be scored live rather than promoted on a backtest. See
+      FINDINGS_2026-09-19.md.
+- [x] ~~**Opponent difficulty features — the model is currently fixture-blind.**~~
+      Built, and REJECTED on ranking in `opponent.py`, then REOPENED on
+      2026-09-19 when the first live gameweek showed the rejection may have
+      been on the wrong metric. Superseded by the challenger item above.
+      Original text follows. All 47
       features describe the player; none describe who he is facing. It predicts the
       same score against Man City as against Hull City. Data is already available
       (`fixtures.difficulty_h/_a`, and for history both clubs' players share a

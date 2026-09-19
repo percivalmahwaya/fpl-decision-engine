@@ -42,6 +42,26 @@ the top-20 is dominated by premium players whose ability outweighs the fixture.
 CONCLUSION: apply fixture difficulty as a HUMAN OVERLAY on the model's output -
 especially for captaincy, where one extreme fixture cannot be averaged away -
 rather than as a feature inside the model.
+
+=============================================================================
+REOPENED 2026-09-19. The rejection may have been on the wrong metric.
+=============================================================================
+That conclusion was reached before a single gameweek had been scored live.
+GW4 was graded on 2026-09-15 and said the champion's high-return MAE is the
+WORST of three models, 5.353 against form_fdr's 4.572, while its overall MAE
+is the best. The model's real weakness is the tail, and the tail is what
+these features improved.
+
+Re-run as a 2x2 with the goalkeeper fix, on identical test rows:
+
+    + opponent    high-return MAE  -0.168  CI [-0.182, -0.155]  P(better) 1.00
+    + both        high-return MAE  -0.214  CI [-0.228, -0.200]  P(better) 1.00
+    + both        ranking          -0.081  CI [-0.226, +0.062]  P(better) 0.14
+
+The ranking cost is real but not statistically clear; the high-return gain is
+unambiguous. See FINDINGS_2026-09-19.md. NOT promoted: registered as a
+challenger to be scored live, because two backtest metrics disagreeing is not
+enough to overturn the one the project was built on.
 """
 
 import numpy as np

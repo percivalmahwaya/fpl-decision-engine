@@ -267,8 +267,10 @@ if age is not None and age > 14:
     )
 
 
-tab_squad, tab_picks, tab_news, tab_model, tab_season = st.tabs(
-    ["Squad and captain", "Recommendations", "Team news", "Model accuracy", "My season"]
+(tab_squad, tab_bench, tab_picks, tab_news,
+ tab_model, tab_season) = st.tabs(
+    ["Squad and captain", "Bench", "Recommendations", "Team news",
+     "Model accuracy", "My season"]
 )
 
 
@@ -397,6 +399,75 @@ with tab_squad:
                 chance = "unknown" if p["chance"] is None else f"{p['chance']}%"
                 st.error(f"{p['name']} ({p['position']}), chance of playing "
                          f"{chance}. {p['news']}")
+
+
+
+# ------------------------------------------------------------- bench tab
+
+with tab_bench:
+    plan = load("bench")
+
+    if not plan or not plan.get("available"):
+        st.info(plan.get("reason", "No bench plan yet.") if plan
+                else "No bench plan yet.")
+    else:
+        if plan.get("provisional"):
+            st.warning(
+                "**The order below is provisional.** These predictions were "
+                "logged before the engine began storing both halves of the "
+                "two-stage model, so this falls back to expected points, "
+                "which is the wrong number for a bench. It corrects itself "
+                "at the next deadline.")
+
+        left, right = st.columns([3, 2])
+
+        with left:
+            st.markdown(f"#### Bench order, {plan['formation']}")
+            st.caption(
+                "Ordered by expected points **if the player appears**, not by "
+                "expected points. Autosubs fall through anyone who did not "
+                "play, so how likely they are to feature does not change the "
+                "order, only how much cover you have."
+            )
+            for i, b in enumerate(plan["bench"]):
+                slot = "GK" if b["position"] == "GKP" else str(i)
+                flag = "  ·  flagged" if b["flagged"] else ""
+                st.markdown(
+                    f"**{slot}. {b['name']}** &nbsp; `{b['position']}` &nbsp; "
+                    f"{b['if_played']:.2f} if he plays &nbsp;·&nbsp; "
+                    f"{b['p_play'] * 100:.0f}% to feature{flag}",
+                    unsafe_allow_html=True)
+
+            if plan.get("autosub_value") is not None:
+                st.metric("Expected points from autosubs",
+                          f"{plan['autosub_value']:.2f}")
+
+        with right:
+            bb = plan["bench_boost"]
+            st.markdown("#### Bench Boost")
+            st.metric("Worth this week", f"{bb['value_now']:.1f} pts",
+                      help="Every bench player scores with the chip active.")
+            verdict = bb["verdict"]
+            if verdict == "play it":
+                st.success(f"**{verdict.upper()}**")
+            elif verdict.startswith("hold"):
+                st.info(f"**{verdict.upper()}**")
+            else:
+                st.warning(f"**{verdict.upper()}**")
+            for line in bb["reasoning"]:
+                st.caption(line)
+
+        for note in plan.get("notes", []):
+            st.caption(note)
+
+        st.markdown("#### Starting XI")
+        st.dataframe(
+            [{"Player": x["name"], "Pos": x["position"],
+              "xP": round(x["ep"], 2),
+              "If he plays": round(x["if_played"], 2),
+              "Plays": f"{x['p_play'] * 100:.0f}%"}
+             for x in plan["starting_xi"]],
+            hide_index=True, use_container_width=True)
 
 
 # ------------------------------------------------------ recommendations

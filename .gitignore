@@ -24,3 +24,4 @@ env/
 Thumbs.db
 .vscode/
 .idea/
+*.pyc

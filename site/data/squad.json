@@ -14,7 +14,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.26,
+   "ep": 3.48,
    "flagged": false
   },
   {
@@ -30,39 +30,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 0,
-   "ep": 2.86,
-   "flagged": false
-  },
-  {
-   "name": "Davis",
-   "element_id": 305,
-   "position": "DEF",
-   "club": "IPS",
-   "price": 4.0,
-   "owned": 6.9,
-   "status": "a",
-   "chance": null,
-   "news": null,
-   "is_captain": false,
-   "is_vice": false,
-   "started": 0,
-   "ep": 3.66,
-   "flagged": false
-  },
-  {
-   "name": "Thomas",
-   "element_id": 173,
-   "position": "DEF",
-   "club": "COV",
-   "price": 4.0,
-   "owned": 8.6,
-   "status": "a",
-   "chance": null,
-   "news": null,
-   "is_captain": false,
-   "is_vice": false,
-   "started": 0,
-   "ep": 3.39,
+   "ep": 3.18,
    "flagged": false
   },
   {
@@ -78,7 +46,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.34,
+   "ep": 3.32,
    "flagged": false
   },
   {
@@ -94,7 +62,23 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.32,
+   "ep": 3.18,
+   "flagged": false
+  },
+  {
+   "name": "Davis",
+   "element_id": 305,
+   "position": "DEF",
+   "club": "IPS",
+   "price": 4.0,
+   "owned": 6.9,
+   "status": "a",
+   "chance": null,
+   "news": null,
+   "is_captain": false,
+   "is_vice": false,
+   "started": 0,
+   "ep": 3.18,
    "flagged": false
   },
   {
@@ -110,7 +94,23 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 2.84,
+   "ep": 3.13,
+   "flagged": false
+  },
+  {
+   "name": "Thomas",
+   "element_id": 173,
+   "position": "DEF",
+   "club": "COV",
+   "price": 4.0,
+   "owned": 8.6,
+   "status": "a",
+   "chance": null,
+   "news": null,
+   "is_captain": false,
+   "is_vice": false,
+   "started": 0,
+   "ep": 2.96,
    "flagged": false
   },
   {
@@ -126,7 +126,7 @@
    "is_captain": true,
    "is_vice": false,
    "started": 1,
-   "ep": 5.71,
+   "ep": 6.34,
    "flagged": false
   },
   {
@@ -142,7 +142,7 @@
    "is_captain": false,
    "is_vice": true,
    "started": 1,
-   "ep": 5.03,
+   "ep": 4.74,
    "flagged": true
   },
   {
@@ -158,7 +158,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 4.4,
+   "ep": 4.67,
    "flagged": false
   },
   {
@@ -174,7 +174,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 4.27,
+   "ep": 4.5,
    "flagged": false
   },
   {
@@ -190,7 +190,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.98,
+   "ep": 3.61,
    "flagged": false
   },
   {
@@ -206,7 +206,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 5.7,
+   "ep": 4.61,
    "flagged": false
   },
   {
@@ -222,7 +222,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.78,
+   "ep": 3.26,
    "flagged": false
   },
   {
@@ -238,7 +238,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 0,
-   "ep": 2.85,
+   "ep": 2.21,
    "flagged": true
   }
  ],

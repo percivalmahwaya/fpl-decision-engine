@@ -1,4 +1,12 @@
 {
+ "model_changes": [
+  {
+   "gameweek": 6,
+   "model": "two_stage_ml",
+   "change": "Goalkeepers entered training for the first time.",
+   "detail": "The archive spelled goalkeeper GK and the rest of the system spelled it GKP, so 12,500 rows, 11% of the archive, had never reached training, and the is_gkp feature was a constant zero while 71 keepers a week were predicted anyway. Scores before GW6 come from a model that had never seen a goalkeeper, so they are not strictly comparable with those after it."
+  }
+ ],
  "models": [
   "form_fdr",
   "naive_form",

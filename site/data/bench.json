@@ -8,99 +8,99 @@
    "name": "B.Fernandes",
    "element_id": 426,
    "position": "MID",
-   "ep": 5.71,
-   "p_play": 0.948,
-   "if_played": 6.02,
-   "flagged": false
-  },
-  {
-   "name": "Isak",
-   "element_id": 379,
-   "position": "FWD",
-   "ep": 5.7,
-   "p_play": 0.869,
-   "if_played": 6.56,
+   "ep": 6.34,
+   "p_play": 0.913,
+   "if_played": 6.94,
    "flagged": false
   },
   {
    "name": "Palmer",
    "element_id": 154,
    "position": "MID",
-   "ep": 5.03,
-   "p_play": 0.873,
-   "if_played": 5.76,
+   "ep": 4.74,
+   "p_play": 0.851,
+   "if_played": 5.57,
    "flagged": true
   },
   {
    "name": "Rogers",
    "element_id": 40,
    "position": "MID",
-   "ep": 4.4,
-   "p_play": 0.888,
-   "if_played": 4.96,
+   "ep": 4.67,
+   "p_play": 0.889,
+   "if_played": 5.25,
+   "flagged": false
+  },
+  {
+   "name": "Isak",
+   "element_id": 379,
+   "position": "FWD",
+   "ep": 4.61,
+   "p_play": 0.835,
+   "if_played": 5.53,
    "flagged": false
   },
   {
    "name": "Wirtz",
    "element_id": 366,
    "position": "MID",
-   "ep": 4.27,
-   "p_play": 0.823,
-   "if_played": 5.2,
+   "ep": 4.5,
+   "p_play": 0.803,
+   "if_played": 5.6,
    "flagged": false
   },
   {
    "name": "Szoboszlai",
    "element_id": 368,
    "position": "MID",
-   "ep": 3.98,
-   "p_play": 0.908,
-   "if_played": 4.38,
-   "flagged": false
-  },
-  {
-   "name": "Barry",
-   "element_id": 249,
-   "position": "FWD",
-   "ep": 3.78,
-   "p_play": 0.899,
-   "if_played": 4.21,
-   "flagged": false
-  },
-  {
-   "name": "Davis",
-   "element_id": 305,
-   "position": "DEF",
-   "ep": 3.66,
-   "p_play": 0.912,
-   "if_played": 4.01,
-   "flagged": false
-  },
-  {
-   "name": "Thomas",
-   "element_id": 173,
-   "position": "DEF",
-   "ep": 3.39,
-   "p_play": 0.913,
-   "if_played": 3.71,
-   "flagged": false
-  },
-  {
-   "name": "Rúben",
-   "element_id": 390,
-   "position": "DEF",
-   "ep": 3.34,
-   "p_play": 0.894,
-   "if_played": 3.74,
+   "ep": 3.61,
+   "p_play": 0.865,
+   "if_played": 4.18,
    "flagged": false
   },
   {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
+   "ep": 3.48,
+   "p_play": 0.947,
+   "if_played": 3.67,
+   "flagged": false
+  },
+  {
+   "name": "Rúben",
+   "element_id": 390,
+   "position": "DEF",
+   "ep": 3.32,
+   "p_play": 0.916,
+   "if_played": 3.62,
+   "flagged": false
+  },
+  {
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
    "ep": 3.26,
-   "p_play": 0.93,
-   "if_played": 3.51,
+   "p_play": 0.898,
+   "if_played": 3.63,
+   "flagged": false
+  },
+  {
+   "name": "Hall",
+   "element_id": 449,
+   "position": "DEF",
+   "ep": 3.18,
+   "p_play": 0.931,
+   "if_played": 3.42,
+   "flagged": false
+  },
+  {
+   "name": "Davis",
+   "element_id": 305,
+   "position": "DEF",
+   "ep": 3.18,
+   "p_play": 0.914,
+   "if_played": 3.47,
    "flagged": false
   }
  ],
@@ -109,45 +109,46 @@
    "name": "Horníček",
    "element_id": 567,
    "position": "GKP",
-   "ep": 2.86,
-   "p_play": 0.92,
-   "if_played": 3.1,
+   "ep": 3.18,
+   "p_play": 0.952,
+   "if_played": 3.34,
    "flagged": false
   },
   {
    "name": "João Pedro",
    "element_id": 165,
    "position": "FWD",
-   "ep": 2.85,
-   "p_play": 0.516,
-   "if_played": 5.52,
+   "ep": 2.21,
+   "p_play": 0.426,
+   "if_played": 5.18,
    "flagged": true
-  },
-  {
-   "name": "Hall",
-   "element_id": 449,
-   "position": "DEF",
-   "ep": 3.32,
-   "p_play": 0.943,
-   "if_played": 3.52,
-   "flagged": false
   },
   {
    "name": "Mitchell",
    "element_id": 204,
    "position": "DEF",
-   "ep": 2.84,
-   "p_play": 0.869,
-   "if_played": 3.27,
+   "ep": 3.13,
+   "p_play": 0.878,
+   "if_played": 3.56,
+   "flagged": false
+  },
+  {
+   "name": "Thomas",
+   "element_id": 173,
+   "position": "DEF",
+   "ep": 2.96,
+   "p_play": 0.897,
+   "if_played": 3.3,
    "flagged": false
   }
  ],
- "autosub_value": 4.56,
+ "autosub_value": 4.82,
  "notes": [
-  "Starting with a flag on Palmer. The bench covers a blank, but only for the first one that happens."
+  "Starting with a flag on Palmer. The bench covers a blank, but only for the first one that happens.",
+  "At least one bench player is more likely than not to sit out. That costs nothing in the ordering, since the autosub falls through to the next player, but it does thin the cover."
  ],
  "bench_boost": {
-  "value_now": 11.86,
+  "value_now": 11.47,
   "verdict": "hold",
   "recent": [
    [
@@ -161,7 +162,7 @@
   ],
   "double_gameweeks": [],
   "reasoning": [
-   "Your bench has been worth 12.5 points a week on average over the last 2 gameweeks, best 12.6. This week it is worth 11.9.",
+   "Your bench has been worth 12.5 points a week on average over the last 2 gameweeks, best 12.6. This week it is worth 11.5.",
    "Below the 12 point rule of thumb for a full bench of starters, so this is not the week.",
    "Bench order does not matter in a Bench Boost week: every player scores, so the ordering work is the one thing the chip switches off."
   ]

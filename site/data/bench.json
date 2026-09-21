@@ -8,9 +8,9 @@
    "name": "B.Fernandes",
    "element_id": 426,
    "position": "MID",
-   "ep": 6.34,
+   "ep": 6.29,
    "p_play": 0.913,
-   "if_played": 6.94,
+   "if_played": 6.9,
    "flagged": false
   },
   {
@@ -89,9 +89,9 @@
    "name": "Hall",
    "element_id": 449,
    "position": "DEF",
-   "ep": 3.18,
+   "ep": 3.26,
    "p_play": 0.931,
-   "if_played": 3.42,
+   "if_played": 3.5,
    "flagged": false
   },
   {

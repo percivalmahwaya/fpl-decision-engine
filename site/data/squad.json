@@ -54,7 +54,7 @@
    "element_id": 449,
    "position": "DEF",
    "club": "NEW",
-   "price": 5.2,
+   "price": 5.3,
    "owned": 16.6,
    "status": "a",
    "chance": null,
@@ -62,7 +62,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.18,
+   "ep": 3.26,
    "flagged": false
   },
   {
@@ -118,7 +118,7 @@
    "element_id": 426,
    "position": "MID",
    "club": "MUN",
-   "price": 12.0,
+   "price": 11.9,
    "owned": 38.8,
    "status": "a",
    "chance": null,
@@ -126,7 +126,7 @@
    "is_captain": true,
    "is_vice": false,
    "started": 1,
-   "ep": 6.34,
+   "ep": 6.29,
    "flagged": false
   },
   {
@@ -230,7 +230,7 @@
    "element_id": 165,
    "position": "FWD",
    "club": "CHE",
-   "price": 7.8,
+   "price": 7.7,
    "owned": 66.1,
    "status": "d",
    "chance": 75,
@@ -242,6 +242,6 @@
    "flagged": true
   }
  ],
- "squad_value": 99.9,
+ "squad_value": 99.8,
  "count": 15
 }

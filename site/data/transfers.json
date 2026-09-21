@@ -7,7 +7,7 @@
  "moves": [
   {
    "out": "João Pedro",
-   "out_price": 7.8,
+   "out_price": 7.7,
    "out_ep": 2.21,
    "in": "Havertz",
    "in_price": 7.6,
@@ -16,14 +16,14 @@
    "position": "FWD",
    "gain": 2.291,
    "net": 2.291,
-   "cost": -0.2,
-   "bank_after": 0.5,
+   "cost": -0.1,
+   "bank_after": 0.4,
    "free": true,
    "penalties": false,
    "worth_it": true,
    "reasons": [
     "João Pedro is flagged in the team news.",
-    "Frees up 0.2m for later.",
+    "Frees up 0.1m for later.",
     "Owned by only 8%, so this is a differential rather than a template move."
    ]
   },
@@ -50,28 +50,6 @@
    ]
   },
   {
-   "out": "Hall",
-   "out_price": 5.2,
-   "out_ep": 3.18,
-   "in": "Ballard",
-   "in_price": 4.9,
-   "in_ep": 3.93,
-   "in_club": "SUN",
-   "position": "DEF",
-   "gain": 0.749,
-   "net": -3.251,
-   "cost": -0.3,
-   "bank_after": 0.6,
-   "free": false,
-   "penalties": false,
-   "worth_it": false,
-   "reasons": [
-    "Frees up 0.3m for later.",
-    "Owned by only 3%, so this is a differential rather than a template move.",
-    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
-   ]
-  },
-  {
    "out": "Horníček",
    "out_price": 5.0,
    "out_ep": 3.18,
@@ -90,6 +68,28 @@
    "reasons": [
     "Frees up 0.1m for later.",
     "Owned by only 2%, so this is a differential rather than a template move.",
+    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
+   ]
+  },
+  {
+   "out": "Hall",
+   "out_price": 5.3,
+   "out_ep": 3.26,
+   "in": "Ballard",
+   "in_price": 4.9,
+   "in_ep": 3.93,
+   "in_club": "SUN",
+   "position": "DEF",
+   "gain": 0.671,
+   "net": -3.329,
+   "cost": -0.4,
+   "bank_after": 0.7,
+   "free": false,
+   "penalties": false,
+   "worth_it": false,
+   "reasons": [
+    "Frees up 0.4m for later.",
+    "Owned by only 3%, so this is a differential rather than a template move.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   },

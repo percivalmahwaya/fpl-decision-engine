@@ -10,7 +10,8 @@
  "models": [
   "form_fdr",
   "naive_form",
-  "two_stage_ml"
+  "two_stage_ml",
+  "two_stage_opp"
  ],
  "scored": [
   {

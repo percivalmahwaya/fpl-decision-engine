@@ -42,7 +42,9 @@ WINDOWS = [3, 5, 10]
 
 def load(conn):
     df = pd.read_sql_query(
-        "SELECT season, gw, element, fixture, name, position, was_home,"
+        # `team` is here for opponent pairing (see opponent.py). It is not a
+        # model feature and build_features never selects it.
+        "SELECT season, gw, element, fixture, name, position, team, was_home,"
         " minutes, total_points, xp, xg, xa, xgi, xgc, ict, bps, threat,"
         " creativity, influence, value, selected"
         " FROM history ORDER BY season, element, gw, fixture",

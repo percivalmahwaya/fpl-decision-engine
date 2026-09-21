@@ -32,6 +32,7 @@ import pandas as pd
 from sklearn.ensemble import HistGradientBoostingRegressor, HistGradientBoostingClassifier
 
 from model import load as load_history, build_features
+import challenger
 
 warnings.filterwarnings("ignore")
 DB_PATH = Path(__file__).parent / "fpl.db"
@@ -99,6 +100,9 @@ def upcoming_rows(conn, snap):
 def run(conn):
     # ---------- train on history ----------
     hist = load_history(conn)
+    # The challenger needs history BEFORE build_features, because it adds its
+    # own opponent columns first.
+    hist_raw = hist.copy()
     hist, feats = build_features(hist)
     train = hist.dropna(subset=["total_points"])
     print(f"  Training on {len(train):,} historical rows (4 seasons)")
@@ -168,6 +172,12 @@ def run(conn):
             hrs = (dl - now).total_seconds() / 3600
             print(f"  Logged {len(pred_rows)} predictions for GW{gw} "
                   f"({hrs:.1f}h before deadline)\n")
+
+            # The challenger, logged AFTER the champion and never instead
+            # of it. Scored by the same machinery and used for nothing:
+            # see challenger.py. Failures there are swallowed, because a
+            # research model must not be able to cost a real gameweek.
+            challenger.log(conn, hist_raw, combined, gw, now.isoformat())
 
     # ---------- the recommendation ----------
     ranked = pred_rows.sort_values("ep", ascending=False)

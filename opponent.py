@@ -98,7 +98,13 @@ def build_opponent_features(df):
 
     Returns the frame plus the list of new feature names.
     """
-    df = attach_opponent(df)
+    # The current season cannot use fixture pairing: recommend.py sets
+    # `fixture` to the gameweek number as an ordering placeholder, so every
+    # player in a gameweek would appear to share a fixture. Those frames
+    # attach `opponent` themselves, from the fixtures table, and this respects
+    # it rather than overwriting with nonsense.
+    if "opponent" not in df.columns:
+        df = attach_opponent(df)
 
     # Points conceded by a team in a gameweek = points scored by everyone
     # facing them. Grouping on `opponent` gives exactly that.

@@ -235,8 +235,19 @@ def predict(conn):
         mult = FDR_MULTIPLIER.get(diff.get(team), 1.0) if team in diff else 0.0
         rows_fdr.append((gw, eid, "form_fdr", round(base * mult * avail, 3), made_at))
 
+    # Named columns, not positional. This line was
+    # `VALUES (?,?,?,?,?)` and broke the moment `predictions` gained p60 and
+    # cond on 2026-09-19: SQLite requires the value count to match the column
+    # count exactly when the columns are not named. Same defect as the one
+    # fixed in recommend.py the same day; this copy was missed, so the
+    # pipeline simply failed one step later.
+    #
+    # The baselines have no two-stage components, so p60 and cond stay NULL
+    # for them, which is honest: those models do not decompose that way.
     conn.executemany(
-        "INSERT OR REPLACE INTO predictions VALUES (?,?,?,?,?)", rows_naive + rows_fdr
+        "INSERT OR REPLACE INTO predictions "
+        "(gameweek, element_id, model, predicted, made_at) "
+        "VALUES (?,?,?,?,?)", rows_naive + rows_fdr
     )
     conn.commit()
     print(f"  Logged {len(rows_naive)} naive_form and {len(rows_fdr)} form_fdr predictions.")

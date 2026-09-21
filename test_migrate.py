@@ -168,5 +168,44 @@ class DeclarationsAndMigrationsAgreeTest(unittest.TestCase):
                 "on 2026-09-19.")
 
 
+
+class NoPositionalInsertsIntoMigratedTablesTest(unittest.TestCase):
+    """A table that gains columns must never be written to positionally.
+
+    `INSERT INTO t VALUES (?,?,?)` requires the value count to match the
+    column count EXACTLY. The moment such a table gains a column, every
+    positional insert into it starts failing with
+
+        table predictions has 7 columns but 5 values were supplied
+
+    which is the second half of the 2026-09-19 outage. The migration fixed
+    the schema, the run got one step further, and then died on this instead.
+    recommend.py had been converted to named columns; predict.py had the same
+    line and was missed.
+    """
+
+    SOURCES = ["fpl_collect.py", "predict.py", "recommend.py",
+               "record_my_team.py", "backfill_history.py"]
+
+    def test_no_migrated_table_is_written_positionally(self):
+        offenders = []
+        for filename in self.SOURCES:
+            path = ROOT / filename
+            if not path.exists():
+                continue
+            source = path.read_text(encoding="utf-8")
+            for table in MIGRATIONS:
+                # "INSERT ... INTO <table> VALUES" with no column list.
+                pattern = r"INSERT[^\"']*INTO\s+%s\s+VALUES" % table
+                for match in re.finditer(pattern, source):
+                    line = source[:match.start()].count("\n") + 1
+                    offenders.append(f"{filename}:{line} -> {table}")
+
+        self.assertEqual(
+            offenders, [],
+            "positional INSERT into a table that gains columns: "
+            + "; ".join(offenders)
+            + ". Name the columns, or the next migration breaks the pipeline.")
+
 if __name__ == "__main__":
     unittest.main(verbosity=2, exit=False)

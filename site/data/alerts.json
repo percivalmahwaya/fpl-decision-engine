@@ -1,165 +1,195 @@
 {
- "prev_snapshot": 40,
- "latest_snapshot": 43,
- "prev_taken_at": "2026-09-17T19:00:06.018285+00:00",
- "latest_taken_at": "2026-09-19T12:04:12.788714+00:00",
+ "prev_snapshot": 48,
+ "latest_snapshot": 49,
+ "prev_taken_at": "2026-09-19T09:30:19.559149+00:00",
+ "latest_taken_at": "2026-09-21T22:02:18.121834+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.8,
-   "owned": 68.4,
+   "owned": 66.1,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "new news: Knee injury - 75% chance of playing"
   },
   {
-   "element_id": 423,
-   "name": "Shaw",
-   "position": "DEF",
-   "price": 4.3,
-   "owned": 8.3,
+   "element_id": 154,
+   "name": "Palmer",
+   "position": "MID",
+   "price": 9.7,
+   "owned": 26.4,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 13,
+   "name": "Rice",
+   "position": "MID",
+   "price": 7.4,
+   "owned": 12.1,
    "severity": "WARNING",
    "tag": "OWNED",
-   "message": "worsened 75% -> 50% (Unspecified injury - 50% chance of playing)"
-  },
-  {
-   "element_id": 260,
-   "name": "Wilson",
-   "position": "MID",
-   "price": 6.2,
-   "owned": 2.0,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Thigh injury - Unknown return date)"
-  },
-  {
-   "element_id": 36,
-   "name": "Maatsen",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.6,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Ankle injury - Unknown return date)"
-  },
-  {
-   "element_id": 34,
-   "name": "Pau",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.3,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Hamstring injury - Expected back 10 Oct)"
-  },
-  {
-   "element_id": 256,
-   "name": "Tete",
-   "position": "DEF",
-   "price": 4.4,
-   "owned": 0.2,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Concussion - Expected back 10 Oct)"
-  },
-  {
-   "element_id": 29,
-   "name": "M.Bizot",
-   "position": "GKP",
-   "price": 4.5,
-   "owned": 0.1,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Back injury - Expected back 10 Oct)"
-  },
-  {
-   "element_id": 246,
-   "name": "Röhl",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.0,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Unspecified injury - Expected back 11 Oct)"
-  },
-  {
-   "element_id": 652,
-   "name": "Azeez",
-   "position": "MID",
-   "price": 5.5,
-   "owned": 0.0,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Hamstring injury - Expected back 10 Oct)"
-  },
-  {
-   "element_id": 142,
-   "name": "James",
-   "position": "DEF",
-   "price": 5.4,
-   "owned": 6.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 448,
-   "name": "Burn",
-   "position": "DEF",
-   "price": 4.9,
-   "owned": 0.8,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Ankle injury - Expected back 12 Oct"
-  },
-  {
-   "element_id": 52,
-   "name": "Alysson",
-   "position": "MID",
-   "price": 5.0,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
-   "element_id": 170,
-   "name": "Emegha",
-   "position": "FWD",
-   "price": 5.0,
-   "owned": 0.1,
+   "element_id": 175,
+   "name": "van Ewijk",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 9.0,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 70,
+   "name": "Kluivert",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 0.9,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Unspecified injury - Unknown return date)"
+  },
+  {
+   "element_id": 182,
+   "name": "Amenda",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 0.6,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Calf injury - Unknown return date)"
+  },
+  {
+   "element_id": 315,
+   "name": "Fatawu",
+   "position": "MID",
+   "price": 5.4,
+   "owned": 0.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 17 Oct)"
+  },
+  {
+   "element_id": 499,
+   "name": "Pedro Porro",
+   "position": "DEF",
+   "price": 5.4,
+   "owned": 7.8,
    "severity": "WARNING",
    "tag": "-",
-   "message": "new news: Hamstring injury - Expected back 10 Oct"
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
    "element_id": 10,
    "name": "White",
    "position": "DEF",
    "price": 5.5,
-   "owned": 5.5,
-   "severity": "GOOD",
+   "owned": 5.1,
+   "severity": "WARNING",
    "tag": "-",
-   "message": "cleared - news removed, fit again"
+   "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
   },
   {
-   "element_id": 455,
-   "name": "Tonali",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 2.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 11,
-   "name": "Mosquera",
-   "position": "DEF",
-   "price": 5.3,
+   "element_id": 439,
+   "name": "Šeško",
+   "position": "FWD",
+   "price": 7.0,
    "owned": 1.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Shin injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 432,
+   "name": "Mainoo",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 1.6,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 429,
+   "name": "Rashford",
+   "position": "MID",
+   "price": 7.0,
+   "owned": 1.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 577,
+   "name": "Tomiyasu",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 638,
+   "name": "Norton-Cuffy",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 450,
+   "name": "Livramento",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 52,
+   "name": "Alysson",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 325,
+   "name": "Darlow",
+   "position": "GKP",
+   "price": 4.5,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 423,
+   "name": "Shaw",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 7.8,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 586,
+   "name": "Mendy",
+   "position": "DEF",
+   "price": 4.1,
+   "owned": 6.3,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -172,24 +202,64 @@
    "owned": 0.7,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 75%"
+   "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 208,
-   "name": "Sarr",
+   "element_id": 244,
+   "name": "Armstrong",
    "position": "MID",
-   "price": 6.2,
-   "owned": 0.6,
+   "price": 5.0,
+   "owned": 0.4,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 224,
-   "name": "Nketiah",
-   "position": "FWD",
+   "element_id": 269,
+   "name": "Sessegnon",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 0.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 536,
+   "name": "Reinildo",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 256,
+   "name": "Tete",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 405,
+   "name": "N.Gonzalez",
+   "position": "MID",
    "price": 5.5,
-   "owned": 0.5,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 474,
+   "name": "Jair Cunha",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.2,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -202,123 +272,93 @@
    "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 50%"
-  },
-  {
-   "element_id": 54,
-   "name": "Gomes",
-   "position": "MID",
-   "price": 5.5,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 101,
-   "name": "Henderson",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 344,
-   "name": "Gruev",
-   "position": "MID",
-   "price": 5.0,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
    "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
   {
-   "name": "Haaland",
-   "old": 15.5,
-   "new": 15.6,
-   "owned": 73.3,
+   "name": "Raya",
+   "old": 6.0,
+   "new": 6.1,
+   "owned": 42.1,
    "direction": "up"
   },
   {
-   "name": "Ødegaard",
-   "old": 6.7,
-   "new": 6.8,
-   "owned": 20.1,
-   "direction": "up"
-  },
-  {
-   "name": "Konsa",
-   "old": 4.5,
-   "new": 4.6,
-   "owned": 19.4,
-   "direction": "up"
-  },
-  {
-   "name": "M.Sangaré",
+   "name": "Groß",
    "old": 5.7,
+   "new": 5.8,
+   "owned": 27.1,
+   "direction": "up"
+  },
+  {
+   "name": "Tzolis",
+   "old": 6.4,
+   "new": 6.3,
+   "owned": 12.4,
+   "direction": "down"
+  },
+  {
+   "name": "Kostoulas",
+   "old": 5.5,
    "new": 5.6,
-   "owned": 11.0,
+   "owned": 3.3,
+   "direction": "up"
+  },
+  {
+   "name": "Gyökeres",
+   "old": 7.2,
+   "new": 7.1,
+   "owned": 3.1,
    "direction": "down"
   },
   {
-   "name": "Thiago",
-   "old": 7.9,
-   "new": 7.8,
-   "owned": 8.9,
+   "name": "Hincapie",
+   "old": 5.3,
+   "new": 5.2,
+   "owned": 0.9,
    "direction": "down"
   },
   {
-   "name": "Shaw",
-   "old": 4.4,
-   "new": 4.3,
-   "owned": 8.3,
+   "name": "Fernandes",
+   "old": 5.8,
+   "new": 5.7,
+   "owned": 0.8,
    "direction": "down"
   },
   {
-   "name": "Pedro Porro",
+   "name": "Burn",
+   "old": 4.9,
+   "new": 4.8,
+   "owned": 0.7,
+   "direction": "down"
+  },
+  {
+   "name": "Lewis-Skelly",
    "old": 5.5,
    "new": 5.4,
-   "owned": 8.3,
+   "owned": 0.6,
    "direction": "down"
   },
   {
-   "name": "Ndiaye",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 7.2,
+   "name": "Georginio",
+   "old": 5.4,
+   "new": 5.3,
+   "owned": 0.5,
    "direction": "down"
   },
   {
-   "name": "Lacroix",
-   "old": 6.0,
-   "new": 5.9,
-   "owned": 7.0,
+   "name": "Aaronson",
+   "old": 5.4,
+   "new": 5.3,
+   "owned": 0.5,
    "direction": "down"
   },
   {
-   "name": "Dewsbury-Hall",
-   "old": 6.5,
-   "new": 6.6,
-   "owned": 6.2,
-   "direction": "up"
-  },
-  {
-   "name": "Wirtz",
-   "old": 7.4,
-   "new": 7.3,
-   "owned": 6.1,
+   "name": "O'Brien",
+   "old": 4.9,
+   "new": 4.8,
+   "owned": 0.3,
    "direction": "down"
-  },
-  {
-   "name": "Bogle",
-   "old": 4.5,
-   "new": 4.6,
-   "owned": 5.9,
-   "direction": "up"
   }
  ],
  "urgent": [
@@ -327,10 +367,20 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.8,
-   "owned": 68.4,
+   "owned": 66.1,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "new news: Knee injury - 75% chance of playing"
+  },
+  {
+   "element_id": 154,
+   "name": "Palmer",
+   "position": "MID",
+   "price": 9.7,
+   "owned": 26.4,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
   }
  ],
  "available": true,

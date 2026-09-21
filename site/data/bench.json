@@ -1,4 +1,169 @@
 {
- "available": false,
- "reason": "no predictions logged for GW6 yet. They are written in the run before the deadline, so this fills in once the gameweek is close."
+ "available": true,
+ "gameweek": 6,
+ "provisional": false,
+ "formation": "3-5-2",
+ "starting_xi": [
+  {
+   "name": "B.Fernandes",
+   "element_id": 426,
+   "position": "MID",
+   "ep": 5.71,
+   "p_play": 0.948,
+   "if_played": 6.02,
+   "flagged": false
+  },
+  {
+   "name": "Isak",
+   "element_id": 379,
+   "position": "FWD",
+   "ep": 5.7,
+   "p_play": 0.869,
+   "if_played": 6.56,
+   "flagged": false
+  },
+  {
+   "name": "Palmer",
+   "element_id": 154,
+   "position": "MID",
+   "ep": 5.03,
+   "p_play": 0.873,
+   "if_played": 5.76,
+   "flagged": true
+  },
+  {
+   "name": "Rogers",
+   "element_id": 40,
+   "position": "MID",
+   "ep": 4.4,
+   "p_play": 0.888,
+   "if_played": 4.96,
+   "flagged": false
+  },
+  {
+   "name": "Wirtz",
+   "element_id": 366,
+   "position": "MID",
+   "ep": 4.27,
+   "p_play": 0.823,
+   "if_played": 5.2,
+   "flagged": false
+  },
+  {
+   "name": "Szoboszlai",
+   "element_id": 368,
+   "position": "MID",
+   "ep": 3.98,
+   "p_play": 0.908,
+   "if_played": 4.38,
+   "flagged": false
+  },
+  {
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
+   "ep": 3.78,
+   "p_play": 0.899,
+   "if_played": 4.21,
+   "flagged": false
+  },
+  {
+   "name": "Davis",
+   "element_id": 305,
+   "position": "DEF",
+   "ep": 3.66,
+   "p_play": 0.912,
+   "if_played": 4.01,
+   "flagged": false
+  },
+  {
+   "name": "Thomas",
+   "element_id": 173,
+   "position": "DEF",
+   "ep": 3.39,
+   "p_play": 0.913,
+   "if_played": 3.71,
+   "flagged": false
+  },
+  {
+   "name": "Rúben",
+   "element_id": 390,
+   "position": "DEF",
+   "ep": 3.34,
+   "p_play": 0.894,
+   "if_played": 3.74,
+   "flagged": false
+  },
+  {
+   "name": "Pickford",
+   "element_id": 226,
+   "position": "GKP",
+   "ep": 3.26,
+   "p_play": 0.93,
+   "if_played": 3.51,
+   "flagged": false
+  }
+ ],
+ "bench": [
+  {
+   "name": "Horníček",
+   "element_id": 567,
+   "position": "GKP",
+   "ep": 2.86,
+   "p_play": 0.92,
+   "if_played": 3.1,
+   "flagged": false
+  },
+  {
+   "name": "João Pedro",
+   "element_id": 165,
+   "position": "FWD",
+   "ep": 2.85,
+   "p_play": 0.516,
+   "if_played": 5.52,
+   "flagged": true
+  },
+  {
+   "name": "Hall",
+   "element_id": 449,
+   "position": "DEF",
+   "ep": 3.32,
+   "p_play": 0.943,
+   "if_played": 3.52,
+   "flagged": false
+  },
+  {
+   "name": "Mitchell",
+   "element_id": 204,
+   "position": "DEF",
+   "ep": 2.84,
+   "p_play": 0.869,
+   "if_played": 3.27,
+   "flagged": false
+  }
+ ],
+ "autosub_value": 4.56,
+ "notes": [
+  "Starting with a flag on Palmer. The bench covers a blank, but only for the first one that happens."
+ ],
+ "bench_boost": {
+  "value_now": 11.86,
+  "verdict": "hold",
+  "recent": [
+   [
+    4,
+    12.61
+   ],
+   [
+    5,
+    12.46
+   ]
+  ],
+  "double_gameweeks": [],
+  "reasoning": [
+   "Your bench has been worth 12.5 points a week on average over the last 2 gameweeks, best 12.6. This week it is worth 11.9.",
+   "Below the 12 point rule of thumb for a full bench of starters, so this is not the week.",
+   "Bench order does not matter in a Bench Boost week: every player scores, so the ordering work is the one thing the chip switches off."
+  ]
+ }
 }

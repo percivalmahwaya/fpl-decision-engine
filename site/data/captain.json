@@ -1,7 +1,70 @@
 {
  "gameweek": 6,
- "model_pick": null,
+ "model_pick": {
+  "name": "B.Fernandes",
+  "element_id": 426,
+  "position": "MID",
+  "ep": 5.71,
+  "flagged": false
+ },
  "your_pick": "B.Fernandes",
- "agrees": false,
- "ranked": []
+ "agrees": true,
+ "ranked": [
+  {
+   "name": "B.Fernandes",
+   "element_id": 426,
+   "position": "MID",
+   "ep": 5.71,
+   "flagged": false
+  },
+  {
+   "name": "Isak",
+   "element_id": 379,
+   "position": "FWD",
+   "ep": 5.7,
+   "flagged": false
+  },
+  {
+   "name": "Palmer",
+   "element_id": 154,
+   "position": "MID",
+   "ep": 5.03,
+   "flagged": true
+  },
+  {
+   "name": "Rogers",
+   "element_id": 40,
+   "position": "MID",
+   "ep": 4.4,
+   "flagged": false
+  },
+  {
+   "name": "Wirtz",
+   "element_id": 366,
+   "position": "MID",
+   "ep": 4.27,
+   "flagged": false
+  },
+  {
+   "name": "Szoboszlai",
+   "element_id": 368,
+   "position": "MID",
+   "ep": 3.98,
+   "flagged": false
+  },
+  {
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
+   "ep": 3.78,
+   "flagged": false
+  },
+  {
+   "name": "Davis",
+   "element_id": 305,
+   "position": "DEF",
+   "ep": 3.66,
+   "flagged": false
+  }
+ ]
 }

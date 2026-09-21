@@ -42,16 +42,16 @@
   },
   {
    "gameweek": 5,
-   "points": 4,
+   "points": 59,
    "transfers": 0,
    "formation": "3-5-2",
    "decided_by": "unrecorded",
    "captain": "B.Fernandes",
-   "captain_points": null,
+   "captain_points": 4,
    "played": true
   }
  ],
- "total_points": 237,
+ "total_points": 292,
  "played": 5,
- "average": 47.4
+ "average": 58.4
 }

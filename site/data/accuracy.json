@@ -25,9 +25,30 @@
    "n": 656,
    "mae": 1.126,
    "mae_high_return": 5.353
+  },
+  {
+   "gameweek": 5,
+   "model": "form_fdr",
+   "n": 659,
+   "mae": 1.15,
+   "mae_high_return": 4.545
+  },
+  {
+   "gameweek": 5,
+   "model": "naive_form",
+   "n": 659,
+   "mae": 1.205,
+   "mae_high_return": 4.5
+  },
+  {
+   "gameweek": 5,
+   "model": "two_stage_ml",
+   "n": 659,
+   "mae": 1.048,
+   "mae_high_return": 5.116
   }
  ],
  "pending": [
-  5
+  6
  ]
 }

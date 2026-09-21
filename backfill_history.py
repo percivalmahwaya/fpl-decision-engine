@@ -35,6 +35,27 @@ SEASONS = ["2022-23", "2023-24", "2024-25", "2025-26"]
 UA = "fpl-research/0.1 (personal research project)"
 
 
+
+# The upstream archive spells goalkeeper "GK". Everything else in this
+# project - the live API, fpl_collect.POSITIONS, the model's is_gkp feature,
+# the optimiser, the bench - spells it "GKP".
+#
+# That single-letter difference silently dropped 12,500 rows, 11% of the
+# archive, out of every training run for months, because model.py filters on
+# the live spelling and nothing ever matched. `is_gkp` was a constant zero
+# while 71 goalkeepers a week were predicted anyway. Nothing crashed and
+# nothing warned.
+#
+# Normalised HERE, at the boundary where the data enters, rather than taught
+# to the twenty call sites downstream that already agree with each other.
+HISTORY_POSITION_ALIASES = {"GK": "GKP"}
+
+
+def normalise_position(position):
+    """Map the archive's spelling onto the one the rest of the system uses."""
+    return HISTORY_POSITION_ALIASES.get(position, position)
+
+
 def create_schema(conn):
     conn.executescript(
         """
@@ -108,7 +129,7 @@ def load_season(conn, season):
         fx = num(r, "fixture", int, -1)
         rows.append((
             season, gw, el, fx,
-            r.get("name"), r.get("position"), r.get("team"),
+            r.get("name"), normalise_position(r.get("position")), r.get("team"),
             num(r, "opponent_team", int),
             1 if str(r.get("was_home", "")).lower() == "true" else 0,
             num(r, "minutes", int, 0),

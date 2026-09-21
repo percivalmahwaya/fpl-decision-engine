@@ -20,7 +20,8 @@ import sqlite3
 import unittest
 from pathlib import Path
 
-from migrate import MIGRATIONS, ensure_columns, migrate
+from migrate import (MIGRATIONS, ensure_columns, migrate,
+                     normalise_history_positions)
 
 ROOT = Path(__file__).resolve().parent
 
@@ -206,6 +207,78 @@ class NoPositionalInsertsIntoMigratedTablesTest(unittest.TestCase):
             "positional INSERT into a table that gains columns: "
             + "; ".join(offenders)
             + ". Name the columns, or the next migration breaks the pipeline.")
+
+class GoalkeeperVocabularyTest(unittest.TestCase):
+    """The archive said GK, everything else said GKP, and 11% of the training
+    data quietly vanished for months.
+
+    `is_gkp` was a constant zero while the live feed still handed the model
+    71 goalkeepers a week to predict. Nothing crashed and nothing warned,
+    which is why it survived: a filter that matches nothing looks exactly
+    like a filter that had nothing to match.
+    """
+
+    def _db(self):
+        conn = sqlite3.connect(":memory:")
+        conn.execute("CREATE TABLE history (element INT, position TEXT)")
+        conn.executemany("INSERT INTO history VALUES (?,?)",
+                         [(1, "GK"), (2, "GK"), (3, "DEF"), (4, "MID")])
+        conn.commit()
+        return conn
+
+    def test_gk_becomes_gkp(self):
+        conn = self._db()
+        moved = normalise_history_positions(conn, verbose=False)
+        self.assertEqual(moved, 2)
+        positions = {r[0] for r in conn.execute("SELECT position FROM history")}
+        self.assertEqual(positions, {"GKP", "DEF", "MID"})
+        self.assertNotIn("GK", positions)
+
+    def test_it_is_idempotent(self):
+        conn = self._db()
+        normalise_history_positions(conn, verbose=False)
+        self.assertEqual(normalise_history_positions(conn, verbose=False), 0)
+
+    def test_it_touches_nothing_else(self):
+        conn = self._db()
+        normalise_history_positions(conn, verbose=False)
+        self.assertEqual(
+            conn.execute("SELECT COUNT(*) FROM history "
+                         "WHERE position IN ('DEF','MID')").fetchone()[0], 2)
+
+    def test_a_database_with_no_history_table_does_not_crash(self):
+        """A fresh database runs migrate before backfill has ever run."""
+        self.assertEqual(
+            normalise_history_positions(sqlite3.connect(":memory:"),
+                                        verbose=False), 0)
+
+    def test_the_importer_normalises_on_the_way_in(self):
+        """So a future re-import cannot silently reintroduce it."""
+        from backfill_history import normalise_position
+        self.assertEqual(normalise_position("GK"), "GKP")
+        self.assertEqual(normalise_position("DEF"), "DEF")
+        self.assertEqual(normalise_position(None), None)
+
+    def test_the_model_filter_and_the_collector_agree(self):
+        """The two vocabularies that drifted. If a future edit changes one
+        spelling and not the other, this is what notices."""
+        collector = (ROOT / "fpl_collect.py").read_text(encoding="utf-8")
+        model_src = (ROOT / "model.py").read_text(encoding="utf-8")
+
+        match = re.search(r"POSITIONS\s*=\s*\{([^}]*)\}", collector)
+        self.assertIsNotNone(match, "fpl_collect.POSITIONS not found")
+        collector_names = set(re.findall(r'"(\w+)"', match.group(1)))
+
+        filt = re.search(
+            r'df\["position"\]\.isin\(\[([^\]]*)\]\)', model_src)
+        self.assertIsNotNone(filt, "model.py position filter not found")
+        model_names = set(re.findall(r'"(\w+)"', filt.group(1)))
+
+        self.assertEqual(
+            collector_names, model_names,
+            "the collector and the model disagree about how positions are "
+            "spelled. That disagreement is what dropped 12,500 rows.")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2, exit=False)

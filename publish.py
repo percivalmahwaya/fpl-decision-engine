@@ -440,6 +440,32 @@ def build_captain(conn, next_gw):
     }
 
 
+
+# When the champion model changed, and what changed about it.
+#
+# The accuracy scoreboard compares models BY NAME across gameweeks. If
+# `two_stage_ml` quietly starts meaning something else, the line on that
+# chart splices two different models together and reads as a trend. That is
+# not a chart, it is a mistake with axes.
+#
+# So every change to what the champion learns from is recorded here and shown
+# beside the scoreboard. Keep it honest: add a row, do not edit one.
+MODEL_CHANGES = [
+    {
+        "gameweek": 6,
+        "model": "two_stage_ml",
+        "change": "Goalkeepers entered training for the first time.",
+        "detail": (
+            "The archive spelled goalkeeper GK and the rest of the system "
+            "spelled it GKP, so 12,500 rows, 11% of the archive, had never "
+            "reached training, and the is_gkp feature was a constant zero "
+            "while 71 keepers a week were predicted anyway. Scores before "
+            "GW6 come from a model that had never seen a goalkeeper, so they "
+            "are not strictly comparable with those after it."
+        ),
+    },
+]
+
 def build_accuracy(conn):
     """
     Every model's error on every gameweek that has both predictions and
@@ -475,7 +501,8 @@ def build_accuracy(conn):
                 "mae_high_return": round(sum(hi) / len(hi), 3) if hi else None,
             })
 
-    return {"models": models, "scored": scored,
+    return {
+        "model_changes": MODEL_CHANGES,"models": models, "scored": scored,
             "pending": [g for g in
                         [r[0] for r in conn.execute(
                             "SELECT DISTINCT gameweek FROM predictions ORDER BY gameweek")]

@@ -76,6 +76,35 @@ MIGRATIONS = {
 }
 
 
+def normalise_history_positions(conn, verbose=True):
+    """Rewrite the archive's "GK" as "GKP", once.
+
+    THE BUG THIS CLOSES: `history` stores goalkeepers as "GK" and every other
+    part of this project - the live API, the model's position filter, the
+    is_gkp feature, the optimiser, the bench - uses "GKP". model.py filters
+    on the live spelling, so 12,500 rows, 11% of the archive, never reached
+    training. `is_gkp` was a constant zero while 71 goalkeepers a week were
+    predicted from the live feed regardless. Nothing crashed, nothing warned,
+    and it went unnoticed for months.
+
+    Data migration rather than a read-time alias, because twenty call sites
+    already agree that a goalkeeper is "GKP" and the archive is the only
+    dissenter. One of them should change, and it should be the odd one out.
+
+    Idempotent: a second run matches nothing.
+    """
+    if not conn.execute(
+            "SELECT name FROM sqlite_master WHERE type='table' AND name='history'"
+    ).fetchone():
+        return 0
+
+    cur = conn.execute("UPDATE history SET position = 'GKP' WHERE position = 'GK'")
+    conn.commit()
+    if cur.rowcount and verbose:
+        print(f"  normalised {cur.rowcount:,} history rows: GK -> GKP")
+    return cur.rowcount
+
+
 def migrate(conn, verbose=True):
     """Bring any database up to the current schema. Safe to call always."""
     total = []
@@ -84,6 +113,10 @@ def migrate(conn, verbose=True):
         if added and verbose:
             print(f"  migrated {table}: added {', '.join(added)}")
         total.extend(f"{table}.{c}" for c in added)
+
+    moved = normalise_history_positions(conn, verbose=verbose)
+    if moved:
+        total.append(f"history.position GK->GKP x{moved}")
     return total
 
 

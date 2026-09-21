@@ -635,6 +635,13 @@ with tab_news:
 
 with tab_model:
     acc = load("accuracy")
+
+    # A model that changed mid-season is two models on one chart unless the
+    # break is drawn. Shown above the numbers, not under them.
+    for change in (acc or {}).get("model_changes", []):
+        st.warning(
+            f"**GW{change['gameweek']}: {change['change']}** "
+            f"{change['detail']}")
     st.markdown("##### Is the model actually any good?")
     st.markdown(
         "Predictions are written **before** each deadline and never edited "

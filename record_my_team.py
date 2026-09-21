@@ -63,6 +63,7 @@ import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
+from migrate import migrate
 
 DB_PATH = Path(__file__).parent / "fpl.db"
 API = "https://fantasy.premierleague.com/api"
@@ -253,6 +254,12 @@ def get(path):
                                  headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as fh:
         return json.load(fh)
+
+    # Existing databases do not get new columns from CREATE TABLE
+    # IF NOT EXISTS. See migrate.py: omitting this killed three
+    # scheduled runs on 2026-09-19.
+    migrate(conn, verbose=True)
+
 
 
 def element_names(conn):

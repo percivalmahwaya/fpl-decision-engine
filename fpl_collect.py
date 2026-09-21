@@ -23,6 +23,7 @@ import sys
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+from migrate import migrate
 
 BASE = "https://fantasy.premierleague.com/api"
 DB_PATH = Path(__file__).parent / "fpl.db"
@@ -110,6 +111,12 @@ def create_schema(conn):
         CREATE INDEX IF NOT EXISTS idx_fixtures_event  ON fixtures(event);
         """
     )
+
+    # Existing databases do not get new columns from CREATE TABLE
+    # IF NOT EXISTS. See migrate.py: omitting this killed three
+    # scheduled runs on 2026-09-19.
+    migrate(conn, verbose=True)
+
 
 
 def to_float(value, default=0.0):

@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 48,
- "latest_snapshot": 51,
+ "latest_snapshot": 52,
  "prev_taken_at": "2026-09-19T09:30:19.559149+00:00",
- "latest_taken_at": "2026-09-21T23:18:41.706356+00:00",
+ "latest_taken_at": "2026-09-22T09:57:10.779049+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.7,
-   "owned": 66.1,
+   "owned": 66.0,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "new news: Knee injury - 75% chance of playing"
@@ -19,7 +19,7 @@
    "name": "Palmer",
    "position": "MID",
    "price": 9.7,
-   "owned": 26.4,
+   "owned": 26.3,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
@@ -29,7 +29,7 @@
    "name": "Rice",
    "position": "MID",
    "price": 7.4,
-   "owned": 12.1,
+   "owned": 12.0,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -39,7 +39,7 @@
    "name": "van Ewijk",
    "position": "DEF",
    "price": 4.0,
-   "owned": 9.0,
+   "owned": 8.9,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
@@ -113,6 +113,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 116,
+   "name": "Dunk",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 1.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Neck injury - 75% chance of playing)"
   },
   {
    "element_id": 429,
@@ -280,14 +290,14 @@
    "name": "João Pedro",
    "old": 7.8,
    "new": 7.7,
-   "owned": 66.1,
+   "owned": 66.0,
    "direction": "down"
   },
   {
    "name": "Raya",
    "old": 6.0,
    "new": 6.1,
-   "owned": 42.1,
+   "owned": 42.2,
    "direction": "up"
   },
   {
@@ -301,14 +311,14 @@
    "name": "Groß",
    "old": 5.7,
    "new": 5.8,
-   "owned": 27.1,
+   "owned": 27.3,
    "direction": "up"
   },
   {
    "name": "Hall",
    "old": 5.2,
    "new": 5.3,
-   "owned": 16.6,
+   "owned": 16.7,
    "direction": "up"
   },
   {
@@ -329,14 +339,14 @@
    "name": "Schade",
    "old": 6.1,
    "new": 6.2,
-   "owned": 10.4,
+   "owned": 10.5,
    "direction": "up"
   },
   {
    "name": "Kostoulas",
    "old": 5.5,
    "new": 5.6,
-   "owned": 3.3,
+   "owned": 3.4,
    "direction": "up"
   },
   {
@@ -367,7 +377,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.7,
-   "owned": 66.1,
+   "owned": 66.0,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "new news: Knee injury - 75% chance of playing"
@@ -377,7 +387,7 @@
    "name": "Palmer",
    "position": "MID",
    "price": 9.7,
-   "owned": 26.4,
+   "owned": 26.3,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"

@@ -7,5 +7,10 @@
 #
 # Pipeline dependencies live in requirements-pipeline.txt and are installed
 # only by GitHub Actions.
-streamlit>=1.40,<2
+# The floor is what the CODE needs, not what once worked. app.py uses
+# width="stretch" throughout, which older Streamlit does not accept, and the
+# pin said >=1.40 while the app had already moved on. A pin that is looser
+# than the code is a pin that lets the cloud install something that cannot
+# run it.
+streamlit>=1.49,<2
 pandas>=2.2,<3

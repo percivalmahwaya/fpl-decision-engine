@@ -138,8 +138,13 @@ def line(df, x, y, colour_by=None, y_title="", height=260, domain=None):
             legend=alt.Legend(orient="top", labelColor="#33332b", symbolType="stroke"))
 
     chart = alt.Chart(df).mark_line(strokeWidth=2.5, color=SERIES[0]).encode(**enc)
+    # width="stretch" rather than the older keyword. Streamlit removed
+    # that one from CHART elements while leaving it on dataframes and
+    # images, so this file sat half-migrated and only the charts broke.
+    # Every element uses the same API now, which is the only way that
+    # stays true.
     st.altair_chart(chart.properties(height=height).configure_view(stroke=None),
-                    use_container_width=True)
+                    width="stretch")
 
 
 def caption(path):
@@ -517,7 +522,7 @@ with tab_bench:
               "If he plays": round(x["if_played"], 2),
               "Plays": f"{x['p_play'] * 100:.0f}%"}
              for x in plan["starting_xi"]],
-            hide_index=True, use_container_width=True)
+            hide_index=True, width="stretch")
 
 
 # ------------------------------------------------------ recommendations
@@ -787,7 +792,7 @@ with tab_season:
             # crop takes a band out of the middle of it, which on a portrait
             # shot means the subject's head is above the frame.
             for col, p in zip(st.columns(4), shots[:4]):
-                col.image(str(p), caption=caption(p), use_container_width=True)
+                col.image(str(p), caption=caption(p), width="stretch")
 
             st.caption(
                 "Katowice, playing for Zimbabwe. The engine exists because "

@@ -557,6 +557,22 @@ def qa_app():
        f"found {heavy} — the free tier caps memory at 1 GB")
     ok("app requirements include streamlit", "streamlit" in reqs)
 
+    # THE APP MUST NOT MIX STREAMLIT API GENERATIONS.
+    #
+    # `use_container_width` was removed from CHART elements while it still
+    # works on dataframes and images, so a half-migrated file fails on the
+    # charts alone and passes every other check. That is exactly what
+    # happened on 2026-09-22: the Model accuracy tab raised a TypeError on
+    # the deployed site while everything rendered fine locally, because the
+    # local Streamlit was a version behind the cloud's.
+    #
+    # Checked here rather than left to a version pin, because the pin cannot
+    # stop the two styles coexisting.
+    stale = re.findall(r"use_container_width\s*=", source)
+    ok("app.py uses one Streamlit sizing API", not stale,
+       f"{len(stale)} use(s) of use_container_width remain; the app also uses "
+       'width="stretch", and mixing them breaks charts on newer Streamlit')
+
     imports = re.findall(r"^\s*(?:import|from)\s+([\w.]+)", source, re.M)
     banned = [i for i in imports if i.split(".")[0] in
               ("sklearn", "scipy", "sqlite3", "torch", "tensorflow")]

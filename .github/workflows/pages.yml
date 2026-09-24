@@ -18,6 +18,24 @@ name: Publish the static site
 # clear message and nothing else is affected.
 
 on:
+  # THE ONE THAT ACTUALLY KEEPS THE SITE CURRENT.
+  #
+  # The `push` trigger below does NOT fire for the pipeline's own commits.
+  # GitHub deliberately refuses to start a workflow from a push made with
+  # GITHUB_TOKEN, to stop a job that commits from retriggering itself
+  # forever. fpl.yml commits site/data twice a day with exactly that token,
+  # so relying on `push` alone meant the site froze at whatever data existed
+  # the last time a human pushed, while the deploy stayed green and reported
+  # success. Found by pushing and watching it not happen.
+  #
+  # `workflow_run` is the supported way out: it fires when another workflow
+  # finishes, whatever started it. It only ever triggers from the default
+  # branch, which is where the pipeline runs.
+  workflow_run:
+    workflows: ["FPL pipeline"]
+    types: [completed]
+
+  # Still useful for a change to the page itself, pushed by a person.
   push:
     branches: [main]
     paths:
@@ -41,6 +59,12 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # A failed pipeline leaves site/data untouched, so there is nothing new to
+    # publish. The two other triggers carry no workflow_run payload, so they
+    # must not be caught by this.
+    if: >-
+      github.event_name != 'workflow_run' ||
+      github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}

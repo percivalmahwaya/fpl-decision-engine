@@ -1,9 +1,30 @@
 {
  "prev_snapshot": 53,
- "latest_snapshot": 58,
+ "latest_snapshot": 59,
  "prev_taken_at": "2026-09-22T21:23:31.741935+00:00",
- "latest_taken_at": "2026-09-24T10:00:23.637107+00:00",
- "alerts": [],
+ "latest_taken_at": "2026-09-24T21:34:30.393584+00:00",
+ "alerts": [
+  {
+   "element_id": 397,
+   "name": "Semenyo",
+   "position": "MID",
+   "price": 8.4,
+   "owned": 15.5,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 552,
+   "name": "Brobbey",
+   "position": "FWD",
+   "price": 5.7,
+   "owned": 7.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  }
+ ],
  "price_moves": [
   {
    "name": "Maguire",

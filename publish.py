@@ -502,6 +502,16 @@ def build_accuracy(conn):
             })
 
     return {
+        # WHICH OF THESE MODELS IS THE ONE THAT ACTUALLY DECIDES ANYTHING.
+        #
+        # Published rather than assumed by each front end. There are now four
+        # models on this scoreboard and only one of them picks a captain; the
+        # others are baselines and a registered challenger. Both front ends
+        # draw the champion in the kit colour and the rest behind it, and
+        # before this key existed each of them worked out which was which by
+        # hardcoding the name, which is two copies of a fact that changes the
+        # day a challenger is promoted.
+        "champion": MODEL_NAME,
         "model_changes": MODEL_CHANGES,"models": models, "scored": scored,
             "pending": [g for g in
                         [r[0] for r in conn.execute(
@@ -632,6 +642,36 @@ def build_notify(meta, alerts, squad, captain, transfers=None, bench=None):
 # ------------------------------------------------------------------- main
 
 
+def photo_caption(stem):
+    """Filename to caption: `01_katowice-2024.jpg` becomes "katowice 2024".
+
+    A leading `NN_` orders the files without the digits showing, so adding a
+    photograph needs no code at all. This rule also exists in app.py, which
+    can glob the directory because Streamlit has a filesystem. qa_deploy.py
+    asserts the two agree on the files actually present, because a caption
+    that differs between the two front ends is the sort of thing nobody
+    notices and everybody trips over later.
+    """
+    if stem[:2].isdigit():
+        stem = stem.split("_", 1)[-1]
+    return stem.replace("-", " ").replace("_", " ").strip()
+
+
+def build_photos():
+    """The photographs, listed for a host with no directory listing.
+
+    The Streamlit app globs the folder at request time. A static page cannot:
+    it is served by a plain file host that will happily 404 anything not asked
+    for by name and offers no way to enumerate. So the list is published like
+    every other piece of data here, at the same moment and by the same job.
+    """
+    folder = ROOT / "site" / "assets" / "photos"
+    if not folder.exists():
+        return []
+    shots = sorted(folder.glob("*.jpg")) + sorted(folder.glob("*.webp"))
+    return [{"file": p.name, "caption": photo_caption(p.stem)} for p in shots]
+
+
 def run(conn, verbose=False):
     meta = build_meta(conn)
     next_gw = meta["next_gw"]
@@ -659,6 +699,7 @@ def run(conn, verbose=False):
         ("season.json", season),
         ("alerts.json", alerts),
         ("notify.json", notify),
+        ("photos.json", build_photos()),
     ]:
         written.append(write(name, payload))
 

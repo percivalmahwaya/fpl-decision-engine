@@ -348,3 +348,278 @@
 /* Links keep the kit colour. */
 a, a:visited { color: var(--pfl-green-d); }
 a:hover { color: var(--pfl-green); }
+
+
+/* ==========================================================================
+   THE STATIC PAGE
+   ==========================================================================
+
+   Everything above this line styles the Streamlit app: it overrides widgets
+   somebody else's framework drew, which is why so much of it is written
+   against class names like .stDataFrame that this project does not control.
+
+   Everything below draws the widgets instead of overriding them. site/index.html
+   is the same engine, the same data and the same words with no framework
+   underneath, and these are the parts Streamlit used to provide: a tab strip,
+   a table, a metric, an alert, a disclosure, a chart.
+
+   It is deliberately in the SAME FILE rather than a second stylesheet. The
+   tokens at the top are the design system, and two files reading from one set
+   of tokens is one file. Nothing below is loaded by anything above: the
+   Streamlit app never sees these class names, and the static page never sees
+   the .st* ones. The whole of this file is 13 KB.
+   ========================================================================== */
+
+/* THE PAGE ITSELF.
+
+   SCOPED TO body.static ON PURPOSE. This stylesheet is served to the
+   Streamlit app as well, and Streamlit sets its own typography and page
+   background on body. An unscoped body rule here would silently restyle
+   that app from a file whose job is only to add the static page.
+
+   It is also a bug that only rendering the page could find. Nothing above
+   this line styles `body` at all, because Streamlit always supplied it, so
+   the static page loaded the entire design system and then drew every word
+   of it in the browser's default Times. Every colour was right, every
+   spacing was right, and the typeface was wrong, which is exactly the kind
+   of thing that reads as "looks a bit off" rather than as a bug. */
+body.static {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: var(--t-base);
+  line-height: 1.55;
+  color: var(--pfl-ink);
+  background: var(--pfl-paper);
+  -webkit-text-size-adjust: 100%;
+}
+body.static p { margin: 0 0 var(--s-3); }
+body.static a { color: var(--pfl-green-d); }
+body.static code {
+  font-family: var(--font-mono);
+  font-size: .9em;
+  background: var(--pfl-sand-l);
+  padding: 1px 4px;
+  border-radius: var(--r);
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: var(--s-5) var(--s-4) var(--s-8);
+}
+
+/* ------------------------------------------------------------ tab strip */
+
+/* Buttons, not links with a fragment. A fragment jumps the page and puts a
+   panel change in the history, so the back button walks through tabs instead
+   of leaving the site, which on a page somebody opens twice a week is the
+   opposite of what they want. */
+.tabstrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 2px solid var(--pfl-sand);
+  margin: var(--s-5) 0 0;
+}
+.tabstrip button {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  padding: var(--s-3) var(--s-4);
+  font: inherit;
+  font-size: var(--t-sm);
+  font-weight: 600;
+  color: var(--pfl-stone);
+  cursor: pointer;
+}
+.tabstrip button:hover { color: var(--pfl-ink); }
+.tabstrip button[aria-selected="true"] {
+  color: var(--pfl-green-d);
+  border-bottom-color: var(--pfl-green);
+}
+.tabstrip button:focus-visible {
+  outline: 2px solid var(--pfl-green);
+  outline-offset: -2px;
+}
+.panel[hidden] { display: none; }
+.panel { padding-top: var(--s-5); }
+
+/* ---------------------------------------------------------------- tables */
+
+/* THE TABLE WRAPS ITSELF IN ITS OWN SCROLLER. A wide table that makes the
+   PAGE scroll sideways takes the masthead and every other panel with it, and
+   on a phone that reads as a broken layout rather than as a wide table. */
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+table.data {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--t-sm);
+  font-variant-numeric: tabular-nums;
+}
+table.data th {
+  text-align: left;
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--pfl-stone);
+  font-weight: 700;
+  padding: var(--s-2) var(--s-3);
+  border-bottom: 2px solid var(--pfl-sand);
+  white-space: nowrap;
+}
+table.data td {
+  padding: var(--s-2) var(--s-3);
+  border-bottom: 1px solid var(--pfl-sand-l);
+}
+table.data tr:last-child td { border-bottom: 0; }
+table.data td.num, table.data th.num { text-align: right; }
+table.data tbody tr:hover { background: var(--pfl-sand-l); }
+table.data .mono { font-family: var(--font-mono); }
+.rowmine { background: rgba(31, 122, 61, .06); }
+
+/* --------------------------------------------------------------- metrics */
+
+.metrics { display: flex; flex-wrap: wrap; gap: var(--s-5); margin: var(--s-4) 0; }
+.metric .k {
+  display: block;
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--pfl-stone);
+}
+.metric .v { display: block; font-size: var(--t-xl); font-weight: 700; }
+
+/* ---------------------------------------------------------------- notes */
+
+/* Four levels, and the colour is the whole message. Red is alarm only, as the
+   tokens at the top of this file insist: if it appears where the reader does
+   not need to act, it stops working where they do. */
+.note {
+  border-left: 3px solid var(--pfl-stone);
+  background: var(--pfl-bone);
+  padding: var(--s-3) var(--s-4);
+  margin: var(--s-3) 0;
+  font-size: var(--t-sm);
+  border-radius: 0 var(--r) var(--r) 0;
+}
+.note-good  { border-left-color: var(--pfl-green); }
+.note-warn  { border-left-color: var(--pfl-gold); }
+.note-alarm { border-left-color: var(--pfl-red); }
+.note strong { font-weight: 700; }
+
+.caption {
+  font-size: var(--t-xs);
+  color: var(--pfl-stone);
+  line-height: 1.5;
+  margin: var(--s-2) 0 var(--s-4);
+}
+
+h2.sect {
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--pfl-stone);
+  margin: var(--s-5) 0 var(--s-2);
+  font-weight: 700;
+}
+
+/* ----------------------------------------------------------- disclosure */
+
+details.more {
+  border: var(--line);
+  border-radius: var(--r);
+  background: var(--pfl-white);
+  margin: var(--s-3) 0;
+}
+details.more > summary {
+  cursor: pointer;
+  padding: var(--s-3) var(--s-4);
+  font-size: var(--t-sm);
+  font-weight: 600;
+  list-style: none;
+}
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::before { content: "+ "; color: var(--pfl-green); font-weight: 700; }
+details.more[open] > summary::before { content: "- "; }
+details.more .body { padding: 0 var(--s-4) var(--s-4); font-size: var(--t-sm); }
+
+/* ---------------------------------------------------------------- forms */
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-4);
+  align-items: flex-end;
+  margin-bottom: var(--s-4);
+  padding: var(--s-3) var(--s-4);
+  background: var(--pfl-bone);
+  border-radius: var(--r);
+}
+.filters label {
+  display: block;
+  font-size: var(--t-xs);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  color: var(--pfl-stone);
+  font-weight: 700;
+  margin-bottom: var(--s-1);
+}
+.filters input[type="range"] { width: 10rem; display: block; }
+.filters .check { display: flex; align-items: center; gap: var(--s-2); }
+.filters .check label {
+  margin: 0; text-transform: none; letter-spacing: 0; font-weight: 500;
+  font-size: var(--t-sm); color: var(--pfl-ink);
+}
+.posgroup { display: flex; gap: var(--s-1); }
+.posgroup button {
+  appearance: none; font: inherit; font-size: var(--t-xs); font-weight: 700;
+  padding: var(--s-1) var(--s-3); cursor: pointer;
+  border: 1px solid var(--pfl-sand); background: var(--pfl-white);
+  color: var(--pfl-stone); border-radius: var(--r);
+}
+.posgroup button[aria-pressed="true"] {
+  background: var(--pfl-green); border-color: var(--pfl-green-d); color: var(--pfl-white);
+}
+
+/* ---------------------------------------------------------------- chart */
+
+/* Inline SVG, drawn by about seventy lines of app.js. A charting library is
+   200 KB to draw two line charts of five points each, which on this page
+   would be seven times the weight of all the data it is drawing. */
+.chart { width: 100%; height: auto; display: block; }
+.chart .axis { stroke: var(--pfl-sand); stroke-width: 1; }
+.chart .tick { fill: var(--pfl-stone); font-size: 10px; }
+.chart .grid { stroke: var(--pfl-sand-l); stroke-width: 1; }
+.chart .series { fill: none; stroke-width: 2; }
+.chart .dot { stroke: var(--pfl-white); stroke-width: 1.5; }
+.legend { display: flex; flex-wrap: wrap; gap: var(--s-4); font-size: var(--t-xs); }
+.legend span { display: flex; align-items: center; gap: var(--s-2); }
+.legend i { width: 12px; height: 3px; display: inline-block; }
+
+/* --------------------------------------------------------------- photos */
+
+/* ALWAYS FOUR COLUMNS, however many photographs there are.
+
+   auto-fit was the first attempt and it is wrong for the same reason it was
+   wrong in app.py, which already carries this note: with one photograph the
+   single column spans the full width, and the 180px crop then takes a
+   horizontal band out of the middle of it. On a portrait shot that means the
+   subject's head is above the frame. A lone photo sitting in the first of
+   four columns is the correct size and simply leaves space beside it. */
+.shots { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--s-3); }
+.shots figure { margin: 0; }
+.shots img { width: 100%; height: 180px; object-fit: cover; border-radius: var(--r); display: block; }
+.shots figcaption { font-size: var(--t-xs); color: var(--pfl-stone); margin-top: var(--s-1); }
+
+/* ---------------------------------------------------------------- phone */
+
+@media (max-width: 640px) {
+  .wrap { padding: var(--s-4) var(--s-3) var(--s-7); }
+  .tabstrip button { padding: var(--s-2) var(--s-3); }
+  .metrics { gap: var(--s-4); }
+  /* Two up on a phone. Four 180px crops across 360px is a contact sheet. */
+  .shots { grid-template-columns: repeat(2, 1fr); }
+}

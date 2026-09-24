@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Progeny FPL Engine</title>
+<meta name="description" content="A Fantasy Premier League decision engine that logs every prediction before the deadline and is scored against the result.">
+
+<!--
+  Progeny FPL Engine, the static front end.
+
+  WHY THIS EXISTS ALONGSIDE app.py
+  ================================
+  The Streamlit app does exactly the same job and costs 5171 KB to do it, of
+  which 4894 KB is Streamlit's own JavaScript, before a single number of
+  Percival's appears. The data it draws is about 28 KB of JSON that GitHub
+  Actions has already computed and committed.
+
+  pfl.css said so itself, months before this page existed: "If that ever
+  changes, the honest answer is not a lighter stylesheet, it is a different
+  host." This is that different host. Same data, same design system, same
+  words, no framework.
+
+  THIS PAGE COMPUTES NOTHING, exactly like the Streamlit one. It fetches the
+  JSON in site/data/ and draws it. Every decision shown here was made by the
+  pipeline before the deadline and logged. If you find yourself wanting to
+  work something out in this file, work it out in publish.py instead and read
+  the answer.
+
+  NO FRAMEWORK, NO CDN, NO WEB FONT, NO ICON SET. Everything this page needs
+  is in this repository and is served from the same origin. That is not
+  minimalism for its own sake: a CDN is a third party that can change or
+  disappear under a page nobody is watching, and this one runs unattended.
+-->
+
+<link rel="stylesheet" href="assets/pfl.css">
+</head>
+<body class="static">
+
+<main class="wrap" id="app">
+
+  <!-- Rendered before any JSON arrives, so a slow network shows the page
+       rather than a blank screen that looks broken. -->
+  <div class="pfl-head">
+    <p class="kicker">Fantasy Premier League, decided on the record</p>
+    <h1><span class="pfl-mark"></span>Progeny FPL Engine</h1>
+    <p class="lede">Every prediction below was written before its deadline and
+      has not been touched since. The engine gets no second guesses, and neither
+      do I. Where the two of us disagree, the scoreboard settles it.</p>
+  </div>
+
+  <div class="pfl-stats" id="stats"></div>
+  <div class="pitch-rule"></div>
+
+  <div id="banners"></div>
+
+  <noscript>
+    <div class="pfl-empty">
+      <h3>This page needs JavaScript</h3>
+      <p>Not for effects: the numbers live in JSON files that a scheduled job
+        writes twice a day, and this page reads them. The raw data is in
+        <code>site/data/</code> in the repository and is readable without any
+        of this.</p>
+    </div>
+  </noscript>
+
+  <div class="tabstrip" role="tablist" id="tabs"></div>
+  <div id="panels"></div>
+
+  <div class="pfl-foot" id="foot"></div>
+
+</main>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

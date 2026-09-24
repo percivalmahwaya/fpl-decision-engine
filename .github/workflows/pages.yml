@@ -1,0 +1,69 @@
+name: Publish the static site
+
+# The static front end, served by GitHub Pages.
+#
+# DELIBERATELY A SEPARATE WORKFLOW FROM fpl.yml, which is the clock for the
+# whole system and has been running unattended for weeks. Deployment is a
+# different job with different permissions and a different failure mode: if
+# Pages is misconfigured or the deploy times out, the pipeline that collects
+# data, predicts, alerts and emails must not go red with it. Those runs go
+# quiet when they fail, and a red cron does not email anybody.
+#
+# It triggers on the same commits regardless, because fpl.yml pushes its JSON
+# to main and that push starts this. So the site follows the data by a minute
+# or two without the two jobs ever being able to take each other down.
+#
+# WHAT PERCIVAL HAS TO DO ONCE: repository Settings, Pages, set Source to
+# "GitHub Actions". Until then this workflow fails on the deploy step with a
+# clear message and nothing else is affected.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+# Read the repository, write a Pages deployment, and nothing else.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deployment at a time, and a newer commit wins. The pipeline can push
+# twice within a minute if a run is retried, and there is no value in
+# publishing an older snapshot after a newer one.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # The site is a directory of files that are already correct in git.
+      # There is no build step and there is not meant to be one: the whole
+      # argument for this page is that it ships what is in the repository.
+      - name: Check the site is intact before publishing it
+        run: |
+          test -f site/index.html
+          test -f site/assets/app.js
+          test -f site/assets/pfl.css
+          test -f site/data/meta.json
+          echo "site weight:"
+          du -sh site
+          du -b site/index.html site/assets/app.js site/assets/pfl.css | \
+            awk '{ s += $1 } END { printf "  page shell: %.0f KB\n", s/1024 }'
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

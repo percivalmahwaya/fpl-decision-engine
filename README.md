@@ -299,9 +299,16 @@ are structural rather than cosmetic:
 | Sleeps after 12 quiet hours | A decision system that only thinks while observed |
 | 1 GB memory cap | Not enough headroom to train comfortably |
 
-So Actions does the thinking on a schedule and commits ~24 KB of JSON;
-Streamlit only draws it. The app opens no database and imports neither
-scikit-learn nor scipy — `qa_deploy.py` fails the build if that ever changes.
+So Actions does the thinking on a schedule and commits ~28 KB of JSON; the web
+front end only draws it. It opens no database and imports neither scikit-learn
+nor scipy — `qa_deploy.py` fails the build if that ever changes.
+
+**There are two front ends reading those same files.** `app.py` is the
+Streamlit app. `site/index.html` is a static page with no framework at all,
+deployed to GitHub Pages by `.github/workflows/pages.yml`, which is a separate
+workflow on purpose: a failed deployment must never turn the data pipeline red,
+because a red pipeline sends no email and fails quietly. See **Weight,
+honestly** below for why the static one exists.
 
 `fpl.db` is 23 MB and would bloat git history if committed twice a day, so it
 lives as a **release asset**: downloaded at the start of each run, uploaded at
@@ -453,13 +460,30 @@ caption is the filename. See that folder's README.
 
 ### Weight, honestly
 
-Measured on a phone viewport, first load: **5171 KB, of which 4894 KB is
-Streamlit's own JavaScript.** The stylesheet is 13 KB and loads no fonts, no
-icon set and nothing from a CDN, but that is rearranging deckchairs. Bulawayo
-Chess Hub went from 329 KB to 19 KB; nothing comparable is possible here. It is
-acceptable only because this app has one reader on his own connection. For an
-audience on a metered bundle the answer would not be a lighter stylesheet, it
-would be a different host.
+Measured on a phone viewport, first load:
+
+| Front end | Total | Requests | Of which framework |
+|---|---|---|---|
+| Streamlit (`app.py`) | **5171 KB** | 77 | 4894 KB |
+| Static (`site/index.html`) | **91 KB** | 13 | none |
+
+The stylesheet was already 13 KB with no fonts, no icon set and nothing from a
+CDN, and that was rearranging deckchairs: Streamlit shipped five megabytes of
+JavaScript before the stylesheet was read at all. This file, and the header of
+`site/assets/pfl.css`, both said the honest answer was not a lighter stylesheet
+but a different host. The static page is that host.
+
+It draws the same data, in the same design system, with the same words. There
+is no framework, no chart library, no CDN and no build step: it fetches the
+JSON the pipeline already commits and renders it in about 1,000 lines of
+vanilla JavaScript, charts included. `qa_deploy.py` fails the build if the
+whole site exceeds 250 KB or references another host.
+
+**Both front ends are kept.** The Streamlit app is the one deployed today and
+is not going anywhere until the static site has run for a while. They read
+exactly the same files, so neither can drift from the data, and `qa_deploy.py`
+checks the places where the two could drift from each other: which model is the
+champion, the measured noise floor, and the photo captions.
 
 ---
 

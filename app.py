@@ -109,7 +109,8 @@ def empty(title, body):
     block(f'<div class="pfl-empty"><strong>{e(title)}</strong>{e(body)}</div>')
 
 
-def line(df, x, y, colour_by=None, y_title="", height=260, domain=None):
+def line(df, x, y, colour_by=None, y_title="", height=260, domain=None,
+         champion=None):
     """A line chart on the palette, with gameweeks labelled as gameweeks.
 
     Deliberately plain: no points, no area fill, no chart junk. Gridlines are
@@ -130,8 +131,14 @@ def line(df, x, y, colour_by=None, y_title="", height=260, domain=None):
                                  titleColor="#6a6a5f")),
     }
     if colour_by:
-        order = ([c for c in df[colour_by].unique() if c == "two_stage_ml"]
-                 + [c for c in df[colour_by].unique() if c != "two_stage_ml"])
+        # The champion takes the kit colour and the models it has to beat sit
+        # behind it, so which line matters is visible before reading the
+        # legend. The name arrives in accuracy.json rather than being typed
+        # here: there are four models on this scoreboard now and only one of
+        # them decides anything, and the day a challenger is promoted this
+        # has to follow it in both front ends at once.
+        order = ([c for c in df[colour_by].unique() if c == champion]
+                 + [c for c in df[colour_by].unique() if c != champion])
         enc["color"] = alt.Color(
             f"{colour_by}:N", title=None,
             scale=alt.Scale(domain=order, range=SERIES[:len(order)]),
@@ -509,8 +516,15 @@ with tab_bench:
                 st.info(f"**{verdict.upper()}**")
             else:
                 st.warning(f"**{verdict.upper()}**")
-            for line in bb["reasoning"]:
-                st.caption(line)
+            # NOT `for line in ...`. `line()` is the chart function defined
+            # at the top of this file, and Streamlit runs the whole script
+            # top to bottom on every interaction, so rebinding it here left
+            # it as a string by the time the Model accuracy tab called it.
+            # That tab raised "TypeError: 'str' object is not callable" from
+            # the moment a SECOND gameweek was scored and the chart started
+            # being drawn at all. qa_deploy.py now fails on this pattern.
+            for reason in bb["reasoning"]:
+                st.caption(reason)
 
         for note in plan.get("notes", []):
             st.caption(note)
@@ -684,7 +698,8 @@ with tab_model:
             # it has to beat are drawn behind it, so which line matters is
             # visible before reading the legend. Ordering is handled in line().
             line(sdf, "gameweek", "mae", colour_by="model",
-                 y_title="Mean absolute error", height=300)
+                 y_title="Mean absolute error", height=300,
+                 champion=acc.get("champion"))
         else:
             gw = int(sdf["gameweek"].iloc[0])
             st.caption(

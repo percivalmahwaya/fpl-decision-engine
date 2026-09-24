@@ -47,7 +47,7 @@ results = []
 
 EXPECTED_FILES = ["meta", "squad", "recommendations", "captain",
                   "accuracy", "season", "alerts", "notify", "bench",
-                  "transfers"]
+                  "transfers", "photos"]
 
 SQUAD_SHAPE = {"GKP": 2, "DEF": 5, "MID": 5, "FWD": 3}
 SEVERITIES = {"CRITICAL", "WARNING", "INFO", "GOOD"}
@@ -573,6 +573,56 @@ def qa_app():
        f"{len(stale)} use(s) of use_container_width remain; the app also uses "
        'width="stretch", and mixing them breaks charts on newer Streamlit')
 
+
+    # NOTHING AT MODULE LEVEL MAY SHADOW A FUNCTION DEFINED AT MODULE LEVEL.
+    #
+    # THE BUG THIS EXISTS FOR, and it was live for two days on the deployed
+    # site: the Bench tab ran `for line in bb["reasoning"]`, and `line()` is
+    # the chart function defined at the top of app.py. Streamlit executes the
+    # whole script top to bottom on every interaction, and every `with tab:`
+    # block runs whether or not anybody is looking at that tab, so by the
+    # time the Model accuracy tab called `line(...)` it was a string.
+    #
+    # It hid for months because `line()` is only called from the second
+    # scored gameweek onwards. GW5 was scored and the tab began raising
+    # "TypeError: 'str' object is not callable" the same day.
+    #
+    # It also survived a fix. On 2026-09-22 this exact symptom was diagnosed
+    # as the app mixing two Streamlit sizing APIs, which was a real problem
+    # and was really fixed, and was NOT this. Reproducing the pre-fix file
+    # afterwards gave the same 'str' object message, so the page was never
+    # repaired. A check that reads the code is the only thing that would have
+    # separated the two, because both are a TypeError on the same tab.
+    tree = ast.parse(source)
+    functions = {n.name for n in tree.body if isinstance(n, ast.FunctionDef)}
+
+    def targets(node):
+        """Every name a for-loop or with-statement binds."""
+        out = []
+        for child in ast.walk(node):
+            if isinstance(child, ast.For):
+                for t in ast.walk(child.target):
+                    if isinstance(t, ast.Name):
+                        out.append((t.id, t.lineno))
+            elif isinstance(child, ast.withitem) and child.optional_vars:
+                for t in ast.walk(child.optional_vars):
+                    if isinstance(t, ast.Name):
+                        out.append((t.id, t.lineno))
+        return out
+
+    shadowed = []
+    for node in tree.body:
+        if isinstance(node, ast.FunctionDef):
+            continue          # a local name inside a function is fine
+        for name, lineno in targets(node):
+            if name in functions:
+                shadowed.append(f"{name} at line {lineno}")
+
+    ok("no module level name shadows a function in app.py", not shadowed,
+       f"{shadowed} rebinds a module level function. Streamlit reruns this "
+       "whole file on every interaction, so the function is gone for every "
+       "later caller. This is what broke the Model accuracy tab")
+
     imports = re.findall(r"^\s*(?:import|from)\s+([\w.]+)", source, re.M)
     banned = [i for i in imports if i.split(".")[0] in
               ("sklearn", "scipy", "sqlite3", "torch", "tensorflow")]
@@ -595,6 +645,188 @@ def qa_app():
         ok("pipeline requirements include scipy for the optimiser", "scipy" in pr)
 
     qa_house_rules(source)
+
+
+# ------------------------------------------------------------ STATIC SITE
+
+# The whole point of the static front end is that it is small and depends on
+# nothing. Both of those are properties that decay silently: one CDN script
+# added in a hurry, one 2 MB photograph dropped in the assets folder, and it
+# is just another heavy page that happens not to use a framework.
+#
+# So the budget is a FAILURE, not a warning. Streamlit serves the same data
+# for 5171 KB. If this ever needs more than a quarter of a megabyte, the
+# argument for it has gone.
+STATIC_BUDGET_KB = 250
+
+
+def qa_static_site():
+    print("\nSTATIC FRONT END")
+
+    site = ROOT / "site"
+    index = site / "index.html"
+    appjs = site / "assets" / "app.js"
+    css = site / "assets" / "pfl.css"
+
+    if not ok("site/index.html exists", index.exists(),
+              "the static front end is the low weight alternative to Streamlit"):
+        return
+    if not ok("site/assets/app.js exists", appjs.exists()):
+        return
+
+    html = index.read_text(encoding="utf-8")
+    js = appjs.read_text(encoding="utf-8")
+
+    # ---- nothing may be loaded from another host ------------------------
+    #
+    # A CDN is a third party that can change or vanish under a page nobody is
+    # watching, and this one runs unattended between gameweeks. Checked on
+    # the ATTRIBUTES rather than on the raw text, because both files discuss
+    # URLs in their comments and a naive scan for "https://" flags the
+    # explanation of the rule as a breach of it.
+    external = []
+    for attr in re.findall(r'(?:src|href)\s*=\s*"([^"]+)"', html):
+        if re.match(r"https?://|//", attr):
+            external.append(attr)
+    for url in re.findall(r"""fetch\(\s*['"]([^'"]+)""", js):
+        if re.match(r"https?://|//", url):
+            external.append(url)
+    ok("the static page loads nothing from another host", not external,
+       f"external references: {external}")
+
+    # ---- weight ---------------------------------------------------------
+    page_files = [index, appjs, css]
+    data_files = sorted((site / "data").glob("*.json"))
+    photos = sorted((site / "assets" / "photos").glob("*.jpg")) + \
+        sorted((site / "assets" / "photos").glob("*.webp"))
+
+    page_kb = sum(f.stat().st_size for f in page_files) / 1024
+    data_kb = sum(f.stat().st_size for f in data_files) / 1024
+    photo_kb = sum(f.stat().st_size for f in photos) / 1024
+    total_kb = page_kb + data_kb + photo_kb
+
+    ok(f"the whole site fits in {STATIC_BUDGET_KB} KB",
+       total_kb <= STATIC_BUDGET_KB,
+       f"{total_kb:.0f} KB: page {page_kb:.0f}, data {data_kb:.0f}, "
+       f"photos {photo_kb:.0f}. Streamlit serves the same data for 5171 KB; "
+       "if this needs a bigger budget the reason for it has gone")
+    check("weight breakdown", PASS,
+          f"page {page_kb:.0f} KB, data {data_kb:.0f} KB, photos {photo_kb:.0f} KB, "
+          f"total {total_kb:.0f} KB")
+
+    # ---- it may only read files the publisher writes --------------------
+    fetched = set()
+    m = re.search(r"var FILES = \[(.*?)\];", js, re.S)
+    if m:
+        fetched = set(re.findall(r"'(\w+)'", m.group(1)))
+    ok("the page only reads files the publisher produces",
+       fetched and not (fetched - set(EXPECTED_FILES)),
+       f"reads {sorted(fetched - set(EXPECTED_FILES))} which publish.py never writes")
+
+    missing = [n for n in fetched if not (site / "data" / f"{n}.json").exists()]
+    ok("every file the page reads has actually been published", not missing,
+       f"missing: {missing}")
+
+    # ---- the two front ends must agree ----------------------------------
+    #
+    # Two pages drawing one dataset is two places for the same fact to live.
+    # These are the ones that have already tried to drift.
+    acc_path = site / "data" / "accuracy.json"
+    if acc_path.exists():
+        acc = json.loads(acc_path.read_text(encoding="utf-8"))
+        ok("accuracy.json names which model is the champion",
+           bool(acc.get("champion")),
+           "both front ends draw the champion in the kit colour and the "
+           "baselines behind it. Without this key each one works it out by "
+           "hardcoding the name, which is two copies of a fact that changes "
+           "the day a challenger is promoted")
+        if acc.get("champion"):
+            ok("the champion is a model that is actually being scored",
+               acc["champion"] in (acc.get("models") or []),
+               f"{acc.get('champion')} is not in {acc.get('models')}")
+
+    # NO FRONT END MAY HARDCODE THE CHAMPION'S NAME.
+    #
+    # Checked against code with comments stripped, because both files
+    # legitimately discuss the name in their comments and the point is
+    # whether either of them BRANCHES on it.
+    for name, path in (("app.py", ROOT / "app.py"),
+                       ("site/assets/app.js", appjs)):
+        if not path.exists():
+            continue
+        text = path.read_text(encoding="utf-8")
+        code = re.sub(r"/\*.*?\*/", "", text, flags=re.S)
+        code = "\n".join(
+            l.split("//")[0] if path.suffix == ".js" else l.split("#")[0]
+            for l in code.splitlines())
+        code = re.sub(r'"""[\s\S]*?"""', "", code)
+        ok(f"{name} does not hardcode the champion's name",
+           "two_stage_ml" not in code,
+           "read it from accuracy.json instead, so promoting a challenger "
+           "does not mean editing two front ends")
+
+    # The noise floor is published, never typed. A second copy stays at 0.17
+    # forever after somebody remeasures it, and the honesty of this whole
+    # project rests on that number being current.
+    js_code = re.sub(r"/\*.*?\*/", "", js, flags=re.S)
+    js_code = "\n".join(l.split("//")[0] for l in js_code.splitlines())
+    ok("the static page does not hardcode the noise floor",
+       "0.17" not in js_code,
+       "it arrives in transfers.json, measured by the pipeline")
+
+    # ---- the photo captions must match ----------------------------------
+    #
+    # app.py globs the photo folder because Streamlit has a filesystem; the
+    # static page reads photos.json because a file host has no directory
+    # listing. Two implementations of one filename rule, so they are compared
+    # against the files actually present.
+    photos_json = site / "data" / "photos.json"
+    if photos_json.exists() and photos:
+        published = {p["file"]: p["caption"]
+                     for p in json.loads(photos_json.read_text(encoding="utf-8"))}
+        app_src = (ROOT / "app.py").read_text(encoding="utf-8")
+        disagree = []
+        if "def caption(path)" in app_src:
+            for p in photos:
+                stem = p.stem.split("_", 1)[-1] if p.stem[:2].isdigit() else p.stem
+                expected = stem.replace("-", " ").replace("_", " ").strip()
+                if published.get(p.name) != expected:
+                    disagree.append(f"{p.name}: json={published.get(p.name)!r} "
+                                    f"app.py={expected!r}")
+        ok("both front ends caption the photographs identically", not disagree,
+           "; ".join(disagree))
+        listed = set(published)
+        on_disk = {p.name for p in photos}
+        ok("photos.json lists every photograph on disk", listed == on_disk,
+           f"only in json: {sorted(listed - on_disk)}, "
+           f"only on disk: {sorted(on_disk - listed)}. A static host has no "
+           "directory listing, so a photo missing from this file is a photo "
+           "nobody will ever see")
+
+    # ---- house rules apply to this page too -----------------------------
+    #
+    # Only interface copy. The comments in these files have to be able to
+    # name the things they ban.
+    copy = re.sub(r"<!--[\s\S]*?-->", "", html)
+    js_copy = re.sub(r"/\*[\s\S]*?\*/", "", js)
+    js_copy = "\n".join(l.split("//")[0] for l in js_copy.splitlines())
+
+    for label, text in (("index.html", copy), ("app.js", js_copy)):
+        ok(f"no em dashes in {label} interface copy",
+           "—" not in text,
+           "house rule: no em dashes")
+        emoji = [c for c in text if ord(c) > 0x2500]
+        ok(f"no emoji used as icons in {label}", not emoji,
+           f"house rule: found {emoji}")
+
+    # ---- it must say something when nothing has been published ----------
+    ok("the page handles missing data instead of rendering blank",
+       "Nothing published yet" in js,
+       "a page that renders an empty frame when the pipeline has not run "
+       "looks broken rather than empty")
+
+    ok("the page tells a reader without JavaScript where the data is",
+       "<noscript>" in html and "site/data" in html)
 
 
 # --------------------------------------------------------- HOUSE RULES
@@ -886,6 +1118,7 @@ def main():
         check("database available for consistency checks", WARN, "fpl.db not found")
 
     qa_app()
+    qa_static_site()
     qa_workflow()
     qa_hygiene()
 

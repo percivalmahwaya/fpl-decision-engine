@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 55,
- "latest_snapshot": 60,
+ "latest_snapshot": 61,
  "prev_taken_at": "2026-09-23T21:33:42.877447+00:00",
- "latest_taken_at": "2026-09-25T10:11:47.805854+00:00",
+ "latest_taken_at": "2026-09-25T21:38:37.981457+00:00",
  "alerts": [
   {
    "element_id": 397,
@@ -19,7 +19,7 @@
    "name": "Havertz",
    "position": "FWD",
    "price": 7.6,
-   "owned": 8.5,
+   "owned": 8.4,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
@@ -30,6 +30,16 @@
    "position": "FWD",
    "price": 5.7,
    "owned": 7.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 532,
+   "name": "Ballard",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 2.5,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"

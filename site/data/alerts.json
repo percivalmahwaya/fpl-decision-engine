@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 59,
- "latest_snapshot": 62,
+ "latest_snapshot": 63,
  "prev_taken_at": "2026-09-24T21:34:30.393584+00:00",
- "latest_taken_at": "2026-09-26T09:52:00.769579+00:00",
+ "latest_taken_at": "2026-09-26T21:14:54.543888+00:00",
  "alerts": [
   {
    "element_id": 26,
@@ -40,7 +40,7 @@
    "name": "De Cuyper",
    "old": 4.9,
    "new": 5.0,
-   "owned": 27.6,
+   "owned": 27.7,
    "direction": "up"
   },
   {

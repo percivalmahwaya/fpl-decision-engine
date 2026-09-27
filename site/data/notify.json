@@ -1,8 +1,9 @@
 {
  "should_email": true,
  "reasons": [
+  "1 squad/watchlist change(s)",
   "transfer worth making"
  ],
- "subject": "FPL: transfer worth making",
- "body": "FLAGGED IN YOUR SQUAD:\n  Palmer (MID) chance 75% — Muscular injury - 75% chance of playing\n  João Pedro (FWD) chance 75% — Knee injury - 75% chance of playing\n\nTRANSFER — João Pedro out, Havertz in.\n  +2.29 expected points, -0.1m, 0.4m left in the bank.\n  João Pedro is flagged in the team news.\n  Frees up 0.1m for later.\n\nCAPTAIN — model says B.Fernandes (6.29 xPts).\n\nSnapshot #63 at 2026-09-26T21:14:54.543888+00:00"
+ "subject": "FPL: 1 squad/watchlist change(s); transfer worth making",
+ "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] WARNING  Isak (FWD)  worsened 100% -> 75% (Foot injury - 75% chance of playing)\n\nFLAGGED IN YOUR SQUAD:\n  Palmer (MID) chance 75% — Muscular injury - 75% chance of playing\n  Isak (FWD) chance 75% — Foot injury - 75% chance of playing\n  João Pedro (FWD) chance 75% — Knee injury - 75% chance of playing\n\nTRANSFER — João Pedro out, Havertz in.\n  +2.29 expected points, -0.1m, 0.4m left in the bank.\n  João Pedro is flagged in the team news.\n  Frees up 0.1m for later.\n\nCAPTAIN — model says B.Fernandes (6.29 xPts).\n\nSnapshot #64 at 2026-09-27T10:33:29.538654+00:00"
 }

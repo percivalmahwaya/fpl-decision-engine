@@ -200,14 +200,14 @@
    "club": "LIV",
    "price": 9.1,
    "owned": 22.5,
-   "status": "a",
-   "chance": null,
-   "news": null,
+   "status": "d",
+   "chance": 75,
+   "news": "Foot injury - 75% chance of playing",
    "is_captain": false,
    "is_vice": false,
    "started": 1,
    "ep": 4.61,
-   "flagged": false
+   "flagged": true
   },
   {
    "name": "Barry",
@@ -215,7 +215,7 @@
    "position": "FWD",
    "club": "EVE",
    "price": 5.6,
-   "owned": 8.2,
+   "owned": 8.3,
    "status": "a",
    "chance": null,
    "news": null,

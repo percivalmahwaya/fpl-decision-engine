@@ -151,7 +151,7 @@
    "position": "MID",
    "club": "CHE",
    "price": 7.7,
-   "owned": 40.4,
+   "owned": 40.5,
    "status": "a",
    "chance": null,
    "news": null,
@@ -202,7 +202,7 @@
    "owned": 22.5,
    "status": "d",
    "chance": 75,
-   "news": "Foot injury - 75% chance of playing",
+   "news": "Thigh injury - 75% chance of playing",
    "is_captain": false,
    "is_vice": false,
    "started": 1,
@@ -214,7 +214,7 @@
    "element_id": 249,
    "position": "FWD",
    "club": "EVE",
-   "price": 5.6,
+   "price": 5.7,
    "owned": 8.3,
    "status": "a",
    "chance": null,
@@ -231,7 +231,7 @@
    "position": "FWD",
    "club": "CHE",
    "price": 7.7,
-   "owned": 65.3,
+   "owned": 65.2,
    "status": "d",
    "chance": 75,
    "news": "Knee injury - 75% chance of playing",
@@ -242,6 +242,6 @@
    "flagged": true
   }
  ],
- "squad_value": 99.8,
+ "squad_value": 99.9,
  "count": 15
 }

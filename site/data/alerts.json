@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 63,
- "latest_snapshot": 67,
- "prev_taken_at": "2026-09-26T21:14:54.543888+00:00",
- "latest_taken_at": "2026-09-28T23:20:07.327191+00:00",
+ "prev_snapshot": 65,
+ "latest_snapshot": 68,
+ "prev_taken_at": "2026-09-27T21:24:16.309770+00:00",
+ "latest_taken_at": "2026-09-29T11:22:02.196679+00:00",
  "alerts": [
   {
    "element_id": 379,
@@ -12,7 +12,7 @@
    "owned": 22.4,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Thigh injury - 75% chance of playing)"
+   "message": "new news: Thigh injury - 75% chance of playing"
   },
   {
    "element_id": 367,
@@ -42,13 +42,6 @@
    "new": 5.7,
    "owned": 8.3,
    "direction": "up"
-  },
-  {
-   "name": "Zepa",
-   "old": 4.5,
-   "new": 4.4,
-   "owned": 0.3,
-   "direction": "down"
   },
   {
    "name": "Emegha",
@@ -95,7 +88,7 @@
    "owned": 22.4,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Thigh injury - 75% chance of playing)"
+   "message": "new news: Thigh injury - 75% chance of playing"
   },
   {
    "element_id": 367,

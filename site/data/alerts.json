@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 65,
- "latest_snapshot": 68,
+ "latest_snapshot": 69,
  "prev_taken_at": "2026-09-27T21:24:16.309770+00:00",
- "latest_taken_at": "2026-09-29T11:22:02.196679+00:00",
+ "latest_taken_at": "2026-09-29T22:20:27.024604+00:00",
  "alerts": [
   {
    "element_id": 379,
@@ -19,7 +19,7 @@
    "name": "Gakpo",
    "position": "MID",
    "price": 7.2,
-   "owned": 12.5,
+   "owned": 12.4,
    "severity": "WARNING",
    "tag": "WATCH",
    "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
@@ -95,7 +95,7 @@
    "name": "Gakpo",
    "position": "MID",
    "price": 7.2,
-   "owned": 12.5,
+   "owned": 12.4,
    "severity": "WARNING",
    "tag": "WATCH",
    "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"

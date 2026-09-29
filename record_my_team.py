@@ -37,6 +37,22 @@ The one field that cannot be fetched is `decided_by`, because whether a call
 came from instinct or from the engine is a fact about Percival, not about FPL.
 It is kept as a small override map and defaults to "unrecorded".
 
+THE OTHER THING THAT CANNOT BE FETCHED (found 2026-09-29): a transfer made
+BEFORE its gameweek's deadline. `event/{gw}/picks/` only ever returns a
+gameweek's LOCKED picks - once the deadline passes, never before. There is no
+public endpoint for "what is currently saved for the next, not-yet-deadlined
+gameweek"; that view only exists behind login, on fantasy.premierleague.com's
+own "My Team" page. So querying this API for a transfer made days ahead of a
+deadline will keep showing the OLD squad from the last finished gameweek,
+correctly, and that is not a bug to chase - it is what "not yet locked" means.
+If Percival reports a transfer that this script cannot yet see, the fix is
+never to force-write it here from his word alone (that is exactly the
+"hand-typed squad going stale" failure this file was rewritten to stop) - it
+is to wait for the deadline, OR, if a screenshot of his own "My Team" page is
+in hand, add it to GAMEWEEKS below the same way GW4 was: full 15, points=None,
+captain/vice and started flags read directly off the screenshot, never
+guessed.
+
 CONFIGURATION
 =============
     FPL_ENTRY_ID    his manager id. The number in the URL when he views his

@@ -1,106 +1,33 @@
 {
- "prev_snapshot": 65,
- "latest_snapshot": 69,
- "prev_taken_at": "2026-09-27T21:24:16.309770+00:00",
- "latest_taken_at": "2026-09-29T22:20:27.024604+00:00",
- "alerts": [
-  {
-   "element_id": 379,
-   "name": "Isak",
-   "position": "FWD",
-   "price": 9.1,
-   "owned": 22.4,
-   "severity": "WARNING",
-   "tag": "SQUAD",
-   "message": "new news: Thigh injury - 75% chance of playing"
-  },
-  {
-   "element_id": 367,
-   "name": "Gakpo",
-   "position": "MID",
-   "price": 7.2,
-   "owned": 12.4,
-   "severity": "WARNING",
-   "tag": "WATCH",
-   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 415,
-   "name": "Dorgu",
-   "position": "MID",
-   "price": 5.8,
-   "owned": 0.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  }
- ],
+ "prev_snapshot": 67,
+ "latest_snapshot": 70,
+ "prev_taken_at": "2026-09-28T23:20:07.327191+00:00",
+ "latest_taken_at": "2026-09-30T11:10:12.511653+00:00",
+ "alerts": [],
  "price_moves": [
   {
-   "name": "Barry",
-   "old": 5.6,
-   "new": 5.7,
-   "owned": 8.3,
-   "direction": "up"
-  },
-  {
-   "name": "Emegha",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Ellborg",
-   "old": 4.5,
-   "new": 4.4,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Nørgaard",
-   "old": 4.9,
-   "new": 4.8,
-   "owned": 0.0,
-   "direction": "down"
-  },
-  {
-   "name": "Diarra",
+   "name": "Kerkez",
    "old": 5.4,
    "new": 5.3,
-   "owned": 0.0,
+   "owned": 2.2,
    "direction": "down"
   },
   {
-   "name": "Morita",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 0.0,
+   "name": "Pau",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 0.3,
+   "direction": "down"
+  },
+  {
+   "name": "Wright",
+   "old": 5.4,
+   "new": 5.3,
+   "owned": 0.1,
    "direction": "down"
   }
  ],
- "urgent": [
-  {
-   "element_id": 379,
-   "name": "Isak",
-   "position": "FWD",
-   "price": 9.1,
-   "owned": 22.4,
-   "severity": "WARNING",
-   "tag": "SQUAD",
-   "message": "new news: Thigh injury - 75% chance of playing"
-  },
-  {
-   "element_id": 367,
-   "name": "Gakpo",
-   "position": "MID",
-   "price": 7.2,
-   "owned": 12.4,
-   "severity": "WARNING",
-   "tag": "WATCH",
-   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
-  }
- ],
+ "urgent": [],
  "available": true,
  "window_hours": 24
 }

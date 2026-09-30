@@ -1,9 +1,20 @@
 {
  "prev_snapshot": 67,
- "latest_snapshot": 70,
+ "latest_snapshot": 71,
  "prev_taken_at": "2026-09-28T23:20:07.327191+00:00",
- "latest_taken_at": "2026-09-30T11:10:12.511653+00:00",
- "alerts": [],
+ "latest_taken_at": "2026-09-30T22:20:55.695235+00:00",
+ "alerts": [
+  {
+   "element_id": 112,
+   "name": "Van Hecke",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 6.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
+  }
+ ],
  "price_moves": [
   {
    "name": "Kerkez",

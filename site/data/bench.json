@@ -41,15 +41,6 @@
    "flagged": true
   },
   {
-   "name": "Wirtz",
-   "element_id": 366,
-   "position": "MID",
-   "ep": 4.5,
-   "p_play": 0.803,
-   "if_played": 5.6,
-   "flagged": false
-  },
-  {
    "name": "Szoboszlai",
    "element_id": 368,
    "position": "MID",
@@ -74,6 +65,15 @@
    "ep": 3.32,
    "p_play": 0.916,
    "if_played": 3.62,
+   "flagged": false
+  },
+  {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 3.3,
+   "p_play": 0.935,
+   "if_played": 3.53,
    "flagged": false
   },
   {
@@ -142,7 +142,7 @@
    "flagged": false
   }
  ],
- "autosub_value": 4.82,
+ "autosub_value": 4.26,
  "notes": [
   "Starting with a flag on Palmer, Isak. The bench covers a blank, but only for the first one that happens.",
   "At least one bench player is more likely than not to sit out. That costs nothing in the ordering, since the autosub falls through to the next player, but it does thin the cover."

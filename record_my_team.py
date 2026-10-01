@@ -93,6 +93,7 @@ DECIDED_BY = {
     2: "gut",
     3: "gut",
     4: "gut+model",
+    6: "gut",
 }
 DEFAULT_DECIDED_BY = "unrecorded"
 
@@ -221,6 +222,47 @@ GAMEWEEKS = {
             ("Barry",        None, False, False, False),
             ("Thomas",       None, False, False, False),
             ("Davis",        None, False, False, False),
+        ],
+    },
+    # ---- GW6: Wirtz -> Groß, XI SET, not yet played ------------------------
+    #
+    # Exactly the case the module docstring describes: a transfer made days
+    # before the GW6 deadline (2026-10-10), which event/6/picks/ cannot show
+    # until that deadline passes. Confirmed from Percival's own "My Team"
+    # screenshot on 2026-10-01 - his words: "i already transferred wirtz out
+    # and put in pascal gross before his price had risen... that is a gut
+    # update i did also." He flagged it may still change before the deadline
+    # ("if i change will inform"), so this is current-as-of-2026-10-01, not
+    # necessarily final - update this entry again if he reports a further
+    # change, the same way this one superseded nothing (GW6 never had an
+    # entry before this).
+    #
+    # Captain/vice read directly off the screenshot: João Pedro (C) and
+    # Palmer (V) - a swap from GW4, where Palmer captained and João Pedro
+    # vice-captained. Starting back three is Davis/Mitchell/Hall, with Rúben
+    # dropping to the bench (Rúben started GW4; Davis was benched then).
+    6: {
+        "total_points": None,          # not played yet
+        "transfers": 1,                # Wirtz -> Groß
+        "formation": "3-5-2",
+        "squad": [
+            # name            pts  started captain vice
+            ("Pickford",     None, True,  False, False),
+            ("Davis",        None, True,  False, False),
+            ("Mitchell",     None, True,  False, False),
+            ("Hall",         None, True,  False, False),
+            ("Rogers",       None, True,  False, False),
+            ("Palmer",       None, True,  False, True),    # vice
+            ("B.Fernandes",  None, True,  False, False),
+            ("Szoboszlai",   None, True,  False, False),
+            ("Groß",         None, True,  False, False),   # in for Wirtz
+            ("João Pedro",   None, True,  True,  False),   # captain
+            ("Isak",         None, True,  False, False),
+            # bench, in order
+            ("Horníček",     None, False, False, False),
+            ("Barry",        None, False, False, False),
+            ("Rúben",        None, False, False, False),
+            ("Thomas",       None, False, False, False),
         ],
     },
 }
@@ -408,13 +450,39 @@ POSITIONS = {
     "Pickford": "GKP", "Horníček": "GKP",
     "Thomas": "DEF", "Mitchell": "DEF", "Davis": "DEF", "Rúben": "DEF",
     "Rogers": "MID", "Gakpo": "MID", "Wirtz": "MID",
-    "Barry": "FWD", "Isak": "FWD",
+    "Barry": "FWD", "Isak": "FWD", "Groß": "MID",
 }
 
 
 def seed(conn):
-    """Write the hand transcription. Used only when there is no entry id."""
+    """Write the hand transcription.
+
+    Used when there is no entry id, AND as the only way to record a transfer
+    made before its gameweek's deadline (see the module docstring). That
+    second use is why this must not blindly overwrite every gameweek in
+    GAMEWEEKS: entries for gameweeks that have since been PLAYED and already
+    carry live, API-fetched scores (GW1-4 here, by this point) are stale
+    placeholders the moment the real score lands - this dict is never
+    rewritten once a result is in. Writing them again would silently regress
+    `my_squad`/`my_gameweeks` back to `points: null` for a gameweek the rest
+    of the system already knows the true score of. Found exactly this way on
+    2026-10-01: seeding GW6 also re-wrote GW4 from its stale `None`.
+    """
+    played = set()
+    if ENTRY_ID:
+        try:
+            played = {row["event"] for row in get(f"entry/{ENTRY_ID}/history/").get("current", [])}
+        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError):
+            # Can't reach the API to know what's already played. `played`
+            # stays empty, so every GAMEWEEKS entry gets seeded - the old,
+            # unguarded behaviour - rather than silently skipping all of them
+            # on a network blip and reporting nothing seeded.
+            pass
+
+    skipped = [gw for gw in GAMEWEEKS if gw in played]
     for gw, data in GAMEWEEKS.items():
+        if gw in played:
+            continue
         conn.execute(
             "INSERT OR REPLACE INTO my_gameweeks"
             " (gameweek, total_points, transfers, formation, decided_by)"
@@ -429,7 +497,10 @@ def seed(conn):
                 (gw, name, None, pts, int(started), int(cap), int(vice)))
     conn.commit()
     match_element_ids(conn)
-    print(f"  Seeded {len(GAMEWEEKS)} transcribed gameweek(s).")
+    print(f"  Seeded {len(GAMEWEEKS) - len(skipped)} transcribed gameweek(s)."
+          + (f" Skipped {len(skipped)} already played and live-fetched: "
+             f"GW{', GW'.join(str(g) for g in sorted(skipped))}."
+             if skipped else ""))
 
 
 def match_element_ids(conn):

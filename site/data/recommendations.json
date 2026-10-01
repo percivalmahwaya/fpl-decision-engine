@@ -154,7 +154,7 @@
    "status": "a",
    "chance": null,
    "news": null,
-   "owned_by_me": true
+   "owned_by_me": false
   },
   {
    "element_id": 397,

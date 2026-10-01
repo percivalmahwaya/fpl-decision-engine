@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 69,
- "latest_snapshot": 72,
+ "latest_snapshot": 73,
  "prev_taken_at": "2026-09-29T22:20:27.024604+00:00",
- "latest_taken_at": "2026-10-01T11:37:14.829797+00:00",
+ "latest_taken_at": "2026-10-01T22:44:41.804929+00:00",
  "alerts": [
+  {
+   "element_id": 387,
+   "name": "O'Reilly",
+   "position": "DEF",
+   "price": 6.3,
+   "owned": 10.9,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
   {
    "element_id": 112,
    "name": "Van Hecke",
@@ -13,6 +23,26 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 233,
+   "name": "Mykolenko",
+   "position": "DEF",
+   "price": 4.6,
+   "owned": 4.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Leg injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 459,
+   "name": "L.Miley",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   }
  ],
  "price_moves": [
@@ -20,7 +50,7 @@
    "name": "Tarkowski",
    "old": 6.1,
    "new": 6.2,
-   "owned": 16.5,
+   "owned": 16.6,
    "direction": "up"
   },
   {

@@ -1,5 +1,5 @@
 {
- "gameweek": 6,
+ "gameweek": 5,
  "squad": [
   {
    "name": "Pickford",
@@ -45,7 +45,7 @@
    "news": null,
    "is_captain": false,
    "is_vice": false,
-   "started": 0,
+   "started": 1,
    "ep": 3.32,
    "flagged": false
   },
@@ -77,7 +77,7 @@
    "news": null,
    "is_captain": false,
    "is_vice": false,
-   "started": 1,
+   "started": 0,
    "ep": 3.18,
    "flagged": false
   },
@@ -123,7 +123,7 @@
    "status": "a",
    "chance": null,
    "news": null,
-   "is_captain": false,
+   "is_captain": true,
    "is_vice": false,
    "started": 1,
    "ep": 6.29,
@@ -135,7 +135,7 @@
    "position": "MID",
    "club": "CHE",
    "price": 9.7,
-   "owned": 25.7,
+   "owned": 25.6,
    "status": "d",
    "chance": 75,
    "news": "Muscular injury - 75% chance of playing",
@@ -162,6 +162,22 @@
    "flagged": false
   },
   {
+   "name": "Wirtz",
+   "element_id": 366,
+   "position": "MID",
+   "club": "LIV",
+   "price": 7.3,
+   "owned": 5.7,
+   "status": "a",
+   "chance": null,
+   "news": null,
+   "is_captain": false,
+   "is_vice": false,
+   "started": 1,
+   "ep": 4.5,
+   "flagged": false
+  },
+  {
    "name": "Szoboszlai",
    "element_id": 368,
    "position": "MID",
@@ -178,28 +194,12 @@
    "flagged": false
   },
   {
-   "name": "Groß",
-   "element_id": 124,
-   "position": "MID",
-   "club": "BHA",
-   "price": 5.8,
-   "owned": 28.9,
-   "status": "a",
-   "chance": null,
-   "news": null,
-   "is_captain": false,
-   "is_vice": false,
-   "started": 1,
-   "ep": 3.3,
-   "flagged": false
-  },
-  {
    "name": "Isak",
    "element_id": 379,
    "position": "FWD",
    "club": "LIV",
    "price": 9.1,
-   "owned": 22.4,
+   "owned": 22.3,
    "status": "d",
    "chance": 75,
    "news": "Thigh injury - 75% chance of playing",
@@ -221,7 +221,7 @@
    "news": null,
    "is_captain": false,
    "is_vice": false,
-   "started": 0,
+   "started": 1,
    "ep": 3.26,
    "flagged": false
   },
@@ -235,13 +235,13 @@
    "status": "d",
    "chance": 75,
    "news": "Knee injury - 75% chance of playing",
-   "is_captain": true,
+   "is_captain": false,
    "is_vice": false,
-   "started": 1,
+   "started": 0,
    "ep": 2.21,
    "flagged": true
   }
  ],
- "squad_value": 98.4,
+ "squad_value": 99.9,
  "count": 15
 }

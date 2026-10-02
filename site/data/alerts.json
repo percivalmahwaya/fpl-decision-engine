@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 71,
- "latest_snapshot": 74,
+ "latest_snapshot": 75,
  "prev_taken_at": "2026-09-30T22:20:55.695235+00:00",
- "latest_taken_at": "2026-10-02T11:06:23.173603+00:00",
+ "latest_taken_at": "2026-10-02T22:18:25.137552+00:00",
  "alerts": [
+  {
+   "element_id": 557,
+   "name": "Tzolis",
+   "position": "MID",
+   "price": 6.3,
+   "owned": 12.1,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
   {
    "element_id": 387,
    "name": "O'Reilly",

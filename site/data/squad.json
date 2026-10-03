@@ -182,7 +182,7 @@
    "element_id": 368,
    "position": "MID",
    "club": "LIV",
-   "price": 7.0,
+   "price": 6.9,
    "owned": 32.7,
    "status": "a",
    "chance": null,
@@ -190,7 +190,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.61,
+   "ep": 3.44,
    "flagged": false
   },
   {
@@ -242,6 +242,6 @@
    "flagged": true
   }
  ],
- "squad_value": 99.9,
+ "squad_value": 99.8,
  "count": 15
 }

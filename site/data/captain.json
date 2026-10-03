@@ -46,17 +46,17 @@
    "flagged": false
   },
   {
-   "name": "Szoboszlai",
-   "element_id": 368,
-   "position": "MID",
-   "ep": 3.61,
-   "flagged": false
-  },
-  {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
    "ep": 3.48,
+   "flagged": false
+  },
+  {
+   "name": "Szoboszlai",
+   "element_id": 368,
+   "position": "MID",
+   "ep": 3.44,
    "flagged": false
   },
   {

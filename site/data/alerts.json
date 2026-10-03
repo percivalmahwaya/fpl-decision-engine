@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 73,
- "latest_snapshot": 76,
+ "latest_snapshot": 77,
  "prev_taken_at": "2026-10-01T22:44:41.804929+00:00",
- "latest_taken_at": "2026-10-03T10:24:47.764978+00:00",
+ "latest_taken_at": "2026-10-03T21:22:36.588907+00:00",
  "alerts": [
   {
    "element_id": 557,
@@ -13,6 +13,16 @@
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 96,
+   "name": "Damsgaard",
+   "position": "MID",
+   "price": 5.4,
+   "owned": 0.4,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   }
  ],
  "price_moves": [

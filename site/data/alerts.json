@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 75,
- "latest_snapshot": 78,
+ "latest_snapshot": 79,
  "prev_taken_at": "2026-10-02T22:18:25.137552+00:00",
- "latest_taken_at": "2026-10-04T11:06:27.130453+00:00",
+ "latest_taken_at": "2026-10-04T21:33:47.764435+00:00",
  "alerts": [
+  {
+   "element_id": 422,
+   "name": "Mazraoui",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
+  },
   {
    "element_id": 96,
    "name": "Damsgaard",
@@ -20,14 +30,14 @@
    "name": "Szoboszlai",
    "old": 7.0,
    "new": 6.9,
-   "owned": 32.7,
+   "owned": 32.6,
    "direction": "down"
   },
   {
    "name": "Groß",
    "old": 5.8,
    "new": 5.9,
-   "owned": 29.2,
+   "owned": 29.3,
    "direction": "up"
   },
   {

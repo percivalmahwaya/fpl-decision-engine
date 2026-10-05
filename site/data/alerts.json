@@ -1,9 +1,29 @@
 {
- "prev_snapshot": 75,
- "latest_snapshot": 79,
- "prev_taken_at": "2026-10-02T22:18:25.137552+00:00",
- "latest_taken_at": "2026-10-04T21:33:47.764435+00:00",
+ "prev_snapshot": 77,
+ "latest_snapshot": 80,
+ "prev_taken_at": "2026-10-03T21:22:36.588907+00:00",
+ "latest_taken_at": "2026-10-05T12:16:22.666824+00:00",
  "alerts": [
+  {
+   "element_id": 31,
+   "name": "Konsa",
+   "position": "DEF",
+   "price": 4.6,
+   "owned": 19.4,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 69,
+   "name": "Scott",
+   "position": "MID",
+   "price": 6.1,
+   "owned": 5.8,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
+  },
   {
    "element_id": 422,
    "name": "Mazraoui",
@@ -15,29 +35,22 @@
    "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
   },
   {
-   "element_id": 96,
-   "name": "Damsgaard",
-   "position": "MID",
-   "price": 5.4,
-   "owned": 0.4,
+   "element_id": 588,
+   "name": "Khalaili",
+   "position": "DEF",
+   "price": 5.0,
+   "owned": 0.3,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   }
  ],
  "price_moves": [
   {
-   "name": "Szoboszlai",
-   "old": 7.0,
-   "new": 6.9,
-   "owned": 32.6,
-   "direction": "down"
-  },
-  {
    "name": "Groß",
    "old": 5.8,
    "new": 5.9,
-   "owned": 29.3,
+   "owned": 29.4,
    "direction": "up"
   },
   {
@@ -48,31 +61,10 @@
    "direction": "down"
   },
   {
-   "name": "Henderson",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 1.3,
-   "direction": "down"
-  },
-  {
    "name": "Martinez",
    "old": 5.0,
    "new": 4.9,
    "owned": 1.3,
-   "direction": "down"
-  },
-  {
-   "name": "Aït-Nouri",
-   "old": 5.3,
-   "new": 5.2,
-   "owned": 0.4,
-   "direction": "down"
-  },
-  {
-   "name": "I.Sangaré",
-   "old": 4.9,
-   "new": 4.8,
-   "owned": 0.4,
    "direction": "down"
   },
   {
@@ -90,6 +82,13 @@
    "direction": "down"
   },
   {
+   "name": "Drakes-Thomas",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 0.1,
+   "direction": "down"
+  },
+  {
    "name": "McNeil",
    "old": 5.4,
    "new": 5.3,
@@ -97,17 +96,17 @@
    "direction": "down"
   },
   {
-   "name": "Longstaff",
-   "old": 4.9,
-   "new": 4.8,
+   "name": "Kovačić",
+   "old": 5.4,
+   "new": 5.3,
    "owned": 0.1,
    "direction": "down"
   },
   {
-   "name": "Mamardashvili",
-   "old": 4.9,
-   "new": 4.8,
-   "owned": 0.1,
+   "name": "De Ligt",
+   "old": 5.0,
+   "new": 4.9,
+   "owned": 0.0,
    "direction": "down"
   }
  ],

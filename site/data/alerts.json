@@ -1,15 +1,15 @@
 {
- "prev_snapshot": 77,
- "latest_snapshot": 80,
- "prev_taken_at": "2026-10-03T21:22:36.588907+00:00",
- "latest_taken_at": "2026-10-05T12:16:22.666824+00:00",
+ "prev_snapshot": 79,
+ "latest_snapshot": 81,
+ "prev_taken_at": "2026-10-04T21:33:47.764435+00:00",
+ "latest_taken_at": "2026-10-06T00:07:03.222720+00:00",
  "alerts": [
   {
    "element_id": 31,
    "name": "Konsa",
    "position": "DEF",
    "price": 4.6,
-   "owned": 19.4,
+   "owned": 19.3,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -19,20 +19,10 @@
    "name": "Scott",
    "position": "MID",
    "price": 6.1,
-   "owned": 5.8,
+   "owned": 5.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
-  },
-  {
-   "element_id": 422,
-   "name": "Mazraoui",
-   "position": "DEF",
-   "price": 4.4,
-   "owned": 0.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
   },
   {
    "element_id": 588,
@@ -43,62 +33,44 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 20,
+   "name": "Dowman",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   }
  ],
  "price_moves": [
   {
-   "name": "Groß",
+   "name": "Calafiori",
    "old": 5.8,
    "new": 5.9,
-   "owned": 29.4,
+   "owned": 50.5,
    "direction": "up"
   },
   {
-   "name": "James",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 5.8,
-   "direction": "down"
+   "name": "Saka",
+   "old": 9.5,
+   "new": 9.6,
+   "owned": 14.1,
+   "direction": "up"
   },
   {
-   "name": "Martinez",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 1.3,
-   "direction": "down"
-  },
-  {
-   "name": "Dowell",
-   "old": 4.5,
-   "new": 4.4,
-   "owned": 0.3,
-   "direction": "down"
-  },
-  {
-   "name": "Woolfenden",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 0.1,
+   "name": "J.Ramsey",
+   "old": 4.9,
+   "new": 4.8,
+   "owned": 0.2,
    "direction": "down"
   },
   {
    "name": "Drakes-Thomas",
    "old": 4.5,
    "new": 4.4,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "McNeil",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Kovačić",
-   "old": 5.4,
-   "new": 5.3,
    "owned": 0.1,
    "direction": "down"
   },

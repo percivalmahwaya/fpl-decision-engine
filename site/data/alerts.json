@@ -1,25 +1,35 @@
 {
  "prev_snapshot": 79,
- "latest_snapshot": 82,
+ "latest_snapshot": 83,
  "prev_taken_at": "2026-10-04T21:33:47.764435+00:00",
- "latest_taken_at": "2026-10-06T12:01:40.029243+00:00",
+ "latest_taken_at": "2026-10-06T22:40:57.659110+00:00",
  "alerts": [
   {
    "element_id": 31,
    "name": "Konsa",
    "position": "DEF",
    "price": 4.6,
-   "owned": 19.3,
+   "owned": 19.2,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 444,
+   "name": "Jaouen",
+   "position": "GKP",
+   "price": 4.4,
+   "owned": 0.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hamstring injury - Unknown return date)"
   },
   {
    "element_id": 69,
    "name": "Scott",
    "position": "MID",
    "price": 6.1,
-   "owned": 5.7,
+   "owned": 5.6,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
@@ -67,7 +77,7 @@
    "name": "Saka",
    "old": 9.5,
    "new": 9.6,
-   "owned": 14.1,
+   "owned": 14.2,
    "direction": "up"
   },
   {

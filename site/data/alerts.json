@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 80,
- "latest_snapshot": 84,
+ "latest_snapshot": 85,
  "prev_taken_at": "2026-10-05T12:16:22.666824+00:00",
- "latest_taken_at": "2026-10-07T11:47:10.499617+00:00",
+ "latest_taken_at": "2026-10-07T23:09:01.639623+00:00",
  "alerts": [
   {
    "element_id": 444,
@@ -54,21 +54,35 @@
    "name": "Saka",
    "old": 9.5,
    "new": 9.6,
-   "owned": 14.2,
+   "owned": 14.4,
    "direction": "up"
   },
   {
    "name": "King",
    "old": 5.5,
    "new": 5.6,
-   "owned": 2.9,
+   "owned": 3.0,
    "direction": "up"
+  },
+  {
+   "name": "Greaves",
+   "old": 4.0,
+   "new": 3.9,
+   "owned": 1.1,
+   "direction": "down"
   },
   {
    "name": "J.Ramsey",
    "old": 4.9,
    "new": 4.8,
    "owned": 0.2,
+   "direction": "down"
+  },
+  {
+   "name": "McAidoo",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 0.1,
    "direction": "down"
   }
  ],

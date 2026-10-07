@@ -1,19 +1,9 @@
 {
- "prev_snapshot": 79,
- "latest_snapshot": 83,
- "prev_taken_at": "2026-10-04T21:33:47.764435+00:00",
- "latest_taken_at": "2026-10-06T22:40:57.659110+00:00",
+ "prev_snapshot": 80,
+ "latest_snapshot": 84,
+ "prev_taken_at": "2026-10-05T12:16:22.666824+00:00",
+ "latest_taken_at": "2026-10-07T11:47:10.499617+00:00",
  "alerts": [
-  {
-   "element_id": 31,
-   "name": "Konsa",
-   "position": "DEF",
-   "price": 4.6,
-   "owned": 19.2,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
   {
    "element_id": 444,
    "name": "Jaouen",
@@ -25,31 +15,11 @@
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
   },
   {
-   "element_id": 69,
-   "name": "Scott",
-   "position": "MID",
-   "price": 6.1,
-   "owned": 5.6,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
-  },
-  {
    "element_id": 362,
    "name": "Jacquet",
    "position": "DEF",
    "price": 5.0,
    "owned": 3.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 588,
-   "name": "Khalaili",
-   "position": "DEF",
-   "price": 5.0,
-   "owned": 0.3,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
@@ -70,7 +40,14 @@
    "name": "Calafiori",
    "old": 5.8,
    "new": 5.9,
-   "owned": 50.5,
+   "owned": 50.6,
+   "direction": "up"
+  },
+  {
+   "name": "Rogers",
+   "old": 7.7,
+   "new": 7.8,
+   "owned": 40.9,
    "direction": "up"
   },
   {
@@ -81,24 +58,17 @@
    "direction": "up"
   },
   {
+   "name": "King",
+   "old": 5.5,
+   "new": 5.6,
+   "owned": 2.9,
+   "direction": "up"
+  },
+  {
    "name": "J.Ramsey",
    "old": 4.9,
    "new": 4.8,
    "owned": 0.2,
-   "direction": "down"
-  },
-  {
-   "name": "Drakes-Thomas",
-   "old": 4.5,
-   "new": 4.4,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "De Ligt",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 0.0,
    "direction": "down"
   }
  ],

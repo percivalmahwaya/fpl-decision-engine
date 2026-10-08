@@ -1,67 +1,22 @@
 {
- "prev_snapshot": 80,
- "latest_snapshot": 85,
- "prev_taken_at": "2026-10-05T12:16:22.666824+00:00",
- "latest_taken_at": "2026-10-07T23:09:01.639623+00:00",
- "alerts": [
-  {
-   "element_id": 444,
-   "name": "Jaouen",
-   "position": "GKP",
-   "price": 4.4,
-   "owned": 0.0,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Hamstring injury - Unknown return date)"
-  },
-  {
-   "element_id": 362,
-   "name": "Jacquet",
-   "position": "DEF",
-   "price": 5.0,
-   "owned": 3.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 20,
-   "name": "Dowman",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  }
- ],
+ "prev_snapshot": 83,
+ "latest_snapshot": 86,
+ "prev_taken_at": "2026-10-06T22:40:57.659110+00:00",
+ "latest_taken_at": "2026-10-08T12:01:40.030190+00:00",
+ "alerts": [],
  "price_moves": [
-  {
-   "name": "Calafiori",
-   "old": 5.8,
-   "new": 5.9,
-   "owned": 50.6,
-   "direction": "up"
-  },
   {
    "name": "Rogers",
    "old": 7.7,
    "new": 7.8,
-   "owned": 40.9,
-   "direction": "up"
-  },
-  {
-   "name": "Saka",
-   "old": 9.5,
-   "new": 9.6,
-   "owned": 14.4,
+   "owned": 41.0,
    "direction": "up"
   },
   {
    "name": "King",
    "old": 5.5,
    "new": 5.6,
-   "owned": 3.0,
+   "owned": 3.1,
    "direction": "up"
   },
   {
@@ -69,13 +24,6 @@
    "old": 4.0,
    "new": 3.9,
    "owned": 1.1,
-   "direction": "down"
-  },
-  {
-   "name": "J.Ramsey",
-   "old": 4.9,
-   "new": 4.8,
-   "owned": 0.2,
    "direction": "down"
   },
   {

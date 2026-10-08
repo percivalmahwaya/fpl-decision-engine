@@ -72,28 +72,6 @@
    ]
   },
   {
-   "out": "Hall",
-   "out_price": 5.3,
-   "out_ep": 3.26,
-   "in": "Ballard",
-   "in_price": 4.9,
-   "in_ep": 3.93,
-   "in_club": "SUN",
-   "position": "DEF",
-   "gain": 0.671,
-   "net": -3.329,
-   "cost": -0.4,
-   "bank_after": 0.7,
-   "free": false,
-   "penalties": false,
-   "worth_it": false,
-   "reasons": [
-    "Frees up 0.4m for later.",
-    "Owned by only 2%, so this is a differential rather than a template move.",
-    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
-   ]
-  },
-  {
    "out": "Rogers",
    "out_price": 7.8,
    "out_ep": 4.67,
@@ -110,6 +88,27 @@
    "penalties": false,
    "worth_it": false,
    "reasons": [
+    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
+   ]
+  },
+  {
+   "out": "Thomas",
+   "out_price": 4.0,
+   "out_ep": 2.96,
+   "in": "Dasilva",
+   "in_price": 4.0,
+   "in_ep": 3.33,
+   "in_club": "COV",
+   "position": "DEF",
+   "gain": 0.374,
+   "net": -3.626,
+   "cost": 0.0,
+   "bank_after": 0.3,
+   "free": false,
+   "penalties": false,
+   "worth_it": false,
+   "reasons": [
+    "Owned by only 1%, so this is a differential rather than a template move.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   }

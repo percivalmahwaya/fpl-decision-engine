@@ -1,15 +1,15 @@
 {
- "prev_snapshot": 83,
- "latest_snapshot": 87,
- "prev_taken_at": "2026-10-06T22:40:57.659110+00:00",
- "latest_taken_at": "2026-10-08T23:24:39.699101+00:00",
+ "prev_snapshot": 85,
+ "latest_snapshot": 88,
+ "prev_taken_at": "2026-10-07T23:09:01.639623+00:00",
+ "latest_taken_at": "2026-10-09T11:53:53.526758+00:00",
  "alerts": [
   {
    "element_id": 552,
    "name": "Brobbey",
    "position": "FWD",
    "price": 5.7,
-   "owned": 6.7,
+   "owned": 6.5,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Expected back 25 Oct)"
@@ -19,7 +19,7 @@
    "name": "Scott",
    "position": "MID",
    "price": 6.1,
-   "owned": 5.3,
+   "owned": 5.1,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Thigh injury - Unknown return date)"
@@ -29,7 +29,7 @@
    "name": "Ballard",
    "position": "DEF",
    "price": 4.9,
-   "owned": 2.4,
+   "owned": 2.3,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
@@ -45,6 +45,16 @@
    "message": "RULED OUT (Back injury - Expected back 18 Oct)"
   },
   {
+   "element_id": 254,
+   "name": "Robinson",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 1.6,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
+  },
+  {
    "element_id": 450,
    "name": "Livramento",
    "position": "DEF",
@@ -53,6 +63,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 75% -> 50% (Unspecified injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 266,
+   "name": "Cairney",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Knee injury - Expected back 17 Oct"
   },
   {
    "element_id": 543,
@@ -79,7 +99,7 @@
    "name": "Dedić",
    "position": "DEF",
    "price": 4.5,
-   "owned": 1.7,
+   "owned": 1.6,
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 50%"
@@ -89,10 +109,30 @@
    "name": "Wilson",
    "position": "MID",
    "price": 6.2,
-   "owned": 1.6,
+   "owned": 1.5,
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 116,
+   "name": "Dunk",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 1.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 123,
+   "name": "Hinshelwood",
+   "position": "MID",
+   "price": 5.9,
+   "owned": 0.5,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
   },
   {
    "element_id": 465,
@@ -127,31 +167,10 @@
  ],
  "price_moves": [
   {
-   "name": "Rogers",
-   "old": 7.7,
-   "new": 7.8,
-   "owned": 41.2,
-   "direction": "up"
-  },
-  {
-   "name": "King",
-   "old": 5.5,
-   "new": 5.6,
-   "owned": 3.3,
-   "direction": "up"
-  },
-  {
    "name": "Rashford",
    "old": 7.0,
    "new": 6.9,
    "owned": 1.4,
-   "direction": "down"
-  },
-  {
-   "name": "Greaves",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 1.1,
    "direction": "down"
   },
   {
@@ -165,13 +184,6 @@
    "name": "Mingueza",
    "old": 4.4,
    "new": 4.3,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "McAidoo",
-   "old": 4.5,
-   "new": 4.4,
    "owned": 0.1,
    "direction": "down"
   },

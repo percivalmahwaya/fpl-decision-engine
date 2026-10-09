@@ -1,9 +1,10 @@
 {
  "should_email": true,
  "reasons": [
-  "GW6 deadline in 22h",
+  "2 squad/watchlist change(s)",
+  "GW6 deadline in 11h",
   "transfer worth making"
  ],
- "subject": "FPL: GW6 deadline in 22h; transfer worth making",
- "body": "DEADLINE — GW6 in 22.1 hours (2026-10-10T10:00:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  Palmer (MID) chance 75% — Muscular injury - 75% chance of playing\n  Isak (FWD) chance 75% — Thigh injury - 75% chance of playing\n  João Pedro (FWD) chance 75% — Knee injury - 75% chance of playing\n\nTRANSFER — João Pedro out, Havertz in.\n  +2.29 expected points, -0.1m, 0.4m left in the bank.\n  João Pedro is flagged in the team news.\n  Frees up 0.1m for later.\n\nCAPTAIN — model says B.Fernandes (6.29 xPts).\n\nSnapshot #88 at 2026-10-09T11:53:53.526758+00:00"
+ "subject": "FPL: 2 squad/watchlist change(s); GW6 deadline in 11h; transfer worth making",
+ "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] CRITICAL  Isak (FWD)  RULED OUT (Thigh injury - Unknown return date)\n  [WATCH] CRITICAL  Gakpo (MID)  RULED OUT (Ankle injury - Unknown return date)\n\nDEADLINE — GW6 in 11.3 hours (2026-10-10T10:00:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  Isak (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — Isak out, Havertz in.\n  +4.50 expected points, -1.5m, 1.8m left in the bank.\n  Isak is flagged in the team news.\n  Frees up 1.5m for later.\n\nCAPTAIN — model says B.Fernandes (6.29 xPts).\n\nSnapshot #89 at 2026-10-09T22:42:41.419305+00:00"
 }

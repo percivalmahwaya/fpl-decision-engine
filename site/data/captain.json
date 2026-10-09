@@ -22,7 +22,7 @@
    "element_id": 154,
    "position": "MID",
    "ep": 4.74,
-   "flagged": true
+   "flagged": false
   },
   {
    "name": "Rogers",
@@ -30,13 +30,6 @@
    "position": "MID",
    "ep": 4.67,
    "flagged": false
-  },
-  {
-   "name": "Isak",
-   "element_id": 379,
-   "position": "FWD",
-   "ep": 4.61,
-   "flagged": true
   },
   {
    "name": "Wirtz",
@@ -64,6 +57,13 @@
    "element_id": 390,
    "position": "DEF",
    "ep": 3.32,
+   "flagged": false
+  },
+  {
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
+   "ep": 3.26,
    "flagged": false
   }
  ]

@@ -3,28 +3,28 @@
  "free_transfers": 1,
  "noise_floor": 0.17,
  "has_recommendation": true,
- "headline": "João Pedro to Havertz, +2.29 expected points",
+ "headline": "Isak to Havertz, +4.50 expected points",
  "moves": [
   {
-   "out": "João Pedro",
-   "out_price": 7.7,
-   "out_ep": 2.21,
+   "out": "Isak",
+   "out_price": 9.1,
+   "out_ep": 0.0,
    "in": "Havertz",
    "in_price": 7.6,
    "in_ep": 4.5,
    "in_club": "ARS",
    "position": "FWD",
-   "gain": 2.291,
-   "net": 2.291,
-   "cost": -0.1,
-   "bank_after": 0.4,
+   "gain": 4.5,
+   "net": 4.5,
+   "cost": -1.5,
+   "bank_after": 1.8,
    "free": true,
    "penalties": false,
    "worth_it": true,
    "reasons": [
-    "João Pedro is flagged in the team news.",
-    "Frees up 0.1m for later.",
-    "Owned by only 8%, so this is a differential rather than a template move."
+    "Isak is flagged in the team news.",
+    "Frees up 1.5m for later.",
+    "Owned by only 7%, so this is a differential rather than a template move."
    ]
   },
   {
@@ -46,6 +46,28 @@
    "reasons": [
     "Frees up 1.2m for later.",
     "Owned by only 3%, so this is a differential rather than a template move.",
+    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
+   ]
+  },
+  {
+   "out": "João Pedro",
+   "out_price": 7.7,
+   "out_ep": 2.21,
+   "in": "Thiago",
+   "in_price": 7.8,
+   "in_ep": 3.83,
+   "in_club": "BRE",
+   "position": "FWD",
+   "gain": 1.62,
+   "net": -2.38,
+   "cost": 0.1,
+   "bank_after": 0.2,
+   "free": false,
+   "penalties": true,
+   "worth_it": false,
+   "reasons": [
+    "Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.",
+    "Owned by only 10%, so this is a differential rather than a template move.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   },
@@ -88,27 +110,6 @@
    "penalties": false,
    "worth_it": false,
    "reasons": [
-    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
-   ]
-  },
-  {
-   "out": "Thomas",
-   "out_price": 4.0,
-   "out_ep": 2.96,
-   "in": "Dasilva",
-   "in_price": 4.0,
-   "in_ep": 3.33,
-   "in_club": "COV",
-   "position": "DEF",
-   "gain": 0.374,
-   "net": -3.626,
-   "cost": 0.0,
-   "bank_after": 0.3,
-   "free": false,
-   "penalties": false,
-   "worth_it": false,
-   "reasons": [
-    "Owned by only 1%, so this is a differential rather than a template move.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   }

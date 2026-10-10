@@ -49,9 +49,19 @@
    "captain": "B.Fernandes",
    "captain_points": 4,
    "played": true
+  },
+  {
+   "gameweek": 6,
+   "points": 0,
+   "transfers": 1,
+   "formation": "3-5-2",
+   "decided_by": "gut",
+   "captain": "João Pedro",
+   "captain_points": null,
+   "played": true
   }
  ],
  "total_points": 292,
- "played": 5,
- "average": 58.4
+ "played": 6,
+ "average": 48.7
 }

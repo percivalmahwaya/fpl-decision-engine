@@ -1,69 +1,69 @@
 {
- "gameweek": 6,
+ "gameweek": 7,
  "model_pick": {
   "name": "B.Fernandes",
   "element_id": 426,
   "position": "MID",
-  "ep": 6.29,
+  "ep": 5.17,
   "flagged": false
  },
- "your_pick": "B.Fernandes",
- "agrees": true,
+ "your_pick": "João Pedro",
+ "agrees": false,
  "ranked": [
   {
    "name": "B.Fernandes",
    "element_id": 426,
    "position": "MID",
-   "ep": 6.29,
+   "ep": 5.17,
    "flagged": false
   },
   {
    "name": "Palmer",
    "element_id": 154,
    "position": "MID",
-   "ep": 4.74,
-   "flagged": false
-  },
-  {
-   "name": "Rogers",
-   "element_id": 40,
-   "position": "MID",
-   "ep": 4.67,
-   "flagged": false
-  },
-  {
-   "name": "Wirtz",
-   "element_id": 366,
-   "position": "MID",
-   "ep": 4.5,
-   "flagged": false
-  },
-  {
-   "name": "Pickford",
-   "element_id": 226,
-   "position": "GKP",
-   "ep": 3.48,
-   "flagged": false
-  },
-  {
-   "name": "Szoboszlai",
-   "element_id": 368,
-   "position": "MID",
-   "ep": 3.44,
-   "flagged": false
-  },
-  {
-   "name": "Rúben",
-   "element_id": 390,
-   "position": "DEF",
-   "ep": 3.32,
+   "ep": 4.61,
    "flagged": false
   },
   {
    "name": "Barry",
    "element_id": 249,
    "position": "FWD",
-   "ep": 3.26,
+   "ep": 4.12,
+   "flagged": false
+  },
+  {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 3.99,
+   "flagged": false
+  },
+  {
+   "name": "Rogers",
+   "element_id": 40,
+   "position": "MID",
+   "ep": 3.99,
+   "flagged": false
+  },
+  {
+   "name": "Pickford",
+   "element_id": 226,
+   "position": "GKP",
+   "ep": 3.65,
+   "flagged": false
+  },
+  {
+   "name": "Rúben",
+   "element_id": 390,
+   "position": "DEF",
+   "ep": 3.61,
+   "flagged": false
+  },
+  {
+   "name": "Szoboszlai",
+   "element_id": 368,
+   "position": "MID",
+   "ep": 3.45,
    "flagged": false
   }
  ]

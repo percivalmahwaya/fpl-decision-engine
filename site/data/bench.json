@@ -1,6 +1,6 @@
 {
  "available": true,
- "gameweek": 6,
+ "gameweek": 7,
  "provisional": false,
  "formation": "3-5-2",
  "starting_xi": [
@@ -8,99 +8,99 @@
    "name": "B.Fernandes",
    "element_id": 426,
    "position": "MID",
-   "ep": 6.29,
-   "p_play": 0.913,
-   "if_played": 6.9,
+   "ep": 5.17,
+   "p_play": 0.91,
+   "if_played": 5.68,
    "flagged": false
   },
   {
    "name": "Palmer",
    "element_id": 154,
    "position": "MID",
-   "ep": 4.74,
-   "p_play": 0.851,
-   "if_played": 5.57,
-   "flagged": false
-  },
-  {
-   "name": "Rogers",
-   "element_id": 40,
-   "position": "MID",
-   "ep": 4.67,
-   "p_play": 0.889,
-   "if_played": 5.25,
-   "flagged": false
-  },
-  {
-   "name": "Isak",
-   "element_id": 379,
-   "position": "FWD",
    "ep": 4.61,
-   "p_play": 0.835,
-   "if_played": 5.53,
-   "flagged": true
-  },
-  {
-   "name": "Wirtz",
-   "element_id": 366,
-   "position": "MID",
-   "ep": 4.5,
-   "p_play": 0.803,
-   "if_played": 5.6,
-   "flagged": false
-  },
-  {
-   "name": "Pickford",
-   "element_id": 226,
-   "position": "GKP",
-   "ep": 3.48,
-   "p_play": 0.947,
-   "if_played": 3.67,
-   "flagged": false
-  },
-  {
-   "name": "Szoboszlai",
-   "element_id": 368,
-   "position": "MID",
-   "ep": 3.44,
-   "p_play": 0.86,
-   "if_played": 4.0,
-   "flagged": false
-  },
-  {
-   "name": "Rúben",
-   "element_id": 390,
-   "position": "DEF",
-   "ep": 3.32,
-   "p_play": 0.916,
-   "if_played": 3.62,
+   "p_play": 0.843,
+   "if_played": 5.47,
    "flagged": false
   },
   {
    "name": "Barry",
    "element_id": 249,
    "position": "FWD",
-   "ep": 3.26,
-   "p_play": 0.898,
-   "if_played": 3.63,
+   "ep": 4.12,
+   "p_play": 0.908,
+   "if_played": 4.54,
+   "flagged": false
+  },
+  {
+   "name": "Rogers",
+   "element_id": 40,
+   "position": "MID",
+   "ep": 3.99,
+   "p_play": 0.882,
+   "if_played": 4.52,
+   "flagged": false
+  },
+  {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 3.99,
+   "p_play": 0.949,
+   "if_played": 4.2,
+   "flagged": false
+  },
+  {
+   "name": "Isak",
+   "element_id": 379,
+   "position": "FWD",
+   "ep": 3.76,
+   "p_play": 0.806,
+   "if_played": 4.67,
+   "flagged": true
+  },
+  {
+   "name": "Pickford",
+   "element_id": 226,
+   "position": "GKP",
+   "ep": 3.65,
+   "p_play": 0.948,
+   "if_played": 3.85,
+   "flagged": false
+  },
+  {
+   "name": "Rúben",
+   "element_id": 390,
+   "position": "DEF",
+   "ep": 3.61,
+   "p_play": 0.918,
+   "if_played": 3.93,
+   "flagged": false
+  },
+  {
+   "name": "Szoboszlai",
+   "element_id": 368,
+   "position": "MID",
+   "ep": 3.45,
+   "p_play": 0.852,
+   "if_played": 4.05,
    "flagged": false
   },
   {
    "name": "Hall",
    "element_id": 449,
    "position": "DEF",
-   "ep": 3.26,
-   "p_play": 0.931,
-   "if_played": 3.5,
+   "ep": 3.36,
+   "p_play": 0.932,
+   "if_played": 3.61,
    "flagged": false
   },
   {
    "name": "Davis",
    "element_id": 305,
    "position": "DEF",
-   "ep": 3.18,
-   "p_play": 0.914,
-   "if_played": 3.47,
+   "ep": 2.61,
+   "p_play": 0.911,
+   "if_played": 2.87,
    "flagged": false
   }
  ],
@@ -109,46 +109,46 @@
    "name": "Horníček",
    "element_id": 567,
    "position": "GKP",
-   "ep": 3.18,
+   "ep": 3.17,
    "p_play": 0.952,
-   "if_played": 3.34,
+   "if_played": 3.33,
    "flagged": false
   },
   {
    "name": "João Pedro",
    "element_id": 165,
    "position": "FWD",
-   "ep": 2.21,
-   "p_play": 0.426,
-   "if_played": 5.18,
+   "ep": 1.91,
+   "p_play": 0.408,
+   "if_played": 4.67,
    "flagged": false
   },
   {
    "name": "Mitchell",
    "element_id": 204,
    "position": "DEF",
-   "ep": 3.13,
-   "p_play": 0.878,
-   "if_played": 3.56,
+   "ep": 2.49,
+   "p_play": 0.881,
+   "if_played": 2.83,
    "flagged": false
   },
   {
    "name": "Thomas",
    "element_id": 173,
    "position": "DEF",
-   "ep": 2.96,
-   "p_play": 0.897,
-   "if_played": 3.3,
+   "ep": 2.39,
+   "p_play": 0.869,
+   "if_played": 2.75,
    "flagged": false
   }
  ],
- "autosub_value": 4.84,
+ "autosub_value": 3.68,
  "notes": [
   "Starting with a flag on Isak. The bench covers a blank, but only for the first one that happens.",
   "At least one bench player is more likely than not to sit out. That costs nothing in the ordering, since the autosub falls through to the next player, but it does thin the cover."
  ],
  "bench_boost": {
-  "value_now": 11.47,
+  "value_now": 9.96,
   "verdict": "hold",
   "recent": [
    [
@@ -158,11 +158,15 @@
    [
     5,
     12.46
+   ],
+   [
+    6,
+    12.72
    ]
   ],
   "double_gameweeks": [],
   "reasoning": [
-   "Your bench has been worth 12.5 points a week on average over the last 2 gameweeks, best 12.6. This week it is worth 11.5.",
+   "Your bench has been worth 12.6 points a week on average over the last 3 gameweeks, best 12.7. This week it is worth 10.0.",
    "Below the 12 point rule of thumb for a full bench of starters, so this is not the week.",
    "Bench order does not matter in a Bench Boost week: every player scores, so the ordering work is the one thing the chip switches off."
   ]

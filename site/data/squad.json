@@ -1,5 +1,5 @@
 {
- "gameweek": 5,
+ "gameweek": 6,
  "squad": [
   {
    "name": "Pickford",
@@ -14,7 +14,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.48,
+   "ep": 3.65,
    "flagged": false
   },
   {
@@ -30,7 +30,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 0,
-   "ep": 3.18,
+   "ep": 3.17,
    "flagged": false
   },
   {
@@ -45,8 +45,8 @@
    "news": null,
    "is_captain": false,
    "is_vice": false,
-   "started": 1,
-   "ep": 3.32,
+   "started": 0,
+   "ep": 3.61,
    "flagged": false
   },
   {
@@ -55,14 +55,14 @@
    "position": "DEF",
    "club": "NEW",
    "price": 5.3,
-   "owned": 19.8,
+   "owned": 20.8,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.26,
+   "ep": 3.36,
    "flagged": false
   },
   {
@@ -71,14 +71,14 @@
    "position": "DEF",
    "club": "IPS",
    "price": 4.0,
-   "owned": 7.5,
+   "owned": 7.7,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
-   "started": 0,
-   "ep": 3.18,
+   "started": 1,
+   "ep": 2.61,
    "flagged": false
   },
   {
@@ -87,14 +87,14 @@
    "position": "DEF",
    "club": "CRY",
    "price": 4.5,
-   "owned": 6.1,
+   "owned": 6.0,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.13,
+   "ep": 2.49,
    "flagged": false
   },
   {
@@ -103,14 +103,14 @@
    "position": "DEF",
    "club": "COV",
    "price": 4.0,
-   "owned": 8.6,
+   "owned": 8.8,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 0,
-   "ep": 2.96,
+   "ep": 2.39,
    "flagged": false
   },
   {
@@ -119,14 +119,14 @@
    "position": "MID",
    "club": "MUN",
    "price": 11.9,
-   "owned": 37.9,
+   "owned": 37.2,
    "status": "a",
    "chance": null,
    "news": null,
-   "is_captain": true,
+   "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 6.29,
+   "ep": 5.17,
    "flagged": false
   },
   {
@@ -135,14 +135,14 @@
    "position": "MID",
    "club": "CHE",
    "price": 9.7,
-   "owned": 24.2,
+   "owned": 24.3,
    "status": "a",
    "chance": 100,
    "news": null,
    "is_captain": false,
    "is_vice": true,
    "started": 1,
-   "ep": 4.74,
+   "ep": 4.61,
    "flagged": false
   },
   {
@@ -151,30 +151,30 @@
    "position": "MID",
    "club": "CHE",
    "price": 7.8,
-   "owned": 42.1,
+   "owned": 42.7,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 4.67,
+   "ep": 3.99,
    "flagged": false
   },
   {
-   "name": "Wirtz",
-   "element_id": 366,
+   "name": "Groß",
+   "element_id": 124,
    "position": "MID",
-   "club": "LIV",
-   "price": 7.3,
-   "owned": 5.5,
+   "club": "BHA",
+   "price": 5.9,
+   "owned": 35.9,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 4.5,
+   "ep": 3.99,
    "flagged": false
   },
   {
@@ -183,14 +183,14 @@
    "position": "MID",
    "club": "LIV",
    "price": 6.9,
-   "owned": 31.0,
+   "owned": 30.2,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.44,
+   "ep": 3.45,
    "flagged": false
   },
   {
@@ -199,14 +199,14 @@
    "position": "FWD",
    "club": "EVE",
    "price": 5.7,
-   "owned": 8.7,
+   "owned": 8.6,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
-   "started": 1,
-   "ep": 3.26,
+   "started": 0,
+   "ep": 4.12,
    "flagged": false
   },
   {
@@ -215,14 +215,14 @@
    "position": "FWD",
    "club": "CHE",
    "price": 7.7,
-   "owned": 64.4,
+   "owned": 66.2,
    "status": "a",
    "chance": 100,
    "news": null,
-   "is_captain": false,
+   "is_captain": true,
    "is_vice": false,
-   "started": 0,
-   "ep": 2.21,
+   "started": 1,
+   "ep": 1.91,
    "flagged": false
   },
   {
@@ -231,7 +231,7 @@
    "position": "FWD",
    "club": "LIV",
    "price": 9.1,
-   "owned": 18.9,
+   "owned": 16.8,
    "status": "i",
    "chance": 0,
    "news": "Thigh injury - Unknown return date",
@@ -242,6 +242,6 @@
    "flagged": true
   }
  ],
- "squad_value": 99.9,
+ "squad_value": 98.5,
  "count": 15
 }

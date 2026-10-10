@@ -52,7 +52,7 @@
   },
   {
    "gameweek": 6,
-   "points": 0,
+   "points": 49,
    "transfers": 1,
    "formation": "3-5-2",
    "decided_by": "gut",
@@ -61,7 +61,7 @@
    "played": true
   }
  ],
- "total_points": 292,
+ "total_points": 341,
  "played": 6,
- "average": 48.7
+ "average": 56.8
 }

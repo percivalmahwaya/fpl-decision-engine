@@ -32,21 +32,21 @@
    "flagged": false
   },
   {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 4.0,
+   "p_play": 0.951,
+   "if_played": 4.2,
+   "flagged": false
+  },
+  {
    "name": "Rogers",
    "element_id": 40,
    "position": "MID",
    "ep": 3.99,
    "p_play": 0.882,
    "if_played": 4.52,
-   "flagged": false
-  },
-  {
-   "name": "Groß",
-   "element_id": 124,
-   "position": "MID",
-   "ep": 3.99,
-   "p_play": 0.949,
-   "if_played": 4.2,
    "flagged": false
   },
   {

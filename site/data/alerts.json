@@ -1,15 +1,25 @@
 {
  "prev_snapshot": 89,
- "latest_snapshot": 92,
+ "latest_snapshot": 93,
  "prev_taken_at": "2026-10-09T22:42:41.419305+00:00",
- "latest_taken_at": "2026-10-11T11:24:15.397455+00:00",
+ "latest_taken_at": "2026-10-11T22:03:01.396725+00:00",
  "alerts": [
+  {
+   "element_id": 368,
+   "name": "Szoboszlai",
+   "position": "MID",
+   "price": 6.9,
+   "owned": 29.4,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
   {
    "element_id": 94,
    "name": "Schade",
    "position": "MID",
    "price": 6.2,
-   "owned": 15.9,
+   "owned": 15.6,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Shoulder injury - 75% chance of playing)"
@@ -25,6 +35,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 397,
+   "name": "Semenyo",
+   "position": "MID",
+   "price": 8.4,
+   "owned": 13.5,
+   "severity": "GOOD",
+   "tag": "OWNED",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 13,
    "name": "Rice",
    "position": "MID",
@@ -33,6 +53,26 @@
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 387,
+   "name": "O'Reilly",
+   "position": "DEF",
+   "price": 6.3,
+   "owned": 9.5,
+   "severity": "GOOD",
+   "tag": "OWNED",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 371,
+   "name": "Gravenberch",
+   "position": "MID",
+   "price": 5.8,
+   "owned": 1.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 25 Oct)"
   },
   {
    "element_id": 328,
@@ -59,7 +99,7 @@
    "name": "James",
    "position": "DEF",
    "price": 5.3,
-   "owned": 5.4,
+   "owned": 5.3,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -155,11 +195,31 @@
    "message": "new news: Hamstring injury - Expected back 18 Oct"
   },
   {
+   "element_id": 469,
+   "name": "N.Williams",
+   "position": "DEF",
+   "price": 5.0,
+   "owned": 7.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 26,
    "name": "Havertz",
    "position": "FWD",
    "price": 7.5,
-   "owned": 6.7,
+   "owned": 6.6,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 398,
+   "name": "Foden",
+   "position": "MID",
+   "price": 6.8,
+   "owned": 1.5,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -255,6 +315,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 21,
+   "name": "Nørgaard",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 52,
    "name": "Alysson",
    "position": "MID",
@@ -265,10 +335,30 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 246,
+   "name": "Röhl",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 325,
    "name": "Darlow",
    "position": "GKP",
    "price": 4.5,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 370,
+   "name": "Chiesa",
+   "position": "MID",
+   "price": 5.3,
    "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
@@ -290,35 +380,35 @@
    "name": "Groß",
    "old": 5.9,
    "new": 6.0,
-   "owned": 36.9,
+   "owned": 37.8,
    "direction": "up"
   },
   {
    "name": "Gvardiol",
    "old": 5.7,
    "new": 5.8,
-   "owned": 27.6,
+   "owned": 27.7,
    "direction": "up"
   },
   {
    "name": "Gabriel",
    "old": 8.0,
    "new": 7.9,
-   "owned": 22.2,
+   "owned": 22.1,
    "direction": "down"
   },
   {
    "name": "Wissa",
    "old": 6.2,
    "new": 6.3,
-   "owned": 19.0,
+   "owned": 18.8,
    "direction": "up"
   },
   {
    "name": "Isak",
    "old": 9.1,
    "new": 9.0,
-   "owned": 16.0,
+   "owned": 15.4,
    "direction": "down"
   },
   {
@@ -339,7 +429,7 @@
    "name": "Havertz",
    "old": 7.6,
    "new": 7.5,
-   "owned": 6.7,
+   "owned": 6.6,
    "direction": "down"
   },
   {
@@ -371,7 +461,18 @@
    "direction": "down"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 368,
+   "name": "Szoboszlai",
+   "position": "MID",
+   "price": 6.9,
+   "owned": 29.4,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

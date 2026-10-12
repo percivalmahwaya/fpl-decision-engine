@@ -30,7 +30,7 @@
   },
   {
    "out": "João Pedro",
-   "out_price": 7.7,
+   "out_price": 7.8,
    "out_ep": 1.91,
    "in": "Wissa",
    "in_price": 6.3,
@@ -39,13 +39,13 @@
    "position": "FWD",
    "gain": 2.019,
    "net": -1.981,
-   "cost": -1.4,
-   "bank_after": 3.3,
+   "cost": -1.5,
+   "bank_after": 3.4,
    "free": false,
    "penalties": false,
    "worth_it": false,
    "reasons": [
-    "Frees up 1.4m for later.",
+    "Frees up 1.5m for later.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   },

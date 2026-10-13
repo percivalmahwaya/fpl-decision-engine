@@ -4,7 +4,7 @@
   "name": "B.Fernandes",
   "element_id": 426,
   "position": "MID",
-  "ep": 5.17,
+  "ep": 6.53,
   "flagged": false
  },
  "your_pick": "João Pedro",
@@ -14,57 +14,57 @@
    "name": "B.Fernandes",
    "element_id": 426,
    "position": "MID",
-   "ep": 5.17,
-   "flagged": false
-  },
-  {
-   "name": "Palmer",
-   "element_id": 154,
-   "position": "MID",
-   "ep": 4.61,
-   "flagged": false
-  },
-  {
-   "name": "Barry",
-   "element_id": 249,
-   "position": "FWD",
-   "ep": 4.12,
+   "ep": 6.53,
    "flagged": false
   },
   {
    "name": "Groß",
    "element_id": 124,
    "position": "MID",
-   "ep": 4.0,
+   "ep": 5.39,
+   "flagged": false
+  },
+  {
+   "name": "Palmer",
+   "element_id": 154,
+   "position": "MID",
+   "ep": 4.62,
    "flagged": false
   },
   {
    "name": "Rogers",
    "element_id": 40,
    "position": "MID",
-   "ep": 3.99,
+   "ep": 3.9,
+   "flagged": false
+  },
+  {
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
+   "ep": 3.85,
+   "flagged": false
+  },
+  {
+   "name": "Horníček",
+   "element_id": 567,
+   "position": "GKP",
+   "ep": 3.62,
    "flagged": false
   },
   {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
-   "ep": 3.65,
+   "ep": 3.59,
    "flagged": false
   },
   {
    "name": "Rúben",
    "element_id": 390,
    "position": "DEF",
-   "ep": 3.61,
+   "ep": 3.51,
    "flagged": false
-  },
-  {
-   "name": "Szoboszlai",
-   "element_id": 368,
-   "position": "MID",
-   "ep": 3.45,
-   "flagged": true
   }
  ]
 }

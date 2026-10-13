@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 93,
- "latest_snapshot": 95,
+ "latest_snapshot": 96,
  "prev_taken_at": "2026-10-11T22:03:01.396725+00:00",
- "latest_taken_at": "2026-10-13T00:46:50.142587+00:00",
+ "latest_taken_at": "2026-10-13T22:50:11.299662+00:00",
  "alerts": [
+  {
+   "element_id": 596,
+   "name": "Ruggeri",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.1,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hamstring injury - Unknown return date)"
+  },
   {
    "element_id": 423,
    "name": "Shaw",
@@ -13,6 +23,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 557,
+   "name": "Tzolis",
+   "position": "MID",
+   "price": 6.3,
+   "owned": 6.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Hamstring injury - Expected back 1 Nov"
   },
   {
    "element_id": 432,
@@ -55,14 +75,24 @@
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
-   "element_id": 596,
-   "name": "Ruggeri",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.1,
+   "element_id": 103,
+   "name": "Dasilva",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 75% -> 25% (Hamstring injury - 25% chance of playing)"
+   "message": "new news: Hamstring injury - Unknown return date"
+  },
+  {
+   "element_id": 187,
+   "name": "Eccles",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Unspecified injury - Unknown return date"
   },
   {
    "element_id": 175,
@@ -125,6 +155,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 416,
+   "name": "De Ligt",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 458,
    "name": "Joelinton",
    "position": "MID",
@@ -140,49 +180,49 @@
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.8,
-   "owned": 69.0,
+   "owned": 69.5,
    "direction": "up"
   },
   {
    "name": "Rogers",
    "old": 7.8,
    "new": 7.9,
-   "owned": 44.5,
+   "owned": 44.9,
    "direction": "up"
   },
   {
    "name": "De Cuyper",
    "old": 5.0,
    "new": 5.1,
-   "owned": 34.5,
+   "owned": 35.2,
    "direction": "up"
   },
   {
    "name": "Semenyo",
    "old": 8.4,
    "new": 8.3,
-   "owned": 13.6,
+   "owned": 13.7,
    "direction": "down"
   },
   {
    "name": "Bogle",
    "old": 4.6,
    "new": 4.7,
-   "owned": 8.8,
+   "owned": 8.9,
    "direction": "up"
   },
   {
    "name": "Kostoulas",
    "old": 5.6,
    "new": 5.7,
-   "owned": 8.5,
+   "owned": 8.7,
    "direction": "up"
   },
   {
    "name": "Gakpo",
    "old": 7.2,
    "new": 7.1,
-   "owned": 8.1,
+   "owned": 7.8,
    "direction": "down"
   },
   {
@@ -196,21 +236,21 @@
    "name": "Belloumi",
    "old": 5.1,
    "new": 5.2,
-   "owned": 7.0,
+   "owned": 7.2,
    "direction": "up"
   },
   {
    "name": "Scott",
    "old": 6.1,
    "new": 6.0,
-   "owned": 3.7,
+   "owned": 3.6,
    "direction": "down"
   },
   {
    "name": "N.Jackson",
    "old": 6.5,
    "new": 6.6,
-   "owned": 2.4,
+   "owned": 2.5,
    "direction": "up"
   },
   {

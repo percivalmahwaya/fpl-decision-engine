@@ -52,16 +52,16 @@
   },
   {
    "gameweek": 6,
-   "points": 54,
+   "points": 66,
    "transfers": 1,
-   "formation": "3-5-2",
+   "formation": "4-4-2",
    "decided_by": "gut",
    "captain": "João Pedro",
-   "captain_points": null,
+   "captain_points": 24,
    "played": true
   }
  ],
- "total_points": 346,
+ "total_points": 358,
  "played": 6,
- "average": 57.7
+ "average": 59.7
 }

@@ -309,6 +309,21 @@ def qa_alerts_and_notify(meta, squad):
        0 < len(notify.get("subject", "")) <= 180,
        f"{len(notify.get('subject', ''))} chars")
 
+    # --- Throttle state -----------------------------------------------------
+    # The gap between notifications is carried inside notify.json, so losing
+    # these fields would silently restore the old behaviour of sending on
+    # every run that had anything to say - the exact thing the throttle exists
+    # to stop, and a regression nobody would notice until the inbox filled up.
+    ok("the throttle records which gate it took", bool(notify.get("gate")),
+       notify.get("gate"))
+    ok("the throttle carries its own clock forward",
+       "last_sent_at" in notify and "deadline_sent_for_gw" in notify)
+    if notify.get("should_email"):
+        ok("a message that sends stamps the clock", bool(notify.get("last_sent_at")))
+    ok("a suppressed run still reports why",
+       notify.get("should_email") or bool(notify.get("gate")),
+       notify.get("gate"))
+
     # Nothing personal should end up in a file committed to a public repo.
     blob = json.dumps([alerts, notify, load("meta"), load("squad")], default=str)
     leaks = re.findall(r"[\w.+-]+@[\w-]+\.[\w.]+", blob)
@@ -947,7 +962,37 @@ def qa_workflow():
        "workflow_dispatch" in triggers)
 
     crons = [c.get("cron") for c in triggers.get("schedule", [])]
-    ok("at least two runs a day", len(crons) >= 2, f"{crons}")
+
+    # Count ACTUAL runs per day, not the number of cron lines. This check used
+    # to assert `len(crons) >= 2` and would have failed the moment two fixed
+    # slots were replaced by one `*/3` expression that runs eight times — it
+    # was counting the wrong thing, and counting it in a way that punished an
+    # increase in frequency.
+    def runs_per_day(expr):
+        if not expr:
+            return 0
+        hour = expr.split()[1]
+        if hour.startswith("*/"):
+            try:
+                return 24 // int(hour[2:])
+            except ValueError:
+                return 0
+        return len([h for h in hour.split(",") if h.strip()]) or (24 if hour == "*" else 0)
+
+    per_day = sum(runs_per_day(c) for c in crons)
+    ok("at least two runs a day", per_day >= 2, f"{per_day}/day from {crons}")
+
+    # THE CRON INTERVAL AND THE DEADLINE WINDOW ARE COUPLED, and nothing else
+    # says so. publish.py guarantees one notification inside the last
+    # DEADLINE_WINDOW_HOURS before a deadline, but it can only do that if a run
+    # actually happens in that window. Widen the gap between runs past the
+    # window and the guarantee quietly becomes a coin flip — which is precisely
+    # how the GW4 deadline alert was missed by 24 minutes once already.
+    import publish as _pub
+    gap = 24 / per_day if per_day else 999
+    ok("runs are frequent enough to land in the deadline window",
+       gap <= _pub.DEADLINE_WINDOW_HOURS,
+       f"a run every {gap:.0f}h against a {_pub.DEADLINE_WINDOW_HOURS}h window")
 
     ok("workflow may write to the repository",
        wf.get("permissions", {}).get("contents") == "write",

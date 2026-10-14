@@ -19,10 +19,20 @@ name: FPL pipeline
 # is still best-effort, never guaranteed, which is why the email window below
 # is wide enough to absorb a late run.
 
+# FREQUENCY CHANGED 2026-10-15, AND IT RUNS MORE OFTEN WHILE NOTIFYING LESS.
+# Two runs a day cannot reliably land inside a six-hour pre-deadline window
+# once the scheduler's own four-hour jitter is allowed for: a 17:45 deadline
+# has a window of 11:45-17:45, which both old slots miss entirely. Every three
+# hours guarantees a run inside any such window even if one trigger is dropped.
+#
+# This costs nothing - Actions minutes are unlimited on a public repository -
+# and it does NOT mean more messages. publish.py now throttles sending to one
+# routine notification every 48 hours plus one per deadline, so the data gets
+# fresher while the inbox gets quieter. The two were only ever coupled because
+# every run that had something to say sent it.
 on:
   schedule:
-    - cron: '17 5 * * *'
-    - cron: '17 18 * * *'
+    - cron: '17 */3 * * *'
   workflow_dispatch:          # lets you run it by hand before a deadline
 
 permissions:

@@ -56,9 +56,40 @@ MODEL_NAME = "two_stage_ml"
 # it matters most.
 DEADLINE_WARN_HOURS = 30
 
+# --- How often a notification is allowed out -------------------------------
+#
+# Until 2026-10-15 every run with anything to say sent a message, so a busy
+# week produced one twice a day and the whole point of an alert was lost.
+# Percival asked for one every two days, plus one close to the deadline.
+#
+# NOTIFY_MIN_GAP_HOURS is the routine floor. DEADLINE_WINDOW_HOURS is the
+# guaranteed one, and it is SIX rather than the three he asked for, for the
+# reason written directly above: GitHub has delivered a trigger four hours
+# late in this very repository, and a window narrower than the scheduler's
+# jitter is a window that gets missed on the morning it matters. Six hours
+# with runs every three is the narrowest pair that cannot silently skip.
+NOTIFY_MIN_GAP_HOURS = 48
+DEADLINE_WINDOW_HOURS = 6
+
 
 def utcnow():
     return datetime.now(timezone.utc)
+
+
+def previous_notify_state():
+    """
+    Read the last run's notify.json so throttling survives between runs.
+
+    The state rides inside notify.json rather than a new file: that file is
+    already published, already QA'd and already committed each run, so there
+    is nothing extra to register, and a missing or malformed one simply means
+    "no history", which fails open to sending rather than closed to silence.
+    """
+    try:
+        d = json.loads((OUT_DIR / "notify.json").read_text(encoding="utf-8"))
+        return d.get("last_sent_at"), d.get("deadline_sent_for_gw")
+    except Exception:
+        return None, None
 
 
 def parse_iso(s):
@@ -631,11 +662,48 @@ def build_notify(meta, alerts, squad, captain, transfers=None, bench=None):
     lines.append(f"Snapshot #{meta['snapshot_id']} at {meta['snapshot_taken_at']}")
 
     subject = "FPL: " + "; ".join(reasons) if reasons else "FPL: nothing urgent"
+
+    # --- Throttle -----------------------------------------------------------
+    # Having something to say is now necessary but not sufficient. A message
+    # goes out only when it is the one close to a deadline, or when two days
+    # have passed since the last one. Everything else is still computed,
+    # published and visible on the site — it just does not interrupt.
+    last_sent_at, deadline_sent_for_gw = previous_notify_state()
+    now = utcnow()
+    gate = "nothing to say"
+
+    if reasons:
+        in_window = hrs is not None and 0 < hrs <= DEADLINE_WINDOW_HOURS
+        if in_window and deadline_sent_for_gw != meta.get("next_gw"):
+            gate = "deadline"
+        elif not last_sent_at:
+            gate = "first ever"
+        else:
+            try:
+                age = (now - datetime.fromisoformat(last_sent_at)).total_seconds() / 3600
+            except Exception:
+                # An unparseable timestamp must not mute the alerter forever.
+                age = None
+            if age is None:
+                gate = "unreadable timestamp, sending"
+            elif age >= NOTIFY_MIN_GAP_HOURS:
+                gate = "routine"
+            else:
+                gate = f"throttled, {age:.0f}h of {NOTIFY_MIN_GAP_HOURS}h"
+
+    send = gate in ("deadline", "first ever", "routine", "unreadable timestamp, sending")
+
     return {
-        "should_email": bool(reasons),
+        "should_email": send,
+        "gate": gate,
         "reasons": reasons,
         "subject": subject[:180],
         "body": "\n".join(lines),
+        # Carried forward unchanged when nothing is sent, so a suppressed run
+        # cannot reset the clock and let the next one straight through.
+        "last_sent_at": now.isoformat() if send else last_sent_at,
+        "deadline_sent_for_gw": (meta.get("next_gw") if gate == "deadline"
+                                 else deadline_sent_for_gw),
     }
 
 

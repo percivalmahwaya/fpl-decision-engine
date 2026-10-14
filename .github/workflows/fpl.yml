@@ -43,10 +43,11 @@ jobs:
     env:
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Mapped to env so later steps can test them in `if:` conditions —
-      # secrets cannot be referenced directly there.
-      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
-      MAIL_PASSWORD: ${{ secrets.MAIL_PASSWORD }}
-      MAIL_TO: ${{ secrets.MAIL_TO }}
+      # secrets cannot be referenced directly there. Job level, never step
+      # level: an `if:` cannot see a step's own env block, which is exactly how
+      # a deploy step in the sibling progeny-app workflow was silently disabled.
+      TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
       # Job level, not on the one step that fetches with it. qa_deploy.py also
       # reads this to tell "not configured" apart from "configured and broken",
       # and scoped to a single step it could not see it: the fetch succeeded
@@ -190,29 +191,55 @@ jobs:
               --notes "Rolling fpl.db snapshot. Regenerable — see README."
           gh release upload data fpl.db --clobber
 
-      - name: Decide whether to email
+      - name: Decide whether to notify
         id: notify
+        # `should_email` keeps its name: it is a published field that
+        # qa_deploy.py asserts on, and renaming it would change the public
+        # JSON contract for a cosmetic gain. It means "is there something
+        # worth sending", and has been channel-neutral since the move off mail.
         run: |
           echo "send=$(jq -r '.should_email' site/data/notify.json)" >> "$GITHUB_OUTPUT"
           echo "subject=$(jq -r '.subject' site/data/notify.json)" >> "$GITHUB_OUTPUT"
-          jq -r '.body' site/data/notify.json > mail_body.txt
-          cat mail_body.txt
+          jq -r '.body' site/data/notify.json > notify_body.txt
+          cat notify_body.txt
 
-      - name: Email
-        # Skipped silently when the mail secrets are not configured, so the
-        # pipeline still works before you set them up.
-        if: steps.notify.outputs.send == 'true' && env.MAIL_USERNAME != ''
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 587
-          secure: false
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          from: Progeny FPL Engine
-          to: ${{ secrets.MAIL_TO }}
-          subject: ${{ steps.notify.outputs.subject }}
-          body: file://mail_body.txt
+      - name: Telegram
+        # Skipped silently when the bot secrets are absent, so the pipeline
+        # still works before they are set up — the same contract the mail step
+        # had. The condition reads JOB-level env (see the env block above);
+        # a step-level env is invisible to `if:` and would disable this
+        # silently rather than loudly.
+        if: steps.notify.outputs.send == 'true' && env.TELEGRAM_BOT_TOKEN != ''
+        run: |
+          # Telegram rejects the whole message above 4096 characters rather
+          # than truncating it, so the text is cut here. Cut in Python, by
+          # character: `head -c` cuts bytes and would split a multi-byte name
+          # like Kovačić in half and produce invalid UTF-8.
+          python - <<'PY' > telegram_text.txt
+          import json
+          d = json.load(open("site/data/notify.json", encoding="utf-8"))
+          print((d["subject"] + "\n\n" + d["body"])[:3900])
+          PY
+
+          # No parse_mode: the body carries player names and figures, and
+          # Telegram's Markdown parser rejects an unbalanced _ or * in them by
+          # failing the entire send. Plain text cannot fail that way.
+          response=$(curl -sS -X POST \
+            "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text@telegram_text.txt" \
+            --data "disable_web_page_preview=true")
+
+          # Telegram answers HTTP 200 and reports its own failures in the body.
+          # A zero exit from curl therefore proves only that something replied,
+          # which is the same "a status code is not a verification" trap this
+          # project has hit on a deploy, on a release and on a squad fetch.
+          if [ "$(printf '%s' "$response" | jq -r '.ok')" != "true" ]; then
+            echo "Telegram refused the message:"
+            printf '%s' "$response" | jq -r '.description // "no description returned"'
+            exit 1
+          fi
+          echo "Delivered to Telegram."
 
       - name: Upload logs on failure
         if: failure()

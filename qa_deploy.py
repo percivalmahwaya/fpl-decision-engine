@@ -971,14 +971,19 @@ def qa_workflow():
                 return i
         return -1
 
-    qa_i, commit_i, email_i = index_of("QA"), index_of("Commit"), index_of("Email")
+    qa_i, commit_i = index_of("QA"), index_of("Commit")
+    send_i = index_of("Telegram")
     ok("a QA gate exists in the workflow", qa_i >= 0)
     # Ordering is the whole point of the gate: bad data must never be committed
-    # to a public page or emailed out.
+    # to a public page or pushed to a phone.
     ok("QA runs before anything is committed", 0 <= qa_i < commit_i,
        f"QA at step {qa_i}, commit at step {commit_i}")
-    ok("QA runs before anything is emailed", 0 <= qa_i < email_i,
-       f"QA at step {qa_i}, email at step {email_i}")
+    # Was index_of("Email") until the notifier moved to Telegram. The check is
+    # about ORDER, not about the channel — but it is anchored to a literal step
+    # name, so renaming the step silently turns `index_of` into -1 and the
+    # assertion into a failure. Any future channel change must edit this line.
+    ok("QA runs before anything is sent out", 0 <= qa_i < send_i,
+       f"QA at step {qa_i}, send at step {send_i}")
 
     # ------------------------------------------------------------------
     # Most scripts here print their docstring and exit 0 when given no mode
@@ -1027,10 +1032,25 @@ def qa_workflow():
 
     ok("no hardcoded credentials in the workflow",
        not re.search(r"(?i)(password|token)\s*:\s*['\"]?[A-Za-z0-9_\-]{16,}", raw))
-    ok("mail credentials come from secrets",
-       "secrets.MAIL_PASSWORD" in raw and "MAIL_PASSWORD:" in raw)
-    ok("email step is skipped when secrets are absent",
-       "env.MAIL_USERNAME != ''" in raw)
+    ok("notifier credentials come from secrets",
+       "secrets.TELEGRAM_BOT_TOKEN" in raw and "TELEGRAM_BOT_TOKEN:" in raw)
+    ok("the notify step is skipped when secrets are absent",
+       "env.TELEGRAM_BOT_TOKEN != ''" in raw)
+    # The bot token is mapped at JOB level. Scoped to the step it would be
+    # invisible to that `if:`, so the condition would read empty, the step
+    # would skip on every run, and nothing would ever say so — the same silent
+    # disable that hit the sibling progeny-app deploy. Assert the mapping sits
+    # above `steps:`, not merely that it exists somewhere in the file.
+    _job_env = raw.split("steps:")[0] if "steps:" in raw else ""
+    ok("the bot token is mapped at job level, not step level",
+       "TELEGRAM_BOT_TOKEN:" in _job_env,
+       "found above steps:" if "TELEGRAM_BOT_TOKEN:" in _job_env else "NOT in job env")
+    # Telegram answers HTTP 200 and reports failures in the JSON body, so the
+    # step must inspect `.ok` rather than trust curl's exit code.
+    ok("the notify step verifies the send rather than trusting the exit code",
+       ".ok" in raw and "Telegram refused" in raw)
+    ok("no mail secrets remain after the move off email",
+       "MAIL_PASSWORD" not in raw and "MAIL_USERNAME" not in raw)
 
 
 # -------------------------------------------------------------- HYGIENE

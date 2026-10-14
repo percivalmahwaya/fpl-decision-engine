@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 93,
- "latest_snapshot": 96,
- "prev_taken_at": "2026-10-11T22:03:01.396725+00:00",
- "latest_taken_at": "2026-10-13T22:50:11.299662+00:00",
+ "prev_snapshot": 94,
+ "latest_snapshot": 97,
+ "prev_taken_at": "2026-10-12T13:09:45.242166+00:00",
+ "latest_taken_at": "2026-10-14T10:11:45.065342+00:00",
  "alerts": [
   {
    "element_id": 596,
@@ -19,7 +19,7 @@
    "name": "Shaw",
    "position": "DEF",
    "price": 4.3,
-   "owned": 6.8,
+   "owned": 6.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -63,6 +63,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 582,
+   "name": "Madjo",
+   "position": "FWD",
+   "price": 5.4,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 75% -> 50% (Unspecified injury - 50% chance of playing)"
   },
   {
    "element_id": 461,
@@ -173,42 +183,31 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 618,
+   "name": "Goretzka",
+   "position": "MID",
+   "price": 5.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
   }
  ],
  "price_moves": [
   {
-   "name": "João Pedro",
-   "old": 7.7,
-   "new": 7.8,
-   "owned": 69.5,
-   "direction": "up"
-  },
-  {
-   "name": "Rogers",
+   "name": "Cherki",
    "old": 7.8,
    "new": 7.9,
-   "owned": 44.9,
+   "owned": 31.8,
    "direction": "up"
   },
   {
-   "name": "De Cuyper",
-   "old": 5.0,
-   "new": 5.1,
-   "owned": 35.2,
-   "direction": "up"
-  },
-  {
-   "name": "Semenyo",
-   "old": 8.4,
-   "new": 8.3,
-   "owned": 13.7,
-   "direction": "down"
-  },
-  {
-   "name": "Bogle",
-   "old": 4.6,
-   "new": 4.7,
-   "owned": 8.9,
+   "name": "Verbruggen",
+   "old": 4.5,
+   "new": 4.6,
+   "owned": 21.9,
    "direction": "up"
   },
   {
@@ -219,13 +218,6 @@
    "direction": "up"
   },
   {
-   "name": "Gakpo",
-   "old": 7.2,
-   "new": 7.1,
-   "owned": 7.8,
-   "direction": "down"
-  },
-  {
    "name": "van Ewijk",
    "old": 4.0,
    "new": 3.9,
@@ -233,31 +225,52 @@
    "direction": "down"
   },
   {
-   "name": "Belloumi",
-   "old": 5.1,
-   "new": 5.2,
-   "owned": 7.2,
-   "direction": "up"
-  },
-  {
-   "name": "Scott",
-   "old": 6.1,
-   "new": 6.0,
-   "owned": 3.6,
+   "name": "Kusi-Asare",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 5.0,
    "direction": "down"
   },
   {
-   "name": "N.Jackson",
-   "old": 6.5,
-   "new": 6.6,
-   "owned": 2.5,
+   "name": "Vuskovic",
+   "old": 5.0,
+   "new": 5.1,
+   "owned": 4.6,
    "direction": "up"
   },
   {
-   "name": "Dalot",
-   "old": 4.9,
-   "new": 4.8,
-   "owned": 1.5,
+   "name": "Amenda",
+   "old": 4.0,
+   "new": 3.9,
+   "owned": 0.5,
+   "direction": "down"
+  },
+  {
+   "name": "O.Dango",
+   "old": 6.3,
+   "new": 6.2,
+   "owned": 0.4,
+   "direction": "down"
+  },
+  {
+   "name": "Dorgu",
+   "old": 5.8,
+   "new": 5.7,
+   "owned": 0.4,
+   "direction": "down"
+  },
+  {
+   "name": "Lewis",
+   "old": 4.4,
+   "new": 4.3,
+   "owned": 0.2,
+   "direction": "down"
+  },
+  {
+   "name": "Osman",
+   "old": 5.0,
+   "new": 4.9,
+   "owned": 0.0,
    "direction": "down"
   }
  ],

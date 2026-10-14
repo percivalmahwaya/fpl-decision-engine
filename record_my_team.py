@@ -265,6 +265,37 @@ GAMEWEEKS = {
             ("Thomas",       None, False, False, False),
         ],
     },
+    # Transcribed from his own My Team page 2026-10-14, ~2.5 days before the
+    # GW7 deadline (2026-10-17 10:00 UTC). The public API cannot see any of
+    # this: event/7/picks/ returns 404 until the deadline locks, the transfers
+    # endpoint publishes nothing for an undeadlined gameweek, and every field
+    # on entry/{id}/ is prefixed `last_deadline_`. A screenshot is the only
+    # ground truth that exists before Friday, which is exactly the case the
+    # note at the top of this file describes.
+    7: {
+        "total_points": None,          # not played yet
+        "transfers": 2,                # B.Fernandes -> Tavernier, Isak -> Haaland
+        "formation": "3-5-2",
+        "squad": [
+            # name            pts  started captain vice
+            ("Pickford",     None, True,  False, False),
+            ("Rúben",        None, True,  False, False),   # started, was benched in GW6
+            ("Mitchell",     None, True,  False, False),
+            ("Hall",         None, True,  False, False),
+            ("Rogers",       None, True,  False, False),
+            ("Palmer",       None, True,  False, False),   # no longer vice — see below
+            ("Tavernier",    None, True,  False, False),   # in for B.Fernandes
+            ("Szoboszlai",   None, True,  False, False),   # carries an FPL doubt flag
+            ("Groß",         None, True,  False, False),
+            ("João Pedro",   None, True,  False, True),    # vice (was captain in GW6)
+            ("Haaland",      None, True,  True,  False),   # captain — in for Isak
+            # bench, in order
+            ("Horníček",     None, False, False, False),
+            ("Barry",        None, False, False, False),
+            ("Thomas",       None, False, False, False),
+            ("Davis",        None, False, False, False),
+        ],
+    },
 }
 
 

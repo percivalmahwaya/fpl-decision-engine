@@ -221,12 +221,27 @@ jobs:
           print((d["subject"] + "\n\n" + d["body"])[:3900])
           PY
 
+          # Trim the chat id before use. A secret pasted with a stray leading
+          # space is invisible in the GitHub UI and almost invisible in the log
+          # — masking hides the value, not the whitespace around it — and
+          # Telegram answers the unhelpful "chat not found" rather than naming
+          # the real problem. Checking the shape here turns a twenty-minute
+          # hunt into one line of output.
+          chat_id=$(printf '%s' "${TELEGRAM_CHAT_ID}" | tr -d '[:space:]')
+          if ! printf '%s' "$chat_id" | grep -qE '^-?[0-9]+$'; then
+            echo "TELEGRAM_CHAT_ID is not a plain integer after trimming."
+            echo "  length after trimming: ${#chat_id}"
+            echo "  expected: 1278380977 (a user) or -1001234567890 (a group)"
+            exit 1
+          fi
+          echo "chat id looks well formed (${#chat_id} digits)."
+
           # No parse_mode: the body carries player names and figures, and
           # Telegram's Markdown parser rejects an unbalanced _ or * in them by
           # failing the entire send. Plain text cannot fail that way.
           response=$(curl -sS -X POST \
             "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
-            --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "chat_id=${chat_id}" \
             --data-urlencode "text@telegram_text.txt" \
             --data "disable_web_page_preview=true")
 

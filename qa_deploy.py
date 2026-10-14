@@ -1049,6 +1049,11 @@ def qa_workflow():
     # step must inspect `.ok` rather than trust curl's exit code.
     ok("the notify step verifies the send rather than trusting the exit code",
        ".ok" in raw and "Telegram refused" in raw)
+    # A chat id pasted with a stray leading space cost a real run: GitHub masks
+    # the value but not the whitespace, and Telegram reports only "chat not
+    # found", which points at the bot rather than at the typo.
+    ok("the chat id is trimmed and shape-checked before use",
+       "tr -d '[:space:]'" in raw and "^-?[0-9]+$" in raw)
     ok("no mail secrets remain after the move off email",
        "MAIL_PASSWORD" not in raw and "MAIL_USERNAME" not in raw)
 

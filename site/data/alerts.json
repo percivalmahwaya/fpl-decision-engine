@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 96,
- "latest_snapshot": 102,
+ "latest_snapshot": 103,
  "prev_taken_at": "2026-10-13T22:50:11.299662+00:00",
- "latest_taken_at": "2026-10-15T04:46:24.011489+00:00",
+ "latest_taken_at": "2026-10-15T11:35:56.566114+00:00",
  "alerts": [
   {
    "element_id": 582,
@@ -23,6 +23,16 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 123,
+   "name": "Hinshelwood",
+   "position": "MID",
+   "price": 5.9,
+   "owned": 0.5,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
   },
   {
    "element_id": 328,
@@ -60,7 +70,7 @@
    "name": "Cherki",
    "old": 7.8,
    "new": 7.9,
-   "owned": 32.1,
+   "owned": 32.3,
    "direction": "up"
   },
   {

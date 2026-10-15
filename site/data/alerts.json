@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 96,
- "latest_snapshot": 104,
+ "latest_snapshot": 105,
  "prev_taken_at": "2026-10-13T22:50:11.299662+00:00",
- "latest_taken_at": "2026-10-15T17:05:36.227302+00:00",
+ "latest_taken_at": "2026-10-15T21:27:37.302309+00:00",
  "alerts": [
+  {
+   "element_id": 643,
+   "name": "Chilwell",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.4,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Unspecified injury - Unknown return date)"
+  },
   {
    "element_id": 553,
    "name": "Isidor",
@@ -29,7 +39,7 @@
    "name": "Brobbey",
    "position": "FWD",
    "price": 5.7,
-   "owned": 5.0,
+   "owned": 5.1,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -42,7 +52,7 @@
    "owned": 0.6,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 75%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 123,
@@ -52,7 +62,7 @@
    "owned": 0.5,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 50% -> 75%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 328,
@@ -72,7 +82,7 @@
    "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 75%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 543,
@@ -100,7 +110,7 @@
    "name": "Cherki",
    "old": 7.8,
    "new": 7.9,
-   "owned": 32.5,
+   "owned": 32.7,
    "direction": "up"
   },
   {

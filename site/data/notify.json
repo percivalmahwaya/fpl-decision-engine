@@ -1,11 +1,11 @@
 {
- "should_email": true,
- "gate": "first ever",
+ "should_email": false,
+ "gate": "throttled, 7h of 48h",
  "reasons": [
   "transfer worth making"
  ],
  "subject": "FPL: transfer worth making",
- "body": "FLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 75% — Hamstring injury - 75% chance of playing\n  Isak (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — Isak out, Thiago in.\n  +5.27 expected points, -1.2m, 3.1m left in the bank.\n  Thiago is his club's first-choice penalty taker.\n  Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.\n  Isak is flagged in the team news.\n\nCAPTAIN — model says B.Fernandes (6.53 xPts).\n  You have João Pedro recorded. Model disagrees.\n\nSnapshot #101 at 2026-10-14T22:15:02.610926+00:00",
+ "body": "FLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 75% — Hamstring injury - 75% chance of playing\n  Isak (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — Isak out, Thiago in.\n  +5.27 expected points, -1.2m, 3.1m left in the bank.\n  Thiago is his club's first-choice penalty taker.\n  Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.\n  Isak is flagged in the team news.\n\nCAPTAIN — model says B.Fernandes (6.53 xPts).\n  You have João Pedro recorded. Model disagrees.\n\nSnapshot #102 at 2026-10-15T04:46:24.011489+00:00",
  "last_sent_at": "2026-10-14T22:15:15.698445+00:00",
  "deadline_sent_for_gw": null
 }

@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 96,
- "latest_snapshot": 103,
+ "latest_snapshot": 104,
  "prev_taken_at": "2026-10-13T22:50:11.299662+00:00",
- "latest_taken_at": "2026-10-15T11:35:56.566114+00:00",
+ "latest_taken_at": "2026-10-15T17:05:36.227302+00:00",
  "alerts": [
+  {
+   "element_id": 553,
+   "name": "Isidor",
+   "position": "FWD",
+   "price": 5.5,
+   "owned": 1.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Knock - 50% chance of playing)"
+  },
   {
    "element_id": 582,
    "name": "Madjo",
@@ -13,6 +23,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 75% -> 50% (Unspecified injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 552,
+   "name": "Brobbey",
+   "position": "FWD",
+   "price": 5.7,
+   "owned": 5.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 70,
@@ -55,6 +75,16 @@
    "message": "improved 0% -> 75%"
   },
   {
+   "element_id": 543,
+   "name": "Diarra",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 618,
    "name": "Goretzka",
    "position": "MID",
@@ -70,7 +100,7 @@
    "name": "Cherki",
    "old": 7.8,
    "new": 7.9,
-   "owned": 32.3,
+   "owned": 32.5,
    "direction": "up"
   },
   {
@@ -98,7 +128,7 @@
    "name": "Kusi-Asare",
    "old": 4.5,
    "new": 4.4,
-   "owned": 5.0,
+   "owned": 5.1,
    "direction": "down"
   },
   {

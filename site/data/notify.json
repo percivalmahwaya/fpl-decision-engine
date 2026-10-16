@@ -1,12 +1,13 @@
 {
  "should_email": false,
- "gate": "throttled, 30h of 48h",
+ "gate": "throttled, 37h of 48h",
  "reasons": [
-  "GW7 deadline in 29h",
+  "1 squad/watchlist change(s)",
+  "GW7 deadline in 22h",
   "transfer worth making"
  ],
- "subject": "FPL: GW7 deadline in 29h; transfer worth making",
- "body": "DEADLINE — GW7 in 29.4 hours (2026-10-17T10:00:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 75% — Hamstring injury - 75% chance of playing\n  Isak (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — Isak out, Thiago in.\n  +5.27 expected points, -1.2m, 3.1m left in the bank.\n  Thiago is his club's first-choice penalty taker.\n  Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.\n  Isak is flagged in the team news.\n\nCAPTAIN — model says B.Fernandes (6.53 xPts).\n  You have João Pedro recorded. Model disagrees.\n\nSnapshot #106 at 2026-10-16T04:37:22.060087+00:00",
+ "subject": "FPL: 1 squad/watchlist change(s); GW7 deadline in 22h; transfer worth making",
+ "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] WARNING  Szoboszlai (MID)  worsened 75% -> 25% (Hamstring injury - 25% chance of playing)\n\nDEADLINE — GW7 in 22.5 hours (2026-10-17T10:00:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 25% — Hamstring injury - 25% chance of playing\n  Isak (FWD) chance 25% — Thigh injury - 25% chance of playing\n\nTRANSFER — Isak out, Thiago in.\n  +3.54 expected points, -1.2m, 3.1m left in the bank.\n  Thiago is his club's first-choice penalty taker.\n  Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.\n  Isak is flagged in the team news.\n\nCAPTAIN — model says B.Fernandes (6.53 xPts).\n  You have João Pedro recorded. Model disagrees.\n\nSnapshot #107 at 2026-10-16T11:30:24.786192+00:00",
  "last_sent_at": "2026-10-14T22:15:15.698445+00:00",
  "deadline_sent_for_gw": null
 }

@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 96,
- "latest_snapshot": 105,
- "prev_taken_at": "2026-10-13T22:50:11.299662+00:00",
- "latest_taken_at": "2026-10-15T21:27:37.302309+00:00",
+ "prev_snapshot": 101,
+ "latest_snapshot": 106,
+ "prev_taken_at": "2026-10-14T22:15:02.610926+00:00",
+ "latest_taken_at": "2026-10-16T04:37:22.060087+00:00",
  "alerts": [
   {
    "element_id": 643,
@@ -19,20 +19,10 @@
    "name": "Isidor",
    "position": "FWD",
    "price": 5.5,
-   "owned": 1.3,
+   "owned": 1.2,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Knock - 50% chance of playing)"
-  },
-  {
-   "element_id": 582,
-   "name": "Madjo",
-   "position": "FWD",
-   "price": 5.4,
-   "owned": 0.2,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 75% -> 50% (Unspecified injury - 50% chance of playing)"
   },
   {
    "element_id": 552,
@@ -65,16 +55,6 @@
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 328,
-   "name": "Struijk",
-   "position": "DEF",
-   "price": 4.9,
-   "owned": 0.2,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
    "element_id": 77,
    "name": "Adli",
    "position": "MID",
@@ -93,60 +73,29 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 618,
-   "name": "Goretzka",
-   "position": "MID",
-   "price": 5.9,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
   {
-   "name": "Cherki",
-   "old": 7.8,
-   "new": 7.9,
-   "owned": 32.7,
-   "direction": "up"
-  },
-  {
-   "name": "Verbruggen",
-   "old": 4.5,
-   "new": 4.6,
-   "owned": 22.0,
-   "direction": "up"
+   "name": "Tzolis",
+   "old": 6.3,
+   "new": 6.2,
+   "owned": 6.2,
+   "direction": "down"
   },
   {
    "name": "Pedro Porro",
    "old": 5.4,
    "new": 5.3,
-   "owned": 5.7,
+   "owned": 5.6,
    "direction": "down"
   },
   {
    "name": "Muñoz",
    "old": 5.4,
    "new": 5.3,
-   "owned": 5.2,
-   "direction": "down"
-  },
-  {
-   "name": "Kusi-Asare",
-   "old": 4.5,
-   "new": 4.4,
    "owned": 5.1,
    "direction": "down"
-  },
-  {
-   "name": "Vuskovic",
-   "old": 5.0,
-   "new": 5.1,
-   "owned": 4.7,
-   "direction": "up"
   },
   {
    "name": "Senesi",
@@ -156,17 +105,17 @@
    "direction": "down"
   },
   {
-   "name": "Amenda",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 0.5,
+   "name": "Igor Jesus",
+   "old": 5.8,
+   "new": 5.7,
+   "owned": 1.8,
    "direction": "down"
   },
   {
-   "name": "O.Dango",
-   "old": 6.3,
-   "new": 6.2,
-   "owned": 0.4,
+   "name": "Šeško",
+   "old": 7.0,
+   "new": 6.9,
+   "owned": 1.3,
    "direction": "down"
   },
   {
@@ -174,13 +123,6 @@
    "old": 4.4,
    "new": 4.3,
    "owned": 0.4,
-   "direction": "down"
-  },
-  {
-   "name": "Lewis",
-   "old": 4.4,
-   "new": 4.3,
-   "owned": 0.2,
    "direction": "down"
   },
   {

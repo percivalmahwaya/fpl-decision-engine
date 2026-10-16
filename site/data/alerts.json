@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 101,
- "latest_snapshot": 107,
+ "latest_snapshot": 108,
  "prev_taken_at": "2026-10-14T22:15:02.610926+00:00",
- "latest_taken_at": "2026-10-16T11:30:24.786192+00:00",
+ "latest_taken_at": "2026-10-16T16:43:25.320423+00:00",
  "alerts": [
   {
    "element_id": 368,
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.9,
-   "owned": 26.4,
+   "owned": 25.5,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 75% -> 25% (Hamstring injury - 25% chance of playing)"
@@ -19,7 +19,7 @@
    "name": "Isak",
    "position": "FWD",
    "price": 9.0,
-   "owned": 13.5,
+   "owned": 13.1,
    "severity": "GOOD",
    "tag": "SQUAD",
    "message": "improved 0% -> 25%"
@@ -29,17 +29,27 @@
    "name": "Gakpo",
    "position": "MID",
    "price": 7.1,
-   "owned": 7.2,
+   "owned": 7.1,
    "severity": "GOOD",
    "tag": "WATCH",
    "message": "improved 0% -> 25%"
+  },
+  {
+   "element_id": 586,
+   "name": "Mendy",
+   "position": "DEF",
+   "price": 4.1,
+   "owned": 6.1,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Groin injury - Expected back 31 Oct)"
   },
   {
    "element_id": 142,
    "name": "James",
    "position": "DEF",
    "price": 5.3,
-   "owned": 4.9,
+   "owned": 4.8,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Knee injury - Unknown return date)"
@@ -53,6 +63,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
+  },
+  {
+   "element_id": 589,
+   "name": "Gourna-Douath",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Calf injury - Expected back 25 Oct)"
   },
   {
    "element_id": 454,
@@ -95,6 +115,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 471,
+   "name": "Milenković",
+   "position": "DEF",
+   "price": 5.4,
+   "owned": 0.8,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
    "element_id": 70,
    "name": "Kluivert",
    "position": "MID",
@@ -135,6 +165,16 @@
    "message": "improved 50% -> 75%"
   },
   {
+   "element_id": 266,
+   "name": "Cairney",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
    "element_id": 543,
    "name": "Diarra",
    "position": "MID",
@@ -150,14 +190,14 @@
    "name": "Tzolis",
    "old": 6.3,
    "new": 6.2,
-   "owned": 6.1,
+   "owned": 5.9,
    "direction": "down"
   },
   {
    "name": "Pedro Porro",
    "old": 5.4,
    "new": 5.3,
-   "owned": 5.6,
+   "owned": 5.5,
    "direction": "down"
   },
   {
@@ -178,7 +218,7 @@
    "name": "Igor Jesus",
    "old": 5.8,
    "new": 5.7,
-   "owned": 1.8,
+   "owned": 1.7,
    "direction": "down"
   },
   {
@@ -209,7 +249,7 @@
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.9,
-   "owned": 26.4,
+   "owned": 25.5,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 75% -> 25% (Hamstring injury - 25% chance of playing)"

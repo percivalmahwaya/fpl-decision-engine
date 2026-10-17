@@ -1,28 +1,28 @@
 {
  "prev_snapshot": 105,
- "latest_snapshot": 112,
+ "latest_snapshot": 113,
  "prev_taken_at": "2026-10-15T21:27:37.302309+00:00",
- "latest_taken_at": "2026-10-17T10:50:29.235552+00:00",
+ "latest_taken_at": "2026-10-17T15:39:45.317638+00:00",
  "alerts": [
   {
    "element_id": 368,
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 21.6,
+   "owned": 21.7,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 75% -> 25% (Hamstring injury - 25% chance of playing)"
+   "message": "new news: Unspecified injury - 75% chance of playing"
   },
   {
    "element_id": 379,
    "name": "Isak",
    "position": "FWD",
    "price": 9.0,
-   "owned": 11.8,
+   "owned": 12.0,
    "severity": "GOOD",
    "tag": "WATCH",
-   "message": "improved 0% -> 25%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 367,
@@ -32,17 +32,27 @@
    "owned": 6.5,
    "severity": "GOOD",
    "tag": "WATCH",
-   "message": "improved 0% -> 25%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 480,
    "name": "Gibbs-White",
    "position": "MID",
    "price": 8.0,
-   "owned": 12.1,
+   "owned": 12.2,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 94,
+   "name": "Schade",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 13.6,
+   "severity": "GOOD",
+   "tag": "OWNED",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 586,
@@ -75,6 +85,16 @@
    "message": "RULED OUT (Ankle injury - Expected back 24 Oct)"
   },
   {
+   "element_id": 102,
+   "name": "Yarmoliuk",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.7,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 8 Nov)"
+  },
+  {
    "element_id": 450,
    "name": "Livramento",
    "position": "DEF",
@@ -105,14 +125,14 @@
    "message": "RULED OUT (Unspecified injury - Expected back 25 Oct)"
   },
   {
-   "element_id": 233,
-   "name": "Mykolenko",
-   "position": "DEF",
-   "price": 4.6,
-   "owned": 2.7,
+   "element_id": 28,
+   "name": "Martinez",
+   "position": "GKP",
+   "price": 5.0,
+   "owned": 4.6,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 75% -> 50% (Leg injury - 50% chance of playing)"
+   "message": "worsened 100% -> 25% (Head injury - 25% chance of playing)"
   },
   {
    "element_id": 454,
@@ -125,14 +145,14 @@
    "message": "new news: Unspecified injury - Expected back 25 Oct"
   },
   {
-   "element_id": 230,
-   "name": "Branthwaite",
+   "element_id": 357,
+   "name": "Frimpong",
    "position": "DEF",
-   "price": 5.5,
-   "owned": 2.4,
+   "price": 5.2,
+   "owned": 1.6,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Leg injury - 75% chance of playing)"
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
    "element_id": 422,
@@ -149,6 +169,16 @@
    "name": "Barkley",
    "position": "MID",
    "price": 5.0,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 583,
+   "name": "Chavarria",
+   "position": "DEF",
+   "price": 4.9,
    "owned": 0.2,
    "severity": "WARNING",
    "tag": "-",
@@ -185,6 +215,26 @@
    "message": "worsened 100% -> 25% (Groin injury - 25% chance of playing)"
   },
   {
+   "element_id": 233,
+   "name": "Mykolenko",
+   "position": "DEF",
+   "price": 4.6,
+   "owned": 2.8,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 254,
+   "name": "Robinson",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 1.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 198,
    "name": "Henderson",
    "position": "GKP",
@@ -202,7 +252,7 @@
    "owned": 0.8,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 50%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 471,
@@ -215,14 +265,14 @@
    "message": "improved 0% -> 75%"
   },
   {
-   "element_id": 177,
-   "name": "Kesler-Hayden",
-   "position": "DEF",
-   "price": 3.9,
-   "owned": 0.1,
+   "element_id": 96,
+   "name": "Damsgaard",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 0.3,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 50% -> 75%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 343,
@@ -235,6 +285,16 @@
    "message": "improved 0% -> 50%"
   },
   {
+   "element_id": 177,
+   "name": "Kesler-Hayden",
+   "position": "DEF",
+   "price": 3.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
+  },
+  {
    "element_id": 266,
    "name": "Cairney",
    "position": "MID",
@@ -242,7 +302,7 @@
    "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 75%"
+   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -250,49 +310,49 @@
    "name": "Haaland",
    "old": 15.6,
    "new": 15.7,
-   "owned": 76.4,
+   "owned": 76.3,
    "direction": "up"
   },
   {
    "name": "Groß",
    "old": 6.0,
    "new": 6.1,
-   "owned": 44.2,
+   "owned": 44.0,
    "direction": "up"
   },
   {
    "name": "De Cuyper",
    "old": 5.1,
    "new": 5.2,
-   "owned": 40.0,
+   "owned": 39.8,
    "direction": "up"
   },
   {
    "name": "B.Fernandes",
    "old": 11.9,
    "new": 11.8,
-   "owned": 30.8,
+   "owned": 30.9,
    "direction": "down"
   },
   {
    "name": "Szoboszlai",
    "old": 6.9,
    "new": 6.8,
-   "owned": 21.6,
+   "owned": 21.7,
    "direction": "down"
   },
   {
    "name": "Mbeumo",
    "old": 7.9,
    "new": 7.8,
-   "owned": 19.4,
+   "owned": 19.5,
    "direction": "down"
   },
   {
    "name": "Wissa",
    "old": 6.3,
    "new": 6.2,
-   "owned": 15.4,
+   "owned": 15.5,
    "direction": "down"
   },
   {
@@ -337,10 +397,10 @@
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 21.6,
+   "owned": 21.7,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 75% -> 25% (Hamstring injury - 25% chance of playing)"
+   "message": "new news: Unspecified injury - 75% chance of playing"
   }
  ],
  "available": true,

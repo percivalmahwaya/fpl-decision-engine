@@ -59,9 +59,19 @@
    "captain": "João Pedro",
    "captain_points": 24,
    "played": true
+  },
+  {
+   "gameweek": 7,
+   "points": 0,
+   "transfers": 2,
+   "formation": "3-5-2",
+   "decided_by": "unrecorded",
+   "captain": "Haaland",
+   "captain_points": null,
+   "played": true
   }
  ],
  "total_points": 358,
- "played": 6,
- "average": 59.7
+ "played": 7,
+ "average": 51.1
 }

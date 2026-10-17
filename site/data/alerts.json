@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 105,
- "latest_snapshot": 111,
+ "latest_snapshot": 112,
  "prev_taken_at": "2026-10-15T21:27:37.302309+00:00",
- "latest_taken_at": "2026-10-17T04:33:42.182933+00:00",
+ "latest_taken_at": "2026-10-17T10:50:29.235552+00:00",
  "alerts": [
   {
    "element_id": 368,
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 23.6,
+   "owned": 21.6,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 75% -> 25% (Hamstring injury - 25% chance of playing)"
@@ -19,9 +19,9 @@
    "name": "Isak",
    "position": "FWD",
    "price": 9.0,
-   "owned": 12.5,
+   "owned": 11.8,
    "severity": "GOOD",
-   "tag": "SQUAD",
+   "tag": "WATCH",
    "message": "improved 0% -> 25%"
   },
   {
@@ -29,7 +29,7 @@
    "name": "Gakpo",
    "position": "MID",
    "price": 7.1,
-   "owned": 6.8,
+   "owned": 6.5,
    "severity": "GOOD",
    "tag": "WATCH",
    "message": "improved 0% -> 25%"
@@ -39,7 +39,7 @@
    "name": "Gibbs-White",
    "position": "MID",
    "price": 8.0,
-   "owned": 13.2,
+   "owned": 12.1,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
@@ -49,7 +49,7 @@
    "name": "Mendy",
    "position": "DEF",
    "price": 4.1,
-   "owned": 6.0,
+   "owned": 5.8,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Groin injury - Expected back 31 Oct)"
@@ -59,7 +59,7 @@
    "name": "James",
    "position": "DEF",
    "price": 5.3,
-   "owned": 4.6,
+   "owned": 4.4,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Knee injury - Unknown return date)"
@@ -109,7 +109,7 @@
    "name": "Mykolenko",
    "position": "DEF",
    "price": 4.6,
-   "owned": 2.9,
+   "owned": 2.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 75% -> 50% (Leg injury - 50% chance of playing)"
@@ -119,7 +119,7 @@
    "name": "Elanga",
    "position": "MID",
    "price": 6.0,
-   "owned": 2.8,
+   "owned": 2.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Unspecified injury - Expected back 25 Oct"
@@ -129,7 +129,7 @@
    "name": "Branthwaite",
    "position": "DEF",
    "price": 5.5,
-   "owned": 2.5,
+   "owned": 2.4,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Leg injury - 75% chance of playing)"
@@ -215,6 +215,16 @@
    "message": "improved 0% -> 75%"
   },
   {
+   "element_id": 177,
+   "name": "Kesler-Hayden",
+   "position": "DEF",
+   "price": 3.9,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
+  },
+  {
    "element_id": 343,
    "name": "James",
    "position": "MID",
@@ -223,16 +233,6 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 50%"
-  },
-  {
-   "element_id": 177,
-   "name": "Kesler-Hayden",
-   "position": "DEF",
-   "price": 3.9,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 50% -> 75%"
   },
   {
    "element_id": 266,
@@ -250,63 +250,63 @@
    "name": "Haaland",
    "old": 15.6,
    "new": 15.7,
-   "owned": 76.1,
+   "owned": 76.4,
    "direction": "up"
   },
   {
    "name": "Groß",
    "old": 6.0,
    "new": 6.1,
-   "owned": 42.8,
+   "owned": 44.2,
    "direction": "up"
   },
   {
    "name": "De Cuyper",
    "old": 5.1,
    "new": 5.2,
-   "owned": 38.7,
+   "owned": 40.0,
    "direction": "up"
   },
   {
    "name": "B.Fernandes",
    "old": 11.9,
    "new": 11.8,
-   "owned": 31.9,
+   "owned": 30.8,
    "direction": "down"
   },
   {
    "name": "Szoboszlai",
    "old": 6.9,
    "new": 6.8,
-   "owned": 23.6,
+   "owned": 21.6,
    "direction": "down"
   },
   {
    "name": "Mbeumo",
    "old": 7.9,
    "new": 7.8,
-   "owned": 19.6,
+   "owned": 19.4,
    "direction": "down"
   },
   {
    "name": "Wissa",
    "old": 6.3,
    "new": 6.2,
-   "owned": 16.2,
+   "owned": 15.4,
    "direction": "down"
   },
   {
    "name": "M.Sangaré",
    "old": 5.6,
    "new": 5.5,
-   "owned": 7.7,
+   "owned": 7.5,
    "direction": "down"
   },
   {
    "name": "Tzolis",
    "old": 6.3,
    "new": 6.2,
-   "owned": 5.6,
+   "owned": 5.2,
    "direction": "down"
   },
   {
@@ -320,14 +320,14 @@
    "name": "Evanilson",
    "old": 6.0,
    "new": 6.1,
-   "owned": 3.8,
+   "owned": 3.9,
    "direction": "up"
   },
   {
    "name": "Elanga",
    "old": 6.1,
    "new": 6.0,
-   "owned": 2.8,
+   "owned": 2.7,
    "direction": "down"
   }
  ],
@@ -337,7 +337,7 @@
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 23.6,
+   "owned": 21.6,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 75% -> 25% (Hamstring injury - 25% chance of playing)"

@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 105,
- "latest_snapshot": 114,
+ "latest_snapshot": 115,
  "prev_taken_at": "2026-10-15T21:27:37.302309+00:00",
- "latest_taken_at": "2026-10-17T20:39:56.019067+00:00",
+ "latest_taken_at": "2026-10-17T23:10:01.490396+00:00",
  "alerts": [
   {
    "element_id": 368,
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 21.4,
+   "owned": 21.3,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
@@ -129,7 +129,7 @@
    "name": "Sessegnon",
    "position": "DEF",
    "price": 4.3,
-   "owned": 0.4,
+   "owned": 0.3,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 7 Nov)"
@@ -188,8 +188,8 @@
    "element_id": 53,
    "name": "Manzambi",
    "position": "MID",
-   "price": 5.9,
-   "owned": 2.3,
+   "price": 6.0,
+   "owned": 2.4,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
@@ -288,7 +288,7 @@
    "element_id": 254,
    "name": "Robinson",
    "position": "DEF",
-   "price": 4.5,
+   "price": 4.4,
    "owned": 1.3,
    "severity": "GOOD",
    "tag": "-",
@@ -368,7 +368,7 @@
    "element_id": 461,
    "name": "Touré",
    "position": "MID",
-   "price": 5.8,
+   "price": 5.7,
    "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
@@ -404,6 +404,13 @@
    "direction": "up"
   },
   {
+   "name": "Calafiori",
+   "old": 5.9,
+   "new": 6.0,
+   "owned": 53.3,
+   "direction": "up"
+  },
+  {
    "name": "Groß",
    "old": 6.0,
    "new": 6.1,
@@ -414,21 +421,28 @@
    "name": "De Cuyper",
    "old": 5.1,
    "new": 5.2,
-   "owned": 39.9,
+   "owned": 40.0,
+   "direction": "up"
+  },
+  {
+   "name": "Cherki",
+   "old": 7.9,
+   "new": 8.0,
+   "owned": 37.0,
    "direction": "up"
   },
   {
    "name": "B.Fernandes",
    "old": 11.9,
    "new": 11.8,
-   "owned": 30.8,
+   "owned": 30.7,
    "direction": "down"
   },
   {
    "name": "Szoboszlai",
    "old": 6.9,
    "new": 6.8,
-   "owned": 21.4,
+   "owned": 21.3,
    "direction": "down"
   },
   {
@@ -442,7 +456,14 @@
    "name": "Wissa",
    "old": 6.3,
    "new": 6.2,
-   "owned": 15.4,
+   "owned": 15.3,
+   "direction": "down"
+  },
+  {
+   "name": "Diop",
+   "old": 4.0,
+   "new": 3.9,
+   "owned": 11.1,
    "direction": "down"
   },
   {
@@ -458,27 +479,6 @@
    "new": 6.2,
    "owned": 5.1,
    "direction": "down"
-  },
-  {
-   "name": "Wirtz",
-   "old": 7.3,
-   "new": 7.2,
-   "owned": 5.0,
-   "direction": "down"
-  },
-  {
-   "name": "Evanilson",
-   "old": 6.0,
-   "new": 6.1,
-   "owned": 3.9,
-   "direction": "up"
-  },
-  {
-   "name": "Elanga",
-   "old": 6.1,
-   "new": 6.0,
-   "owned": 2.7,
-   "direction": "down"
   }
  ],
  "urgent": [
@@ -487,7 +487,7 @@
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 21.4,
+   "owned": 21.3,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"

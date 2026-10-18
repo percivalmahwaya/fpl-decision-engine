@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 110,
- "latest_snapshot": 118,
+ "latest_snapshot": 119,
  "prev_taken_at": "2026-10-16T23:40:28.594814+00:00",
- "latest_taken_at": "2026-10-18T15:55:54.057913+00:00",
+ "latest_taken_at": "2026-10-18T20:49:12.693174+00:00",
  "alerts": [
   {
    "element_id": 368,
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 20.8,
+   "owned": 20.4,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
@@ -19,7 +19,7 @@
    "name": "Isak",
    "position": "FWD",
    "price": 9.0,
-   "owned": 12.5,
+   "owned": 12.6,
    "severity": "GOOD",
    "tag": "WATCH",
    "message": "cleared - news removed, fit again"
@@ -39,7 +39,7 @@
    "name": "Semenyo",
    "position": "MID",
    "price": 8.3,
-   "owned": 14.2,
+   "owned": 14.1,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
@@ -79,7 +79,7 @@
    "name": "Frimpong",
    "position": "DEF",
    "price": 5.2,
-   "owned": 1.6,
+   "owned": 1.5,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
@@ -149,17 +149,27 @@
    "name": "Manzambi",
    "position": "MID",
    "price": 6.0,
-   "owned": 2.5,
+   "owned": 2.6,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 419,
+   "name": "Martinez",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 1.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Thigh injury - 75% chance of playing)"
   },
   {
    "element_id": 144,
    "name": "Gusto",
    "position": "DEF",
    "price": 4.9,
-   "owned": 0.9,
+   "owned": 0.8,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
@@ -249,7 +259,7 @@
    "name": "Branthwaite",
    "position": "DEF",
    "price": 5.5,
-   "owned": 2.5,
+   "owned": 2.4,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -407,7 +417,7 @@
    "name": "Cherki",
    "old": 7.9,
    "new": 8.0,
-   "owned": 37.0,
+   "owned": 37.1,
    "direction": "up"
   },
   {
@@ -421,7 +431,7 @@
    "name": "Manzambi",
    "old": 5.9,
    "new": 6.0,
-   "owned": 2.5,
+   "owned": 2.6,
    "direction": "up"
   },
   {
@@ -473,7 +483,7 @@
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 20.8,
+   "owned": 20.4,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"

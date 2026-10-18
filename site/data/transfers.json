@@ -27,7 +27,7 @@
   },
   {
    "out": "Tavernier",
-   "out_price": 6.1,
+   "out_price": 6.2,
    "out_ep": 2.63,
    "in": "E.Le Fée",
    "in_price": 5.7,
@@ -36,13 +36,13 @@
    "position": "MID",
    "gain": 2.295,
    "net": -1.705,
-   "cost": -0.4,
-   "bank_after": 1.5,
+   "cost": -0.5,
+   "bank_after": 1.6,
    "free": false,
    "penalties": false,
    "worth_it": false,
    "reasons": [
-    "Frees up 0.4m for later.",
+    "Frees up 0.5m for later.",
     "Owned by only 3%, so this is a differential rather than a template move.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]

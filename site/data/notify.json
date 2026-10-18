@@ -1,12 +1,12 @@
 {
  "should_email": false,
- "gate": "throttled, 40h of 48h",
+ "gate": "throttled, 43h of 48h",
  "reasons": [
   "1 squad/watchlist change(s)",
   "transfer worth making"
  ],
  "subject": "FPL: 1 squad/watchlist change(s); transfer worth making",
- "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] CRITICAL  Szoboszlai (MID)  RULED OUT (Hamstring injury - Unknown return date)\n\nFLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 0% — Hamstring injury - Unknown return date\n\nTRANSFER — Szoboszlai out, Mbeumo in.\n  +5.18 expected points, 1.0m, 0.1m left in the bank.\n  Szoboszlai is flagged in the team news.\n\nCAPTAIN — model says Haaland (5.73 xPts).\n\nSnapshot #119 at 2026-10-18T20:49:12.693174+00:00",
+ "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] CRITICAL  Szoboszlai (MID)  RULED OUT (Hamstring injury - Unknown return date)\n\nFLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 0% — Hamstring injury - Unknown return date\n\nTRANSFER — Szoboszlai out, Mbeumo in.\n  +5.18 expected points, 1.0m, 0.1m left in the bank.\n  Szoboszlai is flagged in the team news.\n\nCAPTAIN — model says Haaland (5.73 xPts).\n\nSnapshot #120 at 2026-10-18T23:17:18.137559+00:00",
  "last_sent_at": "2026-10-17T04:34:00.971977+00:00",
  "deadline_sent_for_gw": 7
 }

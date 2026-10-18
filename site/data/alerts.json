@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 110,
- "latest_snapshot": 119,
+ "latest_snapshot": 120,
  "prev_taken_at": "2026-10-16T23:40:28.594814+00:00",
- "latest_taken_at": "2026-10-18T20:49:12.693174+00:00",
+ "latest_taken_at": "2026-10-18T23:17:18.137559+00:00",
  "alerts": [
   {
    "element_id": 368,
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 20.4,
+   "owned": 20.3,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
@@ -39,7 +39,7 @@
    "name": "Semenyo",
    "position": "MID",
    "price": 8.3,
-   "owned": 14.1,
+   "owned": 14.0,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
@@ -69,7 +69,7 @@
    "name": "Janelt",
    "position": "MID",
    "price": 5.0,
-   "owned": 2.4,
+   "owned": 2.3,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 31 Oct)"
@@ -99,7 +99,7 @@
    "name": "Yarmoliuk",
    "position": "MID",
    "price": 4.8,
-   "owned": 0.7,
+   "owned": 0.6,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 23 Nov)"
@@ -318,7 +318,7 @@
    "element_id": 19,
    "name": "Zubimendi",
    "position": "MID",
-   "price": 5.3,
+   "price": 5.2,
    "owned": 0.5,
    "severity": "GOOD",
    "tag": "-",
@@ -407,18 +407,46 @@
  ],
  "price_moves": [
   {
+   "name": "João Pedro",
+   "old": 7.8,
+   "new": 7.9,
+   "owned": 72.5,
+   "direction": "up"
+  },
+  {
    "name": "Calafiori",
    "old": 5.9,
    "new": 6.0,
-   "owned": 53.4,
+   "owned": 53.5,
    "direction": "up"
   },
   {
    "name": "Cherki",
    "old": 7.9,
    "new": 8.0,
-   "owned": 37.1,
+   "owned": 37.2,
    "direction": "up"
+  },
+  {
+   "name": "Virgil",
+   "old": 6.5,
+   "new": 6.4,
+   "owned": 15.4,
+   "direction": "down"
+  },
+  {
+   "name": "Wissa",
+   "old": 6.2,
+   "new": 6.1,
+   "owned": 14.6,
+   "direction": "down"
+  },
+  {
+   "name": "Gibbs-White",
+   "old": 8.0,
+   "new": 7.9,
+   "owned": 11.7,
+   "direction": "down"
   },
   {
    "name": "Diop",
@@ -426,6 +454,13 @@
    "new": 3.9,
    "owned": 11.1,
    "direction": "down"
+  },
+  {
+   "name": "Tavernier",
+   "old": 6.1,
+   "new": 6.2,
+   "owned": 8.4,
+   "direction": "up"
   },
   {
    "name": "Manzambi",
@@ -454,27 +489,6 @@
    "new": 5.3,
    "owned": 1.2,
    "direction": "down"
-  },
-  {
-   "name": "Touré",
-   "old": 5.8,
-   "new": 5.7,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Tel",
-   "old": 5.7,
-   "new": 5.6,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Bentancur",
-   "old": 5.5,
-   "new": 5.4,
-   "owned": 0.1,
-   "direction": "down"
   }
  ],
  "urgent": [
@@ -483,7 +497,7 @@
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.8,
-   "owned": 20.4,
+   "owned": 20.3,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"

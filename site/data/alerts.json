@@ -1,15 +1,35 @@
 {
  "prev_snapshot": 115,
- "latest_snapshot": 121,
+ "latest_snapshot": 122,
  "prev_taken_at": "2026-10-17T23:10:01.490396+00:00",
- "latest_taken_at": "2026-10-19T04:47:16.195092+00:00",
+ "latest_taken_at": "2026-10-19T13:25:16.837380+00:00",
  "alerts": [
+  {
+   "element_id": 411,
+   "name": "Haaland",
+   "position": "FWD",
+   "price": 15.7,
+   "owned": 76.8,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 397,
+   "name": "Semenyo",
+   "position": "MID",
+   "price": 8.3,
+   "owned": 13.7,
+   "severity": "CRITICAL",
+   "tag": "OWNED",
+   "message": "RULED OUT (Knee injury - Unknown return date)"
+  },
   {
    "element_id": 28,
    "name": "Martinez",
    "position": "GKP",
    "price": 5.0,
-   "owned": 4.4,
+   "owned": 4.3,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Head injury - Unknown return date)"
@@ -19,7 +39,7 @@
    "name": "Sávio",
    "position": "MID",
    "price": 6.5,
-   "owned": 1.0,
+   "owned": 0.9,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Muscular injury - Expected back 7 Nov)"
@@ -42,7 +62,17 @@
    "owned": 0.1,
    "severity": "CRITICAL",
    "tag": "-",
-   "message": "RULED OUT (Knee injury - Expected back 7 Nov)"
+   "message": "RULED OUT (Knee injury - Expected back 31 Oct)"
+  },
+  {
+   "element_id": 552,
+   "name": "Brobbey",
+   "position": "FWD",
+   "price": 5.7,
+   "owned": 5.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
    "element_id": 499,
@@ -169,7 +199,7 @@
    "name": "Disasi",
    "position": "DEF",
    "price": 4.4,
-   "owned": 0.0,
+   "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -190,7 +220,7 @@
    "name": "João Pedro",
    "old": 7.8,
    "new": 7.9,
-   "owned": 72.5,
+   "owned": 72.6,
    "direction": "up"
   },
   {
@@ -204,21 +234,21 @@
    "name": "Wissa",
    "old": 6.2,
    "new": 6.1,
-   "owned": 14.5,
+   "owned": 14.4,
    "direction": "down"
   },
   {
    "name": "Gibbs-White",
    "old": 8.0,
    "new": 7.9,
-   "owned": 11.7,
+   "owned": 11.6,
    "direction": "down"
   },
   {
    "name": "Tavernier",
    "old": 6.1,
    "new": 6.2,
-   "owned": 8.5,
+   "owned": 8.7,
    "direction": "up"
   },
   {
@@ -271,7 +301,18 @@
    "direction": "down"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 411,
+   "name": "Haaland",
+   "position": "FWD",
+   "price": 15.7,
+   "owned": 76.8,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

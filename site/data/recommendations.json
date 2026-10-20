@@ -5,7 +5,7 @@
   {
    "element_id": 426,
    "ep": 7.05,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "B.Fernandes",
    "position": "MID",
    "club": "MUN",
@@ -19,7 +19,7 @@
   {
    "element_id": 411,
    "ep": 5.73,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Haaland",
    "position": "FWD",
    "club": "MCI",
@@ -33,7 +33,7 @@
   {
    "element_id": 12,
    "ep": 5.5,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Saka",
    "position": "MID",
    "club": "ARS",
@@ -47,12 +47,12 @@
   {
    "element_id": 427,
    "ep": 5.18,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Mbeumo",
    "position": "MID",
    "club": "MUN",
    "price": 7.8,
-   "owned": 20.1,
+   "owned": 20.2,
    "status": "a",
    "chance": null,
    "news": null,
@@ -61,7 +61,7 @@
   {
    "element_id": 542,
    "ep": 4.93,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "E.Le Fée",
    "position": "MID",
    "club": "SUN",
@@ -75,7 +75,7 @@
   {
    "element_id": 428,
    "ep": 4.92,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Cunha",
    "position": "MID",
    "club": "MUN",
@@ -89,7 +89,7 @@
   {
    "element_id": 154,
    "ep": 4.87,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Palmer",
    "position": "MID",
    "club": "CHE",
@@ -103,12 +103,12 @@
   {
    "element_id": 40,
    "ep": 4.57,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Rogers",
    "position": "MID",
    "club": "CHE",
-   "price": 7.9,
-   "owned": 47.8,
+   "price": 8.0,
+   "owned": 47.9,
    "status": "a",
    "chance": null,
    "news": null,
@@ -117,7 +117,7 @@
   {
    "element_id": 13,
    "ep": 4.45,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Rice",
    "position": "MID",
    "club": "ARS",
@@ -131,7 +131,7 @@
   {
    "element_id": 15,
    "ep": 4.25,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Ødegaard",
    "position": "MID",
    "club": "ARS",
@@ -145,7 +145,7 @@
   {
    "element_id": 106,
    "ep": 4.23,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Thiago",
    "position": "FWD",
    "club": "BRE",
@@ -159,11 +159,11 @@
   {
    "element_id": 124,
    "ep": 4.23,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Groß",
    "position": "MID",
    "club": "BHA",
-   "price": 6.1,
+   "price": 6.2,
    "owned": 45.1,
    "status": "a",
    "chance": null,
@@ -173,12 +173,12 @@
   {
    "element_id": 156,
    "ep": 4.16,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Neto",
    "position": "MID",
    "club": "CHE",
    "price": 6.5,
-   "owned": 2.2,
+   "owned": 2.3,
    "status": "a",
    "chance": null,
    "news": null,
@@ -187,12 +187,12 @@
   {
    "element_id": 480,
    "ep": 4.11,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Gibbs-White",
    "position": "MID",
    "club": "NFO",
    "price": 7.9,
-   "owned": 11.6,
+   "owned": 11.5,
    "status": "d",
    "chance": 75,
    "news": "Muscular injury - 75% chance of playing",
@@ -201,7 +201,7 @@
   {
    "element_id": 4,
    "ep": 4.02,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Gabriel",
    "position": "DEF",
    "club": "ARS",
@@ -215,7 +215,7 @@
   {
    "element_id": 236,
    "ep": 4.01,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Dewsbury-Hall",
    "position": "MID",
    "club": "EVE",
@@ -229,7 +229,7 @@
   {
    "element_id": 350,
    "ep": 3.94,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "A.Becker",
    "position": "GKP",
    "club": "LIV",
@@ -243,7 +243,7 @@
   {
    "element_id": 165,
    "ep": 3.84,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "João Pedro",
    "position": "FWD",
    "club": "CHE",
@@ -257,12 +257,12 @@
   {
    "element_id": 8,
    "ep": 3.83,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Calafiori",
    "position": "DEF",
    "club": "ARS",
    "price": 6.0,
-   "owned": 53.6,
+   "owned": 53.7,
    "status": "a",
    "chance": null,
    "news": null,
@@ -271,7 +271,7 @@
   {
    "element_id": 388,
    "ep": 3.76,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Guéhi",
    "position": "DEF",
    "club": "MCI",
@@ -285,12 +285,12 @@
   {
    "element_id": 356,
    "ep": 3.74,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Virgil",
    "position": "DEF",
    "club": "LIV",
    "price": 6.4,
-   "owned": 15.4,
+   "owned": 15.3,
    "status": "a",
    "chance": null,
    "news": null,
@@ -299,7 +299,7 @@
   {
    "element_id": 166,
    "ep": 3.69,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "N.Jackson",
    "position": "FWD",
    "club": "AVL",
@@ -313,7 +313,7 @@
   {
    "element_id": 210,
    "ep": 3.65,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Wharton",
    "position": "MID",
    "club": "CRY",
@@ -327,7 +327,7 @@
   {
    "element_id": 544,
    "ep": 3.62,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Xhaka",
    "position": "MID",
    "club": "SUN",
@@ -341,7 +341,7 @@
   {
    "element_id": 26,
    "ep": 3.58,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Havertz",
    "position": "FWD",
    "club": "ARS",
@@ -355,7 +355,7 @@
   {
    "element_id": 1,
    "ep": 3.49,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Raya",
    "position": "GKP",
    "club": "ARS",
@@ -369,7 +369,7 @@
   {
    "element_id": 627,
    "ep": 3.48,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Barcola",
    "position": "MID",
    "club": "LIV",
@@ -383,7 +383,7 @@
   {
    "element_id": 481,
    "ep": 3.46,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Anderson",
    "position": "MID",
    "club": "MCI",
@@ -397,7 +397,7 @@
   {
    "element_id": 472,
    "ep": 3.45,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Murillo",
    "position": "DEF",
    "club": "NFO",
@@ -411,7 +411,7 @@
   {
    "element_id": 295,
    "ep": 3.43,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "McBurnie",
    "position": "FWD",
    "club": "HUL",
@@ -425,7 +425,7 @@
   {
    "element_id": 226,
    "ep": 3.43,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Pickford",
    "position": "GKP",
    "club": "EVE",
@@ -439,7 +439,7 @@
   {
    "element_id": 67,
    "ep": 3.4,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Rayan",
    "position": "MID",
    "club": "BOU",
@@ -453,7 +453,7 @@
   {
    "element_id": 453,
    "ep": 3.38,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Barnes",
    "position": "MID",
    "club": "NEW",
@@ -467,7 +467,7 @@
   {
    "element_id": 45,
    "ep": 3.38,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "McGinn",
    "position": "MID",
    "club": "AVL",
@@ -481,7 +481,7 @@
   {
    "element_id": 305,
    "ep": 3.37,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Davis",
    "position": "DEF",
    "club": "IPS",
@@ -495,7 +495,7 @@
   {
    "element_id": 127,
    "ep": 3.37,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Gomez",
    "position": "MID",
    "club": "BHA",
@@ -509,7 +509,7 @@
   {
    "element_id": 366,
    "ep": 3.37,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Wirtz",
    "position": "MID",
    "club": "LIV",
@@ -523,7 +523,7 @@
   {
    "element_id": 229,
    "ep": 3.35,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Tarkowski",
    "position": "DEF",
    "club": "EVE",
@@ -537,7 +537,7 @@
   {
    "element_id": 384,
    "ep": 3.34,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Donnarumma",
    "position": "GKP",
    "club": "MCI",
@@ -551,7 +551,7 @@
   {
    "element_id": 211,
    "ep": 3.32,
-   "made_at": "2026-10-19T20:37:16.711436+00:00",
+   "made_at": "2026-10-20T00:24:44.149121+00:00",
    "name": "Yeremy",
    "position": "MID",
    "club": "CRY",

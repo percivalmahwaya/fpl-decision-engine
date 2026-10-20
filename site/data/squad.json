@@ -134,8 +134,8 @@
    "element_id": 40,
    "position": "MID",
    "club": "CHE",
-   "price": 7.9,
-   "owned": 47.8,
+   "price": 8.0,
+   "owned": 47.9,
    "status": "a",
    "chance": null,
    "news": null,
@@ -150,7 +150,7 @@
    "element_id": 124,
    "position": "MID",
    "club": "BHA",
-   "price": 6.1,
+   "price": 6.2,
    "owned": 45.1,
    "status": "a",
    "chance": null,
@@ -183,7 +183,7 @@
    "position": "MID",
    "club": "LIV",
    "price": 6.8,
-   "owned": 19.8,
+   "owned": 19.7,
    "status": "i",
    "chance": 0,
    "news": "Hamstring injury - Unknown return date",
@@ -242,6 +242,6 @@
    "flagged": false
   }
  ],
- "squad_value": 99.8,
+ "squad_value": 100.0,
  "count": 15
 }

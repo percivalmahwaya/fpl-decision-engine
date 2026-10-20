@@ -1,25 +1,15 @@
 {
  "prev_snapshot": 120,
- "latest_snapshot": 124,
+ "latest_snapshot": 125,
  "prev_taken_at": "2026-10-18T23:17:18.137559+00:00",
- "latest_taken_at": "2026-10-20T00:24:32.053999+00:00",
+ "latest_taken_at": "2026-10-20T19:19:42.645836+00:00",
  "alerts": [
-  {
-   "element_id": 411,
-   "name": "Haaland",
-   "position": "FWD",
-   "price": 15.7,
-   "owned": 76.8,
-   "severity": "WARNING",
-   "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
   {
    "element_id": 397,
    "name": "Semenyo",
    "position": "MID",
    "price": 8.3,
-   "owned": 13.0,
+   "owned": 12.4,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Knee injury - Unknown return date)"
@@ -29,10 +19,20 @@
    "name": "O'Reilly",
    "position": "DEF",
    "price": 6.3,
-   "owned": 9.3,
+   "owned": 9.2,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 611,
+   "name": "Wan-Bissaka",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hamstring injury - Expected back 21 Nov)"
   },
   {
    "element_id": 552,
@@ -75,11 +75,21 @@
    "message": "new news: Shin injury - Expected back 31 Oct"
   },
   {
+   "element_id": 377,
+   "name": "Munoz",
+   "position": "MID",
+   "price": 6.5,
+   "owned": 1.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
+  },
+  {
    "element_id": 389,
    "name": "Matheus N.",
    "position": "DEF",
    "price": 5.9,
-   "owned": 1.1,
+   "owned": 1.0,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -175,6 +185,26 @@
    "message": "new news: Knee injury - Expected back 31 Oct"
   },
   {
+   "element_id": 596,
+   "name": "Ruggeri",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Hamstring injury - Expected back 2 Jan"
+  },
+  {
+   "element_id": 36,
+   "name": "Maatsen",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
    "element_id": 177,
    "name": "Kesler-Hayden",
    "position": "DEF",
@@ -200,28 +230,28 @@
    "name": "Rogers",
    "old": 7.9,
    "new": 8.0,
-   "owned": 47.9,
+   "owned": 48.0,
    "direction": "up"
   },
   {
    "name": "Groß",
    "old": 6.1,
    "new": 6.2,
-   "owned": 45.1,
+   "owned": 45.3,
    "direction": "up"
   },
   {
    "name": "De Cuyper",
    "old": 5.2,
    "new": 5.3,
-   "owned": 40.8,
+   "owned": 41.0,
    "direction": "up"
   },
   {
    "name": "Doku",
    "old": 7.4,
    "new": 7.5,
-   "owned": 2.3,
+   "owned": 2.4,
    "direction": "up"
   },
   {
@@ -267,18 +297,7 @@
    "direction": "down"
   }
  ],
- "urgent": [
-  {
-   "element_id": 411,
-   "name": "Haaland",
-   "position": "FWD",
-   "price": 15.7,
-   "owned": 76.8,
-   "severity": "WARNING",
-   "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  }
- ],
+ "urgent": [],
  "available": true,
  "window_hours": 24
 }

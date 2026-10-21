@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 123,
- "latest_snapshot": 128,
+ "latest_snapshot": 129,
  "prev_taken_at": "2026-10-19T20:37:05.759525+00:00",
- "latest_taken_at": "2026-10-21T11:56:18.845434+00:00",
+ "latest_taken_at": "2026-10-21T17:16:34.446799+00:00",
  "alerts": [
   {
    "element_id": 411,
@@ -15,6 +15,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 480,
+   "name": "Gibbs-White",
+   "position": "MID",
+   "price": 7.9,
+   "owned": 11.3,
+   "severity": "GOOD",
+   "tag": "OWNED",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 423,
    "name": "Shaw",
    "position": "DEF",
@@ -23,6 +33,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
+  },
+  {
+   "element_id": 38,
+   "name": "A.García",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 1.4,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Has joined Getafe on loan for the rest of the season)"
   },
   {
    "element_id": 432,
@@ -43,6 +63,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Expected back 21 Nov)"
+  },
+  {
+   "element_id": 69,
+   "name": "Scott",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 2.8,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Thigh injury - Expected back 8 Nov"
   },
   {
    "element_id": 502,
@@ -75,6 +105,16 @@
    "message": "worsened 100% -> 75% (Hip injury - 75% chance of playing)"
   },
   {
+   "element_id": 439,
+   "name": "Šeško",
+   "position": "FWD",
+   "price": 6.9,
+   "owned": 1.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Shin injury - Unknown return date"
+  },
+  {
    "element_id": 377,
    "name": "Munoz",
    "position": "MID",
@@ -83,6 +123,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 171,
+   "name": "Dovin",
+   "position": "GKP",
+   "price": 4.0,
+   "owned": 0.9,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: not included in squad."
   },
   {
    "element_id": 506,
@@ -125,6 +175,16 @@
    "message": "new news: Hamstring injury - Expected back 2 Jan"
   },
   {
+   "element_id": 63,
+   "name": "Milosavljević",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Thigh injury - Expected back 8 Nov"
+  },
+  {
    "element_id": 9,
    "name": "Hincapie",
    "position": "DEF",
@@ -143,6 +203,26 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 78,
+   "name": "Kroupi.Jr",
+   "position": "MID",
+   "price": 7.3,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
+  },
+  {
+   "element_id": 414,
+   "name": "Heaton",
+   "position": "GKP",
+   "price": 4.0,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 637,

@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 123,
- "latest_snapshot": 127,
+ "latest_snapshot": 128,
  "prev_taken_at": "2026-10-19T20:37:05.759525+00:00",
- "latest_taken_at": "2026-10-21T04:55:34.496173+00:00",
+ "latest_taken_at": "2026-10-21T11:56:18.845434+00:00",
  "alerts": [
   {
    "element_id": 411,
@@ -125,6 +125,16 @@
    "message": "new news: Hamstring injury - Expected back 2 Jan"
   },
   {
+   "element_id": 9,
+   "name": "Hincapie",
+   "position": "DEF",
+   "price": 5.2,
+   "owned": 0.7,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
    "element_id": 36,
    "name": "Maatsen",
    "position": "DEF",
@@ -133,6 +143,36 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 637,
+   "name": "Vaz",
+   "position": "FWD",
+   "price": 5.0,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
+  },
+  {
+   "element_id": 589,
+   "name": "Gourna-Douath",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
+  },
+  {
+   "element_id": 617,
+   "name": "Cho",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
   }
  ],
  "price_moves": [
@@ -140,7 +180,7 @@
    "name": "Rogers",
    "old": 7.9,
    "new": 8.0,
-   "owned": 48.0,
+   "owned": 48.1,
    "direction": "up"
   },
   {
@@ -154,7 +194,7 @@
    "name": "De Cuyper",
    "old": 5.2,
    "new": 5.3,
-   "owned": 41.0,
+   "owned": 41.1,
    "direction": "up"
   },
   {

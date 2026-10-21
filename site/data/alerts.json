@@ -1,28 +1,18 @@
 {
- "prev_snapshot": 120,
- "latest_snapshot": 126,
- "prev_taken_at": "2026-10-18T23:17:18.137559+00:00",
- "latest_taken_at": "2026-10-20T23:56:27.703205+00:00",
+ "prev_snapshot": 123,
+ "latest_snapshot": 127,
+ "prev_taken_at": "2026-10-19T20:37:05.759525+00:00",
+ "latest_taken_at": "2026-10-21T04:55:34.496173+00:00",
  "alerts": [
   {
-   "element_id": 397,
-   "name": "Semenyo",
-   "position": "MID",
-   "price": 8.3,
-   "owned": 12.3,
-   "severity": "CRITICAL",
-   "tag": "OWNED",
-   "message": "RULED OUT (Knee injury - Unknown return date)"
-  },
-  {
-   "element_id": 387,
-   "name": "O'Reilly",
-   "position": "DEF",
-   "price": 6.3,
-   "owned": 9.2,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
+   "element_id": 411,
+   "name": "Haaland",
+   "position": "FWD",
+   "price": 15.7,
+   "owned": 76.8,
+   "severity": "GOOD",
+   "tag": "SQUAD",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 423,
@@ -55,16 +45,6 @@
    "message": "RULED OUT (Hamstring injury - Expected back 21 Nov)"
   },
   {
-   "element_id": 552,
-   "name": "Brobbey",
-   "position": "FWD",
-   "price": 5.7,
-   "owned": 5.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
    "element_id": 502,
    "name": "Robertson",
    "position": "DEF",
@@ -95,16 +75,6 @@
    "message": "worsened 100% -> 75% (Hip injury - 75% chance of playing)"
   },
   {
-   "element_id": 439,
-   "name": "Šeško",
-   "position": "FWD",
-   "price": 6.9,
-   "owned": 1.2,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Shin injury - Expected back 31 Oct"
-  },
-  {
    "element_id": 377,
    "name": "Munoz",
    "position": "MID",
@@ -113,36 +83,6 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 389,
-   "name": "Matheus N.",
-   "position": "DEF",
-   "price": 5.9,
-   "owned": 1.0,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 102,
-   "name": "Yarmoliuk",
-   "position": "MID",
-   "price": 4.8,
-   "owned": 0.6,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Suspended until 8 Nov"
-  },
-  {
-   "element_id": 269,
-   "name": "Sessegnon",
-   "position": "DEF",
-   "price": 4.3,
-   "owned": 0.3,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Suspended until 7 Nov"
   },
   {
    "element_id": 506,
@@ -165,16 +105,6 @@
    "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
   },
   {
-   "element_id": 577,
-   "name": "Tomiyasu",
-   "position": "DEF",
-   "price": 4.4,
-   "owned": 0.2,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Calf injury - Expected back 25 Oct"
-  },
-  {
    "element_id": 147,
    "name": "Tosin",
    "position": "DEF",
@@ -183,46 +113,6 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 170,
-   "name": "Emegha",
-   "position": "FWD",
-   "price": 4.9,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Hamstring injury - Unknown return date"
-  },
-  {
-   "element_id": 267,
-   "name": "Lukić",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 406,
-   "name": "Kovačić",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 520,
-   "name": "Bergvall",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Knee injury - Expected back 31 Oct"
   },
   {
    "element_id": 596,
@@ -243,26 +133,6 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
-  },
-  {
-   "element_id": 177,
-   "name": "Kesler-Hayden",
-   "position": "DEF",
-   "price": 3.9,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 521,
-   "name": "Kulusevski",
-   "position": "MID",
-   "price": 6.5,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -277,7 +147,7 @@
    "name": "Groß",
    "old": 6.1,
    "new": 6.2,
-   "owned": 45.3,
+   "owned": 45.4,
    "direction": "up"
   },
   {

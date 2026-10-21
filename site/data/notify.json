@@ -1,11 +1,11 @@
 {
- "should_email": false,
- "gate": "throttled, 43h of 48h",
+ "should_email": true,
+ "gate": "routine",
  "reasons": [
   "transfer worth making"
  ],
  "subject": "FPL: transfer worth making",
- "body": "FLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 0% — Hamstring injury - Unknown return date\n\nTRANSFER — Szoboszlai out, Mbeumo in.\n  +4.98 expected points, 1.0m, 0.1m left in the bank.\n  Szoboszlai is flagged in the team news.\n\nCAPTAIN — model says Haaland (4.94 xPts).\n\nSnapshot #126 at 2026-10-20T23:56:27.703205+00:00",
- "last_sent_at": "2026-10-19T04:47:35.625196+00:00",
+ "body": "FLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 0% — Hamstring injury - Unknown return date\n\nTRANSFER — Szoboszlai out, Mbeumo in.\n  +4.98 expected points, 1.0m, 0.1m left in the bank.\n  Szoboszlai is flagged in the team news.\n\nCAPTAIN — model says Haaland (4.94 xPts).\n\nSnapshot #127 at 2026-10-21T04:55:34.496173+00:00",
+ "last_sent_at": "2026-10-21T04:55:53.070114+00:00",
  "deadline_sent_for_gw": 7
 }

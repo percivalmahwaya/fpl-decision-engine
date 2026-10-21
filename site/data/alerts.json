@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 123,
- "latest_snapshot": 129,
+ "latest_snapshot": 130,
  "prev_taken_at": "2026-10-19T20:37:05.759525+00:00",
- "latest_taken_at": "2026-10-21T17:16:34.446799+00:00",
+ "latest_taken_at": "2026-10-21T21:46:42.947146+00:00",
  "alerts": [
   {
    "element_id": 411,
@@ -13,6 +13,16 @@
    "severity": "GOOD",
    "tag": "SQUAD",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 12,
+   "name": "Saka",
+   "position": "MID",
+   "price": 9.6,
+   "owned": 16.5,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Thigh injury - 75% chance of playing)"
   },
   {
    "element_id": 480,
@@ -29,7 +39,7 @@
    "name": "Shaw",
    "position": "DEF",
    "price": 4.3,
-   "owned": 5.6,
+   "owned": 5.5,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
@@ -69,7 +79,7 @@
    "name": "Scott",
    "position": "MID",
    "price": 6.0,
-   "owned": 2.8,
+   "owned": 2.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Thigh injury - Expected back 8 Nov"
@@ -89,7 +99,7 @@
    "name": "Marmoush",
    "position": "FWD",
    "price": 7.0,
-   "owned": 2.0,
+   "owned": 1.9,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
@@ -165,6 +175,16 @@
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
   },
   {
+   "element_id": 450,
+   "name": "Livramento",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Knee injury - Expected back 7 Nov"
+  },
+  {
    "element_id": 596,
    "name": "Ruggeri",
    "position": "DEF",
@@ -185,6 +205,16 @@
    "message": "new news: Thigh injury - Expected back 8 Nov"
   },
   {
+   "element_id": 51,
+   "name": "George Hemmings",
+   "position": "MID",
+   "price": 4.5,
+   "owned": 0.9,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 9,
    "name": "Hincapie",
    "position": "DEF",
@@ -202,7 +232,7 @@
    "owned": 0.3,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 75%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 78,
@@ -260,28 +290,28 @@
    "name": "Rogers",
    "old": 7.9,
    "new": 8.0,
-   "owned": 48.1,
+   "owned": 48.2,
    "direction": "up"
   },
   {
    "name": "Groß",
    "old": 6.1,
    "new": 6.2,
-   "owned": 45.4,
+   "owned": 45.5,
    "direction": "up"
   },
   {
    "name": "De Cuyper",
    "old": 5.2,
    "new": 5.3,
-   "owned": 41.1,
+   "owned": 41.2,
    "direction": "up"
   },
   {
    "name": "Hughes",
    "old": 4.4,
    "new": 4.3,
-   "owned": 6.1,
+   "owned": 6.2,
    "direction": "down"
   },
   {
@@ -302,7 +332,7 @@
    "name": "Doku",
    "old": 7.4,
    "new": 7.5,
-   "owned": 2.5,
+   "owned": 2.6,
    "direction": "up"
   },
   {

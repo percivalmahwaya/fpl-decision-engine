@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 126,
- "latest_snapshot": 133,
+ "latest_snapshot": 134,
  "prev_taken_at": "2026-10-20T23:56:27.703205+00:00",
- "latest_taken_at": "2026-10-22T17:14:53.570483+00:00",
+ "latest_taken_at": "2026-10-22T21:40:34.868040+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.6,
-   "owned": 15.6,
+   "owned": 15.0,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
@@ -19,7 +19,7 @@
    "name": "Gibbs-White",
    "position": "MID",
    "price": 7.9,
-   "owned": 11.4,
+   "owned": 11.5,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
@@ -59,7 +59,7 @@
    "name": "Šeško",
    "position": "FWD",
    "price": 6.9,
-   "owned": 1.2,
+   "owned": 1.1,
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Shin injury - Unknown return date"

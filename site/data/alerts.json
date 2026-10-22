@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 126,
- "latest_snapshot": 131,
+ "latest_snapshot": 132,
  "prev_taken_at": "2026-10-20T23:56:27.703205+00:00",
- "latest_taken_at": "2026-10-22T04:55:25.856767+00:00",
+ "latest_taken_at": "2026-10-22T11:58:48.099682+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.6,
-   "owned": 16.3,
+   "owned": 15.9,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
@@ -19,7 +19,7 @@
    "name": "Gibbs-White",
    "position": "MID",
    "price": 7.9,
-   "owned": 11.3,
+   "owned": 11.4,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"

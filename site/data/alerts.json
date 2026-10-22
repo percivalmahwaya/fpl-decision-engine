@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 126,
- "latest_snapshot": 132,
+ "latest_snapshot": 133,
  "prev_taken_at": "2026-10-20T23:56:27.703205+00:00",
- "latest_taken_at": "2026-10-22T11:58:48.099682+00:00",
+ "latest_taken_at": "2026-10-22T17:14:53.570483+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.6,
-   "owned": 15.9,
+   "owned": 15.6,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
@@ -33,6 +33,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Has joined Getafe on loan for the rest of the season)"
+  },
+  {
+   "element_id": 267,
+   "name": "Lukić",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Groin injury - Expected back 23 Oct)"
   },
   {
    "element_id": 69,
@@ -200,7 +210,7 @@
    "name": "Calvert-Lewin",
    "old": 6.0,
    "new": 6.1,
-   "owned": 23.5,
+   "owned": 23.6,
    "direction": "up"
   },
   {

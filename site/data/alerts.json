@@ -1,18 +1,48 @@
 {
  "prev_snapshot": 130,
- "latest_snapshot": 136,
+ "latest_snapshot": 137,
  "prev_taken_at": "2026-10-21T21:46:42.947146+00:00",
- "latest_taken_at": "2026-10-23T11:44:45.463113+00:00",
+ "latest_taken_at": "2026-10-23T17:12:56.522225+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.6,
-   "owned": 13.6,
+   "owned": 10.8,
+   "severity": "CRITICAL",
+   "tag": "OWNED",
+   "message": "RULED OUT (Thigh injury - Unknown return date)"
+  },
+  {
+   "element_id": 346,
+   "name": "Calvert-Lewin",
+   "position": "FWD",
+   "price": 6.1,
+   "owned": 23.0,
    "severity": "WARNING",
    "tag": "OWNED",
-   "message": "worsened 75% -> 50% (Thigh injury - 50% chance of playing)"
+   "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 506,
+   "name": "Udogie",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.3,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Knee injury - Unknown return date)"
+  },
+  {
+   "element_id": 583,
+   "name": "Chavarria",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Unspecified injury - Expected back 31 Oct)"
   },
   {
    "element_id": 267,
@@ -35,6 +65,56 @@
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
   },
   {
+   "element_id": 335,
+   "name": "Stach",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 2.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 377,
+   "name": "Munoz",
+   "position": "MID",
+   "price": 6.5,
+   "owned": 0.9,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 75% -> 25% (Knee injury - 25% chance of playing)"
+  },
+  {
+   "element_id": 222,
+   "name": "Strand Larsen",
+   "position": "FWD",
+   "price": 6.0,
+   "owned": 0.6,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 515,
+   "name": "Maddison",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 0.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 336,
+   "name": "Okafor",
+   "position": "MID",
+   "price": 5.8,
+   "owned": 0.4,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
+  },
+  {
    "element_id": 262,
    "name": "Smith Rowe",
    "position": "MID",
@@ -53,6 +133,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Calf injury - Expected back 8 Nov"
+  },
+  {
+   "element_id": 634,
+   "name": "Fernandez-Pardo",
+   "position": "FWD",
+   "price": 6.0,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
   },
   {
    "element_id": 63,
@@ -75,6 +165,56 @@
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
+   "element_id": 499,
+   "name": "Pedro Porro",
+   "position": "DEF",
+   "price": 5.3,
+   "owned": 4.7,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 454,
+   "name": "Elanga",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 2.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 502,
+   "name": "Robertson",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 2.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 401,
+   "name": "Marmoush",
+   "position": "FWD",
+   "price": 7.0,
+   "owned": 1.9,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 144,
+   "name": "Gusto",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.8,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 643,
    "name": "Chilwell",
    "position": "DEF",
@@ -95,6 +235,76 @@
    "message": "improved 50% -> 75%"
   },
   {
+   "element_id": 421,
+   "name": "Heaven",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 130,
+   "name": "Wieffer",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 25%"
+  },
+  {
+   "element_id": 147,
+   "name": "Tosin",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 343,
+   "name": "James",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 122,
+   "name": "Minteh",
+   "position": "MID",
+   "price": 5.8,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
+  },
+  {
+   "element_id": 589,
+   "name": "Gourna-Douath",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
+  },
+  {
+   "element_id": 617,
+   "name": "Cho",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
+  },
+  {
    "element_id": 635,
    "name": "Larsson",
    "position": "MID",
@@ -110,28 +320,28 @@
    "name": "Palmer",
    "old": 9.7,
    "new": 9.8,
-   "owned": 27.5,
+   "owned": 28.5,
    "direction": "up"
   },
   {
    "name": "Calvert-Lewin",
    "old": 6.0,
    "new": 6.1,
-   "owned": 23.9,
+   "owned": 23.0,
    "direction": "up"
   },
   {
    "name": "Mbeumo",
    "old": 7.8,
    "new": 7.9,
-   "owned": 21.2,
+   "owned": 21.8,
    "direction": "up"
   },
   {
    "name": "Maguire",
    "old": 4.8,
    "new": 4.7,
-   "owned": 6.6,
+   "owned": 6.4,
    "direction": "down"
   },
   {

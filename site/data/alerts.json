@@ -1,38 +1,18 @@
 {
- "prev_snapshot": 126,
- "latest_snapshot": 134,
- "prev_taken_at": "2026-10-20T23:56:27.703205+00:00",
- "latest_taken_at": "2026-10-22T21:40:34.868040+00:00",
+ "prev_snapshot": 130,
+ "latest_snapshot": 135,
+ "prev_taken_at": "2026-10-21T21:46:42.947146+00:00",
+ "latest_taken_at": "2026-10-23T04:57:11.637423+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.6,
-   "owned": 15.0,
+   "owned": 14.6,
    "severity": "WARNING",
    "tag": "OWNED",
-   "message": "worsened 100% -> 50% (Thigh injury - 50% chance of playing)"
-  },
-  {
-   "element_id": 480,
-   "name": "Gibbs-White",
-   "position": "MID",
-   "price": 7.9,
-   "owned": 11.5,
-   "severity": "GOOD",
-   "tag": "OWNED",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 38,
-   "name": "A.García",
-   "position": "DEF",
-   "price": 4.0,
-   "owned": 1.4,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Has joined Getafe on loan for the rest of the season)"
+   "message": "worsened 75% -> 50% (Thigh injury - 50% chance of playing)"
   },
   {
    "element_id": 267,
@@ -45,36 +25,6 @@
    "message": "RULED OUT (Groin injury - Expected back 23 Oct)"
   },
   {
-   "element_id": 69,
-   "name": "Scott",
-   "position": "MID",
-   "price": 6.0,
-   "owned": 2.7,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Thigh injury - Expected back 8 Nov"
-  },
-  {
-   "element_id": 439,
-   "name": "Šeško",
-   "position": "FWD",
-   "price": 6.9,
-   "owned": 1.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Shin injury - Unknown return date"
-  },
-  {
-   "element_id": 171,
-   "name": "Dovin",
-   "position": "GKP",
-   "price": 4.0,
-   "owned": 0.9,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: not included in squad."
-  },
-  {
    "element_id": 577,
    "name": "Tomiyasu",
    "position": "DEF",
@@ -85,64 +35,14 @@
    "message": "new news: Calf injury - Expected back 8 Nov"
   },
   {
-   "element_id": 450,
-   "name": "Livramento",
-   "position": "DEF",
-   "price": 4.9,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Knee injury - Expected back 7 Nov"
-  },
-  {
    "element_id": 644,
    "name": "Timber",
    "position": "MID",
    "price": 5.0,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 63,
-   "name": "Milosavljević",
-   "position": "DEF",
-   "price": 4.9,
    "owned": 0.0,
    "severity": "WARNING",
    "tag": "-",
-   "message": "new news: Thigh injury - Expected back 8 Nov"
-  },
-  {
-   "element_id": 51,
-   "name": "George Hemmings",
-   "position": "MID",
-   "price": 4.5,
-   "owned": 0.9,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 9,
-   "name": "Hincapie",
-   "position": "DEF",
-   "price": 5.2,
-   "owned": 0.7,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 75%"
-  },
-  {
-   "element_id": 36,
-   "name": "Maatsen",
-   "position": "DEF",
-   "price": 4.4,
-   "owned": 0.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
    "element_id": 643,
@@ -153,65 +53,43 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 78,
-   "name": "Kroupi.Jr",
-   "position": "MID",
-   "price": 7.3,
-   "owned": 0.2,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 50%"
-  },
-  {
-   "element_id": 414,
-   "name": "Heaton",
-   "position": "GKP",
-   "price": 4.0,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 637,
-   "name": "Vaz",
-   "position": "FWD",
-   "price": 5.0,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 50% -> 75%"
-  },
-  {
-   "element_id": 589,
-   "name": "Gourna-Douath",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 50%"
-  },
-  {
-   "element_id": 617,
-   "name": "Cho",
-   "position": "MID",
-   "price": 5.0,
-   "owned": 0.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 50%"
   }
  ],
  "price_moves": [
   {
+   "name": "Palmer",
+   "old": 9.7,
+   "new": 9.8,
+   "owned": 27.2,
+   "direction": "up"
+  },
+  {
    "name": "Calvert-Lewin",
    "old": 6.0,
    "new": 6.1,
-   "owned": 23.6,
+   "owned": 23.7,
    "direction": "up"
+  },
+  {
+   "name": "Mbeumo",
+   "old": 7.8,
+   "new": 7.9,
+   "owned": 21.0,
+   "direction": "up"
+  },
+  {
+   "name": "Maguire",
+   "old": 4.8,
+   "new": 4.7,
+   "owned": 6.6,
+   "direction": "down"
+  },
+  {
+   "name": "Ampadu",
+   "old": 5.4,
+   "new": 5.3,
+   "owned": 0.8,
+   "direction": "down"
   },
   {
    "name": "Palacios",

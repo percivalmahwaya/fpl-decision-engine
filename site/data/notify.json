@@ -1,12 +1,11 @@
 {
  "should_email": false,
- "gate": "throttled, 5h of 48h",
+ "gate": "throttled, 10h of 48h",
  "reasons": [
-  "GW8 deadline in 0h",
   "transfer worth making"
  ],
- "subject": "FPL: GW8 deadline in 0h; transfer worth making",
- "body": "DEADLINE — GW8 in 0.3 hours (2026-10-23T17:30:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  Szoboszlai (MID) chance 0% — Hamstring injury - Unknown return date\n\nTRANSFER — Szoboszlai out, Mbeumo in.\n  +4.98 expected points, 1.1m, -0.0m left in the bank.\n  Szoboszlai is flagged in the team news.\n\nCAPTAIN — model says Haaland (4.94 xPts).\n\nSnapshot #137 at 2026-10-23T17:12:56.522225+00:00",
+ "subject": "FPL: transfer worth making",
+ "body": "TRANSFER — Groß out, Barnes in.\n  +1.63 expected points, -0.1m, 0.2m left in the bank.\n  Frees up 0.1m for later.\n  Owned by only 7%, so this is a differential rather than a template move.\n\nCAPTAIN — model says Haaland (5.53 xPts).\n\nSnapshot #138 at 2026-10-23T21:27:49.802998+00:00",
  "last_sent_at": "2026-10-23T11:45:02.970339+00:00",
  "deadline_sent_for_gw": 8
 }

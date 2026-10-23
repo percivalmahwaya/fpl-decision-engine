@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 130,
- "latest_snapshot": 137,
+ "latest_snapshot": 138,
  "prev_taken_at": "2026-10-21T21:46:42.947146+00:00",
- "latest_taken_at": "2026-10-23T17:12:56.522225+00:00",
+ "latest_taken_at": "2026-10-23T21:27:49.802998+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.6,
-   "owned": 10.8,
+   "owned": 10.3,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Thigh injury - Unknown return date)"
@@ -19,7 +19,7 @@
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.1,
-   "owned": 23.0,
+   "owned": 22.8,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
@@ -52,7 +52,7 @@
    "owned": 0.1,
    "severity": "CRITICAL",
    "tag": "-",
-   "message": "RULED OUT (Groin injury - Expected back 23 Oct)"
+   "message": "RULED OUT (Groin injury - Unknown return date)"
   },
   {
    "element_id": 76,
@@ -320,14 +320,14 @@
    "name": "Palmer",
    "old": 9.7,
    "new": 9.8,
-   "owned": 28.5,
+   "owned": 28.6,
    "direction": "up"
   },
   {
    "name": "Calvert-Lewin",
    "old": 6.0,
    "new": 6.1,
-   "owned": 23.0,
+   "owned": 22.8,
    "direction": "up"
   },
   {

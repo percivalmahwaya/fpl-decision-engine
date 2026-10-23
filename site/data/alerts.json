@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 130,
- "latest_snapshot": 135,
+ "latest_snapshot": 136,
  "prev_taken_at": "2026-10-21T21:46:42.947146+00:00",
- "latest_taken_at": "2026-10-23T04:57:11.637423+00:00",
+ "latest_taken_at": "2026-10-23T11:44:45.463113+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.6,
-   "owned": 14.6,
+   "owned": 13.6,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 75% -> 50% (Thigh injury - 50% chance of playing)"
@@ -25,6 +25,26 @@
    "message": "RULED OUT (Groin injury - Expected back 23 Oct)"
   },
   {
+   "element_id": 76,
+   "name": "Tóth.A",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hamstring injury - Unknown return date)"
+  },
+  {
+   "element_id": 262,
+   "name": "Smith Rowe",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Knock - 75% chance of playing)"
+  },
+  {
    "element_id": 577,
    "name": "Tomiyasu",
    "position": "DEF",
@@ -33,6 +53,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Calf injury - Expected back 8 Nov"
+  },
+  {
+   "element_id": 63,
+   "name": "Milosavljević",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Thigh injury - Expected back 31 Oct"
   },
   {
    "element_id": 644,
@@ -53,6 +83,26 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 78,
+   "name": "Kroupi.Jr",
+   "position": "MID",
+   "price": 7.3,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
+  },
+  {
+   "element_id": 635,
+   "name": "Larsson",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -60,21 +110,21 @@
    "name": "Palmer",
    "old": 9.7,
    "new": 9.8,
-   "owned": 27.2,
+   "owned": 27.5,
    "direction": "up"
   },
   {
    "name": "Calvert-Lewin",
    "old": 6.0,
    "new": 6.1,
-   "owned": 23.7,
+   "owned": 23.9,
    "direction": "up"
   },
   {
    "name": "Mbeumo",
    "old": 7.8,
    "new": 7.9,
-   "owned": 21.0,
+   "owned": 21.2,
    "direction": "up"
   },
   {

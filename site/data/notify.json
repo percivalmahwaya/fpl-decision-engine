@@ -1,11 +1,11 @@
 {
  "should_email": false,
- "gate": "throttled, 17h of 48h",
+ "gate": "throttled, 23h of 48h",
  "reasons": [
   "transfer worth making"
  ],
  "subject": "FPL: transfer worth making",
- "body": "TRANSFER — Groß out, Barnes in.\n  +1.63 expected points, -0.1m, 0.2m left in the bank.\n  Frees up 0.1m for later.\n  Owned by only 7%, so this is a differential rather than a template move.\n\nCAPTAIN — model says Haaland (5.53 xPts).\n\nSnapshot #139 at 2026-10-24T04:42:22.510578+00:00",
+ "body": "TRANSFER — Groß out, Barnes in.\n  +1.63 expected points, -0.1m, 0.2m left in the bank.\n  Frees up 0.1m for later.\n  Owned by only 7%, so this is a differential rather than a template move.\n\nCAPTAIN — model says Haaland (5.53 xPts).\n\nSnapshot #140 at 2026-10-24T11:07:49.038173+00:00",
  "last_sent_at": "2026-10-23T11:45:02.970339+00:00",
  "deadline_sent_for_gw": 8
 }

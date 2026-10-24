@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 134,
- "latest_snapshot": 139,
+ "latest_snapshot": 140,
  "prev_taken_at": "2026-10-22T21:40:34.868040+00:00",
- "latest_taken_at": "2026-10-24T04:42:22.510578+00:00",
+ "latest_taken_at": "2026-10-24T11:07:49.038173+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.5,
-   "owned": 10.3,
+   "owned": 10.1,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Thigh injury - Unknown return date)"
@@ -19,10 +19,20 @@
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.1,
-   "owned": 22.8,
+   "owned": 22.7,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 387,
+   "name": "O'Reilly",
+   "position": "DEF",
+   "price": 6.3,
+   "owned": 8.7,
+   "severity": "GOOD",
+   "tag": "OWNED",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 506,
@@ -165,6 +175,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 53,
+   "name": "Manzambi",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 3.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 454,
    "name": "Elanga",
    "position": "MID",
@@ -255,6 +275,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 406,
+   "name": "Kovačić",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 122,
    "name": "Minteh",
    "position": "MID",
@@ -300,7 +330,7 @@
    "name": "Raya",
    "old": 6.1,
    "new": 6.2,
-   "owned": 45.4,
+   "owned": 45.5,
    "direction": "up"
   },
   {
@@ -314,7 +344,7 @@
    "name": "B.Fernandes",
    "old": 11.8,
    "new": 11.7,
-   "owned": 26.2,
+   "owned": 26.1,
    "direction": "down"
   },
   {
@@ -335,7 +365,7 @@
    "name": "Tavernier",
    "old": 6.2,
    "new": 6.3,
-   "owned": 13.5,
+   "owned": 13.6,
    "direction": "up"
   },
   {
@@ -349,7 +379,7 @@
    "name": "Saka",
    "old": 9.6,
    "new": 9.5,
-   "owned": 10.3,
+   "owned": 10.1,
    "direction": "down"
   },
   {

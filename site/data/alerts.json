@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 134,
- "latest_snapshot": 142,
+ "latest_snapshot": 143,
  "prev_taken_at": "2026-10-22T21:40:34.868040+00:00",
- "latest_taken_at": "2026-10-24T20:53:42.471307+00:00",
+ "latest_taken_at": "2026-10-24T23:18:43.107953+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 73.5,
+   "owned": 73.4,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -407,7 +407,7 @@
    "name": "Palmer",
    "old": 9.7,
    "new": 9.8,
-   "owned": 28.4,
+   "owned": 28.3,
    "direction": "up"
   },
   {
@@ -425,6 +425,13 @@
    "direction": "up"
   },
   {
+   "name": "Szoboszlai",
+   "old": 6.8,
+   "new": 6.7,
+   "owned": 15.9,
+   "direction": "down"
+  },
+  {
    "name": "Kinsky",
    "old": 4.5,
    "new": 4.4,
@@ -435,7 +442,14 @@
    "name": "Tavernier",
    "old": 6.2,
    "new": 6.3,
-   "owned": 14.2,
+   "owned": 14.3,
+   "direction": "up"
+  },
+  {
+   "name": "Rice",
+   "old": 7.3,
+   "new": 7.4,
+   "owned": 12.3,
    "direction": "up"
   },
   {
@@ -465,20 +479,6 @@
    "new": 4.7,
    "owned": 6.4,
    "direction": "down"
-  },
-  {
-   "name": "Evanilson",
-   "old": 6.1,
-   "new": 6.2,
-   "owned": 6.2,
-   "direction": "up"
-  },
-  {
-   "name": "Shaw",
-   "old": 4.3,
-   "new": 4.2,
-   "owned": 4.7,
-   "direction": "down"
   }
  ],
  "urgent": [
@@ -487,7 +487,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 73.5,
+   "owned": 73.4,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"

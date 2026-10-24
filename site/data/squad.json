@@ -151,7 +151,7 @@
    "position": "MID",
    "club": "MUN",
    "price": 7.9,
-   "owned": 21.8,
+   "owned": 21.9,
    "status": "a",
    "chance": null,
    "news": null,
@@ -166,15 +166,15 @@
    "element_id": 68,
    "position": "MID",
    "club": "BOU",
-   "price": 6.2,
-   "owned": 13.4,
+   "price": 6.3,
+   "owned": 13.5,
    "status": "a",
    "chance": null,
    "news": null,
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.91,
+   "ep": 4.03,
    "flagged": false
   },
   {
@@ -183,7 +183,7 @@
    "position": "MID",
    "club": "BHA",
    "price": 6.2,
-   "owned": 46.3,
+   "owned": 46.4,
    "status": "a",
    "chance": null,
    "news": null,
@@ -242,6 +242,6 @@
    "flagged": false
   }
  ],
- "squad_value": 101.2,
+ "squad_value": 101.3,
  "count": 15
 }

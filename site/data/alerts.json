@@ -1,14 +1,14 @@
 {
- "prev_snapshot": 130,
- "latest_snapshot": 138,
- "prev_taken_at": "2026-10-21T21:46:42.947146+00:00",
- "latest_taken_at": "2026-10-23T21:27:49.802998+00:00",
+ "prev_snapshot": 134,
+ "latest_snapshot": 139,
+ "prev_taken_at": "2026-10-22T21:40:34.868040+00:00",
+ "latest_taken_at": "2026-10-24T04:42:22.510578+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
-   "price": 9.6,
+   "price": 9.5,
    "owned": 10.3,
    "severity": "CRITICAL",
    "tag": "OWNED",
@@ -45,16 +45,6 @@
    "message": "RULED OUT (Unspecified injury - Expected back 31 Oct)"
   },
   {
-   "element_id": 267,
-   "name": "Lukić",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.1,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Groin injury - Unknown return date)"
-  },
-  {
    "element_id": 76,
    "name": "Tóth.A",
    "position": "MID",
@@ -63,6 +53,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
+  },
+  {
+   "element_id": 469,
+   "name": "N.Williams",
+   "position": "DEF",
+   "price": 5.0,
+   "owned": 6.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Arm injury - 75% chance of playing)"
   },
   {
    "element_id": 335,
@@ -125,14 +125,14 @@
    "message": "worsened 100% -> 75% (Knock - 75% chance of playing)"
   },
   {
-   "element_id": 577,
-   "name": "Tomiyasu",
-   "position": "DEF",
-   "price": 4.4,
-   "owned": 0.2,
+   "element_id": 267,
+   "name": "Lukić",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.1,
    "severity": "WARNING",
    "tag": "-",
-   "message": "new news: Calf injury - Expected back 8 Nov"
+   "message": "new news: Groin injury - Unknown return date"
   },
   {
    "element_id": 634,
@@ -153,16 +153,6 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Thigh injury - Expected back 31 Oct"
-  },
-  {
-   "element_id": 644,
-   "name": "Timber",
-   "position": "MID",
-   "price": 5.0,
-   "owned": 0.0,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
    "element_id": 499,
@@ -188,7 +178,7 @@
    "element_id": 502,
    "name": "Robertson",
    "position": "DEF",
-   "price": 4.4,
+   "price": 4.3,
    "owned": 2.1,
    "severity": "GOOD",
    "tag": "-",
@@ -208,18 +198,8 @@
    "element_id": 144,
    "name": "Gusto",
    "position": "DEF",
-   "price": 4.9,
+   "price": 4.8,
    "owned": 0.8,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 643,
-   "name": "Chilwell",
-   "position": "DEF",
-   "price": 4.4,
-   "owned": 0.3,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -258,7 +238,7 @@
    "element_id": 147,
    "name": "Tosin",
    "position": "DEF",
-   "price": 4.4,
+   "price": 4.3,
    "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
@@ -317,6 +297,13 @@
  ],
  "price_moves": [
   {
+   "name": "Raya",
+   "old": 6.1,
+   "new": 6.2,
+   "owned": 45.4,
+   "direction": "up"
+  },
+  {
    "name": "Palmer",
    "old": 9.7,
    "new": 9.8,
@@ -324,18 +311,53 @@
    "direction": "up"
   },
   {
-   "name": "Calvert-Lewin",
-   "old": 6.0,
-   "new": 6.1,
-   "owned": 22.8,
-   "direction": "up"
+   "name": "B.Fernandes",
+   "old": 11.8,
+   "new": 11.7,
+   "owned": 26.2,
+   "direction": "down"
   },
   {
    "name": "Mbeumo",
    "old": 7.8,
    "new": 7.9,
-   "owned": 21.8,
+   "owned": 21.9,
    "direction": "up"
+  },
+  {
+   "name": "Kinsky",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 14.6,
+   "direction": "down"
+  },
+  {
+   "name": "Tavernier",
+   "old": 6.2,
+   "new": 6.3,
+   "owned": 13.5,
+   "direction": "up"
+  },
+  {
+   "name": "Kostoulas",
+   "old": 5.7,
+   "new": 5.8,
+   "owned": 10.4,
+   "direction": "up"
+  },
+  {
+   "name": "Saka",
+   "old": 9.6,
+   "new": 9.5,
+   "owned": 10.3,
+   "direction": "down"
+  },
+  {
+   "name": "Semenyo",
+   "old": 8.3,
+   "new": 8.2,
+   "owned": 8.7,
+   "direction": "down"
   },
   {
    "name": "Maguire",
@@ -345,17 +367,17 @@
    "direction": "down"
   },
   {
-   "name": "Ampadu",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 0.8,
-   "direction": "down"
+   "name": "Evanilson",
+   "old": 6.1,
+   "new": 6.2,
+   "owned": 6.0,
+   "direction": "up"
   },
   {
-   "name": "Palacios",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 0.1,
+   "name": "Shaw",
+   "old": 4.3,
+   "new": 4.2,
+   "owned": 4.8,
    "direction": "down"
   }
  ],

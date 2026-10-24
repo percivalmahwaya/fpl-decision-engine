@@ -36,7 +36,7 @@
    "element_id": 165,
    "position": "FWD",
    "ep": 4.49,
-   "flagged": false
+   "flagged": true
   },
   {
    "name": "Mbeumo",
@@ -64,7 +64,7 @@
    "element_id": 173,
    "position": "DEF",
    "ep": 3.52,
-   "flagged": false
+   "flagged": true
   }
  ]
 }

@@ -1,25 +1,55 @@
 {
  "prev_snapshot": 134,
- "latest_snapshot": 141,
+ "latest_snapshot": 142,
  "prev_taken_at": "2026-10-22T21:40:34.868040+00:00",
- "latest_taken_at": "2026-10-24T16:01:04.860535+00:00",
+ "latest_taken_at": "2026-10-24T20:53:42.471307+00:00",
  "alerts": [
+  {
+   "element_id": 165,
+   "name": "João Pedro",
+   "position": "FWD",
+   "price": 7.9,
+   "owned": 73.5,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 173,
+   "name": "Thomas",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 9.7,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.5,
-   "owned": 9.9,
+   "owned": 9.7,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Thigh injury - Unknown return date)"
+  },
+  {
+   "element_id": 8,
+   "name": "Calafiori",
+   "position": "DEF",
+   "price": 6.0,
+   "owned": 54.5,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Hip injury - 75% chance of playing)"
   },
   {
    "element_id": 346,
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.1,
-   "owned": 22.4,
+   "owned": 22.2,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
@@ -75,11 +105,21 @@
    "message": "worsened 100% -> 75% (Arm injury - 75% chance of playing)"
   },
   {
+   "element_id": 233,
+   "name": "Mykolenko",
+   "position": "DEF",
+   "price": 4.6,
+   "owned": 2.6,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
    "element_id": 335,
    "name": "Stach",
    "position": "MID",
    "price": 6.0,
-   "owned": 2.2,
+   "owned": 2.1,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
@@ -103,6 +143,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 515,
+   "name": "Maddison",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 0.6,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
   },
   {
    "element_id": 238,
@@ -189,7 +239,7 @@
    "name": "Manzambi",
    "position": "MID",
    "price": 6.0,
-   "owned": 3.2,
+   "owned": 3.3,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -357,35 +407,35 @@
    "name": "Palmer",
    "old": 9.7,
    "new": 9.8,
-   "owned": 28.7,
+   "owned": 28.4,
    "direction": "up"
   },
   {
    "name": "B.Fernandes",
    "old": 11.8,
    "new": 11.7,
-   "owned": 26.0,
+   "owned": 25.9,
    "direction": "down"
   },
   {
    "name": "Mbeumo",
    "old": 7.8,
    "new": 7.9,
-   "owned": 21.9,
+   "owned": 22.0,
    "direction": "up"
   },
   {
    "name": "Kinsky",
    "old": 4.5,
    "new": 4.4,
-   "owned": 14.6,
+   "owned": 14.7,
    "direction": "down"
   },
   {
    "name": "Tavernier",
    "old": 6.2,
    "new": 6.3,
-   "owned": 13.9,
+   "owned": 14.2,
    "direction": "up"
   },
   {
@@ -399,14 +449,14 @@
    "name": "Saka",
    "old": 9.6,
    "new": 9.5,
-   "owned": 9.9,
+   "owned": 9.7,
    "direction": "down"
   },
   {
    "name": "Semenyo",
    "old": 8.3,
    "new": 8.2,
-   "owned": 8.5,
+   "owned": 8.4,
    "direction": "down"
   },
   {
@@ -420,18 +470,39 @@
    "name": "Evanilson",
    "old": 6.1,
    "new": 6.2,
-   "owned": 6.1,
+   "owned": 6.2,
    "direction": "up"
   },
   {
    "name": "Shaw",
    "old": 4.3,
    "new": 4.2,
-   "owned": 4.8,
+   "owned": 4.7,
    "direction": "down"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 165,
+   "name": "João Pedro",
+   "position": "FWD",
+   "price": 7.9,
+   "owned": 73.5,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 173,
+   "name": "Thomas",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 9.7,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

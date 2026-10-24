@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 134,
- "latest_snapshot": 140,
+ "latest_snapshot": 141,
  "prev_taken_at": "2026-10-22T21:40:34.868040+00:00",
- "latest_taken_at": "2026-10-24T11:07:49.038173+00:00",
+ "latest_taken_at": "2026-10-24T16:01:04.860535+00:00",
  "alerts": [
   {
    "element_id": 12,
    "name": "Saka",
    "position": "MID",
    "price": 9.5,
-   "owned": 10.1,
+   "owned": 9.9,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Thigh injury - Unknown return date)"
@@ -19,7 +19,7 @@
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.1,
-   "owned": 22.7,
+   "owned": 22.4,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
@@ -105,14 +105,14 @@
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
-   "element_id": 515,
-   "name": "Maddison",
+   "element_id": 238,
+   "name": "Grealish",
    "position": "MID",
-   "price": 6.2,
+   "price": 6.5,
    "owned": 0.5,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
   },
   {
    "element_id": 336,
@@ -143,6 +143,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Groin injury - Unknown return date"
+  },
+  {
+   "element_id": 487,
+   "name": "Dominguez",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
   },
   {
    "element_id": 634,
@@ -179,7 +189,7 @@
    "name": "Manzambi",
    "position": "MID",
    "price": 6.0,
-   "owned": 3.0,
+   "owned": 3.2,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -220,6 +230,16 @@
    "position": "DEF",
    "price": 4.8,
    "owned": 0.8,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 9,
+   "name": "Hincapie",
+   "position": "DEF",
+   "price": 5.2,
+   "owned": 0.7,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -337,14 +357,14 @@
    "name": "Palmer",
    "old": 9.7,
    "new": 9.8,
-   "owned": 28.6,
+   "owned": 28.7,
    "direction": "up"
   },
   {
    "name": "B.Fernandes",
    "old": 11.8,
    "new": 11.7,
-   "owned": 26.1,
+   "owned": 26.0,
    "direction": "down"
   },
   {
@@ -365,7 +385,7 @@
    "name": "Tavernier",
    "old": 6.2,
    "new": 6.3,
-   "owned": 13.6,
+   "owned": 13.9,
    "direction": "up"
   },
   {
@@ -379,14 +399,14 @@
    "name": "Saka",
    "old": 9.6,
    "new": 9.5,
-   "owned": 10.1,
+   "owned": 9.9,
    "direction": "down"
   },
   {
    "name": "Semenyo",
    "old": 8.3,
    "new": 8.2,
-   "owned": 8.7,
+   "owned": 8.5,
    "direction": "down"
   },
   {
@@ -400,7 +420,7 @@
    "name": "Evanilson",
    "old": 6.1,
    "new": 6.2,
-   "owned": 6.0,
+   "owned": 6.1,
    "direction": "up"
   },
   {

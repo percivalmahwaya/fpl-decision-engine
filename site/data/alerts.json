@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 138,
- "latest_snapshot": 145,
+ "latest_snapshot": 146,
  "prev_taken_at": "2026-10-23T21:27:49.802998+00:00",
- "latest_taken_at": "2026-10-25T11:38:06.636728+00:00",
+ "latest_taken_at": "2026-10-25T16:28:10.162311+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 73.1,
+   "owned": 72.6,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -19,7 +19,7 @@
    "name": "Thomas",
    "position": "DEF",
    "price": 4.0,
-   "owned": 9.7,
+   "owned": 9.6,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -29,7 +29,7 @@
    "name": "Calafiori",
    "position": "DEF",
    "price": 6.0,
-   "owned": 54.2,
+   "owned": 53.8,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Hip injury - 75% chance of playing)"
@@ -39,7 +39,7 @@
    "name": "O'Reilly",
    "position": "DEF",
    "price": 6.3,
-   "owned": 8.7,
+   "owned": 8.6,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
@@ -89,7 +89,27 @@
    "name": "Manzambi",
    "position": "MID",
    "price": 6.0,
-   "owned": 3.4,
+   "owned": 3.6,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 454,
+   "name": "Elanga",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 2.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 419,
+   "name": "Martinez",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 1.1,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -105,11 +125,61 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 93,
+   "name": "Schuster",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 78,
+   "name": "Kroupi.Jr",
+   "position": "MID",
+   "price": 7.3,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 456,
+   "name": "J.Ramsey",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 406,
    "name": "Kovačić",
    "position": "MID",
    "price": 5.3,
    "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 637,
+   "name": "Vaz",
+   "position": "FWD",
+   "price": 5.0,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 617,
+   "name": "Cho",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -127,15 +197,22 @@
    "name": "B.Fernandes",
    "old": 11.8,
    "new": 11.7,
-   "owned": 25.8,
+   "owned": 25.5,
    "direction": "down"
   },
   {
    "name": "Szoboszlai",
    "old": 6.8,
    "new": 6.7,
-   "owned": 15.8,
+   "owned": 15.6,
    "direction": "down"
+  },
+  {
+   "name": "Tavernier",
+   "old": 6.2,
+   "new": 6.3,
+   "owned": 15.2,
+   "direction": "up"
   },
   {
    "name": "Kinsky",
@@ -145,17 +222,10 @@
    "direction": "down"
   },
   {
-   "name": "Tavernier",
-   "old": 6.2,
-   "new": 6.3,
-   "owned": 14.4,
-   "direction": "up"
-  },
-  {
    "name": "Rice",
    "old": 7.3,
    "new": 7.4,
-   "owned": 12.3,
+   "owned": 12.4,
    "direction": "up"
   },
   {
@@ -169,35 +239,35 @@
    "name": "Saka",
    "old": 9.6,
    "new": 9.5,
-   "owned": 9.6,
+   "owned": 9.4,
    "direction": "down"
   },
   {
    "name": "Semenyo",
    "old": 8.3,
    "new": 8.2,
-   "owned": 8.3,
+   "owned": 8.2,
    "direction": "down"
-  },
-  {
-   "name": "Evanilson",
-   "old": 6.1,
-   "new": 6.2,
-   "owned": 6.3,
-   "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.6,
    "new": 6.7,
-   "owned": 6.3,
+   "owned": 6.9,
+   "direction": "up"
+  },
+  {
+   "name": "Evanilson",
+   "old": 6.1,
+   "new": 6.2,
+   "owned": 6.5,
    "direction": "up"
   },
   {
    "name": "Gonzalo",
    "old": 6.1,
    "new": 6.0,
-   "owned": 6.1,
+   "owned": 6.0,
    "direction": "down"
   }
  ],
@@ -207,7 +277,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 73.1,
+   "owned": 72.6,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -217,7 +287,7 @@
    "name": "Thomas",
    "position": "DEF",
    "price": 4.0,
-   "owned": 9.7,
+   "owned": 9.6,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"

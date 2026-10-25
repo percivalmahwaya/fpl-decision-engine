@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 138,
- "latest_snapshot": 144,
+ "latest_snapshot": 145,
  "prev_taken_at": "2026-10-23T21:27:49.802998+00:00",
- "latest_taken_at": "2026-10-25T04:48:08.838194+00:00",
+ "latest_taken_at": "2026-10-25T11:38:06.636728+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 73.3,
+   "owned": 73.1,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -29,7 +29,7 @@
    "name": "Calafiori",
    "position": "DEF",
    "price": 6.0,
-   "owned": 54.4,
+   "owned": 54.2,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Hip injury - 75% chance of playing)"
@@ -63,16 +63,6 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 515,
-   "name": "Maddison",
-   "position": "MID",
-   "price": 6.2,
-   "owned": 0.6,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Groin injury - 75% chance of playing"
   },
   {
    "element_id": 238,
@@ -130,14 +120,14 @@
    "name": "Raya",
    "old": 6.1,
    "new": 6.2,
-   "owned": 45.5,
+   "owned": 45.6,
    "direction": "up"
   },
   {
    "name": "B.Fernandes",
    "old": 11.8,
    "new": 11.7,
-   "owned": 25.9,
+   "owned": 25.8,
    "direction": "down"
   },
   {
@@ -158,7 +148,7 @@
    "name": "Tavernier",
    "old": 6.2,
    "new": 6.3,
-   "owned": 14.3,
+   "owned": 14.4,
    "direction": "up"
   },
   {
@@ -186,21 +176,21 @@
    "name": "Semenyo",
    "old": 8.3,
    "new": 8.2,
-   "owned": 8.4,
+   "owned": 8.3,
    "direction": "down"
   },
   {
    "name": "Evanilson",
    "old": 6.1,
    "new": 6.2,
-   "owned": 6.2,
+   "owned": 6.3,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.6,
    "new": 6.7,
-   "owned": 6.1,
+   "owned": 6.3,
    "direction": "up"
   },
   {
@@ -217,7 +207,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 73.3,
+   "owned": 73.1,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"

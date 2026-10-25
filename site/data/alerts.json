@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 138,
- "latest_snapshot": 147,
+ "latest_snapshot": 148,
  "prev_taken_at": "2026-10-23T21:27:49.802998+00:00",
- "latest_taken_at": "2026-10-25T20:55:02.784725+00:00",
+ "latest_taken_at": "2026-10-25T23:18:54.603656+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 72.1,
+   "owned": 72.0,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -29,7 +29,7 @@
    "name": "Calafiori",
    "position": "DEF",
    "price": 6.0,
-   "owned": 53.4,
+   "owned": 53.3,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Hip injury - 75% chance of playing)"
@@ -297,21 +297,21 @@
    "name": "B.Fernandes",
    "old": 11.8,
    "new": 11.7,
-   "owned": 25.3,
+   "owned": 25.2,
    "direction": "down"
   },
   {
    "name": "Tavernier",
    "old": 6.2,
    "new": 6.3,
-   "owned": 15.9,
+   "owned": 16.1,
    "direction": "up"
   },
   {
    "name": "Szoboszlai",
    "old": 6.8,
    "new": 6.7,
-   "owned": 15.5,
+   "owned": 15.4,
    "direction": "down"
   },
   {
@@ -353,14 +353,14 @@
    "name": "N.Jackson",
    "old": 6.6,
    "new": 6.7,
-   "owned": 7.3,
+   "owned": 7.5,
    "direction": "up"
   },
   {
    "name": "Evanilson",
    "old": 6.1,
    "new": 6.2,
-   "owned": 6.7,
+   "owned": 6.8,
    "direction": "up"
   },
   {
@@ -377,7 +377,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 72.1,
+   "owned": 72.0,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"

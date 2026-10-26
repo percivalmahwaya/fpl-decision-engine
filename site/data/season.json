@@ -72,16 +72,16 @@
   },
   {
    "gameweek": 8,
-   "points": 19,
+   "points": 38,
    "transfers": 1,
    "formation": "3-5-2",
    "decided_by": "unrecorded",
    "captain": "Haaland",
-   "captain_points": null,
+   "captain_points": 16,
    "played": true
   }
  ],
- "total_points": 445,
+ "total_points": 464,
  "played": 8,
- "average": 55.6
+ "average": 58.0
 }

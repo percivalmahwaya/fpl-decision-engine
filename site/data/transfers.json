@@ -96,7 +96,7 @@
   },
   {
    "out": "Barry",
-   "out_price": 5.7,
+   "out_price": 5.6,
    "out_ep": 3.0,
    "in": "McBurnie",
    "in_price": 5.5,
@@ -105,13 +105,13 @@
    "position": "FWD",
    "gain": 0.497,
    "net": -3.503,
-   "cost": -0.2,
-   "bank_after": 0.3,
+   "cost": -0.1,
+   "bank_after": 0.2,
    "free": false,
    "penalties": true,
    "worth_it": false,
    "reasons": [
-    "Frees up 0.2m for later.",
+    "Frees up 0.1m for later.",
     "Owned by only 2%, so this is a differential rather than a template move.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]

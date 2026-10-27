@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 148,
- "latest_snapshot": 151,
+ "latest_snapshot": 152,
  "prev_taken_at": "2026-10-25T23:18:54.603656+00:00",
- "latest_taken_at": "2026-10-27T00:29:44.140559+00:00",
+ "latest_taken_at": "2026-10-27T09:05:14.628489+00:00",
  "alerts": [],
  "price_moves": [
   {
@@ -20,18 +20,18 @@
    "direction": "up"
   },
   {
-   "name": "Ødegaard",
-   "old": 6.8,
-   "new": 6.7,
-   "owned": 17.8,
-   "direction": "down"
-  },
-  {
    "name": "Tavernier",
    "old": 6.3,
    "new": 6.4,
-   "owned": 17.7,
+   "owned": 17.9,
    "direction": "up"
+  },
+  {
+   "name": "Ødegaard",
+   "old": 6.8,
+   "new": 6.7,
+   "owned": 17.7,
+   "direction": "down"
   },
   {
    "name": "Wissa",

@@ -1,18 +1,28 @@
 {
  "prev_snapshot": 148,
- "latest_snapshot": 153,
+ "latest_snapshot": 154,
  "prev_taken_at": "2026-10-25T23:18:54.603656+00:00",
- "latest_taken_at": "2026-10-27T15:24:00.995865+00:00",
+ "latest_taken_at": "2026-10-27T22:18:50.918808+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 69.9,
+   "owned": 66.9,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Thigh injury - Unknown return date)"
+  },
+  {
+   "element_id": 89,
+   "name": "Henry",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hip injury - Unknown return date)"
   },
   {
    "element_id": 208,
@@ -25,6 +35,66 @@
    "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
   },
   {
+   "element_id": 222,
+   "name": "Strand Larsen",
+   "position": "FWD",
+   "price": 6.0,
+   "owned": 0.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Ankle injury - 75% chance of playing"
+  },
+  {
+   "element_id": 328,
+   "name": "Struijk",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 75% -> 50% (Hamstring injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 459,
+   "name": "L.Miley",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 639,
+   "name": "Andrés",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Hip injury - 75% chance of playing"
+  },
+  {
+   "element_id": 198,
+   "name": "Henderson",
+   "position": "GKP",
+   "price": 4.9,
+   "owned": 1.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
+  },
+  {
+   "element_id": 130,
+   "name": "Wieffer",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 25% -> 75%"
+  },
+  {
    "element_id": 170,
    "name": "Emegha",
    "position": "FWD",
@@ -33,6 +103,16 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 122,
+   "name": "Minteh",
+   "position": "MID",
+   "price": 5.8,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 50% -> 75%"
   }
  ],
  "price_moves": [
@@ -47,28 +127,28 @@
    "name": "Konsa",
    "old": 4.6,
    "new": 4.7,
-   "owned": 20.1,
+   "owned": 20.2,
    "direction": "up"
   },
   {
    "name": "Tavernier",
    "old": 6.3,
    "new": 6.4,
-   "owned": 18.3,
+   "owned": 18.8,
    "direction": "up"
   },
   {
    "name": "Ødegaard",
    "old": 6.8,
    "new": 6.7,
-   "owned": 17.7,
+   "owned": 17.6,
    "direction": "down"
   },
   {
    "name": "Wissa",
    "old": 6.1,
    "new": 6.0,
-   "owned": 11.5,
+   "owned": 11.4,
    "direction": "down"
   },
   {
@@ -89,14 +169,14 @@
    "name": "Lammens",
    "old": 4.9,
    "new": 4.8,
-   "owned": 8.1,
+   "owned": 8.0,
    "direction": "down"
   },
   {
    "name": "Barry",
    "old": 5.7,
    "new": 5.6,
-   "owned": 7.4,
+   "owned": 7.3,
    "direction": "down"
   },
   {
@@ -127,7 +207,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.9,
-   "owned": 69.9,
+   "owned": 66.9,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Thigh injury - Unknown return date)"

@@ -134,8 +134,8 @@
    "element_id": 68,
    "position": "MID",
    "club": "BOU",
-   "price": 6.3,
-   "owned": 17.5,
+   "price": 6.4,
+   "owned": 17.7,
    "status": "a",
    "chance": null,
    "news": null,
@@ -151,7 +151,7 @@
    "position": "MID",
    "club": "MUN",
    "price": 7.9,
-   "owned": 21.7,
+   "owned": 21.6,
    "status": "a",
    "chance": null,
    "news": null,
@@ -167,7 +167,7 @@
    "position": "MID",
    "club": "CHE",
    "price": 9.8,
-   "owned": 27.6,
+   "owned": 27.5,
    "status": "a",
    "chance": 100,
    "news": null,
@@ -231,7 +231,7 @@
    "position": "FWD",
    "club": "CHE",
    "price": 7.9,
-   "owned": 71.0,
+   "owned": 70.9,
    "status": "d",
    "chance": 75,
    "news": "Unspecified injury - 75% chance of playing",
@@ -242,6 +242,6 @@
    "flagged": true
   }
  ],
- "squad_value": 101.2,
+ "squad_value": 101.3,
  "count": 15
 }

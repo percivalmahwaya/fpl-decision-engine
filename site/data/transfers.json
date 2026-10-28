@@ -7,7 +7,7 @@
  "moves": [
   {
    "out": "João Pedro",
-   "out_price": 7.9,
+   "out_price": 7.8,
    "out_ep": 0.0,
    "in": "Thiago",
    "in_price": 7.8,
@@ -16,15 +16,14 @@
    "position": "FWD",
    "gain": 5.23,
    "net": 5.23,
-   "cost": -0.1,
-   "bank_after": 0.2,
+   "cost": 0.0,
+   "bank_after": 0.1,
    "free": true,
    "penalties": true,
    "worth_it": true,
    "reasons": [
     "Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.",
     "João Pedro is flagged in the team news.",
-    "Frees up 0.1m for later.",
     "Owned by only 9%, so this is a differential rather than a template move."
    ]
   },

@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 150,
- "latest_snapshot": 156,
+ "latest_snapshot": 157,
  "prev_taken_at": "2026-10-26T20:32:31.121102+00:00",
- "latest_taken_at": "2026-10-28T13:01:46.941227+00:00",
+ "latest_taken_at": "2026-10-28T20:20:01.025137+00:00",
  "alerts": [
   {
    "element_id": 165,
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.8,
-   "owned": 64.8,
+   "owned": 63.8,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Thigh injury - Unknown return date)"
@@ -105,6 +105,16 @@
    "message": "new news: Hip injury - 75% chance of playing"
   },
   {
+   "element_id": 366,
+   "name": "Wirtz",
+   "position": "MID",
+   "price": 7.2,
+   "owned": 5.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 198,
    "name": "Henderson",
    "position": "GKP",
@@ -112,7 +122,17 @@
    "owned": 1.0,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 50% -> 75%"
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 541,
+   "name": "Meunier",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 130,
@@ -122,7 +142,7 @@
    "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 25% -> 75%"
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 170,
@@ -142,7 +162,7 @@
    "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 50% -> 75%"
+   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -157,7 +177,7 @@
    "name": "João Pedro",
    "old": 7.9,
    "new": 7.8,
-   "owned": 64.8,
+   "owned": 63.8,
    "direction": "down"
   },
   {
@@ -171,35 +191,35 @@
    "name": "Tavernier",
    "old": 6.3,
    "new": 6.4,
-   "owned": 19.3,
+   "owned": 19.6,
    "direction": "up"
   },
   {
    "name": "Ødegaard",
    "old": 6.8,
    "new": 6.7,
-   "owned": 17.6,
+   "owned": 17.5,
    "direction": "down"
   },
   {
    "name": "Isak",
    "old": 9.0,
    "new": 9.1,
-   "owned": 16.8,
+   "owned": 17.0,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.7,
    "new": 6.8,
-   "owned": 12.3,
+   "owned": 12.8,
    "direction": "up"
   },
   {
    "name": "Wissa",
    "old": 6.1,
    "new": 6.0,
-   "owned": 11.4,
+   "owned": 11.3,
    "direction": "down"
   },
   {
@@ -237,7 +257,7 @@
    "name": "João Pedro",
    "position": "FWD",
    "price": 7.8,
-   "owned": 64.8,
+   "owned": 63.8,
    "severity": "CRITICAL",
    "tag": "SQUAD",
    "message": "RULED OUT (Thigh injury - Unknown return date)"

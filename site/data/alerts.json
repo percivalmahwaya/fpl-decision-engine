@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 154,
- "latest_snapshot": 158,
+ "latest_snapshot": 159,
  "prev_taken_at": "2026-10-27T22:18:50.918808+00:00",
- "latest_taken_at": "2026-10-29T01:00:49.967855+00:00",
+ "latest_taken_at": "2026-10-29T10:03:28.387263+00:00",
  "alerts": [
   {
    "element_id": 13,
    "name": "Rice",
    "position": "MID",
    "price": 7.4,
-   "owned": 12.5,
+   "owned": 12.4,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -33,6 +33,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 650,
+   "name": "Affengruber",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
    "element_id": 16,
@@ -107,21 +117,21 @@
    "name": "João Pedro",
    "old": 7.9,
    "new": 7.8,
-   "owned": 63.2,
+   "owned": 62.6,
    "direction": "down"
   },
   {
    "name": "Isak",
    "old": 9.0,
    "new": 9.1,
-   "owned": 17.1,
+   "owned": 17.2,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.7,
    "new": 6.8,
-   "owned": 13.2,
+   "owned": 13.5,
    "direction": "up"
   },
   {
@@ -149,7 +159,7 @@
    "name": "Manzambi",
    "old": 6.0,
    "new": 6.1,
-   "owned": 4.8,
+   "owned": 4.9,
    "direction": "up"
   },
   {

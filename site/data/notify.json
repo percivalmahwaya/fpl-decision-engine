@@ -1,12 +1,11 @@
 {
  "should_email": false,
- "gate": "throttled, 22h of 48h",
+ "gate": "throttled, 27h of 48h",
  "reasons": [
-  "1 squad/watchlist change(s)",
   "transfer worth making"
  ],
- "subject": "FPL: 1 squad/watchlist change(s); transfer worth making",
- "body": "AVAILABILITY — players you own or watch:\n  [SQUAD] CRITICAL  João Pedro (FWD)  RULED OUT (Thigh injury - Unknown return date)\n\nFLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 75% — Unspecified injury - 75% chance of playing\n  João Pedro (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — João Pedro out, Thiago in.\n  +5.23 expected points, 0.0m, 0.1m left in the bank.\n  Thiago is his club's first-choice penalty taker.\n  Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.\n  João Pedro is flagged in the team news.\n\nCAPTAIN — model says Haaland (7.37 xPts).\n\nSnapshot #157 at 2026-10-28T20:20:01.025137+00:00",
+ "subject": "FPL: transfer worth making",
+ "body": "FLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 75% — Unspecified injury - 75% chance of playing\n  João Pedro (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — João Pedro out, Thiago in.\n  +5.23 expected points, 0.0m, 0.1m left in the bank.\n  Thiago is his club's first-choice penalty taker.\n  Thiago is his club's first-choice penalty taker. The model cannot see that: it is a scoring route assigned by the manager rather than earned in the form data.\n  João Pedro is flagged in the team news.\n\nCAPTAIN — model says Haaland (7.37 xPts).\n\nSnapshot #158 at 2026-10-29T01:00:49.967855+00:00",
  "last_sent_at": "2026-10-27T22:19:07.921955+00:00",
  "deadline_sent_for_gw": 8
 }

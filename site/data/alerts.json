@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 154,
- "latest_snapshot": 159,
+ "latest_snapshot": 160,
  "prev_taken_at": "2026-10-27T22:18:50.918808+00:00",
- "latest_taken_at": "2026-10-29T10:03:28.387263+00:00",
+ "latest_taken_at": "2026-10-29T18:30:44.171740+00:00",
  "alerts": [
+  {
+   "element_id": 173,
+   "name": "Thomas",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 9.2,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 75% -> 50% (Calf injury - 50% chance of playing)"
+  },
   {
    "element_id": 13,
    "name": "Rice",
@@ -13,6 +23,16 @@
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 208,
+   "name": "Sarr",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 0.6,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Groin injury - Expected back 8 Nov)"
   },
   {
    "element_id": 20,
@@ -25,14 +45,44 @@
    "message": "RULED OUT (Suspended until 29 Nov)"
   },
   {
+   "element_id": 328,
+   "name": "Struijk",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hamstring injury - Expected back 8 Nov)"
+  },
+  {
    "element_id": 200,
    "name": "Lacroix",
    "position": "DEF",
    "price": 5.9,
-   "owned": 6.3,
+   "owned": 6.2,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 335,
+   "name": "Stach",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 2.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 483,
+   "name": "Ndoye",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Hamstring injury - 50% chance of playing)"
   },
   {
    "element_id": 650,
@@ -45,6 +95,16 @@
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
+   "element_id": 403,
+   "name": "Sávio",
+   "position": "MID",
+   "price": 6.5,
+   "owned": 0.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Muscular injury - Expected back 21 Nov"
+  },
+  {
    "element_id": 16,
    "name": "Madueke",
    "position": "MID",
@@ -55,6 +115,76 @@
    "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   },
   {
+   "element_id": 415,
+   "name": "Dorgu",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Hamstring injury - Unknown return date"
+  },
+  {
+   "element_id": 147,
+   "name": "Tosin",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 450,
+   "name": "Livramento",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Knee injury - Unknown return date"
+  },
+  {
+   "element_id": 121,
+   "name": "Mitoma",
+   "position": "MID",
+   "price": 5.9,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Hamstring injury - Expected back 22 Nov"
+  },
+  {
+   "element_id": 135,
+   "name": "Yohanna",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Unspecified injury - Expected back 22 Nov"
+  },
+  {
+   "element_id": 652,
+   "name": "Azeez",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Hamstring injury - Expected back 8 Nov"
+  },
+  {
+   "element_id": 469,
+   "name": "N.Williams",
+   "position": "DEF",
+   "price": 5.0,
+   "owned": 5.9,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 366,
    "name": "Wirtz",
    "position": "MID",
@@ -63,6 +193,26 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 586,
+   "name": "Mendy",
+   "position": "DEF",
+   "price": 4.1,
+   "owned": 4.8,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 432,
+   "name": "Mainoo",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 1.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 25%"
   },
   {
    "element_id": 198,
@@ -95,6 +245,26 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 274,
+   "name": "Butland",
+   "position": "GKP",
+   "price": 4.4,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
+  },
+  {
+   "element_id": 598,
+   "name": "Elvedi",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 122,
    "name": "Minteh",
    "position": "MID",
@@ -117,21 +287,21 @@
    "name": "João Pedro",
    "old": 7.9,
    "new": 7.8,
-   "owned": 62.6,
+   "owned": 61.0,
    "direction": "down"
   },
   {
    "name": "Isak",
    "old": 9.0,
    "new": 9.1,
-   "owned": 17.2,
+   "owned": 17.5,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.7,
    "new": 6.8,
-   "owned": 13.5,
+   "owned": 14.5,
    "direction": "up"
   },
   {
@@ -145,21 +315,21 @@
    "name": "M.Sangaré",
    "old": 5.5,
    "new": 5.4,
-   "owned": 6.6,
+   "owned": 6.5,
    "direction": "down"
   },
   {
    "name": "Cunha",
    "old": 7.9,
    "new": 7.8,
-   "owned": 6.0,
+   "owned": 5.9,
    "direction": "down"
   },
   {
    "name": "Manzambi",
    "old": 6.0,
    "new": 6.1,
-   "owned": 4.9,
+   "owned": 5.1,
    "direction": "up"
   },
   {
@@ -177,7 +347,18 @@
    "direction": "down"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 173,
+   "name": "Thomas",
+   "position": "DEF",
+   "price": 4.0,
+   "owned": 9.2,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 75% -> 50% (Calf injury - 50% chance of playing)"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

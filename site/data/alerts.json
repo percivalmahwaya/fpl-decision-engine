@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 160,
- "latest_snapshot": 165,
+ "latest_snapshot": 166,
  "prev_taken_at": "2026-10-29T18:30:44.171740+00:00",
- "latest_taken_at": "2026-10-31T05:50:33.521919+00:00",
+ "latest_taken_at": "2026-10-31T12:39:34.992494+00:00",
  "alerts": [
   {
    "element_id": 368,
    "name": "Szoboszlai",
    "position": "MID",
    "price": 6.7,
-   "owned": 13.8,
+   "owned": 13.6,
    "severity": "GOOD",
    "tag": "WATCH",
    "message": "improved 0% -> 50%"
@@ -19,7 +19,7 @@
    "name": "Lacroix",
    "position": "DEF",
    "price": 5.9,
-   "owned": 5.8,
+   "owned": 5.6,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
@@ -29,7 +29,7 @@
    "name": "Hato",
    "position": "DEF",
    "price": 4.5,
-   "owned": 0.8,
+   "owned": 0.7,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
@@ -89,7 +89,7 @@
    "name": "Mukiele",
    "position": "DEF",
    "price": 5.4,
-   "owned": 1.8,
+   "owned": 1.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Knock - 75% chance of playing)"
@@ -109,7 +109,7 @@
    "name": "Osula",
    "position": "FWD",
    "price": 5.8,
-   "owned": 0.4,
+   "owned": 0.3,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Ankle injury - 50% chance of playing)"
@@ -119,7 +119,7 @@
    "name": "Tzolis",
    "position": "MID",
    "price": 6.1,
-   "owned": 3.9,
+   "owned": 3.8,
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
@@ -129,7 +129,17 @@
    "name": "Mykolenko",
    "position": "DEF",
    "price": 4.6,
-   "owned": 2.3,
+   "owned": 2.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 432,
+   "name": "Mainoo",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 1.1,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -230,42 +240,42 @@
    "name": "Rogers",
    "old": 8.0,
    "new": 8.1,
-   "owned": 50.7,
+   "owned": 51.0,
    "direction": "up"
   },
   {
    "name": "Calafiori",
    "old": 6.0,
    "new": 5.9,
-   "owned": 47.7,
+   "owned": 48.3,
    "direction": "down"
   },
   {
    "name": "Tavernier",
    "old": 6.4,
    "new": 6.5,
-   "owned": 24.7,
+   "owned": 25.3,
    "direction": "up"
   },
   {
    "name": "Gabriel",
    "old": 7.9,
    "new": 8.0,
-   "owned": 24.0,
+   "owned": 23.8,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.8,
    "new": 6.9,
-   "owned": 21.5,
+   "owned": 23.1,
    "direction": "up"
   },
   {
    "name": "Evanilson",
    "old": 6.2,
    "new": 6.3,
-   "owned": 13.4,
+   "owned": 14.3,
    "direction": "up"
   },
   {
@@ -279,7 +289,7 @@
    "name": "Tzolis",
    "old": 6.2,
    "new": 6.1,
-   "owned": 3.9,
+   "owned": 3.8,
    "direction": "down"
   },
   {
@@ -307,7 +317,7 @@
    "name": "Yarmoliuk",
    "old": 4.8,
    "new": 4.7,
-   "owned": 0.5,
+   "owned": 0.4,
    "direction": "down"
   }
  ],

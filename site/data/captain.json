@@ -1,10 +1,10 @@
 {
- "gameweek": 9,
+ "gameweek": 10,
  "model_pick": {
   "name": "Haaland",
   "element_id": 411,
   "position": "FWD",
-  "ep": 7.37,
+  "ep": 5.83,
   "flagged": false
  },
  "your_pick": "Haaland",
@@ -14,56 +14,56 @@
    "name": "Haaland",
    "element_id": 411,
    "position": "FWD",
-   "ep": 7.37,
-   "flagged": false
-  },
-  {
-   "name": "Rogers",
-   "element_id": 40,
-   "position": "MID",
-   "ep": 4.66,
-   "flagged": false
-  },
-  {
-   "name": "Tavernier",
-   "element_id": 68,
-   "position": "MID",
-   "ep": 4.43,
+   "ep": 5.83,
    "flagged": false
   },
   {
    "name": "Mbeumo",
    "element_id": 427,
    "position": "MID",
-   "ep": 3.69,
+   "ep": 4.73,
    "flagged": false
   },
   {
-   "name": "Rúben",
-   "element_id": 390,
-   "position": "DEF",
-   "ep": 3.45,
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
+   "ep": 4.08,
    "flagged": false
   },
   {
-   "name": "Hall",
-   "element_id": 449,
-   "position": "DEF",
-   "ep": 3.4,
+   "name": "Rogers",
+   "element_id": 40,
+   "position": "MID",
+   "ep": 3.94,
+   "flagged": false
+  },
+  {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 3.7,
+   "flagged": false
+  },
+  {
+   "name": "Tavernier",
+   "element_id": 68,
+   "position": "MID",
+   "ep": 3.65,
    "flagged": false
   },
   {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
-   "ep": 3.27,
+   "ep": 3.49,
    "flagged": false
   },
   {
-   "name": "Horníček",
-   "element_id": 567,
-   "position": "GKP",
-   "ep": 3.18,
+   "name": "Hall",
+   "element_id": 449,
+   "position": "DEF",
+   "ep": 3.1,
    "flagged": false
   }
  ]

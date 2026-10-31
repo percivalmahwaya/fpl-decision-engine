@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 160,
- "latest_snapshot": 166,
+ "latest_snapshot": 167,
  "prev_taken_at": "2026-10-29T18:30:44.171740+00:00",
- "latest_taken_at": "2026-10-31T12:39:34.992494+00:00",
+ "latest_taken_at": "2026-10-31T19:20:26.148232+00:00",
  "alerts": [
   {
    "element_id": 368,
@@ -19,10 +19,30 @@
    "name": "Lacroix",
    "position": "DEF",
    "price": 5.9,
-   "owned": 5.6,
+   "owned": 5.5,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
+  },
+  {
+   "element_id": 223,
+   "name": "Mateta",
+   "position": "FWD",
+   "price": 6.3,
+   "owned": 1.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 2 Dec)"
+  },
+  {
+   "element_id": 419,
+   "name": "Martinez",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 1.1,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 22 Nov)"
   },
   {
    "element_id": 148,
@@ -33,6 +53,26 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
+  },
+  {
+   "element_id": 289,
+   "name": "Crooks",
+   "position": "MID",
+   "price": 4.4,
+   "owned": 0.6,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 22 Nov)"
+  },
+  {
+   "element_id": 535,
+   "name": "Alderete",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 0.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Suspended until 21 Nov)"
   },
   {
    "element_id": 147,
@@ -79,17 +119,27 @@
    "name": "Branthwaite",
    "position": "DEF",
    "price": 5.5,
-   "owned": 2.3,
+   "owned": 2.2,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Concussion - 75% chance of playing)"
+  },
+  {
+   "element_id": 101,
+   "name": "Henderson",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 1.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
   },
   {
    "element_id": 533,
    "name": "Mukiele",
    "position": "DEF",
    "price": 5.4,
-   "owned": 1.7,
+   "owned": 1.6,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Knock - 75% chance of playing)"
@@ -103,6 +153,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 75% -> 50% (Ankle injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 431,
+   "name": "Amad",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
   },
   {
    "element_id": 465,
@@ -135,6 +195,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 335,
+   "name": "Stach",
+   "position": "MID",
+   "price": 6.0,
+   "owned": 1.9,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 432,
    "name": "Mainoo",
    "position": "MID",
@@ -155,6 +225,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 553,
+   "name": "Isidor",
+   "position": "FWD",
+   "price": 5.4,
+   "owned": 0.8,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 377,
    "name": "Munoz",
    "position": "MID",
@@ -163,6 +243,16 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 25% -> 50%"
+  },
+  {
+   "element_id": 483,
+   "name": "Ndoye",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.6,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 515,
@@ -180,6 +270,16 @@
    "position": "DEF",
    "price": 4.5,
    "owned": 0.6,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 102,
+   "name": "Yarmoliuk",
+   "position": "MID",
+   "price": 4.7,
+   "owned": 0.4,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -233,6 +333,16 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 639,
+   "name": "Andrés",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -240,42 +350,42 @@
    "name": "Rogers",
    "old": 8.0,
    "new": 8.1,
-   "owned": 51.0,
+   "owned": 51.3,
    "direction": "up"
   },
   {
    "name": "Calafiori",
    "old": 6.0,
    "new": 5.9,
-   "owned": 48.3,
+   "owned": 48.1,
    "direction": "down"
   },
   {
    "name": "Tavernier",
    "old": 6.4,
    "new": 6.5,
-   "owned": 25.3,
+   "owned": 25.7,
    "direction": "up"
   },
   {
    "name": "Gabriel",
    "old": 7.9,
    "new": 8.0,
-   "owned": 23.8,
+   "owned": 23.9,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.8,
    "new": 6.9,
-   "owned": 23.1,
+   "owned": 23.4,
    "direction": "up"
   },
   {
    "name": "Evanilson",
    "old": 6.2,
    "new": 6.3,
-   "owned": 14.3,
+   "owned": 15.0,
    "direction": "up"
   },
   {

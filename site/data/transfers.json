@@ -7,7 +7,7 @@
  "moves": [
   {
    "out": "João Pedro",
-   "out_price": 7.8,
+   "out_price": 7.7,
    "out_ep": 0.0,
    "in": "Thiago",
    "in_price": 7.8,
@@ -16,8 +16,8 @@
    "position": "FWD",
    "gain": 4.249,
    "net": 4.249,
-   "cost": 0.0,
-   "bank_after": 0.1,
+   "cost": 0.1,
+   "bank_after": 0.0,
    "free": true,
    "penalties": true,
    "worth_it": true,
@@ -71,6 +71,26 @@
    ]
   },
   {
+   "out": "Tavernier",
+   "out_price": 6.6,
+   "out_ep": 3.47,
+   "in": "Ødegaard",
+   "in_price": 6.7,
+   "in_ep": 4.43,
+   "in_club": "ARS",
+   "position": "MID",
+   "gain": 0.962,
+   "net": -3.038,
+   "cost": 0.1,
+   "bank_after": -0.0,
+   "free": false,
+   "penalties": false,
+   "worth_it": false,
+   "reasons": [
+    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
+   ]
+  },
+  {
    "out": "Rúben",
    "out_price": 5.5,
    "out_ep": 3.08,
@@ -88,27 +108,6 @@
    "worth_it": false,
    "reasons": [
     "Frees up 0.7m for later.",
-    "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
-   ]
-  },
-  {
-   "out": "Rogers",
-   "out_price": 8.1,
-   "out_ep": 3.94,
-   "in": "Ødegaard",
-   "in_price": 6.7,
-   "in_ep": 4.43,
-   "in_club": "ARS",
-   "position": "MID",
-   "gain": 0.494,
-   "net": -3.506,
-   "cost": -1.4,
-   "bank_after": 1.5,
-   "free": false,
-   "penalties": false,
-   "worth_it": false,
-   "reasons": [
-    "Frees up 1.4m for later.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   }

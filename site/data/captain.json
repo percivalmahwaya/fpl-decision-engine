@@ -46,17 +46,17 @@
    "flagged": false
   },
   {
-   "name": "Tavernier",
-   "element_id": 68,
-   "position": "MID",
-   "ep": 3.65,
-   "flagged": false
-  },
-  {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
    "ep": 3.49,
+   "flagged": false
+  },
+  {
+   "name": "Tavernier",
+   "element_id": 68,
+   "position": "MID",
+   "ep": 3.47,
    "flagged": false
   },
   {

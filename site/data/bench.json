@@ -50,21 +50,21 @@
    "flagged": false
   },
   {
-   "name": "Tavernier",
-   "element_id": 68,
-   "position": "MID",
-   "ep": 3.65,
-   "p_play": 0.826,
-   "if_played": 4.42,
-   "flagged": false
-  },
-  {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
    "ep": 3.49,
    "p_play": 0.949,
    "if_played": 3.68,
+   "flagged": false
+  },
+  {
+   "name": "Tavernier",
+   "element_id": 68,
+   "position": "MID",
+   "ep": 3.47,
+   "p_play": 0.826,
+   "if_played": 4.2,
    "flagged": false
   },
   {

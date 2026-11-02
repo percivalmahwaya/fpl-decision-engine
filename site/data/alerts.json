@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 167,
- "latest_snapshot": 173,
+ "latest_snapshot": 174,
  "prev_taken_at": "2026-10-31T19:20:26.148232+00:00",
- "latest_taken_at": "2026-11-02T11:16:41.058350+00:00",
+ "latest_taken_at": "2026-11-02T21:44:07.593301+00:00",
  "alerts": [
   {
    "element_id": 368,
@@ -29,7 +29,7 @@
    "name": "Rice",
    "position": "MID",
    "price": 7.4,
-   "owned": 12.0,
+   "owned": 12.2,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
@@ -85,6 +85,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 230,
+   "name": "Branthwaite",
+   "position": "DEF",
+   "price": 5.5,
+   "owned": 2.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 377,
    "name": "Munoz",
    "position": "MID",
@@ -100,6 +110,16 @@
    "position": "MID",
    "price": 6.2,
    "owned": 0.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 465,
+   "name": "Osula",
+   "position": "FWD",
+   "price": 5.8,
+   "owned": 0.3,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -130,56 +150,56 @@
    "name": "De Cuyper",
    "old": 5.3,
    "new": 5.4,
-   "owned": 44.6,
+   "owned": 44.7,
    "direction": "up"
   },
   {
    "name": "João Pedro",
    "old": 7.8,
    "new": 7.7,
-   "owned": 41.7,
+   "owned": 41.1,
    "direction": "down"
   },
   {
    "name": "Cherki",
    "old": 8.0,
    "new": 7.9,
-   "owned": 36.0,
+   "owned": 35.8,
    "direction": "down"
   },
   {
    "name": "Tavernier",
    "old": 6.5,
    "new": 6.6,
-   "owned": 26.9,
+   "owned": 27.1,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 6.9,
    "new": 7.0,
-   "owned": 25.1,
+   "owned": 25.4,
    "direction": "up"
   },
   {
    "name": "Isak",
    "old": 9.1,
    "new": 9.2,
-   "owned": 21.3,
+   "owned": 21.4,
    "direction": "up"
   },
   {
    "name": "Evanilson",
    "old": 6.3,
    "new": 6.4,
-   "owned": 16.9,
+   "owned": 17.3,
    "direction": "up"
   },
   {
    "name": "Van Hecke",
    "old": 4.9,
    "new": 5.0,
-   "owned": 10.6,
+   "owned": 10.8,
    "direction": "up"
   },
   {
@@ -193,7 +213,7 @@
    "name": "N.Williams",
    "old": 5.0,
    "new": 4.9,
-   "owned": 5.8,
+   "owned": 5.7,
    "direction": "down"
   },
   {

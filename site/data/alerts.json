@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 171,
- "latest_snapshot": 176,
+ "latest_snapshot": 177,
  "prev_taken_at": "2026-11-01T19:43:51.277766+00:00",
- "latest_taken_at": "2026-11-03T17:06:45.799745+00:00",
+ "latest_taken_at": "2026-11-03T23:27:08.074006+00:00",
  "alerts": [
   {
    "element_id": 456,
@@ -25,11 +25,31 @@
    "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
   },
   {
+   "element_id": 131,
+   "name": "Baleba",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
    "element_id": 230,
    "name": "Branthwaite",
    "position": "DEF",
    "price": 5.5,
    "owned": 2.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 431,
+   "name": "Amad",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.3,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -43,6 +63,16 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 6,
+   "name": "Saliba",
+   "position": "DEF",
+   "price": 5.9,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
   }
  ],
  "price_moves": [

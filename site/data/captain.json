@@ -4,7 +4,7 @@
   "name": "Haaland",
   "element_id": 411,
   "position": "FWD",
-  "ep": 5.83,
+  "ep": 4.96,
   "flagged": false
  },
  "your_pick": "Haaland",
@@ -14,56 +14,56 @@
    "name": "Haaland",
    "element_id": 411,
    "position": "FWD",
-   "ep": 5.83,
+   "ep": 4.96,
    "flagged": false
   },
   {
    "name": "Mbeumo",
    "element_id": 427,
    "position": "MID",
-   "ep": 4.73,
-   "flagged": false
-  },
-  {
-   "name": "Barry",
-   "element_id": 249,
-   "position": "FWD",
-   "ep": 4.08,
+   "ep": 4.95,
    "flagged": false
   },
   {
    "name": "Rogers",
    "element_id": 40,
    "position": "MID",
-   "ep": 3.94,
+   "ep": 4.21,
    "flagged": false
   },
   {
-   "name": "Groß",
-   "element_id": 124,
-   "position": "MID",
-   "ep": 3.7,
-   "flagged": false
-  },
-  {
-   "name": "Pickford",
-   "element_id": 226,
-   "position": "GKP",
-   "ep": 3.49,
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
+   "ep": 4.06,
    "flagged": false
   },
   {
    "name": "Tavernier",
    "element_id": 68,
    "position": "MID",
-   "ep": 3.47,
+   "ep": 3.99,
    "flagged": false
   },
   {
-   "name": "Hall",
-   "element_id": 449,
-   "position": "DEF",
-   "ep": 3.1,
+   "name": "Palmer",
+   "element_id": 154,
+   "position": "MID",
+   "ep": 3.97,
+   "flagged": false
+  },
+  {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 3.64,
+   "flagged": false
+  },
+  {
+   "name": "Pickford",
+   "element_id": 226,
+   "position": "GKP",
+   "ep": 3.6,
    "flagged": false
   }
  ]

@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 171,
- "latest_snapshot": 175,
+ "latest_snapshot": 176,
  "prev_taken_at": "2026-11-01T19:43:51.277766+00:00",
- "latest_taken_at": "2026-11-03T06:54:00.066873+00:00",
+ "latest_taken_at": "2026-11-03T17:06:45.799745+00:00",
  "alerts": [
   {
    "element_id": 456,
@@ -13,6 +13,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 21 Nov)"
+  },
+  {
+   "element_id": 371,
+   "name": "Gravenberch",
+   "position": "MID",
+   "price": 5.8,
+   "owned": 0.9,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
   },
   {
    "element_id": 230,

@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 174,
- "latest_snapshot": 178,
+ "latest_snapshot": 179,
  "prev_taken_at": "2026-11-02T21:44:07.593301+00:00",
- "latest_taken_at": "2026-11-04T06:32:14.089520+00:00",
+ "latest_taken_at": "2026-11-04T17:19:51.273679+00:00",
  "alerts": [
   {
    "element_id": 456,
@@ -32,7 +32,7 @@
    "owned": 0.2,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+   "message": "worsened 100% -> 50% (Hamstring injury - 50% chance of playing)"
   },
   {
    "element_id": 431,
@@ -60,14 +60,14 @@
    "name": "Rogers",
    "old": 8.1,
    "new": 8.2,
-   "owned": 52.5,
+   "owned": 52.6,
    "direction": "up"
   },
   {
    "name": "Konsa",
    "old": 4.7,
    "new": 4.8,
-   "owned": 23.1,
+   "owned": 23.2,
    "direction": "up"
   },
   {
@@ -95,7 +95,7 @@
    "name": "Kudus",
    "old": 6.5,
    "new": 6.6,
-   "owned": 1.7,
+   "owned": 1.8,
    "direction": "up"
   },
   {

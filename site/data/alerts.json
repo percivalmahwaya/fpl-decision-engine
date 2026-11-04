@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 171,
- "latest_snapshot": 177,
- "prev_taken_at": "2026-11-01T19:43:51.277766+00:00",
- "latest_taken_at": "2026-11-03T23:27:08.074006+00:00",
+ "prev_snapshot": 174,
+ "latest_snapshot": 178,
+ "prev_taken_at": "2026-11-02T21:44:07.593301+00:00",
+ "latest_taken_at": "2026-11-04T06:32:14.089520+00:00",
  "alerts": [
   {
    "element_id": 456,
@@ -35,30 +35,10 @@
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
-   "element_id": 230,
-   "name": "Branthwaite",
-   "position": "DEF",
-   "price": 5.5,
-   "owned": 2.2,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
    "element_id": 431,
    "name": "Amad",
    "position": "MID",
    "price": 5.7,
-   "owned": 0.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 465,
-   "name": "Osula",
-   "position": "FWD",
-   "price": 5.8,
    "owned": 0.3,
    "severity": "GOOD",
    "tag": "-",
@@ -77,10 +57,59 @@
  ],
  "price_moves": [
   {
+   "name": "Rogers",
+   "old": 8.1,
+   "new": 8.2,
+   "owned": 52.5,
+   "direction": "up"
+  },
+  {
+   "name": "Konsa",
+   "old": 4.7,
+   "new": 4.8,
+   "owned": 23.1,
+   "direction": "up"
+  },
+  {
+   "name": "Kayode",
+   "old": 4.6,
+   "new": 4.5,
+   "owned": 6.8,
+   "direction": "down"
+  },
+  {
    "name": "Gonzalo",
    "old": 6.0,
    "new": 5.9,
    "owned": 4.4,
+   "direction": "down"
+  },
+  {
+   "name": "Silva",
+   "old": 5.0,
+   "new": 5.1,
+   "owned": 2.6,
+   "direction": "up"
+  },
+  {
+   "name": "Kudus",
+   "old": 6.5,
+   "new": 6.6,
+   "owned": 1.7,
+   "direction": "up"
+  },
+  {
+   "name": "Thiaw",
+   "old": 5.0,
+   "new": 4.9,
+   "owned": 1.6,
+   "direction": "down"
+  },
+  {
+   "name": "Aina",
+   "old": 4.3,
+   "new": 4.2,
+   "owned": 1.5,
    "direction": "down"
   },
   {
@@ -91,24 +120,17 @@
    "direction": "down"
   },
   {
-   "name": "Lewis-Skelly",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 0.5,
+   "name": "McAteer",
+   "old": 4.4,
+   "new": 4.3,
+   "owned": 0.8,
    "direction": "down"
   },
   {
-   "name": "McNair",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Lucky",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 0.1,
+   "name": "Sávio",
+   "old": 6.5,
+   "new": 6.4,
+   "owned": 0.4,
    "direction": "down"
   },
   {

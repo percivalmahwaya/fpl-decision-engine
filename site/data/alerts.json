@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 174,
- "latest_snapshot": 179,
+ "latest_snapshot": 180,
  "prev_taken_at": "2026-11-02T21:44:07.593301+00:00",
- "latest_taken_at": "2026-11-04T17:19:51.273679+00:00",
+ "latest_taken_at": "2026-11-04T23:43:38.417004+00:00",
  "alerts": [
   {
    "element_id": 456,
@@ -52,7 +52,7 @@
    "owned": 0.2,
    "severity": "GOOD",
    "tag": "-",
-   "message": "improved 0% -> 75%"
+   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -60,7 +60,7 @@
    "name": "Rogers",
    "old": 8.1,
    "new": 8.2,
-   "owned": 52.6,
+   "owned": 52.7,
    "direction": "up"
   },
   {
@@ -81,14 +81,14 @@
    "name": "Gonzalo",
    "old": 6.0,
    "new": 5.9,
-   "owned": 4.4,
+   "owned": 4.3,
    "direction": "down"
   },
   {
    "name": "Silva",
    "old": 5.0,
    "new": 5.1,
-   "owned": 2.6,
+   "owned": 2.7,
    "direction": "up"
   },
   {

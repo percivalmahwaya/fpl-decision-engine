@@ -1,9 +1,39 @@
 {
  "prev_snapshot": 177,
- "latest_snapshot": 181,
+ "latest_snapshot": 182,
  "prev_taken_at": "2026-11-03T23:27:08.074006+00:00",
- "latest_taken_at": "2026-11-05T06:54:05.192163+00:00",
+ "latest_taken_at": "2026-11-05T17:26:57.879801+00:00",
  "alerts": [
+  {
+   "element_id": 458,
+   "name": "Joelinton",
+   "position": "MID",
+   "price": 5.4,
+   "owned": 0.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Unspecified injury - Unknown return date)"
+  },
+  {
+   "element_id": 487,
+   "name": "Dominguez",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Muscular injury - Expected back 30 Dec)"
+  },
+  {
+   "element_id": 230,
+   "name": "Branthwaite",
+   "position": "DEF",
+   "price": 5.5,
+   "owned": 2.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
   {
    "element_id": 131,
    "name": "Baleba",
@@ -13,6 +43,36 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 75% -> 50% (Hamstring injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 104,
+   "name": "Onyeka",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 50% (Groin injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 491,
+   "name": "Igor Jesus",
+   "position": "FWD",
+   "price": 5.6,
+   "owned": 1.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 329,
+   "name": "Rodon",
+   "position": "DEF",
+   "price": 4.2,
+   "owned": 0.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   },
   {
    "element_id": 6,
@@ -30,7 +90,7 @@
    "name": "Rogers",
    "old": 8.1,
    "new": 8.2,
-   "owned": 52.7,
+   "owned": 52.8,
    "direction": "up"
   },
   {
@@ -44,28 +104,28 @@
    "name": "Gibbs-White",
    "old": 7.9,
    "new": 7.8,
-   "owned": 10.5,
+   "owned": 10.4,
    "direction": "down"
   },
   {
    "name": "Kayode",
    "old": 4.6,
    "new": 4.5,
-   "owned": 6.8,
+   "owned": 6.7,
    "direction": "down"
   },
   {
    "name": "Maguire",
    "old": 4.7,
    "new": 4.6,
-   "owned": 5.5,
+   "owned": 5.4,
    "direction": "down"
   },
   {
    "name": "Silva",
    "old": 5.0,
    "new": 5.1,
-   "owned": 2.7,
+   "owned": 2.8,
    "direction": "up"
   },
   {
@@ -79,7 +139,7 @@
    "name": "Thiaw",
    "old": 5.0,
    "new": 4.9,
-   "owned": 1.6,
+   "owned": 1.5,
    "direction": "down"
   },
   {

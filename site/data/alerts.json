@@ -1,29 +1,9 @@
 {
- "prev_snapshot": 174,
- "latest_snapshot": 180,
- "prev_taken_at": "2026-11-02T21:44:07.593301+00:00",
- "latest_taken_at": "2026-11-04T23:43:38.417004+00:00",
+ "prev_snapshot": 177,
+ "latest_snapshot": 181,
+ "prev_taken_at": "2026-11-03T23:27:08.074006+00:00",
+ "latest_taken_at": "2026-11-05T06:54:05.192163+00:00",
  "alerts": [
-  {
-   "element_id": 456,
-   "name": "J.Ramsey",
-   "position": "MID",
-   "price": 4.8,
-   "owned": 0.2,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Suspended until 21 Nov)"
-  },
-  {
-   "element_id": 371,
-   "name": "Gravenberch",
-   "position": "MID",
-   "price": 5.8,
-   "owned": 0.9,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
-  },
   {
    "element_id": 131,
    "name": "Baleba",
@@ -32,17 +12,7 @@
    "owned": 0.2,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 50% (Hamstring injury - 50% chance of playing)"
-  },
-  {
-   "element_id": 431,
-   "name": "Amad",
-   "position": "MID",
-   "price": 5.7,
-   "owned": 0.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
+   "message": "worsened 75% -> 50% (Hamstring injury - 50% chance of playing)"
   },
   {
    "element_id": 6,
@@ -67,8 +37,15 @@
    "name": "Konsa",
    "old": 4.7,
    "new": 4.8,
-   "owned": 23.2,
+   "owned": 23.3,
    "direction": "up"
+  },
+  {
+   "name": "Gibbs-White",
+   "old": 7.9,
+   "new": 7.8,
+   "owned": 10.5,
+   "direction": "down"
   },
   {
    "name": "Kayode",
@@ -78,10 +55,10 @@
    "direction": "down"
   },
   {
-   "name": "Gonzalo",
-   "old": 6.0,
-   "new": 5.9,
-   "owned": 4.3,
+   "name": "Maguire",
+   "old": 4.7,
+   "new": 4.6,
+   "owned": 5.5,
    "direction": "down"
   },
   {
@@ -113,13 +90,6 @@
    "direction": "down"
   },
   {
-   "name": "Mosquera",
-   "old": 5.2,
-   "new": 5.1,
-   "owned": 1.2,
-   "direction": "down"
-  },
-  {
    "name": "McAteer",
    "old": 4.4,
    "new": 4.3,
@@ -127,17 +97,17 @@
    "direction": "down"
   },
   {
-   "name": "Sávio",
-   "old": 6.5,
-   "new": 6.4,
+   "name": "Rodon",
+   "old": 4.3,
+   "new": 4.2,
    "owned": 0.4,
    "direction": "down"
   },
   {
-   "name": "Barco",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 0.1,
+   "name": "Sávio",
+   "old": 6.5,
+   "new": 6.4,
+   "owned": 0.4,
    "direction": "down"
   }
  ],

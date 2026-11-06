@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 180,
- "latest_snapshot": 185,
+ "latest_snapshot": 186,
  "prev_taken_at": "2026-11-04T23:43:38.417004+00:00",
- "latest_taken_at": "2026-11-06T16:48:09.680597+00:00",
+ "latest_taken_at": "2026-11-06T23:13:29.347311+00:00",
  "alerts": [
   {
    "element_id": 346,
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.1,
-   "owned": 19.0,
+   "owned": 18.5,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
@@ -95,21 +95,11 @@
    "message": "RULED OUT (Groin injury - Unknown return date)"
   },
   {
-   "element_id": 230,
-   "name": "Branthwaite",
-   "position": "DEF",
-   "price": 5.5,
-   "owned": 2.2,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
    "element_id": 335,
    "name": "Stach",
    "position": "MID",
    "price": 6.0,
-   "owned": 1.8,
+   "owned": 1.7,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
@@ -125,6 +115,16 @@
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
   },
   {
+   "element_id": 208,
+   "name": "Sarr",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 0.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Groin injury - Expected back 21 Nov"
+  },
+  {
    "element_id": 336,
    "name": "Okafor",
    "position": "MID",
@@ -133,6 +133,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 75% -> 50% (Thigh injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 577,
+   "name": "Tomiyasu",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Calf injury - Expected back 21 Nov"
   },
   {
    "element_id": 104,
@@ -153,6 +163,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 75% -> 50% (Muscular injury - 50% chance of playing)"
+  },
+  {
+   "element_id": 520,
+   "name": "Bergvall",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Knee injury - Unknown return date"
   },
   {
    "element_id": 28,
@@ -235,6 +255,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 267,
+   "name": "Lukić",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 274,
    "name": "Butland",
    "position": "GKP",
@@ -280,21 +310,21 @@
    "name": "Gibbs-White",
    "old": 7.9,
    "new": 7.8,
-   "owned": 9.6,
+   "owned": 9.4,
    "direction": "down"
   },
   {
    "name": "Manzambi",
    "old": 6.1,
    "new": 6.2,
-   "owned": 7.9,
+   "owned": 8.1,
    "direction": "up"
   },
   {
    "name": "Maguire",
    "old": 4.7,
    "new": 4.6,
-   "owned": 5.3,
+   "owned": 5.2,
    "direction": "down"
   },
   {

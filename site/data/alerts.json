@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 177,
- "latest_snapshot": 183,
- "prev_taken_at": "2026-11-03T23:27:08.074006+00:00",
- "latest_taken_at": "2026-11-05T23:40:30.434772+00:00",
+ "prev_snapshot": 180,
+ "latest_snapshot": 184,
+ "prev_taken_at": "2026-11-04T23:43:38.417004+00:00",
+ "latest_taken_at": "2026-11-06T06:53:40.370916+00:00",
  "alerts": [
   {
    "element_id": 31,
@@ -19,7 +19,7 @@
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.1,
-   "owned": 20.3,
+   "owned": 20.2,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
@@ -105,16 +105,6 @@
    "message": "worsened 75% -> 50% (Thigh injury - 50% chance of playing)"
   },
   {
-   "element_id": 131,
-   "name": "Baleba",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.2,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 75% -> 50% (Hamstring injury - 50% chance of playing)"
-  },
-  {
    "element_id": 104,
    "name": "Onyeka",
    "position": "MID",
@@ -148,7 +138,7 @@
    "element_id": 222,
    "name": "Strand Larsen",
    "position": "FWD",
-   "price": 6.0,
+   "price": 5.9,
    "owned": 0.5,
    "severity": "GOOD",
    "tag": "-",
@@ -160,16 +150,6 @@
    "position": "DEF",
    "price": 4.2,
    "owned": 0.4,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 6,
-   "name": "Saliba",
-   "position": "DEF",
-   "price": 5.9,
-   "owned": 0.2,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -217,20 +197,6 @@
  ],
  "price_moves": [
   {
-   "name": "Rogers",
-   "old": 8.1,
-   "new": 8.2,
-   "owned": 52.9,
-   "direction": "up"
-  },
-  {
-   "name": "Konsa",
-   "old": 4.7,
-   "new": 4.8,
-   "owned": 23.3,
-   "direction": "up"
-  },
-  {
    "name": "Gibbs-White",
    "old": 7.9,
    "new": 7.8,
@@ -238,11 +204,11 @@
    "direction": "down"
   },
   {
-   "name": "Kayode",
-   "old": 4.6,
-   "new": 4.5,
-   "owned": 6.7,
-   "direction": "down"
+   "name": "Manzambi",
+   "old": 6.1,
+   "new": 6.2,
+   "owned": 7.5,
+   "direction": "up"
   },
   {
    "name": "Maguire",
@@ -252,38 +218,17 @@
    "direction": "down"
   },
   {
-   "name": "Silva",
-   "old": 5.0,
-   "new": 5.1,
-   "owned": 2.9,
+   "name": "Hill",
+   "old": 5.5,
+   "new": 5.6,
+   "owned": 2.6,
    "direction": "up"
   },
   {
-   "name": "Kudus",
-   "old": 6.5,
-   "new": 6.6,
-   "owned": 1.8,
-   "direction": "up"
-  },
-  {
-   "name": "Thiaw",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 1.5,
-   "direction": "down"
-  },
-  {
-   "name": "Aina",
-   "old": 4.3,
-   "new": 4.2,
-   "owned": 1.4,
-   "direction": "down"
-  },
-  {
-   "name": "McAteer",
-   "old": 4.4,
-   "new": 4.3,
-   "owned": 0.8,
+   "name": "Strand Larsen",
+   "old": 6.0,
+   "new": 5.9,
+   "owned": 0.5,
    "direction": "down"
   },
   {
@@ -294,10 +239,10 @@
    "direction": "down"
   },
   {
-   "name": "Sávio",
-   "old": 6.5,
-   "new": 6.4,
-   "owned": 0.4,
+   "name": "Tutierov",
+   "old": 5.0,
+   "new": 4.9,
+   "owned": 0.0,
    "direction": "down"
   }
  ],

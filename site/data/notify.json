@@ -1,12 +1,12 @@
 {
  "should_email": false,
- "gate": "throttled, 30h of 48h",
+ "gate": "throttled, 38h of 48h",
  "reasons": [
-  "GW10 deadline in 19h",
+  "GW10 deadline in 12h",
   "transfer worth making"
  ],
- "subject": "FPL: GW10 deadline in 19h; transfer worth making",
- "body": "DEADLINE — GW10 in 18.8 hours (2026-11-06T18:30:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 50% — Calf injury - 50% chance of playing\n  João Pedro (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — João Pedro out, Havertz in.\n  +4.18 expected points, -0.3m, 0.4m left in the bank.\n  João Pedro is flagged in the team news.\n  Frees up 0.3m for later.\n\nCAPTAIN — model says Haaland (4.96 xPts).\n\nSnapshot #183 at 2026-11-05T23:40:30.434772+00:00",
+ "subject": "FPL: GW10 deadline in 12h; transfer worth making",
+ "body": "DEADLINE — GW10 in 11.6 hours (2026-11-06T18:30:00Z).\n\nFLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 50% — Calf injury - 50% chance of playing\n  João Pedro (FWD) chance 0% — Thigh injury - Unknown return date\n\nTRANSFER — João Pedro out, Havertz in.\n  +4.18 expected points, -0.3m, 0.4m left in the bank.\n  João Pedro is flagged in the team news.\n  Frees up 0.3m for later.\n\nCAPTAIN — model says Haaland (4.96 xPts).\n\nSnapshot #184 at 2026-11-06T06:53:40.370916+00:00",
  "last_sent_at": "2026-11-04T17:20:12.581245+00:00",
  "deadline_sent_for_gw": 9
 }

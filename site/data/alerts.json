@@ -1,38 +1,58 @@
 {
  "prev_snapshot": 180,
- "latest_snapshot": 184,
+ "latest_snapshot": 185,
  "prev_taken_at": "2026-11-04T23:43:38.417004+00:00",
- "latest_taken_at": "2026-11-06T06:53:40.370916+00:00",
+ "latest_taken_at": "2026-11-06T16:48:09.680597+00:00",
  "alerts": [
-  {
-   "element_id": 31,
-   "name": "Konsa",
-   "position": "DEF",
-   "price": 4.8,
-   "owned": 23.3,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
-  },
   {
    "element_id": 346,
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.1,
-   "owned": 20.2,
+   "owned": 19.0,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Foot injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 429,
+   "name": "Rashford",
+   "position": "MID",
+   "price": 6.8,
+   "owned": 1.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hip injury - Unknown return date)"
+  },
+  {
+   "element_id": 131,
+   "name": "Baleba",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.2,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Hamstring injury - Unknown return date)"
   },
   {
    "element_id": 573,
    "name": "Sanchez",
    "position": "DEF",
    "price": 4.4,
-   "owned": 0.2,
+   "owned": 0.1,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Ankle injury - Unknown return date)"
+  },
+  {
+   "element_id": 266,
+   "name": "Cairney",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Knee injury - Expected back 21 Nov)"
   },
   {
    "element_id": 458,
@@ -95,6 +115,16 @@
    "message": "worsened 100% -> 50% (Foot injury - 50% chance of playing)"
   },
   {
+   "element_id": 159,
+   "name": "Caicedo",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 1.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+  },
+  {
    "element_id": 336,
    "name": "Okafor",
    "position": "MID",
@@ -125,6 +155,26 @@
    "message": "worsened 75% -> 50% (Muscular injury - 50% chance of playing)"
   },
   {
+   "element_id": 28,
+   "name": "Martinez",
+   "position": "GKP",
+   "price": 4.9,
+   "owned": 3.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 69,
+   "name": "Scott",
+   "position": "MID",
+   "price": 5.9,
+   "owned": 2.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
    "element_id": 491,
    "name": "Igor Jesus",
    "position": "FWD",
@@ -139,7 +189,7 @@
    "name": "Strand Larsen",
    "position": "FWD",
    "price": 5.9,
-   "owned": 0.5,
+   "owned": 0.4,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -150,6 +200,36 @@
    "position": "DEF",
    "price": 4.2,
    "owned": 0.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 415,
+   "name": "Dorgu",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
+   "element_id": 611,
+   "name": "Wan-Bissaka",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 50%"
+  },
+  {
+   "element_id": 147,
+   "name": "Tosin",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -200,35 +280,35 @@
    "name": "Gibbs-White",
    "old": 7.9,
    "new": 7.8,
-   "owned": 10.2,
+   "owned": 9.6,
    "direction": "down"
   },
   {
    "name": "Manzambi",
    "old": 6.1,
    "new": 6.2,
-   "owned": 7.5,
+   "owned": 7.9,
    "direction": "up"
   },
   {
    "name": "Maguire",
    "old": 4.7,
    "new": 4.6,
-   "owned": 5.4,
+   "owned": 5.3,
    "direction": "down"
   },
   {
    "name": "Hill",
    "old": 5.5,
    "new": 5.6,
-   "owned": 2.6,
+   "owned": 2.7,
    "direction": "up"
   },
   {
    "name": "Strand Larsen",
    "old": 6.0,
    "new": 5.9,
-   "owned": 0.5,
+   "owned": 0.4,
    "direction": "down"
   },
   {

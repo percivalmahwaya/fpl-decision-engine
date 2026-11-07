@@ -46,6 +46,13 @@
    "flagged": false
   },
   {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 3.71,
+   "flagged": false
+  },
+  {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
@@ -57,13 +64,6 @@
    "element_id": 390,
    "position": "DEF",
    "ep": 3.36,
-   "flagged": false
-  },
-  {
-   "name": "Horníček",
-   "element_id": 567,
-   "position": "GKP",
-   "ep": 3.34,
    "flagged": false
   }
  ]

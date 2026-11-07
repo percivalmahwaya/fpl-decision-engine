@@ -54,7 +54,7 @@
    "element_id": 449,
    "position": "DEF",
    "club": "NEW",
-   "price": 5.3,
+   "price": 5.2,
    "owned": 18.8,
    "status": "a",
    "chance": null,
@@ -62,7 +62,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.3,
+   "ep": 3.27,
    "flagged": false
   },
   {
@@ -162,27 +162,11 @@
    "flagged": false
   },
   {
-   "name": "Manzambi",
-   "element_id": 53,
-   "position": "MID",
-   "club": "AVL",
-   "price": 6.2,
-   "owned": 8.1,
-   "status": "a",
-   "chance": 100,
-   "news": null,
-   "is_captain": false,
-   "is_vice": false,
-   "started": 0,
-   "ep": 3.28,
-   "flagged": false
-  },
-  {
    "name": "Groß",
    "element_id": 124,
    "position": "MID",
    "club": "BHA",
-   "price": 6.2,
+   "price": 6.3,
    "owned": 47.3,
    "status": "a",
    "chance": null,
@@ -190,7 +174,23 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 3.24,
+   "ep": 3.71,
+   "flagged": false
+  },
+  {
+   "name": "Manzambi",
+   "element_id": 53,
+   "position": "MID",
+   "club": "AVL",
+   "price": 6.2,
+   "owned": 8.2,
+   "status": "a",
+   "chance": 100,
+   "news": null,
+   "is_captain": false,
+   "is_vice": false,
+   "started": 0,
+   "ep": 3.28,
    "flagged": false
   },
   {
@@ -230,8 +230,8 @@
    "element_id": 249,
    "position": "FWD",
    "club": "EVE",
-   "price": 5.6,
-   "owned": 9.0,
+   "price": 5.7,
+   "owned": 9.1,
    "status": "a",
    "chance": null,
    "news": null,
@@ -242,6 +242,6 @@
    "flagged": false
   }
  ],
- "squad_value": 101.4,
+ "squad_value": 101.5,
  "count": 15
 }

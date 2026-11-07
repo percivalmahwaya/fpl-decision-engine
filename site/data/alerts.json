@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 183,
- "latest_snapshot": 188,
+ "latest_snapshot": 189,
  "prev_taken_at": "2026-11-05T23:40:30.434772+00:00",
- "latest_taken_at": "2026-11-07T07:50:24.621581+00:00",
+ "latest_taken_at": "2026-11-07T13:10:03.884254+00:00",
  "alerts": [
   {
    "element_id": 31,
@@ -10,6 +10,16 @@
    "position": "DEF",
    "price": 4.8,
    "owned": 23.4,
+   "severity": "GOOD",
+   "tag": "OWNED",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 346,
+   "name": "Calvert-Lewin",
+   "position": "FWD",
+   "price": 6.0,
+   "owned": 18.4,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
@@ -115,6 +125,16 @@
    "message": "improved 0% -> 75%"
   },
   {
+   "element_id": 336,
+   "name": "Okafor",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 415,
    "name": "Dorgu",
    "position": "MID",
@@ -167,7 +187,7 @@
    "name": "Gabriel",
    "old": 8.0,
    "new": 8.1,
-   "owned": 25.4,
+   "owned": 25.5,
    "direction": "up"
   },
   {
@@ -181,7 +201,7 @@
    "name": "Hall",
    "old": 5.3,
    "new": 5.2,
-   "owned": 18.8,
+   "owned": 18.7,
    "direction": "down"
   },
   {
@@ -209,7 +229,7 @@
    "name": "Barry",
    "old": 5.6,
    "new": 5.7,
-   "owned": 9.1,
+   "owned": 9.2,
    "direction": "up"
   },
   {

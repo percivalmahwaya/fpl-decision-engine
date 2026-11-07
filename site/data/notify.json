@@ -1,11 +1,11 @@
 {
  "should_email": false,
- "gate": "throttled, 15h of 48h",
+ "gate": "throttled, 20h of 48h",
  "reasons": [
   "transfer worth making"
  ],
  "subject": "FPL: transfer worth making",
- "body": "FLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 50% — Calf injury - 50% chance of playing\n\nTRANSFER — Thomas out, Dasilva in.\n  +2.36 expected points, 0.0m, 0.2m left in the bank.\n  Thomas is flagged in the team news.\n  Owned by only 1%, so this is a differential rather than a template move.\n\nCAPTAIN — model says Haaland (7.04 xPts).\n\nSnapshot #188 at 2026-11-07T07:50:24.621581+00:00",
+ "body": "FLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 50% — Calf injury - 50% chance of playing\n\nTRANSFER — Thomas out, Dasilva in.\n  +2.36 expected points, 0.0m, 0.2m left in the bank.\n  Thomas is flagged in the team news.\n  Owned by only 1%, so this is a differential rather than a template move.\n\nCAPTAIN — model says Haaland (7.04 xPts).\n\nSnapshot #189 at 2026-11-07T13:10:03.884254+00:00",
  "last_sent_at": "2026-11-06T16:48:30.017434+00:00",
  "deadline_sent_for_gw": 10
 }

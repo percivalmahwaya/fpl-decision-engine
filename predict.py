@@ -116,9 +116,22 @@ def latest_snapshot(conn):
 # ---------------------------------------------------------------- backfill
 
 def backfill(conn):
-    """Pull actual results for every finished gameweek — one request each."""
-    boot = fetch("bootstrap-static/")
-    finished = [e["id"] for e in boot["events"] if e.get("finished")]
+    """Pull actual results for every finished gameweek — one request each.
+
+    "Finished" is read from the `gameweeks` table this run's own snapshot
+    just wrote — the event-level flag, not fixtures.finished. Reading the
+    snapshot rather than making a second live call also means this and the
+    QA gate that checks it afterwards are reading the exact same moment and
+    can never disagree within one run (they used to: see fpl_collect.py's
+    schema comment on `gameweeks`).
+    """
+    finished = [
+        r[0] for r in conn.execute(
+            """SELECT event FROM gameweeks
+               WHERE snapshot_id = (SELECT MAX(snapshot_id) FROM gameweeks)
+                 AND finished = 1
+               ORDER BY event""")
+    ]
     if not finished:
         print("  No finished gameweeks yet.")
         return

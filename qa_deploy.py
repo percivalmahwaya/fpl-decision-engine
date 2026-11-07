@@ -409,13 +409,16 @@ def qa_benchmark(conn):
     """
     print("\nBENCHMARK (my own results)")
 
+    # Event-level finished, from `gameweeks` — see fpl_collect.py's schema
+    # comment. NOT derived from fixtures.finished: that flips per-match at
+    # full time, hours before this one, which used to make this check (and
+    # qa_honesty's below) fire on a gameweek predict.py --backfill hadn't
+    # reached yet. Both now read the same signal predict.py itself waits for.
     finished = [
         r[0] for r in conn.execute(
-            """SELECT event FROM fixtures
-               WHERE snapshot_id = (SELECT MAX(snapshot_id) FROM fixtures)
-                 AND event IS NOT NULL
-               GROUP BY event
-               HAVING SUM(CASE WHEN finished THEN 0 ELSE 1 END) = 0""")
+            """SELECT event FROM gameweeks
+               WHERE snapshot_id = (SELECT MAX(snapshot_id) FROM gameweeks)
+                 AND finished = 1""")
     ]
     if not finished:
         check("benchmark is current", PASS, "no finished gameweeks yet")
@@ -488,27 +491,30 @@ def qa_honesty(conn, meta):
         ok("every prediction was made before its deadline", not late,
            f"{len(late)} logged after the deadline")
 
-    # Every gameweek whose fixtures have ALL finished must have actuals loaded.
-    #
-    # `predict.py --backfill` asks the API which gameweeks are finished and
-    # stores each one. If that list comes back short — the API flips `finished`
-    # late, the step is reordered, a request fails — the step prints a tidy
-    # "GW1..GW3 stored" and exits 0 having quietly skipped the gameweek that
-    # just ended. Nothing downstream complains: scoring has nothing to join, so
-    # it says "nothing to score yet", and the published scoreboard stays empty
-    # while every step of the pipeline reports success.
+    # Every gameweek `predict.py --backfill` considers finished must have
+    # actuals loaded. If that list comes back short — a request fails, the
+    # step is reordered — the step prints a tidy "GW1..GW3 stored" and exits
+    # 0 having quietly skipped the gameweek that just ended. Nothing
+    # downstream complains: scoring has nothing to join, so it says "nothing
+    # to score yet", and the published scoreboard stays empty while every
+    # step of the pipeline reports success.
     #
     # That is how GW4 sat unscored for days in September 2026 across five
-    # consecutive green runs. Checked against the stored fixture table rather
-    # than the network, so the gate works offline and cannot be fooled by the
-    # same API response that caused the miss.
+    # consecutive green runs. Checked against the stored `gameweeks` table
+    # rather than a fresh network call, so the gate works offline and cannot
+    # be fooled by a response that changes between two calls in the same run.
+    #
+    # Deliberately NOT derived from fixtures.finished (per-match, flips at
+    # full time) — that used to be exactly this check's bug: fixtures.finished
+    # goes true hours before the event-level flag below does, so this fired
+    # on GW6/GW7(x2)/GW8 while predict.py --backfill, reading the correct
+    # signal, had rightly not touched them yet. Fixed 2026-11-07 by reading
+    # the same event-level flag `backfill()` itself waits for.
     finished_gws = [
         r[0] for r in conn.execute(
-            """SELECT event FROM fixtures
-               WHERE snapshot_id = (SELECT MAX(snapshot_id) FROM fixtures)
-                 AND event IS NOT NULL
-               GROUP BY event
-               HAVING SUM(CASE WHEN finished THEN 0 ELSE 1 END) = 0""")
+            """SELECT event FROM gameweeks
+               WHERE snapshot_id = (SELECT MAX(snapshot_id) FROM gameweeks)
+                 AND finished = 1""")
     ]
     have_actuals = {r[0] for r in conn.execute(
         "SELECT DISTINCT gameweek FROM player_gw")}

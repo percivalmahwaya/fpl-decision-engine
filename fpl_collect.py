@@ -107,6 +107,23 @@ def create_schema(conn):
             PRIMARY KEY (snapshot_id, fixture_id)
         );
 
+        -- The EVENT-level finished flag from bootstrap-static, distinct from
+        -- fixtures.finished above. A fixture's own flag flips the moment that
+        -- match reaches full time; this one only flips once the whole
+        -- gameweek's bonus points are locked in, which trails it by hours.
+        -- Confirmed live 2026-10-26: GW8's fixtures were all finished=1 a run
+        -- before this flag was. predict.py --backfill already waited for
+        -- this one correctly; the QA gate was deriving "finished" from
+        -- fixtures instead and fired early on GW6/GW7(x2)/GW8. Stored once
+        -- here so both read the same signal and cannot disagree again.
+        CREATE TABLE IF NOT EXISTS gameweeks (
+            snapshot_id   INTEGER NOT NULL,
+            event         INTEGER NOT NULL,
+            finished      INTEGER,
+            data_checked  INTEGER,
+            PRIMARY KEY (snapshot_id, event)
+        );
+
         CREATE INDEX IF NOT EXISTS idx_players_element ON players(element_id);
         CREATE INDEX IF NOT EXISTS idx_fixtures_event  ON fixtures(event);
         """
@@ -215,6 +232,16 @@ def take_snapshot(conn):
                 1 if f.get("finished") else 0,
             )
             for f in fixtures
+        ],
+    )
+
+    # --- gameweeks (event-level finished/data_checked, see schema comment) ---
+    conn.executemany(
+        "INSERT OR REPLACE INTO gameweeks VALUES (?,?,?,?)",
+        [
+            (snap_id, e["id"], 1 if e.get("finished") else 0,
+             1 if e.get("data_checked") else 0)
+            for e in events
         ],
     )
 

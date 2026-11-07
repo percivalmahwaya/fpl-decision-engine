@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 183,
- "latest_snapshot": 189,
+ "latest_snapshot": 190,
  "prev_taken_at": "2026-11-05T23:40:30.434772+00:00",
- "latest_taken_at": "2026-11-07T13:10:03.884254+00:00",
+ "latest_taken_at": "2026-11-07T19:27:49.008005+00:00",
  "alerts": [
   {
    "element_id": 31,
    "name": "Konsa",
    "position": "DEF",
    "price": 4.8,
-   "owned": 23.4,
+   "owned": 23.5,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
@@ -19,7 +19,7 @@
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.0,
-   "owned": 18.4,
+   "owned": 18.3,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
@@ -59,7 +59,7 @@
    "name": "Caicedo",
    "position": "MID",
    "price": 5.3,
-   "owned": 1.1,
+   "owned": 1.0,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
@@ -73,6 +73,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "new news: Groin injury - Expected back 21 Nov"
+  },
+  {
+   "element_id": 514,
+   "name": "Tel",
+   "position": "MID",
+   "price": 5.6,
+   "owned": 0.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   },
   {
    "element_id": 577,
@@ -125,6 +135,26 @@
    "message": "improved 0% -> 75%"
   },
   {
+   "element_id": 491,
+   "name": "Igor Jesus",
+   "position": "FWD",
+   "price": 5.6,
+   "owned": 1.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 289,
+   "name": "Crooks",
+   "position": "MID",
+   "price": 4.4,
+   "owned": 0.5,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 336,
    "name": "Okafor",
    "position": "MID",
@@ -173,6 +203,56 @@
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 456,
+   "name": "J.Ramsey",
+   "position": "MID",
+   "price": 4.8,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 459,
+   "name": "L.Miley",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 634,
+   "name": "Fernandez-Pardo",
+   "position": "FWD",
+   "price": 5.9,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 450,
+   "name": "Livramento",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 589,
+   "name": "Gourna-Douath",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -194,7 +274,7 @@
    "name": "Evanilson",
    "old": 6.4,
    "new": 6.5,
-   "owned": 22.0,
+   "owned": 22.1,
    "direction": "up"
   },
   {
@@ -208,14 +288,14 @@
    "name": "Calvert-Lewin",
    "old": 6.1,
    "new": 6.0,
-   "owned": 18.4,
+   "owned": 18.3,
    "direction": "down"
   },
   {
    "name": "Rice",
    "old": 7.4,
    "new": 7.5,
-   "owned": 13.5,
+   "owned": 13.6,
    "direction": "up"
   },
   {
@@ -229,14 +309,14 @@
    "name": "Barry",
    "old": 5.6,
    "new": 5.7,
-   "owned": 9.2,
+   "owned": 9.5,
    "direction": "up"
   },
   {
    "name": "Wissa",
    "old": 6.0,
    "new": 5.9,
-   "owned": 8.8,
+   "owned": 8.7,
    "direction": "down"
   },
   {

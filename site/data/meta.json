@@ -1,19 +1,19 @@
 {
- "generated_at": "2026-11-08T00:41:51.918364+00:00",
+ "generated_at": "2026-11-08T07:02:41.354100+00:00",
  "published_by": "github-actions",
- "snapshot_id": 191,
- "snapshot_taken_at": "2026-11-08T00:41:32.316069+00:00",
+ "snapshot_id": 192,
+ "snapshot_taken_at": "2026-11-08T07:02:21.103688+00:00",
  "current_gw": 10,
  "next_gw": 11,
  "deadline": "2026-11-21T11:00:00Z",
- "hours_to_deadline": 322.3,
+ "hours_to_deadline": 315.96,
  "deadline_passed": false,
  "row_counts": {
   "history": 113582,
   "player_gw": 5890,
   "predictions": 19987,
-  "players": 127028,
-  "snapshots": 191,
+  "players": 127699,
+  "snapshots": 192,
   "my_squad": 150,
   "watchlist": 15
  }

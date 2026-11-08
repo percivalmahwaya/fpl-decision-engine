@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 186,
- "latest_snapshot": 192,
+ "latest_snapshot": 193,
  "prev_taken_at": "2026-11-06T23:13:29.347311+00:00",
- "latest_taken_at": "2026-11-08T07:02:21.103688+00:00",
+ "latest_taken_at": "2026-11-08T10:28:55.112455+00:00",
  "alerts": [
   {
    "element_id": 391,
    "name": "Gvardiol",
    "position": "DEF",
    "price": 5.7,
-   "owned": 24.8,
+   "owned": 24.7,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -154,7 +154,7 @@
    "name": "N.Jackson",
    "old": 7.0,
    "new": 7.1,
-   "owned": 28.8,
+   "owned": 28.9,
    "direction": "up"
   },
   {

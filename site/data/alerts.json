@@ -1,78 +1,48 @@
 {
- "prev_snapshot": 183,
- "latest_snapshot": 190,
- "prev_taken_at": "2026-11-05T23:40:30.434772+00:00",
- "latest_taken_at": "2026-11-07T19:27:49.008005+00:00",
+ "prev_snapshot": 186,
+ "latest_snapshot": 191,
+ "prev_taken_at": "2026-11-06T23:13:29.347311+00:00",
+ "latest_taken_at": "2026-11-08T00:41:32.316069+00:00",
  "alerts": [
   {
-   "element_id": 31,
-   "name": "Konsa",
+   "element_id": 391,
+   "name": "Gvardiol",
    "position": "DEF",
-   "price": 4.8,
-   "owned": 23.5,
-   "severity": "GOOD",
+   "price": 5.7,
+   "owned": 24.8,
+   "severity": "WARNING",
    "tag": "OWNED",
-   "message": "cleared - news removed, fit again"
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 388,
+   "name": "Guéhi",
+   "position": "DEF",
+   "price": 6.0,
+   "owned": 15.2,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
    "element_id": 346,
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.0,
-   "owned": 18.3,
+   "owned": 18.2,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 429,
-   "name": "Rashford",
+   "element_id": 268,
+   "name": "King",
    "position": "MID",
-   "price": 6.8,
-   "owned": 1.0,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Hip injury - Unknown return date)"
-  },
-  {
-   "element_id": 131,
-   "name": "Baleba",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.2,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Hamstring injury - Unknown return date)"
-  },
-  {
-   "element_id": 266,
-   "name": "Cairney",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.0,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Knee injury - Expected back 21 Nov)"
-  },
-  {
-   "element_id": 159,
-   "name": "Caicedo",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 1.0,
+   "price": 5.5,
+   "owned": 3.4,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 208,
-   "name": "Sarr",
-   "position": "MID",
-   "price": 6.2,
-   "owned": 0.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Groin injury - Expected back 21 Nov"
+   "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
   },
   {
    "element_id": 514,
@@ -83,56 +53,6 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 577,
-   "name": "Tomiyasu",
-   "position": "DEF",
-   "price": 4.3,
-   "owned": 0.2,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Calf injury - Expected back 21 Nov"
-  },
-  {
-   "element_id": 520,
-   "name": "Bergvall",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Knee injury - Unknown return date"
-  },
-  {
-   "element_id": 28,
-   "name": "Martinez",
-   "position": "GKP",
-   "price": 4.9,
-   "owned": 3.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 75%"
-  },
-  {
-   "element_id": 230,
-   "name": "Branthwaite",
-   "position": "DEF",
-   "price": 5.5,
-   "owned": 2.2,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 69,
-   "name": "Scott",
-   "position": "MID",
-   "price": 5.9,
-   "owned": 2.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 75%"
   },
   {
    "element_id": 491,
@@ -165,46 +85,6 @@
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 415,
-   "name": "Dorgu",
-   "position": "MID",
-   "price": 5.7,
-   "owned": 0.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 75%"
-  },
-  {
-   "element_id": 611,
-   "name": "Wan-Bissaka",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.2,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 50%"
-  },
-  {
-   "element_id": 147,
-   "name": "Tosin",
-   "position": "DEF",
-   "price": 4.3,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 267,
-   "name": "Lukić",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
    "element_id": 456,
    "name": "J.Ramsey",
    "position": "MID",
@@ -228,7 +108,7 @@
    "element_id": 634,
    "name": "Fernandez-Pardo",
    "position": "FWD",
-   "price": 5.9,
+   "price": 5.8,
    "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
@@ -260,22 +140,43 @@
    "name": "Groß",
    "old": 6.2,
    "new": 6.3,
-   "owned": 47.3,
+   "owned": 47.4,
+   "direction": "up"
+  },
+  {
+   "name": "Tavernier",
+   "old": 6.6,
+   "new": 6.7,
+   "owned": 30.7,
+   "direction": "up"
+  },
+  {
+   "name": "N.Jackson",
+   "old": 7.0,
+   "new": 7.1,
+   "owned": 28.8,
    "direction": "up"
   },
   {
    "name": "Gabriel",
    "old": 8.0,
    "new": 8.1,
-   "owned": 25.5,
+   "owned": 25.6,
    "direction": "up"
   },
   {
    "name": "Evanilson",
    "old": 6.4,
    "new": 6.5,
-   "owned": 22.1,
+   "owned": 22.2,
    "direction": "up"
+  },
+  {
+   "name": "B.Fernandes",
+   "old": 11.7,
+   "new": 11.6,
+   "owned": 20.6,
+   "direction": "down"
   },
   {
    "name": "Hall",
@@ -288,7 +189,7 @@
    "name": "Calvert-Lewin",
    "old": 6.1,
    "new": 6.0,
-   "owned": 18.3,
+   "owned": 18.2,
    "direction": "down"
   },
   {
@@ -309,7 +210,7 @@
    "name": "Barry",
    "old": 5.6,
    "new": 5.7,
-   "owned": 9.5,
+   "owned": 9.6,
    "direction": "up"
   },
   {
@@ -318,27 +219,6 @@
    "new": 5.9,
    "owned": 8.7,
    "direction": "down"
-  },
-  {
-   "name": "Manzambi",
-   "old": 6.1,
-   "new": 6.2,
-   "owned": 8.2,
-   "direction": "up"
-  },
-  {
-   "name": "Kusi-Asare",
-   "old": 4.4,
-   "new": 4.3,
-   "owned": 4.3,
-   "direction": "down"
-  },
-  {
-   "name": "Araujo",
-   "old": 5.4,
-   "new": 5.5,
-   "owned": 4.2,
-   "direction": "up"
   }
  ],
  "urgent": [],

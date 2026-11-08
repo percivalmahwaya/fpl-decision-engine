@@ -92,7 +92,7 @@
   },
   {
    "gameweek": 10,
-   "points": 19,
+   "points": 28,
    "transfers": 2,
    "formation": "3-4-3",
    "decided_by": "unrecorded",
@@ -101,7 +101,7 @@
    "played": true
   }
  ],
- "total_points": 531,
+ "total_points": 540,
  "played": 10,
- "average": 53.1
+ "average": 54.0
 }

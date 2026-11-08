@@ -1,15 +1,25 @@
 {
  "prev_snapshot": 186,
- "latest_snapshot": 193,
+ "latest_snapshot": 194,
  "prev_taken_at": "2026-11-06T23:13:29.347311+00:00",
- "latest_taken_at": "2026-11-08T10:28:55.112455+00:00",
+ "latest_taken_at": "2026-11-08T17:57:11.320898+00:00",
  "alerts": [
+  {
+   "element_id": 106,
+   "name": "Thiago",
+   "position": "FWD",
+   "price": 7.8,
+   "owned": 8.7,
+   "severity": "CRITICAL",
+   "tag": "OWNED",
+   "message": "RULED OUT (Suspended until 5 Dec)"
+  },
   {
    "element_id": 391,
    "name": "Gvardiol",
    "position": "DEF",
    "price": 5.7,
-   "owned": 24.7,
+   "owned": 24.1,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -19,7 +29,7 @@
    "name": "Guéhi",
    "position": "DEF",
    "price": 6.0,
-   "owned": 15.2,
+   "owned": 14.9,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -29,7 +39,7 @@
    "name": "Calvert-Lewin",
    "position": "FWD",
    "price": 6.0,
-   "owned": 18.2,
+   "owned": 18.1,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "cleared - news removed, fit again"
@@ -45,6 +55,26 @@
    "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
   },
   {
+   "element_id": 544,
+   "name": "Xhaka",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 2.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 151,
+   "name": "Acheampong",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.6,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
    "element_id": 514,
    "name": "Tel",
    "position": "MID",
@@ -55,11 +85,71 @@
    "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   },
   {
+   "element_id": 331,
+   "name": "Gudmundsson",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 69,
+   "name": "Scott",
+   "position": "MID",
+   "price": 5.9,
+   "owned": 2.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 101,
+   "name": "Henderson",
+   "position": "MID",
+   "price": 4.9,
+   "owned": 1.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 533,
+   "name": "Mukiele",
+   "position": "DEF",
+   "price": 5.3,
+   "owned": 1.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 113,
+   "name": "F.Kadıoğlu",
+   "position": "DEF",
+   "price": 4.4,
+   "owned": 1.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 491,
    "name": "Igor Jesus",
    "position": "FWD",
    "price": 5.6,
    "owned": 1.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 159,
+   "name": "Caicedo",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 1.0,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -80,6 +170,26 @@
    "position": "MID",
    "price": 5.7,
    "owned": 0.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 415,
+   "name": "Dorgu",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.3,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 535,
+   "name": "Alderete",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 0.2,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -125,6 +235,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 561,
+   "name": "Anselmino",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 589,
    "name": "Gourna-Douath",
    "position": "MID",
@@ -140,42 +260,42 @@
    "name": "Groß",
    "old": 6.2,
    "new": 6.3,
-   "owned": 47.4,
+   "owned": 47.6,
    "direction": "up"
   },
   {
    "name": "Tavernier",
    "old": 6.6,
    "new": 6.7,
-   "owned": 30.8,
+   "owned": 30.9,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 7.0,
    "new": 7.1,
-   "owned": 28.9,
+   "owned": 29.3,
    "direction": "up"
   },
   {
    "name": "Gabriel",
    "old": 8.0,
    "new": 8.1,
-   "owned": 25.6,
+   "owned": 25.7,
    "direction": "up"
   },
   {
    "name": "Evanilson",
    "old": 6.4,
    "new": 6.5,
-   "owned": 22.2,
+   "owned": 22.7,
    "direction": "up"
   },
   {
    "name": "B.Fernandes",
    "old": 11.7,
    "new": 11.6,
-   "owned": 20.6,
+   "owned": 20.5,
    "direction": "down"
   },
   {
@@ -189,7 +309,7 @@
    "name": "Calvert-Lewin",
    "old": 6.1,
    "new": 6.0,
-   "owned": 18.2,
+   "owned": 18.1,
    "direction": "down"
   },
   {
@@ -203,21 +323,21 @@
    "name": "Schade",
    "old": 6.2,
    "new": 6.1,
-   "owned": 13.3,
+   "owned": 13.2,
    "direction": "down"
   },
   {
    "name": "Barry",
    "old": 5.6,
    "new": 5.7,
-   "owned": 9.7,
+   "owned": 10.1,
    "direction": "up"
   },
   {
    "name": "Wissa",
    "old": 6.0,
    "new": 5.9,
-   "owned": 8.7,
+   "owned": 8.6,
    "direction": "down"
   }
  ],

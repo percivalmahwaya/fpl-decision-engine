@@ -168,10 +168,37 @@
    "n": 669,
    "mae": 0.956,
    "mae_high_return": 4.698
+  },
+  {
+   "gameweek": 10,
+   "model": "form_fdr",
+   "n": 670,
+   "mae": 1.142,
+   "mae_high_return": 4.868
+  },
+  {
+   "gameweek": 10,
+   "model": "naive_form",
+   "n": 670,
+   "mae": 1.173,
+   "mae_high_return": 4.813
+  },
+  {
+   "gameweek": 10,
+   "model": "two_stage_ml",
+   "n": 670,
+   "mae": 0.983,
+   "mae_high_return": 5.214
+  },
+  {
+   "gameweek": 10,
+   "model": "two_stage_opp",
+   "n": 670,
+   "mae": 1.036,
+   "mae_high_return": 5.202
   }
  ],
  "pending": [
-  10,
   11
  ]
 }

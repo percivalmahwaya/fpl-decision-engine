@@ -44,8 +44,8 @@
    "name": "Isak",
    "element_id": 379,
    "position": "FWD",
-   "ep": 4.3,
-   "p_play": 0.879,
+   "ep": 4.32,
+   "p_play": 0.884,
    "if_played": 4.89,
    "flagged": false
   },
@@ -142,7 +142,7 @@
    "flagged": false
   }
  ],
- "autosub_value": 3.71,
+ "autosub_value": 3.69,
  "notes": [
   "At least one bench player is more likely than not to sit out. That costs nothing in the ordering, since the autosub falls through to the next player, but it does thin the cover."
  ],

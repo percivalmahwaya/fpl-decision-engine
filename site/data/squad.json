@@ -55,7 +55,7 @@
    "position": "DEF",
    "club": "NEW",
    "price": 5.2,
-   "owned": 18.5,
+   "owned": 18.4,
    "status": "a",
    "chance": null,
    "news": null,
@@ -167,7 +167,7 @@
    "position": "MID",
    "club": "BHA",
    "price": 6.3,
-   "owned": 47.7,
+   "owned": 47.8,
    "status": "a",
    "chance": null,
    "news": null,
@@ -183,7 +183,7 @@
    "position": "MID",
    "club": "AVL",
    "price": 6.2,
-   "owned": 8.4,
+   "owned": 8.5,
    "status": "a",
    "chance": 100,
    "news": null,
@@ -214,7 +214,7 @@
    "element_id": 379,
    "position": "FWD",
    "club": "LIV",
-   "price": 9.2,
+   "price": 9.3,
    "owned": 24.7,
    "status": "a",
    "chance": 100,
@@ -222,7 +222,7 @@
    "is_captain": false,
    "is_vice": false,
    "started": 1,
-   "ep": 4.3,
+   "ep": 4.32,
    "flagged": false
   },
   {
@@ -231,7 +231,7 @@
    "position": "FWD",
    "club": "EVE",
    "price": 5.7,
-   "owned": 10.2,
+   "owned": 10.3,
    "status": "a",
    "chance": null,
    "news": null,
@@ -242,6 +242,6 @@
    "flagged": false
   }
  ],
- "squad_value": 101.6,
+ "squad_value": 101.7,
  "count": 15
 }

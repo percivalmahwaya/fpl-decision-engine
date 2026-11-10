@@ -1,29 +1,9 @@
 {
- "prev_snapshot": 190,
- "latest_snapshot": 197,
- "prev_taken_at": "2026-11-07T19:27:49.008005+00:00",
- "latest_taken_at": "2026-11-09T19:52:44.583902+00:00",
+ "prev_snapshot": 195,
+ "latest_snapshot": 198,
+ "prev_taken_at": "2026-11-08T22:11:07.904262+00:00",
+ "latest_taken_at": "2026-11-10T03:36:59.522579+00:00",
  "alerts": [
-  {
-   "element_id": 106,
-   "name": "Thiago",
-   "position": "FWD",
-   "price": 7.8,
-   "owned": 8.3,
-   "severity": "CRITICAL",
-   "tag": "OWNED",
-   "message": "RULED OUT (Suspended until 5 Dec)"
-  },
-  {
-   "element_id": 391,
-   "name": "Gvardiol",
-   "position": "DEF",
-   "price": 5.6,
-   "owned": 23.2,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
   {
    "element_id": 356,
    "name": "Virgil",
@@ -35,151 +15,11 @@
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
   },
   {
-   "element_id": 388,
-   "name": "Guéhi",
-   "position": "DEF",
-   "price": 6.0,
-   "owned": 14.4,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
    "element_id": 268,
    "name": "King",
    "position": "MID",
    "price": 5.5,
    "owned": 3.3,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Groin injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 544,
-   "name": "Xhaka",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 2.6,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 151,
-   "name": "Acheampong",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 331,
-   "name": "Gudmundsson",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 32,
-   "name": "Cash",
-   "position": "DEF",
-   "price": 4.3,
-   "owned": 3.6,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 69,
-   "name": "Scott",
-   "position": "MID",
-   "price": 5.9,
-   "owned": 2.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 533,
-   "name": "Mukiele",
-   "position": "DEF",
-   "price": 5.3,
-   "owned": 1.4,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 101,
-   "name": "Henderson",
-   "position": "MID",
-   "price": 4.9,
-   "owned": 1.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 113,
-   "name": "F.Kadıoğlu",
-   "position": "DEF",
-   "price": 4.3,
-   "owned": 1.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 159,
-   "name": "Caicedo",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 1.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 419,
-   "name": "Martinez",
-   "position": "DEF",
-   "price": 4.8,
-   "owned": 0.9,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 415,
-   "name": "Dorgu",
-   "position": "MID",
-   "price": 5.7,
-   "owned": 0.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 535,
-   "name": "Alderete",
-   "position": "DEF",
-   "price": 4.8,
-   "owned": 0.2,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 561,
-   "name": "Anselmino",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -197,22 +37,8 @@
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.6,
-   "owned": 32.3,
+   "owned": 32.2,
    "direction": "down"
-  },
-  {
-   "name": "Tavernier",
-   "old": 6.6,
-   "new": 6.7,
-   "owned": 31.1,
-   "direction": "up"
-  },
-  {
-   "name": "N.Jackson",
-   "old": 7.0,
-   "new": 7.1,
-   "owned": 30.5,
-   "direction": "up"
   },
   {
    "name": "Isak",
@@ -225,21 +51,14 @@
    "name": "Gvardiol",
    "old": 5.7,
    "new": 5.6,
-   "owned": 23.2,
-   "direction": "down"
-  },
-  {
-   "name": "B.Fernandes",
-   "old": 11.7,
-   "new": 11.6,
-   "owned": 20.4,
+   "owned": 23.1,
    "direction": "down"
   },
   {
    "name": "Van Hecke",
    "old": 5.0,
    "new": 5.1,
-   "owned": 14.3,
+   "owned": 14.4,
    "direction": "up"
   },
   {
@@ -257,17 +76,38 @@
    "direction": "down"
   },
   {
-   "name": "Saka",
-   "old": 9.5,
-   "new": 9.4,
-   "owned": 5.5,
+   "name": "Anderson",
+   "old": 6.3,
+   "new": 6.2,
+   "owned": 3.6,
    "direction": "down"
   },
   {
-   "name": "Lacroix",
-   "old": 5.9,
-   "new": 5.8,
-   "owned": 4.6,
+   "name": "Emersonn",
+   "old": 5.5,
+   "new": 5.4,
+   "owned": 2.9,
+   "direction": "down"
+  },
+  {
+   "name": "Yalcouyé",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 2.7,
+   "direction": "down"
+  },
+  {
+   "name": "F.Kadıoğlu",
+   "old": 4.4,
+   "new": 4.3,
+   "owned": 1.3,
+   "direction": "down"
+  },
+  {
+   "name": "Wilson",
+   "old": 6.2,
+   "new": 6.1,
+   "owned": 1.1,
    "direction": "down"
   }
  ],

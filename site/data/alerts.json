@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 195,
- "latest_snapshot": 198,
+ "latest_snapshot": 199,
  "prev_taken_at": "2026-11-08T22:11:07.904262+00:00",
- "latest_taken_at": "2026-11-10T03:36:59.522579+00:00",
+ "latest_taken_at": "2026-11-10T14:57:36.452312+00:00",
  "alerts": [
   {
    "element_id": 356,
@@ -13,6 +13,16 @@
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 552,
+   "name": "Brobbey",
+   "position": "FWD",
+   "price": 5.7,
+   "owned": 4.7,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
   },
   {
    "element_id": 268,
@@ -37,7 +47,7 @@
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.6,
-   "owned": 32.2,
+   "owned": 32.1,
    "direction": "down"
   },
   {
@@ -51,21 +61,21 @@
    "name": "Gvardiol",
    "old": 5.7,
    "new": 5.6,
-   "owned": 23.1,
+   "owned": 23.0,
    "direction": "down"
   },
   {
    "name": "Van Hecke",
    "old": 5.0,
    "new": 5.1,
-   "owned": 14.4,
+   "owned": 14.5,
    "direction": "up"
   },
   {
    "name": "Vuskovic",
    "old": 5.2,
    "new": 5.3,
-   "owned": 8.9,
+   "owned": 9.0,
    "direction": "up"
   },
   {

@@ -1,18 +1,28 @@
 {
  "prev_snapshot": 195,
- "latest_snapshot": 199,
+ "latest_snapshot": 200,
  "prev_taken_at": "2026-11-08T22:11:07.904262+00:00",
- "latest_taken_at": "2026-11-10T14:57:36.452312+00:00",
+ "latest_taken_at": "2026-11-10T21:19:42.928354+00:00",
  "alerts": [
   {
    "element_id": 356,
    "name": "Virgil",
    "position": "DEF",
    "price": 6.4,
-   "owned": 15.0,
+   "owned": 14.9,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 286,
+   "name": "Belloumi",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 9.7,
+   "severity": "WARNING",
+   "tag": "OWNED",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
    "element_id": 552,
@@ -40,28 +50,28 @@
    "name": "De Cuyper",
    "old": 5.4,
    "new": 5.5,
-   "owned": 47.6,
+   "owned": 47.7,
    "direction": "up"
   },
   {
    "name": "João Pedro",
    "old": 7.7,
    "new": 7.6,
-   "owned": 32.1,
+   "owned": 32.0,
    "direction": "down"
   },
   {
    "name": "Isak",
    "old": 9.2,
    "new": 9.3,
-   "owned": 24.9,
+   "owned": 25.0,
    "direction": "up"
   },
   {
    "name": "Gvardiol",
    "old": 5.7,
    "new": 5.6,
-   "owned": 23.0,
+   "owned": 22.9,
    "direction": "down"
   },
   {
@@ -75,7 +85,7 @@
    "name": "Vuskovic",
    "old": 5.2,
    "new": 5.3,
-   "owned": 9.0,
+   "owned": 9.1,
    "direction": "up"
   },
   {

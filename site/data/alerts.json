@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 197,
- "latest_snapshot": 201,
+ "latest_snapshot": 202,
  "prev_taken_at": "2026-11-09T19:52:44.583902+00:00",
- "latest_taken_at": "2026-11-11T06:33:00.681918+00:00",
+ "latest_taken_at": "2026-11-11T17:12:41.816871+00:00",
  "alerts": [
   {
    "element_id": 286,
    "name": "Belloumi",
    "position": "MID",
    "price": 5.3,
-   "owned": 9.7,
+   "owned": 9.6,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
@@ -33,6 +33,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 222,
+   "name": "Strand Larsen",
+   "position": "FWD",
+   "price": 5.9,
+   "owned": 0.4,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   },
   {
    "element_id": 268,

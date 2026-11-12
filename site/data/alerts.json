@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 200,
- "latest_snapshot": 203,
+ "latest_snapshot": 204,
  "prev_taken_at": "2026-11-10T21:19:42.928354+00:00",
- "latest_taken_at": "2026-11-12T00:47:40.616472+00:00",
+ "latest_taken_at": "2026-11-12T11:22:36.399225+00:00",
  "alerts": [
   {
    "element_id": 418,
@@ -30,7 +30,7 @@
    "name": "Verbruggen",
    "old": 4.6,
    "new": 4.7,
-   "owned": 23.9,
+   "owned": 24.0,
    "direction": "up"
   },
   {

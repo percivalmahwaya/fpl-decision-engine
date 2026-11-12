@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 200,
- "latest_snapshot": 204,
+ "latest_snapshot": 205,
  "prev_taken_at": "2026-11-10T21:19:42.928354+00:00",
- "latest_taken_at": "2026-11-12T11:22:36.399225+00:00",
+ "latest_taken_at": "2026-11-12T19:59:06.816401+00:00",
  "alerts": [
+  {
+   "element_id": 53,
+   "name": "Manzambi",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 8.6,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+  },
   {
    "element_id": 418,
    "name": "Maguire",
@@ -55,7 +65,18 @@
    "direction": "down"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 53,
+   "name": "Manzambi",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 8.6,
+   "severity": "WARNING",
+   "tag": "SQUAD",
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

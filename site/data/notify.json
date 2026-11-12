@@ -1,11 +1,11 @@
 {
  "should_email": false,
- "gate": "throttled, 20h of 48h",
+ "gate": "throttled, 27h of 48h",
  "reasons": [
   "transfer worth making"
  ],
  "subject": "FPL: transfer worth making",
- "body": "FLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 50% — Calf injury - 50% chance of playing\n\nTRANSFER — Thomas out, Egan in.\n  +2.28 expected points, 0.1m, 0.1m left in the bank.\n  Thomas is flagged in the team news.\n  Owned by only 7%, so this is a differential rather than a template move.\n\nCAPTAIN — model says Haaland (6.12 xPts).\n\nSnapshot #202 at 2026-11-11T17:12:41.816871+00:00",
+ "body": "FLAGGED IN YOUR SQUAD:\n  Thomas (DEF) chance 50% — Calf injury - 50% chance of playing\n\nTRANSFER — Thomas out, Egan in.\n  +2.28 expected points, 0.1m, 0.1m left in the bank.\n  Thomas is flagged in the team news.\n  Owned by only 7%, so this is a differential rather than a template move.\n\nCAPTAIN — model says Haaland (6.12 xPts).\n\nSnapshot #203 at 2026-11-12T00:47:40.616472+00:00",
  "last_sent_at": "2026-11-10T21:20:00.647497+00:00",
  "deadline_sent_for_gw": 10
 }

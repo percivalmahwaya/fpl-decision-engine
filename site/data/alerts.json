@@ -1,19 +1,9 @@
 {
- "prev_snapshot": 197,
- "latest_snapshot": 202,
- "prev_taken_at": "2026-11-09T19:52:44.583902+00:00",
- "latest_taken_at": "2026-11-11T17:12:41.816871+00:00",
+ "prev_snapshot": 200,
+ "latest_snapshot": 203,
+ "prev_taken_at": "2026-11-10T21:19:42.928354+00:00",
+ "latest_taken_at": "2026-11-12T00:47:40.616472+00:00",
  "alerts": [
-  {
-   "element_id": 286,
-   "name": "Belloumi",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 9.6,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
   {
    "element_id": 418,
    "name": "Maguire",
@@ -25,16 +15,6 @@
    "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
   },
   {
-   "element_id": 552,
-   "name": "Brobbey",
-   "position": "FWD",
-   "price": 5.7,
-   "owned": 4.7,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Muscular injury - 75% chance of playing)"
-  },
-  {
    "element_id": 222,
    "name": "Strand Larsen",
    "position": "FWD",
@@ -43,16 +23,6 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 268,
-   "name": "King",
-   "position": "MID",
-   "price": 5.5,
-   "owned": 3.3,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
   }
  ],
  "price_moves": [
@@ -71,27 +41,6 @@
    "direction": "up"
   },
   {
-   "name": "Anderson",
-   "old": 6.3,
-   "new": 6.2,
-   "owned": 3.6,
-   "direction": "down"
-  },
-  {
-   "name": "Wilson",
-   "old": 6.2,
-   "new": 6.1,
-   "owned": 1.1,
-   "direction": "down"
-  },
-  {
-   "name": "Wharton",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 0.6,
-   "direction": "down"
-  },
-  {
    "name": "Amass",
    "old": 4.0,
    "new": 3.9,
@@ -99,17 +48,10 @@
    "direction": "down"
   },
   {
-   "name": "Madjo",
-   "old": 5.4,
-   "new": 5.3,
-   "owned": 0.2,
-   "direction": "down"
-  },
-  {
-   "name": "Doucouré",
+   "name": "Steur",
    "old": 4.8,
    "new": 4.7,
-   "owned": 0.0,
+   "owned": 0.1,
    "direction": "down"
   }
  ],

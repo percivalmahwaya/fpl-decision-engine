@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 200,
- "latest_snapshot": 205,
- "prev_taken_at": "2026-11-10T21:19:42.928354+00:00",
- "latest_taken_at": "2026-11-12T19:59:06.816401+00:00",
+ "prev_snapshot": 202,
+ "latest_snapshot": 206,
+ "prev_taken_at": "2026-11-11T17:12:41.816871+00:00",
+ "latest_taken_at": "2026-11-13T01:51:54.983421+00:00",
  "alerts": [
   {
    "element_id": 53,
@@ -13,50 +13,9 @@
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 418,
-   "name": "Maguire",
-   "position": "DEF",
-   "price": 4.6,
-   "owned": 5.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 222,
-   "name": "Strand Larsen",
-   "position": "FWD",
-   "price": 5.9,
-   "owned": 0.4,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   }
  ],
  "price_moves": [
-  {
-   "name": "Verbruggen",
-   "old": 4.6,
-   "new": 4.7,
-   "owned": 24.0,
-   "direction": "up"
-  },
-  {
-   "name": "Dewsbury-Hall",
-   "old": 6.6,
-   "new": 6.7,
-   "owned": 7.2,
-   "direction": "up"
-  },
-  {
-   "name": "Amass",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 0.2,
-   "direction": "down"
-  },
   {
    "name": "Steur",
    "old": 4.8,

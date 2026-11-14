@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 205,
- "latest_snapshot": 210,
+ "latest_snapshot": 211,
  "prev_taken_at": "2026-11-12T19:59:06.816401+00:00",
- "latest_taken_at": "2026-11-14T10:32:22.608935+00:00",
+ "latest_taken_at": "2026-11-14T18:10:23.612783+00:00",
  "alerts": [
   {
    "element_id": 415,
@@ -13,6 +13,26 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 614,
+   "name": "Hadjam",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 639,
+   "name": "Andrés",
+   "position": "MID",
+   "price": 5.5,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hip injury - 75% chance of playing)"
   }
  ],
  "price_moves": [

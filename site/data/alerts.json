@@ -1,9 +1,20 @@
 {
  "prev_snapshot": 205,
- "latest_snapshot": 209,
+ "latest_snapshot": 210,
  "prev_taken_at": "2026-11-12T19:59:06.816401+00:00",
- "latest_taken_at": "2026-11-14T01:28:15.980163+00:00",
- "alerts": [],
+ "latest_taken_at": "2026-11-14T10:32:22.608935+00:00",
+ "alerts": [
+  {
+   "element_id": 415,
+   "name": "Dorgu",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  }
+ ],
  "price_moves": [
   {
    "name": "Roefs",

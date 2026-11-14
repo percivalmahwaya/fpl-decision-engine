@@ -1,41 +1,19 @@
 {
- "prev_snapshot": 202,
- "latest_snapshot": 208,
- "prev_taken_at": "2026-11-11T17:12:41.816871+00:00",
- "latest_taken_at": "2026-11-13T19:47:22.903609+00:00",
- "alerts": [
-  {
-   "element_id": 53,
-   "name": "Manzambi",
-   "position": "MID",
-   "price": 6.2,
-   "owned": 8.6,
-   "severity": "WARNING",
-   "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
-  }
- ],
+ "prev_snapshot": 205,
+ "latest_snapshot": 209,
+ "prev_taken_at": "2026-11-12T19:59:06.816401+00:00",
+ "latest_taken_at": "2026-11-14T01:28:15.980163+00:00",
+ "alerts": [],
  "price_moves": [
   {
-   "name": "Steur",
-   "old": 4.8,
-   "new": 4.7,
-   "owned": 0.1,
+   "name": "Roefs",
+   "old": 4.9,
+   "new": 4.8,
+   "owned": 1.9,
    "direction": "down"
   }
  ],
- "urgent": [
-  {
-   "element_id": 53,
-   "name": "Manzambi",
-   "position": "MID",
-   "price": 6.2,
-   "owned": 8.6,
-   "severity": "WARNING",
-   "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
-  }
- ],
+ "urgent": [],
  "available": true,
  "window_hours": 24
 }

@@ -1,9 +1,19 @@
 {
  "prev_snapshot": 208,
- "latest_snapshot": 213,
+ "latest_snapshot": 214,
  "prev_taken_at": "2026-11-13T19:47:22.903609+00:00",
- "latest_taken_at": "2026-11-15T06:40:23.828357+00:00",
+ "latest_taken_at": "2026-11-15T16:24:58.492019+00:00",
  "alerts": [
+  {
+   "element_id": 32,
+   "name": "Cash",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 3.6,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Concussion - 75% chance of playing)"
+  },
   {
    "element_id": 415,
    "name": "Dorgu",

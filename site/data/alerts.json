@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 205,
- "latest_snapshot": 212,
- "prev_taken_at": "2026-11-12T19:59:06.816401+00:00",
- "latest_taken_at": "2026-11-14T22:29:28.195659+00:00",
+ "prev_snapshot": 208,
+ "latest_snapshot": 213,
+ "prev_taken_at": "2026-11-13T19:47:22.903609+00:00",
+ "latest_taken_at": "2026-11-15T06:40:23.828357+00:00",
  "alerts": [
   {
    "element_id": 415,
@@ -37,10 +37,31 @@
  ],
  "price_moves": [
   {
+   "name": "Konsa",
+   "old": 4.8,
+   "new": 4.9,
+   "owned": 24.7,
+   "direction": "up"
+  },
+  {
+   "name": "Steele",
+   "old": 4.0,
+   "new": 3.9,
+   "owned": 3.4,
+   "direction": "down"
+  },
+  {
    "name": "Roefs",
    "old": 4.9,
    "new": 4.8,
    "owned": 1.9,
+   "direction": "down"
+  },
+  {
+   "name": "Frimpong",
+   "old": 5.2,
+   "new": 5.1,
+   "owned": 1.2,
    "direction": "down"
   }
  ],

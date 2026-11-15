@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 208,
- "latest_snapshot": 214,
+ "latest_snapshot": 215,
  "prev_taken_at": "2026-11-13T19:47:22.903609+00:00",
- "latest_taken_at": "2026-11-15T16:24:58.492019+00:00",
+ "latest_taken_at": "2026-11-15T22:52:57.761729+00:00",
  "alerts": [
   {
    "element_id": 32,
@@ -23,6 +23,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 558,
+   "name": "Schlager",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.1,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Thigh injury - 75% chance of playing)"
   },
   {
    "element_id": 614,

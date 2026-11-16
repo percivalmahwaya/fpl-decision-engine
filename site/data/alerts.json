@@ -1,9 +1,29 @@
 {
  "prev_snapshot": 212,
- "latest_snapshot": 216,
+ "latest_snapshot": 217,
  "prev_taken_at": "2026-11-14T22:29:28.195659+00:00",
- "latest_taken_at": "2026-11-16T06:37:14.590678+00:00",
+ "latest_taken_at": "2026-11-16T19:39:02.068134+00:00",
  "alerts": [
+  {
+   "element_id": 469,
+   "name": "N.Williams",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 5.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 586,
+   "name": "Mendy",
+   "position": "DEF",
+   "price": 4.1,
+   "owned": 4.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
+  },
   {
    "element_id": 32,
    "name": "Cash",
@@ -13,6 +33,26 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Concussion - 75% chance of playing)"
+  },
+  {
+   "element_id": 84,
+   "name": "Collins",
+   "position": "DEF",
+   "price": 5.4,
+   "owned": 0.8,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 19,
+   "name": "Zubimendi",
+   "position": "MID",
+   "price": 5.2,
+   "owned": 0.4,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
    "element_id": 558,
@@ -30,7 +70,7 @@
    "name": "Konsa",
    "old": 4.8,
    "new": 4.9,
-   "owned": 24.7,
+   "owned": 24.8,
    "direction": "up"
   },
   {

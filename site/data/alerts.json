@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 215,
- "latest_snapshot": 218,
+ "latest_snapshot": 219,
  "prev_taken_at": "2026-11-15T22:52:57.761729+00:00",
- "latest_taken_at": "2026-11-17T03:56:31.214043+00:00",
+ "latest_taken_at": "2026-11-17T16:06:41.741914+00:00",
  "alerts": [
   {
    "element_id": 469,
@@ -40,6 +40,16 @@
    "position": "MID",
    "price": 5.2,
    "owned": 0.4,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 90,
+   "name": "Hickey",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.1,
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"

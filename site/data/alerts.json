@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 212,
- "latest_snapshot": 217,
- "prev_taken_at": "2026-11-14T22:29:28.195659+00:00",
- "latest_taken_at": "2026-11-16T19:39:02.068134+00:00",
+ "prev_snapshot": 215,
+ "latest_snapshot": 218,
+ "prev_taken_at": "2026-11-15T22:52:57.761729+00:00",
+ "latest_taken_at": "2026-11-17T03:56:31.214043+00:00",
  "alerts": [
   {
    "element_id": 469,
@@ -25,16 +25,6 @@
    "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
   },
   {
-   "element_id": 32,
-   "name": "Cash",
-   "position": "DEF",
-   "price": 4.3,
-   "owned": 3.6,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Concussion - 75% chance of playing)"
-  },
-  {
    "element_id": 84,
    "name": "Collins",
    "position": "DEF",
@@ -53,38 +43,14 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 558,
-   "name": "Schlager",
-   "position": "MID",
-   "price": 5.0,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Thigh injury - 75% chance of playing)"
   }
  ],
  "price_moves": [
   {
-   "name": "Konsa",
-   "old": 4.8,
+   "name": "Cook",
+   "old": 5.0,
    "new": 4.9,
-   "owned": 24.8,
-   "direction": "up"
-  },
-  {
-   "name": "Steele",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 3.4,
-   "direction": "down"
-  },
-  {
-   "name": "Frimpong",
-   "old": 5.2,
-   "new": 5.1,
-   "owned": 1.2,
+   "owned": 0.1,
    "direction": "down"
   },
   {
@@ -92,6 +58,20 @@
    "old": 5.3,
    "new": 5.2,
    "owned": 0.1,
+   "direction": "down"
+  },
+  {
+   "name": "Mingueza",
+   "old": 4.3,
+   "new": 4.2,
+   "owned": 0.0,
+   "direction": "down"
+  },
+  {
+   "name": "J.Fletcher",
+   "old": 4.9,
+   "new": 4.8,
+   "owned": 0.0,
    "direction": "down"
   }
  ],

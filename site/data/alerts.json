@@ -1,49 +1,9 @@
 {
- "prev_snapshot": 215,
- "latest_snapshot": 219,
- "prev_taken_at": "2026-11-15T22:52:57.761729+00:00",
- "latest_taken_at": "2026-11-17T16:06:41.741914+00:00",
+ "prev_snapshot": 217,
+ "latest_snapshot": 220,
+ "prev_taken_at": "2026-11-16T19:39:02.068134+00:00",
+ "latest_taken_at": "2026-11-18T00:59:27.688857+00:00",
  "alerts": [
-  {
-   "element_id": 469,
-   "name": "N.Williams",
-   "position": "DEF",
-   "price": 4.9,
-   "owned": 5.3,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 586,
-   "name": "Mendy",
-   "position": "DEF",
-   "price": 4.1,
-   "owned": 4.5,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 84,
-   "name": "Collins",
-   "position": "DEF",
-   "price": 5.4,
-   "owned": 0.8,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 19,
-   "name": "Zubimendi",
-   "position": "MID",
-   "price": 5.2,
-   "owned": 0.4,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  },
   {
    "element_id": 90,
    "name": "Hickey",
@@ -57,16 +17,16 @@
  ],
  "price_moves": [
   {
-   "name": "Cook",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 0.1,
+   "name": "Barnes",
+   "old": 6.1,
+   "new": 6.0,
+   "owned": 6.5,
    "direction": "down"
   },
   {
-   "name": "Hamer",
-   "old": 5.3,
-   "new": 5.2,
+   "name": "Cook",
+   "old": 5.0,
+   "new": 4.9,
    "owned": 0.1,
    "direction": "down"
   },

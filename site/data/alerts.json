@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 217,
- "latest_snapshot": 221,
+ "latest_snapshot": 222,
  "prev_taken_at": "2026-11-16T19:39:02.068134+00:00",
- "latest_taken_at": "2026-11-18T11:50:02.480292+00:00",
+ "latest_taken_at": "2026-11-18T20:37:26.005239+00:00",
  "alerts": [
   {
    "element_id": 90,
@@ -20,7 +20,7 @@
    "name": "Barnes",
    "old": 6.1,
    "new": 6.0,
-   "owned": 6.5,
+   "owned": 6.4,
    "direction": "down"
   },
   {

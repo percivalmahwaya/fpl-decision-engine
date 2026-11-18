@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 217,
- "latest_snapshot": 220,
+ "latest_snapshot": 221,
  "prev_taken_at": "2026-11-16T19:39:02.068134+00:00",
- "latest_taken_at": "2026-11-18T00:59:27.688857+00:00",
+ "latest_taken_at": "2026-11-18T11:50:02.480292+00:00",
  "alerts": [
   {
    "element_id": 90,

@@ -1,20 +1,9 @@
 {
- "prev_snapshot": 217,
- "latest_snapshot": 222,
- "prev_taken_at": "2026-11-16T19:39:02.068134+00:00",
- "latest_taken_at": "2026-11-18T20:37:26.005239+00:00",
- "alerts": [
-  {
-   "element_id": 90,
-   "name": "Hickey",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.1,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
-  }
- ],
+ "prev_snapshot": 219,
+ "latest_snapshot": 223,
+ "prev_taken_at": "2026-11-17T16:06:41.741914+00:00",
+ "latest_taken_at": "2026-11-19T02:36:49.143179+00:00",
+ "alerts": [],
  "price_moves": [
   {
    "name": "Barnes",
@@ -24,24 +13,45 @@
    "direction": "down"
   },
   {
-   "name": "Cook",
+   "name": "Gomez",
    "old": 5.0,
-   "new": 4.9,
-   "owned": 0.1,
+   "new": 5.1,
+   "owned": 4.4,
+   "direction": "up"
+  },
+  {
+   "name": "McGinn",
+   "old": 5.4,
+   "new": 5.5,
+   "owned": 3.9,
+   "direction": "up"
+  },
+  {
+   "name": "Gonzalo",
+   "old": 5.9,
+   "new": 5.8,
+   "owned": 3.5,
    "direction": "down"
   },
   {
-   "name": "Mingueza",
-   "old": 4.3,
-   "new": 4.2,
-   "owned": 0.0,
+   "name": "Suzuki",
+   "old": 5.0,
+   "new": 5.1,
+   "owned": 3.2,
+   "direction": "up"
+  },
+  {
+   "name": "Georginio",
+   "old": 5.3,
+   "new": 5.2,
+   "owned": 0.4,
    "direction": "down"
   },
   {
-   "name": "J.Fletcher",
-   "old": 4.9,
-   "new": 4.8,
-   "owned": 0.0,
+   "name": "McConnell",
+   "old": 4.4,
+   "new": 4.3,
+   "owned": 0.2,
    "direction": "down"
   }
  ],

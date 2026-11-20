@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 219,
- "latest_snapshot": 225,
- "prev_taken_at": "2026-11-17T16:06:41.741914+00:00",
- "latest_taken_at": "2026-11-19T20:42:27.204849+00:00",
+ "prev_snapshot": 222,
+ "latest_snapshot": 226,
+ "prev_taken_at": "2026-11-18T20:37:26.005239+00:00",
+ "latest_taken_at": "2026-11-20T02:21:56.183134+00:00",
  "alerts": [
   {
    "element_id": 173,
@@ -53,6 +53,26 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 208,
+   "name": "Sarr",
+   "position": "MID",
+   "price": 6.2,
+   "owned": 0.5,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Groin injury - Expected back 29 Nov"
+  },
+  {
+   "element_id": 577,
+   "name": "Tomiyasu",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 0.2,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Calf injury - Expected back 29 Nov"
   },
   {
    "element_id": 186,
@@ -117,10 +137,17 @@
  ],
  "price_moves": [
   {
-   "name": "Barnes",
-   "old": 6.1,
-   "new": 6.0,
-   "owned": 6.3,
+   "name": "N.Jackson",
+   "old": 7.1,
+   "new": 7.2,
+   "owned": 32.7,
+   "direction": "up"
+  },
+  {
+   "name": "Mitchell",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 4.6,
    "direction": "down"
   },
   {
@@ -134,7 +161,7 @@
    "name": "McGinn",
    "old": 5.4,
    "new": 5.5,
-   "owned": 4.0,
+   "owned": 4.1,
    "direction": "up"
   },
   {
@@ -152,6 +179,13 @@
    "direction": "up"
   },
   {
+   "name": "Walle Egeli",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 2.5,
+   "direction": "down"
+  },
+  {
    "name": "Georginio",
    "old": 5.3,
    "new": 5.2,
@@ -163,6 +197,13 @@
    "old": 4.4,
    "new": 4.3,
    "owned": 0.2,
+   "direction": "down"
+  },
+  {
+   "name": "Palacios",
+   "old": 5.3,
+   "new": 5.2,
+   "owned": 0.1,
    "direction": "down"
   }
  ],

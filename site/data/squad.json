@@ -70,7 +70,7 @@
    "element_id": 204,
    "position": "DEF",
    "club": "CRY",
-   "price": 4.5,
+   "price": 4.4,
    "owned": 4.6,
    "status": "a",
    "chance": null,
@@ -215,7 +215,7 @@
    "position": "FWD",
    "club": "LIV",
    "price": 9.3,
-   "owned": 25.4,
+   "owned": 25.5,
    "status": "a",
    "chance": 100,
    "news": null,
@@ -231,7 +231,7 @@
    "position": "FWD",
    "club": "EVE",
    "price": 5.7,
-   "owned": 11.0,
+   "owned": 11.1,
    "status": "a",
    "chance": null,
    "news": null,
@@ -242,6 +242,6 @@
    "flagged": false
   }
  ],
- "squad_value": 101.7,
+ "squad_value": 101.6,
  "count": 15
 }

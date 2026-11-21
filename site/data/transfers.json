@@ -94,20 +94,20 @@
    "out_price": 9.8,
    "out_ep": 4.02,
    "in": "Wirtz",
-   "in_price": 7.2,
-   "in_ep": 4.52,
+   "in_price": 7.3,
+   "in_ep": 4.59,
    "in_club": "LIV",
    "position": "MID",
-   "gain": 0.497,
-   "net": -3.503,
-   "cost": -2.6,
-   "bank_after": 2.8,
+   "gain": 0.564,
+   "net": -3.436,
+   "cost": -2.5,
+   "bank_after": 2.7,
    "free": false,
    "penalties": false,
    "worth_it": false,
    "reasons": [
-    "Frees up 2.6m for later.",
-    "Owned by only 6%, so this is a differential rather than a template move.",
+    "Frees up 2.5m for later.",
+    "Owned by only 7%, so this is a differential rather than a template move.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   }

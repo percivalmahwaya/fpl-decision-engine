@@ -1,10 +1,10 @@
 {
- "gameweek": 11,
+ "gameweek": 12,
  "model_pick": {
   "name": "Haaland",
   "element_id": 411,
   "position": "FWD",
-  "ep": 6.12,
+  "ep": 4.85,
   "flagged": false
  },
  "your_pick": "Haaland",
@@ -14,56 +14,56 @@
    "name": "Haaland",
    "element_id": 411,
    "position": "FWD",
-   "ep": 6.12,
-   "flagged": false
-  },
-  {
-   "name": "Tavernier",
-   "element_id": 68,
-   "position": "MID",
-   "ep": 4.68,
-   "flagged": false
-  },
-  {
-   "name": "Isak",
-   "element_id": 379,
-   "position": "FWD",
-   "ep": 4.67,
-   "flagged": false
-  },
-  {
-   "name": "Rogers",
-   "element_id": 40,
-   "position": "MID",
-   "ep": 4.47,
-   "flagged": false
-  },
-  {
-   "name": "Palmer",
-   "element_id": 154,
-   "position": "MID",
-   "ep": 4.02,
+   "ep": 4.85,
    "flagged": false
   },
   {
    "name": "Groß",
    "element_id": 124,
    "position": "MID",
-   "ep": 3.45,
+   "ep": 4.26,
+   "flagged": false
+  },
+  {
+   "name": "Barry",
+   "element_id": 249,
+   "position": "FWD",
+   "ep": 4.2,
+   "flagged": false
+  },
+  {
+   "name": "Tavernier",
+   "element_id": 68,
+   "position": "MID",
+   "ep": 4.19,
+   "flagged": false
+  },
+  {
+   "name": "Isak",
+   "element_id": 379,
+   "position": "FWD",
+   "ep": 4.17,
+   "flagged": false
+  },
+  {
+   "name": "Rogers",
+   "element_id": 40,
+   "position": "MID",
+   "ep": 4.13,
+   "flagged": false
+  },
+  {
+   "name": "Palmer",
+   "element_id": 154,
+   "position": "MID",
+   "ep": 3.83,
    "flagged": false
   },
   {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
-   "ep": 3.43,
-   "flagged": false
-  },
-  {
-   "name": "Horníček",
-   "element_id": 567,
-   "position": "GKP",
-   "ep": 3.31,
+   "ep": 3.65,
    "flagged": false
   }
  ]

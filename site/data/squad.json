@@ -39,15 +39,15 @@
    "position": "DEF",
    "club": "NEW",
    "price": 5.2,
-   "owned": 16.9,
-   "status": "a",
-   "chance": null,
-   "news": null,
+   "owned": 16.8,
+   "status": "d",
+   "chance": 75,
+   "news": "Unspecified injury - 75% chance of playing",
    "is_captain": false,
    "is_vice": false,
    "started": 1,
    "ep": 3.15,
-   "flagged": false
+   "flagged": true
   },
   {
    "name": "Mitchell",
@@ -135,7 +135,7 @@
    "position": "MID",
    "club": "BOU",
    "price": 6.7,
-   "owned": 32.7,
+   "owned": 32.8,
    "status": "a",
    "chance": null,
    "news": null,
@@ -150,7 +150,7 @@
    "element_id": 40,
    "position": "MID",
    "club": "CHE",
-   "price": 8.2,
+   "price": 8.3,
    "owned": 54.6,
    "status": "a",
    "chance": null,
@@ -199,7 +199,7 @@
    "position": "FWD",
    "club": "MCI",
    "price": 15.8,
-   "owned": 78.6,
+   "owned": 78.5,
    "status": "a",
    "chance": 100,
    "news": null,
@@ -231,7 +231,7 @@
    "position": "FWD",
    "club": "LIV",
    "price": 9.3,
-   "owned": 26.3,
+   "owned": 26.4,
    "status": "a",
    "chance": 100,
    "news": null,
@@ -242,6 +242,6 @@
    "flagged": false
   }
  ],
- "squad_value": 101.6,
+ "squad_value": 101.7,
  "count": 15
 }

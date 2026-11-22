@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 228,
- "latest_snapshot": 231,
+ "latest_snapshot": 232,
  "prev_taken_at": "2026-11-20T20:26:44.804103+00:00",
- "latest_taken_at": "2026-11-22T01:22:41.563865+00:00",
+ "latest_taken_at": "2026-11-22T11:31:51.880762+00:00",
  "alerts": [
   {
    "element_id": 449,
@@ -22,7 +22,7 @@
    "owned": 6.3,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
   },
   {
    "element_id": 173,
@@ -39,7 +39,7 @@
    "name": "Raya",
    "position": "GKP",
    "price": 6.3,
-   "owned": 47.5,
+   "owned": 47.4,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 100% -> 75% (Shoulder injury - 75% chance of playing)"
@@ -102,7 +102,7 @@
    "owned": 0.3,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
    "element_id": 492,
@@ -112,7 +112,7 @@
    "owned": 0.3,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Leg injury - 75% chance of playing)"
+   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   },
   {
    "element_id": 207,
@@ -197,7 +197,7 @@
    "name": "Raya",
    "old": 6.2,
    "new": 6.3,
-   "owned": 47.5,
+   "owned": 47.4,
    "direction": "up"
   },
   {
@@ -225,7 +225,7 @@
    "name": "Dubravka",
    "old": 4.0,
    "new": 3.9,
-   "owned": 15.0,
+   "owned": 14.9,
    "direction": "down"
   },
   {
@@ -253,7 +253,7 @@
    "name": "Trafford",
    "old": 5.0,
    "new": 5.1,
-   "owned": 6.9,
+   "owned": 7.0,
    "direction": "up"
   },
   {
@@ -290,7 +290,7 @@
    "owned": 6.3,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
+   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
   }
  ],
  "available": true,

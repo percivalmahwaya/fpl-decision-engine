@@ -1,15 +1,15 @@
 {
- "prev_snapshot": 228,
- "latest_snapshot": 233,
- "prev_taken_at": "2026-11-20T20:26:44.804103+00:00",
- "latest_taken_at": "2026-11-22T19:44:58.605469+00:00",
+ "prev_snapshot": 230,
+ "latest_snapshot": 234,
+ "prev_taken_at": "2026-11-21T19:21:14.698259+00:00",
+ "latest_taken_at": "2026-11-23T01:46:27.019689+00:00",
  "alerts": [
   {
    "element_id": 449,
    "name": "Hall",
    "position": "DEF",
    "price": 5.2,
-   "owned": 16.6,
+   "owned": 16.5,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -22,24 +22,14 @@
    "owned": 6.2,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 173,
-   "name": "Thomas",
-   "position": "DEF",
-   "price": 4.0,
-   "owned": 6.8,
-   "severity": "GOOD",
-   "tag": "SQUAD",
-   "message": "cleared - news removed, fit again"
+   "message": "new news: Calf injury - 75% chance of playing"
   },
   {
    "element_id": 367,
    "name": "Gakpo",
    "position": "MID",
    "price": 7.1,
-   "owned": 6.9,
+   "owned": 6.8,
    "severity": "WARNING",
    "tag": "WATCH",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
@@ -49,20 +39,10 @@
    "name": "Raya",
    "position": "GKP",
    "price": 6.3,
-   "owned": 47.0,
+   "owned": 46.8,
    "severity": "WARNING",
    "tag": "OWNED",
-   "message": "worsened 100% -> 75% (Shoulder injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 388,
-   "name": "Guéhi",
-   "position": "DEF",
-   "price": 5.9,
-   "owned": 12.4,
-   "severity": "GOOD",
-   "tag": "OWNED",
-   "message": "cleared - news removed, fit again"
+   "message": "new news: Shoulder injury - 75% chance of playing"
   },
   {
    "element_id": 420,
@@ -70,16 +50,6 @@
    "position": "DEF",
    "price": 4.8,
    "owned": 0.5,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Suspended until 2 Dec)"
-  },
-  {
-   "element_id": 211,
-   "name": "Yeremy",
-   "position": "MID",
-   "price": 5.5,
-   "owned": 0.3,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 2 Dec)"
@@ -95,36 +65,6 @@
    "message": "RULED OUT (Suspended until 2 Dec)"
   },
   {
-   "element_id": 501,
-   "name": "Danso",
-   "position": "DEF",
-   "price": 5.0,
-   "owned": 0.1,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Ineligible to face parent club - Expected back 2 Dec)"
-  },
-  {
-   "element_id": 159,
-   "name": "Caicedo",
-   "position": "MID",
-   "price": 5.3,
-   "owned": 1.0,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Back injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 37,
-   "name": "Lindelöf",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.7,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
-  },
-  {
    "element_id": 403,
    "name": "Sávio",
    "position": "MID",
@@ -132,7 +72,7 @@
    "owned": 0.3,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
+   "message": "new news: Hamstring injury - 75% chance of playing"
   },
   {
    "element_id": 492,
@@ -142,7 +82,7 @@
    "owned": 0.3,
    "severity": "WARNING",
    "tag": "-",
-   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
+   "message": "new news: Ankle injury - 75% chance of playing"
   },
   {
    "element_id": 240,
@@ -155,41 +95,21 @@
    "message": "worsened 100% -> 75% (Hamstring injury - 75% chance of playing)"
   },
   {
-   "element_id": 207,
-   "name": "Mingueza",
-   "position": "DEF",
-   "price": 4.2,
-   "owned": 0.0,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "worsened 100% -> 75% (Thigh injury - 75% chance of playing)"
-  },
-  {
-   "element_id": 469,
-   "name": "N.Williams",
-   "position": "DEF",
-   "price": 4.9,
-   "owned": 4.8,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
    "element_id": 418,
    "name": "Maguire",
    "position": "DEF",
-   "price": 4.6,
+   "price": 4.5,
    "owned": 4.6,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 393,
-   "name": "Khusanov",
-   "position": "DEF",
+   "element_id": 455,
+   "name": "Tonali",
+   "position": "MID",
    "price": 5.3,
-   "owned": 1.2,
+   "owned": 1.9,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -200,16 +120,6 @@
    "position": "DEF",
    "price": 5.1,
    "owned": 1.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 222,
-   "name": "Strand Larsen",
-   "position": "FWD",
-   "price": 5.9,
-   "owned": 0.4,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -228,7 +138,7 @@
    "element_id": 421,
    "name": "Heaven",
    "position": "DEF",
-   "price": 4.3,
+   "price": 4.2,
    "owned": 0.2,
    "severity": "GOOD",
    "tag": "-",
@@ -239,26 +149,6 @@
    "name": "Dowman",
    "position": "MID",
    "price": 5.2,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 104,
-   "name": "Onyeka",
-   "position": "MID",
-   "price": 4.8,
-   "owned": 0.1,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 558,
-   "name": "Schlager",
-   "position": "MID",
-   "price": 5.0,
    "owned": 0.1,
    "severity": "GOOD",
    "tag": "-",
@@ -274,45 +164,45 @@
    "direction": "up"
   },
   {
-   "name": "Raya",
-   "old": 6.2,
-   "new": 6.3,
-   "owned": 47.0,
+   "name": "N.Jackson",
+   "old": 7.2,
+   "new": 7.3,
+   "owned": 36.2,
    "direction": "up"
+  },
+  {
+   "name": "Cherki",
+   "old": 7.9,
+   "new": 7.8,
+   "owned": 32.6,
+   "direction": "down"
   },
   {
    "name": "Evanilson",
    "old": 6.5,
    "new": 6.6,
-   "owned": 26.7,
+   "owned": 26.8,
    "direction": "up"
+  },
+  {
+   "name": "Gvardiol",
+   "old": 5.6,
+   "new": 5.5,
+   "owned": 19.8,
+   "direction": "down"
   },
   {
    "name": "Van Hecke",
    "old": 5.1,
    "new": 5.2,
-   "owned": 18.6,
+   "owned": 18.7,
    "direction": "up"
   },
   {
-   "name": "Mbeumo",
-   "old": 7.9,
-   "new": 7.8,
-   "owned": 17.8,
-   "direction": "down"
-  },
-  {
-   "name": "Dubravka",
-   "old": 4.0,
-   "new": 3.9,
-   "owned": 14.9,
-   "direction": "down"
-  },
-  {
-   "name": "Guéhi",
-   "old": 6.0,
-   "new": 5.9,
-   "owned": 12.4,
+   "name": "Kostoulas",
+   "old": 5.8,
+   "new": 5.7,
+   "owned": 9.0,
    "direction": "down"
   },
   {
@@ -324,23 +214,23 @@
   },
   {
    "name": "Wirtz",
-   "old": 7.2,
-   "new": 7.3,
-   "owned": 7.7,
+   "old": 7.3,
+   "new": 7.4,
+   "owned": 8.2,
    "direction": "up"
   },
   {
    "name": "Trafford",
    "old": 5.0,
    "new": 5.1,
-   "owned": 7.2,
+   "owned": 7.3,
    "direction": "up"
   },
   {
    "name": "M.Sangaré",
    "old": 5.4,
    "new": 5.3,
-   "owned": 5.6,
+   "owned": 5.5,
    "direction": "down"
   },
   {
@@ -357,7 +247,7 @@
    "name": "Hall",
    "position": "DEF",
    "price": 5.2,
-   "owned": 16.6,
+   "owned": 16.5,
    "severity": "WARNING",
    "tag": "SQUAD",
    "message": "worsened 100% -> 75% (Unspecified injury - 75% chance of playing)"
@@ -370,14 +260,14 @@
    "owned": 6.2,
    "severity": "WARNING",
    "tag": "SQUAD",
-   "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"
+   "message": "new news: Calf injury - 75% chance of playing"
   },
   {
    "element_id": 367,
    "name": "Gakpo",
    "position": "MID",
    "price": 7.1,
-   "owned": 6.9,
+   "owned": 6.8,
    "severity": "WARNING",
    "tag": "WATCH",
    "message": "worsened 100% -> 75% (Calf injury - 75% chance of playing)"

@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 230,
- "latest_snapshot": 234,
+ "latest_snapshot": 235,
  "prev_taken_at": "2026-11-21T19:21:14.698259+00:00",
- "latest_taken_at": "2026-11-23T01:46:27.019689+00:00",
+ "latest_taken_at": "2026-11-23T12:55:36.584559+00:00",
  "alerts": [
   {
    "element_id": 449,
@@ -39,7 +39,7 @@
    "name": "Raya",
    "position": "GKP",
    "price": 6.3,
-   "owned": 46.8,
+   "owned": 46.6,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "new news: Shoulder injury - 75% chance of playing"
@@ -63,6 +63,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Suspended until 2 Dec)"
+  },
+  {
+   "element_id": 340,
+   "name": "Gelhardt",
+   "position": "MID",
+   "price": 5.0,
+   "owned": 0.0,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Thigh injury - Unknown return date)"
   },
   {
    "element_id": 403,
@@ -105,6 +115,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 32,
+   "name": "Cash",
+   "position": "DEF",
+   "price": 4.3,
+   "owned": 3.2,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
    "element_id": 455,
    "name": "Tonali",
    "position": "MID",
@@ -120,6 +140,16 @@
    "position": "DEF",
    "price": 5.1,
    "owned": 1.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 389,
+   "name": "Matheus N.",
+   "position": "DEF",
+   "price": 5.9,
+   "owned": 0.9,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -160,28 +190,28 @@
    "name": "Rogers",
    "old": 8.2,
    "new": 8.3,
-   "owned": 54.7,
+   "owned": 54.6,
    "direction": "up"
   },
   {
    "name": "N.Jackson",
    "old": 7.2,
    "new": 7.3,
-   "owned": 36.2,
+   "owned": 36.3,
    "direction": "up"
   },
   {
    "name": "Cherki",
    "old": 7.9,
    "new": 7.8,
-   "owned": 32.6,
+   "owned": 32.4,
    "direction": "down"
   },
   {
    "name": "Evanilson",
    "old": 6.5,
    "new": 6.6,
-   "owned": 26.8,
+   "owned": 26.9,
    "direction": "up"
   },
   {
@@ -195,7 +225,7 @@
    "name": "Van Hecke",
    "old": 5.1,
    "new": 5.2,
-   "owned": 18.7,
+   "owned": 18.8,
    "direction": "up"
   },
   {
@@ -216,14 +246,14 @@
    "name": "Wirtz",
    "old": 7.3,
    "new": 7.4,
-   "owned": 8.2,
+   "owned": 8.6,
    "direction": "up"
   },
   {
    "name": "Trafford",
    "old": 5.0,
    "new": 5.1,
-   "owned": 7.3,
+   "owned": 7.4,
    "direction": "up"
   },
   {

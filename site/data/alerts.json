@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 233,
- "latest_snapshot": 237,
+ "latest_snapshot": 238,
  "prev_taken_at": "2026-11-22T19:44:58.605469+00:00",
- "latest_taken_at": "2026-11-24T13:50:11.457523+00:00",
+ "latest_taken_at": "2026-11-24T23:55:12.799967+00:00",
  "alerts": [
   {
    "element_id": 229,
    "name": "Tarkowski",
    "position": "DEF",
    "price": 6.2,
-   "owned": 18.0,
+   "owned": 17.7,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Suspended until 13 Dec)"
@@ -19,7 +19,7 @@
    "name": "Raya",
    "position": "GKP",
    "price": 6.3,
-   "owned": 45.9,
+   "owned": 45.6,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 75% -> 50% (Shoulder injury - 50% chance of playing)"
@@ -125,6 +125,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 420,
+   "name": "Yoro",
+   "position": "DEF",
+   "price": 4.8,
+   "owned": 0.4,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 100,
    "name": "Carvalho",
    "position": "MID",
@@ -140,42 +150,42 @@
    "name": "N.Jackson",
    "old": 7.2,
    "new": 7.3,
-   "owned": 36.4,
+   "owned": 36.5,
    "direction": "up"
   },
   {
    "name": "Tavernier",
    "old": 6.7,
    "new": 6.8,
-   "owned": 33.5,
+   "owned": 33.6,
    "direction": "up"
   },
   {
    "name": "Cherki",
    "old": 7.9,
    "new": 7.8,
-   "owned": 31.9,
+   "owned": 31.7,
    "direction": "down"
   },
   {
    "name": "Gvardiol",
    "old": 5.6,
    "new": 5.5,
-   "owned": 19.6,
+   "owned": 19.5,
    "direction": "down"
   },
   {
    "name": "Wirtz",
    "old": 7.3,
    "new": 7.4,
-   "owned": 9.7,
+   "owned": 10.1,
    "direction": "up"
   },
   {
    "name": "Kostoulas",
    "old": 5.8,
    "new": 5.7,
-   "owned": 8.8,
+   "owned": 8.7,
    "direction": "down"
   },
   {
@@ -203,7 +213,7 @@
    "name": "White",
    "old": 5.4,
    "new": 5.3,
-   "owned": 3.9,
+   "owned": 3.8,
    "direction": "down"
   },
   {

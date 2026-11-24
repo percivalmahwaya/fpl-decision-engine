@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 233,
- "latest_snapshot": 236,
+ "latest_snapshot": 237,
  "prev_taken_at": "2026-11-22T19:44:58.605469+00:00",
- "latest_taken_at": "2026-11-24T02:15:04.472243+00:00",
+ "latest_taken_at": "2026-11-24T13:50:11.457523+00:00",
  "alerts": [
   {
    "element_id": 229,
    "name": "Tarkowski",
    "position": "DEF",
    "price": 6.2,
-   "owned": 18.4,
+   "owned": 18.0,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Suspended until 13 Dec)"
@@ -19,7 +19,7 @@
    "name": "Raya",
    "position": "GKP",
    "price": 6.3,
-   "owned": 46.2,
+   "owned": 45.9,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 75% -> 50% (Shoulder injury - 50% chance of playing)"
@@ -29,7 +29,7 @@
    "name": "Yalcouyé",
    "position": "MID",
    "price": 4.4,
-   "owned": 2.5,
+   "owned": 2.4,
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
@@ -65,6 +65,26 @@
    "message": "new news: Thigh injury - Unknown return date"
   },
   {
+   "element_id": 360,
+   "name": "Bradley",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Knee injury - Expected back 12 Dec"
+  },
+  {
+   "element_id": 363,
+   "name": "Leoni",
+   "position": "DEF",
+   "price": 3.9,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "new news: Knee injury - Expected back 12 Dec"
+  },
+  {
    "element_id": 32,
    "name": "Cash",
    "position": "DEF",
@@ -75,11 +95,31 @@
    "message": "improved 0% -> 75%"
   },
   {
+   "element_id": 423,
+   "name": "Shaw",
+   "position": "DEF",
+   "price": 4.2,
+   "owned": 3.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "improved 0% -> 75%"
+  },
+  {
    "element_id": 389,
    "name": "Matheus N.",
    "position": "DEF",
    "price": 5.9,
    "owned": 0.9,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 37,
+   "name": "Lindelöf",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.7,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -107,14 +147,14 @@
    "name": "Tavernier",
    "old": 6.7,
    "new": 6.8,
-   "owned": 33.4,
+   "owned": 33.5,
    "direction": "up"
   },
   {
    "name": "Cherki",
    "old": 7.9,
    "new": 7.8,
-   "owned": 32.1,
+   "owned": 31.9,
    "direction": "down"
   },
   {
@@ -128,14 +168,14 @@
    "name": "Wirtz",
    "old": 7.3,
    "new": 7.4,
-   "owned": 9.3,
+   "owned": 9.7,
    "direction": "up"
   },
   {
    "name": "Kostoulas",
    "old": 5.8,
    "new": 5.7,
-   "owned": 8.9,
+   "owned": 8.8,
    "direction": "down"
   },
   {

@@ -1,15 +1,25 @@
 {
  "prev_snapshot": 235,
- "latest_snapshot": 239,
+ "latest_snapshot": 240,
  "prev_taken_at": "2026-11-23T12:55:36.584559+00:00",
- "latest_taken_at": "2026-11-25T08:42:32.690857+00:00",
+ "latest_taken_at": "2026-11-25T19:20:54.196101+00:00",
  "alerts": [
+  {
+   "element_id": 367,
+   "name": "Gakpo",
+   "position": "MID",
+   "price": 7.1,
+   "owned": 6.5,
+   "severity": "CRITICAL",
+   "tag": "WATCH",
+   "message": "RULED OUT (Calf injury - Expected back 2 Dec)"
+  },
   {
    "element_id": 229,
    "name": "Tarkowski",
    "position": "DEF",
    "price": 6.2,
-   "owned": 17.6,
+   "owned": 17.5,
    "severity": "CRITICAL",
    "tag": "OWNED",
    "message": "RULED OUT (Suspended until 13 Dec)"
@@ -19,7 +29,7 @@
    "name": "Raya",
    "position": "GKP",
    "price": 6.3,
-   "owned": 45.5,
+   "owned": 45.3,
    "severity": "WARNING",
    "tag": "OWNED",
    "message": "worsened 75% -> 50% (Shoulder injury - 50% chance of playing)"
@@ -35,6 +45,16 @@
    "message": "RULED OUT (Unspecified injury - Unknown return date)"
   },
   {
+   "element_id": 371,
+   "name": "Gravenberch",
+   "position": "MID",
+   "price": 5.8,
+   "owned": 0.8,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Foot injury - Unknown return date)"
+  },
+  {
    "element_id": 240,
    "name": "Iroegbunam",
    "position": "MID",
@@ -43,6 +63,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Hamstring injury - Unknown return date)"
+  },
+  {
+   "element_id": 114,
+   "name": "Boscagli",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.8,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
   },
   {
    "element_id": 63,
@@ -105,6 +135,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 482,
+   "name": "Hudson-Odoi",
+   "position": "MID",
+   "price": 5.7,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 100,
    "name": "Carvalho",
    "position": "MID",
@@ -134,14 +174,14 @@
    "name": "Hill",
    "old": 5.6,
    "new": 5.7,
-   "owned": 4.5,
+   "owned": 4.6,
    "direction": "up"
   },
   {
    "name": "Rudoni",
    "old": 4.9,
    "new": 5.0,
-   "owned": 1.8,
+   "owned": 1.9,
    "direction": "up"
   },
   {
@@ -194,7 +234,18 @@
    "direction": "down"
   }
  ],
- "urgent": [],
+ "urgent": [
+  {
+   "element_id": 367,
+   "name": "Gakpo",
+   "position": "MID",
+   "price": 7.1,
+   "owned": 6.5,
+   "severity": "CRITICAL",
+   "tag": "WATCH",
+   "message": "RULED OUT (Calf injury - Expected back 2 Dec)"
+  }
+ ],
  "available": true,
  "window_hours": 24
 }

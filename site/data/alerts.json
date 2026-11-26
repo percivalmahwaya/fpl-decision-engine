@@ -1,15 +1,15 @@
 {
  "prev_snapshot": 238,
- "latest_snapshot": 241,
+ "latest_snapshot": 242,
  "prev_taken_at": "2026-11-24T23:55:12.799967+00:00",
- "latest_taken_at": "2026-11-26T03:36:40.315727+00:00",
+ "latest_taken_at": "2026-11-26T16:58:45.706678+00:00",
  "alerts": [
   {
    "element_id": 367,
    "name": "Gakpo",
    "position": "MID",
    "price": 7.1,
-   "owned": 6.5,
+   "owned": 6.4,
    "severity": "CRITICAL",
    "tag": "WATCH",
    "message": "RULED OUT (Calf injury - Expected back 2 Dec)"
@@ -23,6 +23,16 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Foot injury - Unknown return date)"
+  },
+  {
+   "element_id": 492,
+   "name": "Awoniyi",
+   "position": "FWD",
+   "price": 5.4,
+   "owned": 0.3,
+   "severity": "CRITICAL",
+   "tag": "-",
+   "message": "RULED OUT (Ankle injury - Unknown return date)"
   },
   {
    "element_id": 114,
@@ -55,6 +65,16 @@
    "message": "cleared - news removed, fit again"
   },
   {
+   "element_id": 159,
+   "name": "Caicedo",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 1.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 482,
    "name": "Hudson-Odoi",
    "position": "MID",
@@ -80,21 +100,21 @@
    "name": "Raya",
    "old": 6.3,
    "new": 6.2,
-   "owned": 45.1,
+   "owned": 44.7,
    "direction": "down"
   },
   {
    "name": "Isak",
    "old": 9.3,
    "new": 9.4,
-   "owned": 27.4,
+   "owned": 27.7,
    "direction": "up"
   },
   {
    "name": "Hill",
    "old": 5.6,
    "new": 5.7,
-   "owned": 4.6,
+   "owned": 4.8,
    "direction": "up"
   },
   {
@@ -167,7 +187,7 @@
    "name": "Gakpo",
    "position": "MID",
    "price": 7.1,
-   "owned": 6.5,
+   "owned": 6.4,
    "severity": "CRITICAL",
    "tag": "WATCH",
    "message": "RULED OUT (Calf injury - Expected back 2 Dec)"

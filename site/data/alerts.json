@@ -1,8 +1,8 @@
 {
- "prev_snapshot": 235,
- "latest_snapshot": 240,
- "prev_taken_at": "2026-11-23T12:55:36.584559+00:00",
- "latest_taken_at": "2026-11-25T19:20:54.196101+00:00",
+ "prev_snapshot": 238,
+ "latest_snapshot": 241,
+ "prev_taken_at": "2026-11-24T23:55:12.799967+00:00",
+ "latest_taken_at": "2026-11-26T03:36:40.315727+00:00",
  "alerts": [
   {
    "element_id": 367,
@@ -15,36 +15,6 @@
    "message": "RULED OUT (Calf injury - Expected back 2 Dec)"
   },
   {
-   "element_id": 229,
-   "name": "Tarkowski",
-   "position": "DEF",
-   "price": 6.2,
-   "owned": 17.5,
-   "severity": "CRITICAL",
-   "tag": "OWNED",
-   "message": "RULED OUT (Suspended until 13 Dec)"
-  },
-  {
-   "element_id": 1,
-   "name": "Raya",
-   "position": "GKP",
-   "price": 6.3,
-   "owned": 45.3,
-   "severity": "WARNING",
-   "tag": "OWNED",
-   "message": "worsened 75% -> 50% (Shoulder injury - 50% chance of playing)"
-  },
-  {
-   "element_id": 605,
-   "name": "Yalcouyé",
-   "position": "MID",
-   "price": 4.4,
-   "owned": 2.4,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Unspecified injury - Unknown return date)"
-  },
-  {
    "element_id": 371,
    "name": "Gravenberch",
    "position": "MID",
@@ -53,16 +23,6 @@
    "severity": "CRITICAL",
    "tag": "-",
    "message": "RULED OUT (Foot injury - Unknown return date)"
-  },
-  {
-   "element_id": 240,
-   "name": "Iroegbunam",
-   "position": "MID",
-   "price": 5.0,
-   "owned": 0.1,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Hamstring injury - Unknown return date)"
   },
   {
    "element_id": 114,
@@ -75,34 +35,14 @@
    "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
   },
   {
-   "element_id": 63,
-   "name": "Milosavljević",
-   "position": "DEF",
-   "price": 4.9,
-   "owned": 0.0,
+   "element_id": 377,
+   "name": "Munoz",
+   "position": "MID",
+   "price": 6.5,
+   "owned": 0.6,
    "severity": "WARNING",
    "tag": "-",
-   "message": "new news: Thigh injury - Unknown return date"
-  },
-  {
-   "element_id": 360,
-   "name": "Bradley",
-   "position": "DEF",
-   "price": 4.9,
-   "owned": 0.0,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Knee injury - Expected back 12 Dec"
-  },
-  {
-   "element_id": 363,
-   "name": "Leoni",
-   "position": "DEF",
-   "price": 3.9,
-   "owned": 0.0,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Knee injury - Expected back 12 Dec"
+   "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
   },
   {
    "element_id": 423,
@@ -110,26 +50,6 @@
    "position": "DEF",
    "price": 4.2,
    "owned": 3.0,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "improved 0% -> 75%"
-  },
-  {
-   "element_id": 37,
-   "name": "Lindelöf",
-   "position": "DEF",
-   "price": 4.5,
-   "owned": 0.7,
-   "severity": "GOOD",
-   "tag": "-",
-   "message": "cleared - news removed, fit again"
-  },
-  {
-   "element_id": 420,
-   "name": "Yoro",
-   "position": "DEF",
-   "price": 4.8,
-   "owned": 0.4,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -145,10 +65,10 @@
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 100,
-   "name": "Carvalho",
-   "position": "MID",
-   "price": 5.0,
+   "element_id": 325,
+   "name": "Darlow",
+   "position": "GKP",
+   "price": 4.4,
    "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
@@ -157,18 +77,18 @@
  ],
  "price_moves": [
   {
-   "name": "Tavernier",
-   "old": 6.7,
-   "new": 6.8,
-   "owned": 33.6,
-   "direction": "up"
+   "name": "Raya",
+   "old": 6.3,
+   "new": 6.2,
+   "owned": 45.1,
+   "direction": "down"
   },
   {
-   "name": "Egan",
-   "old": 4.1,
-   "new": 4.0,
-   "owned": 6.2,
-   "direction": "down"
+   "name": "Isak",
+   "old": 9.3,
+   "new": 9.4,
+   "owned": 27.4,
+   "direction": "up"
   },
   {
    "name": "Hill",
@@ -178,24 +98,10 @@
    "direction": "up"
   },
   {
-   "name": "Rudoni",
-   "old": 4.9,
-   "new": 5.0,
-   "owned": 1.9,
-   "direction": "up"
-  },
-  {
-   "name": "Woodman",
+   "name": "Phillips",
    "old": 4.0,
    "new": 3.9,
-   "owned": 0.9,
-   "direction": "down"
-  },
-  {
-   "name": "Wood",
-   "old": 5.7,
-   "new": 5.6,
-   "owned": 0.7,
+   "owned": 1.2,
    "direction": "down"
   },
   {
@@ -210,6 +116,20 @@
    "old": 4.7,
    "new": 4.6,
    "owned": 0.4,
+   "direction": "down"
+  },
+  {
+   "name": "Chilwell",
+   "old": 4.4,
+   "new": 4.3,
+   "owned": 0.3,
+   "direction": "down"
+  },
+  {
+   "name": "Canvot",
+   "old": 4.8,
+   "new": 4.7,
+   "owned": 0.2,
    "direction": "down"
   },
   {
@@ -231,6 +151,13 @@
    "old": 5.0,
    "new": 4.9,
    "owned": 0.1,
+   "direction": "down"
+  },
+  {
+   "name": "Darlow",
+   "old": 4.5,
+   "new": 4.4,
+   "owned": 0.0,
    "direction": "down"
   }
  ],

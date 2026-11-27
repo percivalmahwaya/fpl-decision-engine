@@ -1,29 +1,9 @@
 {
- "prev_snapshot": 238,
- "latest_snapshot": 242,
- "prev_taken_at": "2026-11-24T23:55:12.799967+00:00",
- "latest_taken_at": "2026-11-26T16:58:45.706678+00:00",
+ "prev_snapshot": 240,
+ "latest_snapshot": 243,
+ "prev_taken_at": "2026-11-25T19:20:54.196101+00:00",
+ "latest_taken_at": "2026-11-27T01:45:53.992428+00:00",
  "alerts": [
-  {
-   "element_id": 367,
-   "name": "Gakpo",
-   "position": "MID",
-   "price": 7.1,
-   "owned": 6.4,
-   "severity": "CRITICAL",
-   "tag": "WATCH",
-   "message": "RULED OUT (Calf injury - Expected back 2 Dec)"
-  },
-  {
-   "element_id": 371,
-   "name": "Gravenberch",
-   "position": "MID",
-   "price": 5.8,
-   "owned": 0.8,
-   "severity": "CRITICAL",
-   "tag": "-",
-   "message": "RULED OUT (Foot injury - Unknown return date)"
-  },
   {
    "element_id": 492,
    "name": "Awoniyi",
@@ -35,10 +15,10 @@
    "message": "RULED OUT (Ankle injury - Unknown return date)"
   },
   {
-   "element_id": 114,
-   "name": "Boscagli",
-   "position": "DEF",
-   "price": 4.5,
+   "element_id": 78,
+   "name": "Kroupi.Jr",
+   "position": "MID",
+   "price": 7.3,
    "owned": 0.8,
    "severity": "WARNING",
    "tag": "-",
@@ -53,6 +33,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Knee injury - 75% chance of playing)"
+  },
+  {
+   "element_id": 612,
+   "name": "Methalie",
+   "position": "DEF",
+   "price": 4.5,
+   "owned": 0.0,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
   },
   {
    "element_id": 423,
@@ -75,11 +65,11 @@
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 482,
-   "name": "Hudson-Odoi",
-   "position": "MID",
-   "price": 5.7,
-   "owned": 0.1,
+   "element_id": 207,
+   "name": "Mingueza",
+   "position": "DEF",
+   "price": 4.2,
+   "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
    "message": "cleared - news removed, fit again"
@@ -97,25 +87,81 @@
  ],
  "price_moves": [
   {
+   "name": "Haaland",
+   "old": 15.8,
+   "new": 15.7,
+   "owned": 76.4,
+   "direction": "down"
+  },
+  {
+   "name": "De Cuyper",
+   "old": 5.5,
+   "new": 5.6,
+   "owned": 50.5,
+   "direction": "up"
+  },
+  {
    "name": "Raya",
    "old": 6.3,
    "new": 6.2,
-   "owned": 44.7,
+   "owned": 44.2,
    "direction": "down"
   },
   {
    "name": "Isak",
    "old": 9.3,
    "new": 9.4,
-   "owned": 27.7,
+   "owned": 28.0,
    "direction": "up"
   },
   {
-   "name": "Hill",
-   "old": 5.6,
-   "new": 5.7,
-   "owned": 4.8,
+   "name": "Kinsky",
+   "old": 4.4,
+   "new": 4.5,
+   "owned": 16.6,
    "direction": "up"
+  },
+  {
+   "name": "Wirtz",
+   "old": 7.4,
+   "new": 7.5,
+   "owned": 12.8,
+   "direction": "up"
+  },
+  {
+   "name": "Muharemović",
+   "old": 5.1,
+   "new": 5.2,
+   "owned": 8.3,
+   "direction": "up"
+  },
+  {
+   "name": "Thiago",
+   "old": 7.8,
+   "new": 7.7,
+   "owned": 6.4,
+   "direction": "down"
+  },
+  {
+   "name": "Brobbey",
+   "old": 5.7,
+   "new": 5.6,
+   "owned": 3.9,
+   "direction": "down"
+  },
+  {
+   "name": "Okafor",
+   "old": 5.7,
+   "new": 5.8,
+   "owned": 1.8,
+   "direction": "up"
+  },
+  {
+   "name": "Hume",
+   "old": 4.2,
+   "new": 4.1,
+   "owned": 1.6,
+   "direction": "down"
   },
   {
    "name": "Phillips",
@@ -123,76 +169,9 @@
    "new": 3.9,
    "owned": 1.2,
    "direction": "down"
-  },
-  {
-   "name": "Merino",
-   "old": 5.7,
-   "new": 5.6,
-   "owned": 0.4,
-   "direction": "down"
-  },
-  {
-   "name": "Andrey Santos",
-   "old": 4.7,
-   "new": 4.6,
-   "owned": 0.4,
-   "direction": "down"
-  },
-  {
-   "name": "Chilwell",
-   "old": 4.4,
-   "new": 4.3,
-   "owned": 0.3,
-   "direction": "down"
-  },
-  {
-   "name": "Canvot",
-   "old": 4.8,
-   "new": 4.7,
-   "owned": 0.2,
-   "direction": "down"
-  },
-  {
-   "name": "Henry",
-   "old": 4.4,
-   "new": 4.3,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Grimes",
-   "old": 4.8,
-   "new": 4.7,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Schlager",
-   "old": 5.0,
-   "new": 4.9,
-   "owned": 0.1,
-   "direction": "down"
-  },
-  {
-   "name": "Darlow",
-   "old": 4.5,
-   "new": 4.4,
-   "owned": 0.0,
-   "direction": "down"
   }
  ],
- "urgent": [
-  {
-   "element_id": 367,
-   "name": "Gakpo",
-   "position": "MID",
-   "price": 7.1,
-   "owned": 6.4,
-   "severity": "CRITICAL",
-   "tag": "WATCH",
-   "message": "RULED OUT (Calf injury - Expected back 2 Dec)"
-  }
- ],
+ "urgent": [],
  "available": true,
  "window_hours": 24
 }

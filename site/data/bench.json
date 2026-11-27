@@ -1,6 +1,6 @@
 {
  "available": true,
- "gameweek": 12,
+ "gameweek": 13,
  "provisional": false,
  "formation": "3-4-3",
  "starting_xi": [
@@ -8,99 +8,99 @@
    "name": "Haaland",
    "element_id": 411,
    "position": "FWD",
-   "ep": 4.72,
-   "p_play": 0.907,
-   "if_played": 5.2,
-   "flagged": false
-  },
-  {
-   "name": "Groß",
-   "element_id": 124,
-   "position": "MID",
-   "ep": 4.69,
-   "p_play": 0.913,
-   "if_played": 5.14,
+   "ep": 6.5,
+   "p_play": 0.911,
+   "if_played": 7.14,
    "flagged": false
   },
   {
    "name": "Rogers",
    "element_id": 40,
    "position": "MID",
-   "ep": 4.24,
-   "p_play": 0.904,
-   "if_played": 4.69,
-   "flagged": false
-  },
-  {
-   "name": "Palmer",
-   "element_id": 154,
-   "position": "MID",
-   "ep": 4.21,
-   "p_play": 0.877,
-   "if_played": 4.8,
+   "ep": 4.79,
+   "p_play": 0.908,
+   "if_played": 5.27,
    "flagged": false
   },
   {
    "name": "Tavernier",
    "element_id": 68,
    "position": "MID",
-   "ep": 4.16,
-   "p_play": 0.881,
-   "if_played": 4.72,
+   "ep": 4.45,
+   "p_play": 0.889,
+   "if_played": 5.01,
    "flagged": false
   },
   {
    "name": "Isak",
    "element_id": 379,
    "position": "FWD",
-   "ep": 4.04,
-   "p_play": 0.844,
-   "if_played": 4.79,
+   "ep": 4.34,
+   "p_play": 0.854,
+   "if_played": 5.08,
+   "flagged": false
+  },
+  {
+   "name": "Palmer",
+   "element_id": 154,
+   "position": "MID",
+   "ep": 4.32,
+   "p_play": 0.877,
+   "if_played": 4.92,
+   "flagged": false
+  },
+  {
+   "name": "Groß",
+   "element_id": 124,
+   "position": "MID",
+   "ep": 3.96,
+   "p_play": 0.902,
+   "if_played": 4.4,
    "flagged": false
   },
   {
    "name": "Pickford",
    "element_id": 226,
    "position": "GKP",
-   "ep": 3.98,
+   "ep": 3.92,
    "p_play": 0.945,
-   "if_played": 4.22,
+   "if_played": 4.15,
    "flagged": false
   },
   {
    "name": "Barry",
    "element_id": 249,
    "position": "FWD",
-   "ep": 3.9,
-   "p_play": 0.743,
-   "if_played": 5.25,
+   "ep": 3.55,
+   "p_play": 0.737,
+   "if_played": 4.82,
    "flagged": false
   },
   {
    "name": "Rúben",
    "element_id": 390,
    "position": "DEF",
-   "ep": 3.34,
-   "p_play": 0.879,
-   "if_played": 3.8,
+   "ep": 3.47,
+   "p_play": 0.882,
+   "if_played": 3.94,
    "flagged": false
   },
   {
    "name": "Hall",
    "element_id": 449,
    "position": "DEF",
-   "ep": 3.12,
-   "p_play": 0.903,
-   "if_played": 3.46,
+   "ep": 3.39,
+   "p_play": 0.906,
+   "if_played": 3.74,
    "flagged": true
   },
   {
    "name": "Mitchell",
    "element_id": 204,
    "position": "DEF",
-   "ep": 2.92,
-   "p_play": 0.867,
-   "if_played": 3.37,
+   "ep": 2.61,
+   "p_play": 0.873,
+   "if_played": 2.99,
    "flagged": false
   }
  ],
@@ -109,51 +109,47 @@
    "name": "Horníček",
    "element_id": 567,
    "position": "GKP",
-   "ep": 3.03,
-   "p_play": 0.921,
-   "if_played": 3.29,
+   "ep": 3.16,
+   "p_play": 0.922,
+   "if_played": 3.42,
    "flagged": false
   },
   {
    "name": "Manzambi",
    "element_id": 53,
    "position": "MID",
-   "ep": 2.44,
-   "p_play": 0.609,
-   "if_played": 4.0,
+   "ep": 2.79,
+   "p_play": 0.642,
+   "if_played": 4.35,
+   "flagged": false
+  },
+  {
+   "name": "Thomas",
+   "element_id": 173,
+   "position": "DEF",
+   "ep": 2.43,
+   "p_play": 0.767,
+   "if_played": 3.17,
    "flagged": false
   },
   {
    "name": "Davis",
    "element_id": 305,
    "position": "DEF",
-   "ep": 2.57,
-   "p_play": 0.808,
-   "if_played": 3.18,
-   "flagged": true
-  },
-  {
-   "name": "Thomas",
-   "element_id": 173,
-   "position": "DEF",
    "ep": 1.81,
-   "p_play": 0.769,
-   "if_played": 2.36,
+   "p_play": 0.784,
+   "if_played": 2.3,
    "flagged": false
   }
  ],
- "autosub_value": 4.36,
+ "autosub_value": 4.48,
  "notes": [
   "Starting with a flag on Hall. The bench covers a blank, but only for the first one that happens."
  ],
  "bench_boost": {
-  "value_now": 9.85,
+  "value_now": 10.18,
   "verdict": "hold",
   "recent": [
-   [
-    7,
-    12.55
-   ],
    [
     8,
     14.84
@@ -169,11 +165,15 @@
    [
     11,
     9.25
+   ],
+   [
+    12,
+    10.2
    ]
   ],
   "double_gameweeks": [],
   "reasoning": [
-   "Your bench has been worth 10.6 points a week on average over the last 5 gameweeks, best 14.8. This week it is worth 9.9.",
+   "Your bench has been worth 10.1 points a week on average over the last 5 gameweeks, best 14.8. This week it is worth 10.2.",
    "Below the 12 point rule of thumb for a full bench of starters, so this is not the week.",
    "Bench order does not matter in a Bench Boost week: every player scores, so the ordering work is the one thing the chip switches off."
   ]

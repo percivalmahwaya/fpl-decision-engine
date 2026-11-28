@@ -89,22 +89,22 @@
   },
   {
    "out": "Palmer",
-   "out_price": 9.8,
+   "out_price": 9.7,
    "out_ep": 4.32,
    "in": "Wirtz",
-   "in_price": 7.5,
+   "in_price": 7.6,
    "in_ep": 4.83,
    "in_club": "LIV",
    "position": "MID",
    "gain": 0.508,
    "net": -3.492,
-   "cost": -2.3,
-   "bank_after": 2.5,
+   "cost": -2.1,
+   "bank_after": 2.3,
    "free": false,
    "penalties": false,
    "worth_it": false,
    "reasons": [
-    "Frees up 2.3m for later.",
+    "Frees up 2.1m for later.",
     "Costs a 4 point hit, which this gain does not cover. Shown so the arithmetic is visible, not as advice."
    ]
   }

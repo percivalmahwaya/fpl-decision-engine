@@ -54,7 +54,7 @@
    "element_id": 449,
    "position": "DEF",
    "club": "NEW",
-   "price": 5.2,
+   "price": 5.1,
    "owned": 14.8,
    "status": "d",
    "chance": 75,
@@ -150,8 +150,8 @@
    "element_id": 154,
    "position": "MID",
    "club": "CHE",
-   "price": 9.8,
-   "owned": 25.4,
+   "price": 9.7,
+   "owned": 25.3,
    "status": "a",
    "chance": 100,
    "news": null,
@@ -166,7 +166,7 @@
    "element_id": 124,
    "position": "MID",
    "club": "BHA",
-   "price": 6.3,
+   "price": 6.4,
    "owned": 50.0,
    "status": "a",
    "chance": null,
@@ -199,7 +199,7 @@
    "position": "FWD",
    "club": "MCI",
    "price": 15.7,
-   "owned": 75.5,
+   "owned": 75.4,
    "status": "a",
    "chance": 100,
    "news": null,
@@ -242,6 +242,6 @@
    "flagged": false
   }
  ],
- "squad_value": 101.8,
+ "squad_value": 101.7,
  "count": 15
 }

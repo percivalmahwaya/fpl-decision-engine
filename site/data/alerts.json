@@ -1,8 +1,8 @@
 {
  "prev_snapshot": 242,
- "latest_snapshot": 246,
+ "latest_snapshot": 247,
  "prev_taken_at": "2026-11-26T16:58:45.706678+00:00",
- "latest_taken_at": "2026-11-28T07:55:10.132334+00:00",
+ "latest_taken_at": "2026-11-28T17:36:23.893327+00:00",
  "alerts": [
   {
    "element_id": 305,
@@ -15,21 +15,21 @@
    "message": "cleared - news removed, fit again"
   },
   {
-   "element_id": 426,
-   "name": "B.Fernandes",
-   "position": "MID",
-   "price": 11.6,
-   "owned": 19.9,
-   "severity": "WARNING",
-   "tag": "WATCH",
-   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
+   "element_id": 330,
+   "name": "Bogle",
+   "position": "DEF",
+   "price": 4.9,
+   "owned": 12.8,
+   "severity": "CRITICAL",
+   "tag": "OWNED",
+   "message": "RULED OUT (Suspended until 5 Dec)"
   },
   {
    "element_id": 1,
    "name": "Raya",
    "position": "GKP",
    "price": 6.2,
-   "owned": 42.7,
+   "owned": 42.6,
    "severity": "GOOD",
    "tag": "OWNED",
    "message": "improved 50% -> 75%"
@@ -73,6 +73,16 @@
    "severity": "WARNING",
    "tag": "-",
    "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
+  },
+  {
+   "element_id": 108,
+   "name": "Wilson",
+   "position": "FWD",
+   "price": 5.3,
+   "owned": 0.3,
+   "severity": "WARNING",
+   "tag": "-",
+   "message": "worsened 100% -> 75% (Ankle injury - 75% chance of playing)"
   },
   {
    "element_id": 126,
@@ -125,16 +135,6 @@
    "message": "new news: Lack of match fitness - Expected back 5 Dec"
   },
   {
-   "element_id": 103,
-   "name": "Dasilva",
-   "position": "MID",
-   "price": 4.8,
-   "owned": 0.0,
-   "severity": "WARNING",
-   "tag": "-",
-   "message": "new news: Lack of match fitness - Expected back 5 Dec"
-  },
-  {
    "element_id": 612,
    "name": "Methalie",
    "position": "DEF",
@@ -175,6 +175,16 @@
    "message": "improved 0% -> 75%"
   },
   {
+   "element_id": 186,
+   "name": "Mason-Clark",
+   "position": "MID",
+   "price": 5.3,
+   "owned": 0.1,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
    "element_id": 278,
    "name": "Hughes",
    "position": "DEF",
@@ -189,6 +199,16 @@
    "name": "Milosavljević",
    "position": "DEF",
    "price": 4.9,
+   "owned": 0.0,
+   "severity": "GOOD",
+   "tag": "-",
+   "message": "cleared - news removed, fit again"
+  },
+  {
+   "element_id": 103,
+   "name": "Dasilva",
+   "position": "MID",
+   "price": 4.8,
    "owned": 0.0,
    "severity": "GOOD",
    "tag": "-",
@@ -241,21 +261,21 @@
    "name": "João Pedro",
    "old": 7.6,
    "new": 7.5,
-   "owned": 26.2,
+   "owned": 26.1,
    "direction": "down"
   },
   {
    "name": "Verbruggen",
    "old": 4.7,
    "new": 4.8,
-   "owned": 25.7,
+   "owned": 25.8,
    "direction": "up"
   },
   {
    "name": "Palmer",
    "old": 9.8,
    "new": 9.7,
-   "owned": 25.3,
+   "owned": 25.2,
    "direction": "down"
   },
   {
@@ -266,17 +286,17 @@
    "direction": "up"
   },
   {
+   "name": "Wirtz",
+   "old": 7.4,
+   "new": 7.6,
+   "owned": 17.5,
+   "direction": "up"
+  },
+  {
    "name": "Kinsky",
    "old": 4.4,
    "new": 4.5,
    "owned": 17.2,
-   "direction": "up"
-  },
-  {
-   "name": "Wirtz",
-   "old": 7.4,
-   "new": 7.6,
-   "owned": 17.1,
    "direction": "up"
   },
   {
@@ -301,18 +321,7 @@
    "direction": "up"
   }
  ],
- "urgent": [
-  {
-   "element_id": 426,
-   "name": "B.Fernandes",
-   "position": "MID",
-   "price": 11.6,
-   "owned": 19.9,
-   "severity": "WARNING",
-   "tag": "WATCH",
-   "message": "worsened 100% -> 75% (Illness - 75% chance of playing)"
-  }
- ],
+ "urgent": [],
  "available": true,
  "window_hours": 24
 }
